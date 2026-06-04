@@ -1,0 +1,14 @@
+# Ignore OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+.vscode/
+.idea/
+
+# Do not commit local/private scratch data
+.local/
+private/
+secrets/
+*.env
+.env*
