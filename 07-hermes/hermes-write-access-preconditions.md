@@ -2,7 +2,9 @@
 
 Status: draft policy
 Date: 2026-06-03
-Related research: `03-research-results/001-hermes-agent-boundaries-claude-summary.md`
+Related research:
+- `03-research-results/001-hermes-agent-boundaries-claude-summary.md`
+- `03-research-results/002-hermes-desktop-verification-gpt-summary.md`
 
 ## Purpose
 
