@@ -13,14 +13,26 @@ Prompts are inputs, not conclusions.
 5. Vault information architecture
 6. Spec, decision, and task-packet standards
 7. Agent access, MCP, Windows path confinement, and safe promotion
-8. External intelligence providers and source rights
-9. Storage, retrieval, backup, and recovery constraints
-10. Knowledge quality, freshness, and context assembly
-11. Final synthesis into Kaizen Project Standard v0.2
+8. Comparative Obsidian, Postgres, and Qdrant MCP/typed-tool audits
+9. External intelligence providers and source rights
+10. Storage, retrieval, backup, and recovery constraints
+11. Knowledge quality, freshness, and context assembly
+12. Final synthesis into Kaizen Project Standard v0.2
 
-## Active prompts
+## Prompt status
 
-- `003-agent-access-and-write-safety.md` - Research Batch A; active next research task
+### Completed
+
+- `003-agent-access-and-write-safety.md` - Research Batch A; report reconciled in Research Result 008
+
+### Active next prompt
+
+- `004-obsidian-mcp-tool-surface-audit.md` - Step 5A Obsidian and filesystem MCP comparative audit
+
+### Planned next prompts
+
+- Postgres MCP and typed-tool comparative audit
+- Qdrant MCP and typed-tool comparative audit
 
 ## Promotion path
 

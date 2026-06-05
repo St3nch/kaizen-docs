@@ -218,6 +218,8 @@ Before selecting integration tools, compare prominent real implementations again
 
 #### Obsidian and filesystem tools
 
+- Active Obsidian audit prompt: `02-research-prompts/004-obsidian-mcp-tool-surface-audit.md`
+
 Evaluate:
 
 - Obsidian community-plugin MCP servers, including previously used `Vault as MCP` if verified
@@ -795,8 +797,9 @@ Material governance changes belong in the appropriate decision or specification 
 1. Review and revise `05-specs/staging-write-wrapper-and-promotion-recovery.md`.
 2. Review the Batch A reconciliation changes to staging, promotion, and Hermes planning documents.
 3. Create a clean Git checkpoint for Research Result 008 and the Batch A specification reconciliation.
-4. Prepare comparative Obsidian, Postgres, and Qdrant MCP/typed-tool audit prompts.
-5. Prepare Research Batch B: external intelligence providers and source rights.
-6. Recheck the document-contract batch against the aligned vision and verified Batch A evidence.
-7. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
-8. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
+4. Run `02-research-prompts/004-obsidian-mcp-tool-surface-audit.md` with Claude and return the report for steward reconciliation.
+5. Prepare the Postgres and Qdrant comparative audit prompts after the Obsidian audit structure is validated.
+6. Prepare Research Batch B: external intelligence providers and source rights.
+7. Recheck the document-contract batch against the aligned vision and verified Batch A evidence.
+8. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
+9. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
