@@ -186,6 +186,8 @@ task packet
 
 ### Step 5 - Run Research Batch A: agent access and write safety
 
+- Active prompt: `02-research-prompts/003-agent-access-and-write-safety.md`
+
 Priority: P0/P1
 
 Research and test:
@@ -681,7 +683,7 @@ Material governance changes belong in the appropriate decision or specification 
 
 1. Repair the corrupted field-registry and validation-gate tokens.
 2. Preserve Claude's audit in `03-research-results/` and write the Kaizen reconciliation.
-3. Review the Operational Postgres reconciliation and begin Research Batch A: agent access and write safety.
+3. Run `02-research-prompts/003-agent-access-and-write-safety.md` with Claude and return the report for steward reconciliation.
 4. Add the implementation-return feedback path to the Phase 4 dry-run requirements and Phase 5 standard requirements.
 5. Review the full planning diff and create a clean Git checkpoint.
 6. Run Research Batch A before any Hermes write-access test or implementation-roadmap work.
