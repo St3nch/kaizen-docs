@@ -1,37 +1,199 @@
 # Spec - Kaizen Note Type Registry
 
-Status: draft
+Status: active draft aligned to accepted foundation
 Date: 2026-06-04
+Related decision: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 
 ## Purpose
 
-Define the candidate durable note types in Kaizen, their roles, and their authority/agent boundaries. Adding a new note type is a governed change, not an ad hoc convenience.
+Define the initial durable note types for Kaizen v0.2, their required metadata and body structure, and their authority and agent boundaries.
 
-## Candidate registry
+Adding a new note type is a governed change, not an ad hoc convenience.
 
-| Type | Purpose | Hermes role | Authority potential | Qdrant direction |
-|---|---|---|---|---|
-| `command-center` | curated project entrypoint | read only / propose edits | none | exclude |
-| `overview` | durable project orientation | draft | low | index |
-| `current-state` | human-readable project snapshot | draft | low | index selectively |
-| `roadmap` | narrative now/next/later plan | draft | proposed | index |
-| `raw-source` | pointer and provenance for external raw source | create pointer | none | metadata only/exclude body |
-| `source-summary` | distilled source meaning | draft | evidence only | index |
-| `claim` | discrete testable assertion | draft | accepted/doctrine after human review | index |
-| `observatory-insight` | interpretation of structured result IDs | draft | never doctrine | index |
-| `opportunity` | proposed action/bet from evidence | draft | proposed only | index |
-| `decision` | governed choice with consequences | draft proposal only | accepted/doctrine after human review | index |
-| `spec` | governed implementation definition | draft proposal only | accepted/implementation-ready by human | index |
-| `audit` | review findings and verdict | draft findings only | human verdict | index |
-| `task-packet` | agent-ready implementation handoff | draft from approved spec | human-approved readiness | index |
-| `source-import-map` | source/repo migration mapping | update within rules | none | exclude |
-| `domain-note` | stable governed domain knowledge | draft | doctrine after review | index |
+## Initial v0.2 registry
 
-## Required body structure direction
+| Type | Prefix | Purpose | Hermes role | Review/authority | Qdrant direction |
+|---|---|---|---|---|---|
+| `command-center` | `cc` | curated project entrypoint and LLM orientation | read; propose edits only | review not required; no authority | exclude |
+| `overview` | `ov` | durable project purpose, scope, and orientation | draft | review not required unless promoted as governing guidance | index |
+| `current-state` | `cs` | human-readable snapshot of project position, blockers, and next move | draft | review not required by default | index selectively |
+| `source-summary` | `ss` | distilled meaning and provenance from one or more sources | draft | pending review; no authority | index |
+| `claim` | `clm` | discrete, testable assertion supported by sources | draft | pending review; proposed or accepted authority | index |
+| `decision` | `dec` | explicit governing choice with alternatives and consequences | draft proposal only | pending review; proposed or accepted authority | index |
+| `spec` | `spec` | implementation definition and acceptance boundaries | draft proposal only | pending review; proposed or accepted authority | index |
+| `audit` | `aud` | structured review of a claim, decision, spec, or task packet | draft findings only; never human verdict | pending review; no independent authority | index |
+| `task-packet` | `tp` | implementation-ready handoff to a coding agent | draft from approved spec | pending review; proposed or accepted authority | index |
 
-Each type should eventually define required H2 headings. Candidate examples:
+## Universal fields
 
-### Claim
+Every type requires the seven universal fields defined in `05-specs/kaizen-field-registry.md`:
+
+```yaml
+id:
+type:
+status:
+project:
+summary:
+created:
+updated:
+```
+
+## Type-specific field requirements
+
+### `command-center`
+
+Required:
+
+```yaml
+pipeline_stage:
+review_status: not-required
+```
+
+Authority is omitted or `none`.
+
+### `overview`
+
+Required:
+
+```yaml
+review_status: not-required
+```
+
+`pipeline_stage` is optional.
+
+### `current-state`
+
+Required:
+
+```yaml
+pipeline_stage:
+review_status: not-required
+```
+
+This note is a narrative planning snapshot. It must not become a substitute for live jobs, runs, measurements, queues, or automation state in Postgres.
+
+### `source-summary`
+
+Required:
+
+```yaml
+review_status: pending | approved | rejected
+authority: none
+```
+
+And at least one of:
+
+```yaml
+source_docs:
+source_urls:
+```
+
+### `claim`
+
+Required:
+
+```yaml
+review_status: pending | approved | rejected
+authority: none | proposed | accepted
+confidence: low | medium | high
+source_docs:
+```
+
+`source_urls` may temporarily supplement `source_docs` before a source registry exists, but accepted claims require stable source references.
+
+### `decision`
+
+Required:
+
+```yaml
+review_status: pending | approved | rejected
+authority: proposed | accepted
+```
+
+### `spec`
+
+Required:
+
+```yaml
+review_status: pending | approved | rejected
+authority: proposed | accepted
+related_decisions:
+```
+
+A spec cannot become accepted if its governing decisions are not approved and accepted.
+
+### `audit`
+
+Required:
+
+```yaml
+review_status: pending | approved | rejected
+```
+
+And at least one of:
+
+```yaml
+related_claims:
+related_decisions:
+related_specs:
+```
+
+The human verdict is recorded in the body and promotion event. Hermes may draft findings and recommendations but not the verdict.
+
+### `task-packet`
+
+Required:
+
+```yaml
+review_status: pending | approved | rejected
+authority: proposed | accepted
+related_specs:
+```
+
+A task packet is implementation-ready only when:
+
+- `status: active`
+- `review_status: approved`
+- `authority: accepted`
+- every related spec is approved and accepted
+- required body sections pass validation
+- a promotion event exists
+
+## Required body sections
+
+### `command-center`
+
+- `## LLM entry point`
+- `## Current stage`
+- `## Read first`
+- `## Current blockers`
+- `## Next action`
+- `## Source-of-truth boundaries`
+
+### `overview`
+
+- `## Purpose`
+- `## Scope`
+- `## Non-goals`
+- `## Current posture`
+
+### `current-state`
+
+- `## Current stage`
+- `## What is true now`
+- `## Blockers`
+- `## Next move`
+- `## Operational-state boundary`
+
+### `source-summary`
+
+- `## Summary`
+- `## Key points`
+- `## Provenance`
+- `## Caveats`
+- `## Project relevance`
+
+### `claim`
 
 - `## Statement`
 - `## Evidence`
@@ -39,7 +201,7 @@ Each type should eventually define required H2 headings. Candidate examples:
 - `## Sources`
 - `## Conflicts` when applicable
 
-### Decision
+### `decision`
 
 - `## Context`
 - `## Decision`
@@ -48,7 +210,7 @@ Each type should eventually define required H2 headings. Candidate examples:
 - `## Evidence`
 - `## Supersedence rationale` when applicable
 
-### Spec
+### `spec`
 
 - `## Goal`
 - `## Context`
@@ -59,7 +221,7 @@ Each type should eventually define required H2 headings. Candidate examples:
 - `## Acceptance criteria`
 - `## Open questions`
 
-### Audit
+### `audit`
 
 - `## Scope`
 - `## Evidence reviewed`
@@ -68,7 +230,7 @@ Each type should eventually define required H2 headings. Candidate examples:
 - `## Recommendation`
 - `## Human verdict`
 
-### Task packet
+### `task-packet`
 
 - `## Objective`
 - `## Read first`
@@ -78,41 +240,55 @@ Each type should eventually define required H2 headings. Candidate examples:
 - `## Acceptance criteria`
 - `## Do not touch`
 
-## Authority rules
+## Authority and review rules
 
-- Hermes-created content begins staged and non-authoritative.
-- Hermes cannot create a human verdict, approve a spec, or mark a task packet implementation-ready.
-- Observatory insights cannot become doctrine directly.
-- Claims, decisions, specs, and domain notes may carry higher authority only after explicit human review.
-- Superseding an accepted record requires the same approval posture as the original.
+- Hermes-created content starts with `status: draft`.
+- Hermes may set `review_status: not-required` only where the registry explicitly permits it.
+- Hermes may set `review_status: pending` but never `approved` or `rejected`.
+- Hermes may set `authority: none` or `proposed` where the type permits it.
+- Hermes may never set `authority: accepted`.
+- An active note is usable at its current authority level; active does not imply approved.
+- Superseding an accepted claim, decision, or spec requires the same human approval posture as the record being superseded.
 
-## Raw-source boundary
+## Deferred note types
 
-A raw-source note is a pointer/provenance artifact, not a raw content warehouse.
+These remain deferred until concrete workflow friction proves need:
 
-Bulk crawled content, screenshots, datasets, transcripts, and large payloads live outside the vault. The note stores location, identity, capture metadata, and why the source matters.
+| Type | Reason deferred |
+|---|---|
+| `roadmap` | current-state can carry now/next/later until a separate roadmap earns itself |
+| `raw-source` | no governed ingestion system exists yet |
+| `source-import-map` | add when the first real migration/import workflow exists |
+| `observatory-insight` | Postgres Observatory does not exist yet |
+| `opportunity` | can initially be represented through claims and proposed decisions |
+| `domain-note` | cross-project domain governance has not yet been proven |
+| `promotion-record` | promotion events use append-only JSONL |
+| `conflict` | use `conflict_with` plus claim/audit body sections until a separate type is justified |
 
 ## Registry change rule
 
 Adding a note type requires:
 
 1. purpose and ownership definition
-2. required/optional fields
-3. required body sections
-4. authority and agent rules
-5. validation updates
-6. Qdrant indexing decision
-7. review and decision record
+2. stable type prefix
+3. required and optional fields
+4. required body sections
+5. lifecycle, review, authority, and agent rules
+6. validation updates
+7. Qdrant indexing decision
+8. an explicit accepted decision
 
 ## Open questions
 
-- Whether `promotion-record` deserves its own type or should remain an audit/event concern.
-- Whether `conflict` deserves its own type later.
-- Whether current-state belongs in semantic retrieval.
-- Exact boundaries between claim, domain-note, and decision authority.
+- Final `pipeline_stage` enum.
+- Whether source summaries should require a single primary source.
+- Whether audits need a structured verdict field later.
+- When `raw-source` becomes necessary.
+- Whether current-state notes should be indexed once Qdrant exists.
 
 ## Related files
 
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-validation-gate-spec.md`
-- `05-specs/kaizen-hammer-test-strategy.md`
+- `05-specs/staging-and-promotion-workflow.md`

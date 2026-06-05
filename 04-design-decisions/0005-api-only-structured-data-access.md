@@ -1,7 +1,8 @@
 # Decision 0005 - API-Only Structured Data Access
 
-Status: proposed
+Status: accepted
 Date: 2026-06-04
+Accepted: 2026-06-04
 Related research:
 - `03-research-results/002-hermes-desktop-verification-gpt-summary.md`
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`

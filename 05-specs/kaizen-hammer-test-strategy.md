@@ -51,7 +51,7 @@ Compliant notes pass; each missing required field fails with a specific error.
 
 ### HT-02 ID immutability
 
-Changing an existing note's stable ID or UUID fails validation and does not silently create a new identity.
+Changing an existing note's stable prefixed ULID fails validation and does not silently create a new identity. Reusing an archived or deleted ID also fails.
 
 ### HT-03 Note-type registry enforcement
 
@@ -59,7 +59,7 @@ Unknown types and missing type-specific sections fail explicitly.
 
 ### HT-04 Review and authority transitions
 
-Agent-authored notes cannot become reviewed, accepted, doctrine, or implementation-ready without human approval evidence.
+Agent-authored notes cannot become approved, accepted, or implementation-ready without human approval evidence.
 
 ### HT-05 Qdrant rebuild idempotency
 

@@ -26,25 +26,32 @@ Import the original document exactly enough to preserve its intent, then revise 
 - Structure is earned, not prebuilt.
 - Implementation-ready task packets are the primary pipeline outcome.
 
-## Current architecture additions under review
+## Accepted architecture additions
 
-The following are proposed and must not be treated as accepted doctrine yet:
+The following are now accepted inputs to the v0.2 rewrite:
 
 - raw Markdown as canonical project intelligence
 - Postgres as operational source of truth for Observatory records
 - Qdrant as a rebuildable semantic index
 - API-only structured-data access for agents
-- staging-only agent writes with human promotion
+- sibling staging with human-controlled promotion
+- search-before-create and diff-before-write
 - governed field and note-type registries
 - hammer tests as a hard gate
+- one immutable prefixed ULID note ID
+- relative Markdown body links and stable-ID frontmatter relationships
+- append-only JSONL promotion events
+
+These accepted decisions are documented in `04-design-decisions/0001` through `0007`.
 
 ## Next action
 
 1. Import the full original standard.
-2. Review the proposed decisions individually.
-3. Resolve the lifecycle, ID, staging, linking, and promotion questions.
-4. Draft Kaizen Project Standard v0.2.
-5. Audit and accept it only after human review.
+2. Reconcile it against accepted Decisions 0001-0007.
+3. Resolve the remaining v0.2 questions in `standard-revision-plan.md`.
+4. Draft `kaizen-project-standard-v0.2-draft.md`.
+5. Audit the draft against research and governance patterns.
+6. Accept and supersede the baseline only after explicit human review.
 
 ## Related files
 

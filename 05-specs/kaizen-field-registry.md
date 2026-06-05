@@ -1,111 +1,189 @@
 # Spec - Kaizen Field Registry
 
-Status: draft
+Status: active draft aligned to accepted foundation
 Date: 2026-06-04
+Related decision: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 
 ## Purpose
 
-Define the candidate governed fields used across Kaizen notes. This registry prevents ad hoc metadata growth and frontmatter obesity.
+Define the governed fields used across Kaizen v0.2 notes. This registry prevents ad hoc metadata growth, overlapping state fields, and frontmatter obesity.
 
 Fields are not required on every note. Each note type selects a small required and optional subset.
 
-## Universal candidate fields
+## Universal required fields
 
-| Field | Purpose | Candidate rule |
+Every durable Kaizen note requires these seven fields.
+
+| Field | Purpose | Rule |
 |---|---|---|
-| `id` | stable human-readable note identifier | required; immutable; prefixed by type |
-| `uuid` | immutable machine join key | proposed required; validate before adoption |
-| `type` | note type registry value | required enum |
-| `status` | work/content lifecycle | required enum by type |
-| `review_status` | review/promotion lifecycle | required on agent-touchable/governed notes |
-| `authority` | authority level | required on claims, decisions, specs, audits/domain doctrine candidates |
-| `project` | owning project slug | required |
-| `domain` | governed knowledge domain | likely required; taxonomy must remain shallow |
-| `summary` | one-sentence description | required; plain text; length limited |
-| `created` | creation date/time | required; immutable |
-| `updated` | last meaningful update | required; preferably tool-maintained |
+| `id` | immutable machine identity | required; format `kz-<type-prefix>-<ulid>`; tool-generated; never changed or reused |
+| `type` | note type | required enum from the note-type registry |
+| `status` | content/work maturity | required enum: `draft`, `active`, `blocked`, `complete`, `archived` |
+| `project` | owning project | required lowercase kebab-case slug |
+| `summary` | one-sentence description | required plain text; target maximum 200 characters |
+| `created` | creation timestamp | required ISO-8601; immutable |
+| `updated` | last meaningful update | required ISO-8601; must be greater than or equal to `created` |
 
-## Conditional candidate fields
+## Identity rule
 
-| Field | Applies to | Rule direction |
+Kaizen v0.2 uses one canonical note ID.
+
+```yaml
+id: kz-clm-01JX8J3M8R7K9Q2
+```
+
+The ID is globally unique, immutable, and independent of the filename/title. Kaizen does not require a separate UUID or semantic slug field in v0.2.
+
+Human readability comes from:
+
+- the note title
+- the filename
+- relative Markdown links in the body
+
+An optional readable alias may be considered later only if opaque frontmatter relationships create demonstrated friction.
+
+## Lifecycle fields
+
+These axes are orthogonal.
+
+### `status`
+
+Describes maturity and work state.
+
+```text
+draft | active | blocked | complete | archived
+```
+
+Definitions:
+
+- `draft` - incomplete or not yet suitable for normal use
+- `active` - structurally complete enough for normal use at its current authority level
+- `blocked` - unable to progress because a dependency, decision, or evidence gap exists
+- `complete` - the artifact's intended work is finished
+- `archived` - retained for history but no longer active
+
+`active` does not mean approved.
+
+### `review_status`
+
+Describes required human review.
+
+```text
+not-required | pending | approved | rejected
+```
+
+Definitions:
+
+- `not-required` - this note type or instance does not require a review gate
+- `pending` - review is required and has not completed successfully
+- `approved` - required human review completed successfully
+- `rejected` - required human review completed unsuccessfully
+
+Only humans may set `approved` or `rejected`.
+
+### `authority`
+
+Describes governance weight.
+
+```text
+none | proposed | accepted
+```
+
+Definitions:
+
+- `none` - informative or evidentiary content with no governing force
+- `proposed` - submitted as a candidate governing position
+- `accepted` - human-approved and binding within its defined scope
+
+Evidence is represented by note type, sources, and confidence rather than an authority value.
+
+Only humans may set `accepted`.
+
+## Conditional fields
+
+| Field | Applies to | Rule |
 |---|---|---|
-| `pipeline_stage` | project-state and pipeline artifacts | controlled enum; do not duplicate type blindly |
-| `source_docs` | summaries, claims, opportunities | list of stable IDs/paths only |
-| `related_claims` | claims, decisions, specs, audits | stable ID list |
-| `related_decisions` | claims, specs, audits | stable ID list |
-| `related_specs` | specs, audits, task packets | stable ID list |
-| `observatory_result_ids` | insights, claims, opportunities | stable result IDs only; no raw rows |
-| `supersedes` | claims, decisions, specs | governance-sensitive; requires rationale |
-| `superseded_by` | claims, decisions, specs | governance-sensitive; target must exist |
-| `conflict_with` | claims and insights | explicit unresolved conflict links |
-| `approval_event_id` | promoted governed notes | optional until promotion workflow exists |
-| `validation_status` | staging notes | pending/passed/failed |
-| `confidence` | claims, insights, opportunities | controlled enum plus body caveats |
-| `agent_allowed` | protected/governed notes | default false unless policy grants bounded edit |
-| `agent` | staged agent-created notes | provenance only |
-| `model` | staged agent-created notes | provenance only |
-| `session` | staged agent-created notes | provenance only |
+| `review_status` | governed/reviewable types | required where the note-type registry says review applies |
+| `authority` | claims, decisions, specs, task packets, other governed types | required where the note-type registry says authority applies |
+| `pipeline_stage` | command centers and current-state notes | controlled enum defined by the project standard |
+| `domain` | cross-project or domain-oriented knowledge | optional; lowercase kebab-case when present |
+| `confidence` | claims and evidence interpretations | controlled enum; initial values `low`, `medium`, `high` |
+| `source_docs` | source summaries, claims | list of stable Kaizen IDs |
+| `source_urls` | pre-ingestion source summaries | list of external URLs; allowed until a source registry exists |
+| `related_claims` | decisions, specs, audits, other claims | list of stable Kaizen IDs |
+| `related_decisions` | specs and audits | list of stable Kaizen IDs |
+| `related_specs` | audits and task packets | list of stable Kaizen IDs |
+| `observatory_result_ids` | future Observatory-derived notes | stable Postgres result IDs; deferred until Observatory exists |
+| `supersedes` | claims, decisions, specs | stable Kaizen ID; governance-sensitive |
+| `superseded_by` | claims, decisions, specs | stable Kaizen ID; governance-sensitive |
+| `conflict_with` | claims and audits | stable Kaizen ID list for explicit unresolved conflicts |
+| `approval_event_id` | promoted governed notes | promotion-log event ID |
+
+## Agent provenance
+
+These fields are set at creation when an agent drafts the note and remain as durable history after promotion.
+
+```yaml
+agent:
+model:
+session:
+```
+
+Rules:
+
+- Humans must not fabricate agent provenance on human-authored notes.
+- Promotion must not erase true agent provenance.
+- Provenance fields never grant authority.
+
+## Staging-transient field
+
+```yaml
+validation_status: pending | passed | failed
+```
+
+`validation_status` exists only while a note is in staging. It is removed during promotion because the promotion event records the successful gate.
 
 ## Deferred or rejected fields
 
 | Field | Direction | Reason |
 |---|---|---|
-| `phase` | remove/defer | overlaps status/pipeline stage |
-| `subdomain` | defer | premature taxonomy until needed |
-| `informs_projects` | defer | cross-project relationship can be introduced after real use |
-| nested objects | reject | poor Obsidian property support and harder validation |
+| `uuid` | rejected for v0.2 | the prefixed ULID ID already supplies stable global identity |
+| `phase` | rejected | overlaps `status` and `pipeline_stage` |
+| `subdomain` | deferred | premature taxonomy |
+| `informs_projects` | deferred | add only after cross-project reuse creates real need |
+| readable `slug`/`aka` | deferred | add only if opaque relationship IDs create demonstrated friction |
+| nested objects | rejected | harder validation and weak Obsidian property support |
 
-## Candidate state axes
+## Link and reference rules
 
-These axes must remain orthogonal.
-
-### Work status
-
-Draft candidate values:
-
-```text
-active | blocked | complete | archived
-```
-
-### Review status
-
-Draft candidate values:
-
-```text
-draft | staged | in-review | reviewed | rejected
-```
-
-### Authority
-
-Draft candidate values:
-
-```text
-none | proposed | accepted | doctrine
-```
-
-Exact values require a dedicated lifecycle decision before implementation.
+- Frontmatter relationships store stable IDs, never filenames or Wikilinks.
+- Canonical body relationships use relative Markdown links.
+- External references use Markdown URLs or explicit repository/path references.
+- Wikilinks are allowed only as staging input and must be normalized or rejected before promotion.
 
 ## Registry rules
 
-1. Unknown fields produce warnings initially and errors after stabilization.
-2. Unknown enum values are errors.
-3. No nested YAML in canonical notes.
-4. IDs and UUIDs never change after creation.
-5. Supersedence fields require explicit rationale and review.
-6. Agent provenance fields never grant authority.
-7. Private/customer data is forbidden in canonical frontmatter.
-8. New fields require registry update, validation update, and review.
+1. Unknown fields warn during early v0.2 rollout and become errors after stabilization.
+2. Unknown enum values are errors immediately.
+3. Nested YAML is forbidden in canonical notes.
+4. Stable IDs never change or get reused.
+5. `created` never changes; `updated` is maintained on meaningful edits.
+6. Supersedence requires explicit rationale, reciprocal reference consistency, human approval, and a promotion event.
+7. Agent provenance never grants review or authority.
+8. Private/customer data is forbidden in canonical frontmatter.
+9. New fields require registry review, validation updates, and a decision when governance-sensitive.
 
 ## Open questions
 
-- Is dual ID necessary for every note or only governed/cross-system notes?
-- Should `domain` be required on project-local operational planning notes?
-- Should summary remain in frontmatter, body, or both?
-- Which exact date-time format is canonical?
-- What is the final lifecycle state machine?
+- Exact `pipeline_stage` enum for v0.2.
+- Whether `confidence` needs an `unknown` value.
+- Whether source URLs should remain after stable source IDs are assigned.
+- When unknown fields should switch from warning to error.
+- Whether optional readable aliases become necessary after real authoring.
 
 ## Related files
 
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `05-specs/kaizen-note-type-registry.md`
 - `05-specs/kaizen-validation-gate-spec.md`
 - `05-specs/postgres-observatory-authority.md`

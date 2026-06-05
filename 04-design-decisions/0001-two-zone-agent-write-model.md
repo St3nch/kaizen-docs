@@ -1,8 +1,10 @@
-# Decision 0001 — Two-Zone Agent Write Model
+# Decision 0001 - Two-Zone Agent Write Model
 
-Status: proposed
+Status: accepted
 Date: 2026-06-03
+Accepted: 2026-06-04
 Related research: `03-research-results/001-hermes-agent-boundaries-claude-summary.md`
+Related resolution: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 
 ## Context
 
@@ -12,70 +14,74 @@ The Hermes boundary research strongly recommends separating agent-writable stagi
 
 ## Decision
 
-Kaizen should adopt a two-zone write model:
+Kaizen adopts a two-zone write model:
 
-1. **Staging zone** — agent-writable draft space for raw captures, summaries, proposals, validation reports, and test writes.
-2. **Canonical zone** — human-governed source-of-truth space where accepted project docs, specs, decisions, and handoffs live.
+1. **Staging zone** - agent-writable draft space for captures, summaries, proposals, validation reports, and test writes.
+2. **Canonical zone** - human-governed source-of-truth space where accepted project intelligence lives.
 
-Hermes may write only to approved staging zones. Canonical content may be changed only through a promotion process that includes validation and human approval.
+Hermes may write only to an approved sibling staging root. Canonical content may change only through a human-controlled promotion workflow that includes deterministic validation and an append-only promotion event.
+
+Recommended initial layout:
+
+```text
+C:\dev\kaizen-vault
+C:\dev\kaizen-staging
+```
+
+The staging folder is not required to be its own Git repository.
 
 ## Why
 
-This model makes the safe behavior structural instead of relying on prompt obedience.
+This model makes safe behavior structural instead of relying on prompt obedience.
 
 It supports:
 
 - reversible draft creation
 - deterministic validation before acceptance
 - clear audit trails
-- human control over doctrine
+- human control over authority
 - safer agent experimentation
-- easier rollback
+- easier rollback and containment
+
+## Required enforcement
+
+Before Hermes receives write access, Kaizen must verify:
+
+- the write root is limited to the sibling staging folder
+- absolute paths outside staging fail
+- path traversal fails
+- symlink/junction escape fails or is prevented by the wrapper
+- canonical content remains read-only to Hermes
+- failed boundary attempts are logged
+
+If Hermes cannot enforce the root directly, Kaizen must wrap file operations in a tool that does.
 
 ## Consequences
 
 ### Enables
 
-- Agent drafting without granting source-of-truth authority
-- Validation gates before canonical promotion
-- Cleaner audit trails
-- Safer Hermes onboarding
+- agent drafting without source-of-truth authority
+- validation gates before canonical promotion
+- cleaner audit trails
+- safer Hermes onboarding
 
 ### Prevents
 
-- Silent mutation of canonical files
-- Agent-created doctrine
-- Direct overwrite of accepted specs/decisions
-- Confusing draft material with accepted truth
+- direct agent mutation of canonical notes
+- agent-created authority
+- silent overwrite of accepted decisions/specs
+- staging content appearing canonical by proximity
 
 ### Costs
 
-- Adds a promotion step
-- Requires validation scripts
-- Requires clear folder ownership rules
-- Requires humans to review promoted material
-
-## Proposed folder implications
-
-For the future vault, candidate staging folders may include:
-
-```text
-_inbox/
-_drafts/
-_agent-staging/
-```
-
-For this docs repo, staging should be introduced only when needed, not prebuilt without use.
-
-## Open questions
-
-- What exact staging folder names should the future vault use?
-- Should research results land in staging first, or can they enter `03-research-results/` as evidence directly?
-- Should the docs repo and future vault use the same staging conventions?
-- What promotion metadata should be required?
+- adds a promotion step
+- requires validation and promotion tooling
+- requires separate root management
+- requires human review
 
 ## Related files
 
-- `07-hermes/hermes-permission-matrix.md`
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `05-specs/staging-and-promotion-workflow.md`
 - `07-hermes/hermes-write-access-preconditions.md`
 - `05-specs/kaizen-validation-gate-spec.md`

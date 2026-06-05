@@ -1,7 +1,8 @@
 # Decision 0002 — Search-Before-Create and Diff-Before-Write
 
-Status: proposed
+Status: accepted
 Date: 2026-06-03
+Accepted: 2026-06-04
 Related research: `03-research-results/001-hermes-agent-boundaries-claude-summary.md`
 
 ## Context

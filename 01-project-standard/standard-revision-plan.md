@@ -1,11 +1,11 @@
 # Kaizen Project Standard Revision Plan
 
-Status: draft
+Status: active
 Date: 2026-06-04
 
 ## Purpose
 
-Define how the original Kaizen Project Standard will be revised without silently turning research and draft specs into accepted doctrine.
+Define how the original Kaizen Project Standard will be revised into v0.2 without silently turning research or implementation assumptions into doctrine.
 
 ## Current baseline
 
@@ -19,9 +19,9 @@ The original standard remains the baseline concept document. It established:
 - frontier models for reasoning-heavy audits and architecture
 - implementation-ready task packets as the primary pipeline output
 
-## Proposed revision inputs
+## Accepted foundation decisions
 
-The next standard revision should evaluate these proposed decisions:
+The following decisions are now accepted inputs to v0.2:
 
 - `04-design-decisions/0001-two-zone-agent-write-model.md`
 - `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
@@ -29,43 +29,79 @@ The next standard revision should evaluate these proposed decisions:
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
 - `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 
-It should also evaluate these draft specs:
+## Active v0.2 planning specs
 
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-note-type-registry.md`
 - `05-specs/postgres-observatory-authority.md`
 - `05-specs/kaizen-validation-gate-spec.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
+- `05-specs/staging-and-promotion-workflow.md`
 
-## Required decisions before v0.2
+## Resolved foundation questions
 
-1. Final `status`, `review_status`, and `authority` lifecycle values and transitions.
-2. Whether every note requires both a stable human ID and UUID.
-3. Whether `domain` is universal or conditional.
-4. Internal link convention.
-5. Staging location and promotion flow.
-6. Promotion event storage and audit evidence.
-7. Initial note-type set.
-8. Initial required field set by note type.
-9. Plugin install/defer policy.
-10. Whether proposed architecture decisions become accepted.
+The following are resolved for v0.2:
+
+1. Lifecycle axes and enum values.
+2. One immutable prefixed ULID note ID; no second UUID.
+3. `project` required; `domain` optional; `subdomain` deferred.
+4. Stable IDs in frontmatter relationships and relative Markdown links in bodies.
+5. Sibling staging folder outside the canonical vault.
+6. Append-only JSONL promotion events.
+7. Nine initial note types.
+8. Seven universal required frontmatter fields plus type-specific fields.
+9. Durable agent provenance and transient `validation_status`.
+10. Raw Markdown canonical, API-only structured-data access, and hammer gates.
+
+## Remaining decisions before v0.2 draft
+
+1. Final `pipeline_stage` enum.
+2. Exact canonical project folder placement for the nine initial types.
+3. Canonical vault root name/path convention independent of local Windows paths.
+4. Promotion-log JSON Schema and event action vocabulary.
+5. ULID generation command and machine-readable type-prefix registry.
+6. Plugin install/defer policy in the rewritten standard.
+7. Which `.obsidian` configuration files are intentionally version-controlled.
+8. Whether source URLs remain after stable source IDs are assigned.
+9. Initial private-data scanning and raw-data size thresholds.
+10. Whether current-state notes are included in future Qdrant indexing.
 
 ## Revision method
 
-1. Review each proposed decision individually.
-2. Accept, reject, or revise each decision explicitly.
-3. Resolve conflicts between the original standard and accepted decisions.
+1. Import the full original standard without reconstructing it from memory.
+2. Reconcile it against accepted Decisions 0001-0007.
+3. Resolve the remaining v0.2 decisions listed above.
 4. Produce a complete Kaizen Project Standard v0.2 draft.
-5. Audit v0.2 against research summaries and Veda-derived governance patterns.
-6. Accept v0.2 only after human review.
-7. Preserve the original standard in Git history or archive when superseded.
+5. Audit v0.2 against the research summaries and Veda-derived governance patterns.
+6. Correct contradictions and missing boundaries.
+7. Accept v0.2 only after explicit human review.
+8. Preserve the original standard in Git history or archive when superseded.
 
-## Non-goal
+## Non-goals
 
-Do not implement the vault, Postgres Observatory, Qdrant index, or Hermes write workflow as part of the standard revision itself.
+The v0.2 standard revision does not implement:
 
-The standard defines the governed plan. Implementation follows only after the plan is accepted.
+- the production Obsidian vault
+- Qdrant
+- the Postgres Observatory
+- Hermes write access
+- validation code
+- promotion tooling
+- source ingestion automation
+
+The standard defines the governed plan. Implementation follows only after the plan is accepted and task-packeted.
+
+## Next recommended artifact
+
+After importing the original baseline, create:
+
+```text
+01-project-standard/kaizen-project-standard-v0.2-draft.md
+```
+
+Do not overwrite or supersede the baseline placeholder until the v0.2 draft has passed audit and human approval.
 
 ## Related files
 

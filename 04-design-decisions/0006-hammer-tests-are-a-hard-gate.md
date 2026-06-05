@@ -1,7 +1,8 @@
 # Decision 0006 - Hammer Tests Are a Hard Gate
 
-Status: proposed
+Status: accepted
 Date: 2026-06-04
+Accepted: 2026-06-04
 Related research: `03-research-results/005-veda-db-governance-hammer-patterns-claude-summary.md`
 
 ## Context

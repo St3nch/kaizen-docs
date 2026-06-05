@@ -1,7 +1,8 @@
 # Decision 0003 - Raw Markdown Is Canonical
 
-Status: proposed
+Status: accepted
 Date: 2026-06-04
+Accepted: 2026-06-04
 Related research: `03-research-results/003-obsidian-agent-readable-infrastructure-gpt-summary.md`
 
 ## Context
@@ -44,11 +45,14 @@ Plugin-generated or rendered state is non-canonical unless the same information 
 - Templates must produce valid static Markdown.
 - Validation scripts enforce schema, links, and boundaries.
 
+## Resolved link rule
+
+Canonical body links use relative Markdown links. Frontmatter relationships use stable Kaizen IDs. Wikilinks may appear in staging but must be normalized or rejected before promotion.
+
 ## Open questions
 
-- Standardize Wikilinks or Markdown links as the default internal link form.
 - Decide which `.obsidian` configuration files are intentionally versioned.
-- Decide whether summary is canonical in frontmatter, body, or both.
+- Define any approved aliases for required body section headings.
 
 ## Related files
 

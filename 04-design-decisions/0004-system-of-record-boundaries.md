@@ -1,7 +1,8 @@
 # Decision 0004 - System-of-Record Boundaries
 
-Status: proposed
+Status: accepted
 Date: 2026-06-04
+Accepted: 2026-06-04
 Related research:
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`
 - `03-research-results/005-veda-db-governance-hammer-patterns-claude-summary.md`
@@ -12,7 +13,7 @@ Kaizen is evolving beyond an Obsidian-only design. Future semantic retrieval and
 
 ## Decision
 
-Kaizen should adopt these system-of-record boundaries:
+Kaizen adopts these system-of-record boundaries:
 
 | Layer | Owns | Must not own |
 |---|---|---|
@@ -36,6 +37,12 @@ structured observation in Postgres
 -> accepted decision/spec/task packet
 ```
 
+## Resolved boundary clarifications
+
+- Promotion events begin as append-only JSONL in the canonical vault repository and may later move to Postgres operational governance.
+- `current-state` notes are human-readable planning snapshots, not live operational state.
+- Live jobs, runs, queues, measurements, costs, and automation state belong in Postgres when implemented.
+
 ## Consequences
 
 - No content has two canonical homes.
@@ -48,11 +55,12 @@ structured observation in Postgres
 
 - Exact shape and lifecycle of Observatory result summaries.
 - Raw payload storage and retention location.
-- Whether promotion events are stored in Markdown, Postgres, or both.
-- Whether current project state is purely Markdown snapshot or partly operational state.
+- Exact Postgres retention, backup, and recovery posture.
 
 ## Related files
 
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `05-specs/postgres-observatory-authority.md`
 - `05-specs/kaizen-field-registry.md`
+- `05-specs/staging-and-promotion-workflow.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
