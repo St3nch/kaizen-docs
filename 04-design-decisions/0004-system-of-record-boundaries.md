@@ -3,6 +3,7 @@
 Status: accepted
 Date: 2026-06-04
 Accepted: 2026-06-04
+Amended by: `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md`
 Related research:
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`
 - `03-research-results/005-veda-db-governance-hammer-patterns-claude-summary.md`
@@ -18,13 +19,15 @@ Kaizen adopts these system-of-record boundaries:
 | Layer | Owns | Must not own |
 |---|---|---|
 | Markdown / Obsidian | project intelligence, interpretations, claims, decisions, specs, audits, handoffs | raw/bulk operational observations |
-| Postgres Observatory | observations, jobs, runs, costs, logs, provenance, governed result summaries | canonical project narrative or doctrine |
+| Operational Postgres database | structured operational records assigned to governed domains, including observations, jobs, runs, costs, logs, provenance, and governed result summaries | canonical project narrative or doctrine |
 | Qdrant | no canonical domain; rebuildable semantic index over approved Markdown | unique truth, private/customer data, direct agent-authored state |
 | Hermes / agents | no canonical domain; draft, search, lint, package, propose | approval, promotion, direct database or index mutation |
 
 Qdrant must be rebuildable from canonical Markdown.
 
 Postgres is not rebuildable from Markdown. It is the operational source of truth for the structured records it owns and therefore requires backups, recovery, retention, migrations, and schema authority.
+
+The Observatory is one bounded intelligence and analysis domain within the Operational Postgres database. It is not the name or owner of the entire structured operational layer. Initial planning domains are defined by Decision 0009.
 
 ## Promotion flow
 
@@ -53,14 +56,15 @@ structured observation in Postgres
 
 ## Open questions
 
-- Exact shape and lifecycle of Observatory result summaries.
+- Exact shape and lifecycle of Observatory result summaries within the broader Operational Postgres database.
 - Raw payload storage and retention location.
 - Exact Postgres retention, backup, and recovery posture.
 
 ## Related files
 
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
-- `05-specs/postgres-observatory-authority.md`
+- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/staging-and-promotion-workflow.md`
 - `05-specs/kaizen-hammer-test-strategy.md`

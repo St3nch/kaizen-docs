@@ -93,6 +93,6 @@ Markdown should reference stable result IDs and contain interpretation, claims, 
 
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-note-type-registry.md`

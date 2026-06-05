@@ -119,8 +119,8 @@ It includes continuous external and operational intelligence, cross-project know
 - `ROADMAP.md`
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
-- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - proposed boundary correction
-- `05-specs/postgres-observatory-authority.md`
+- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted boundary decision
+- `05-specs/operational-postgres-authority.md`
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`
 
 ## Required work
@@ -151,9 +151,9 @@ Claude's audit is evidence, not doctrine. The project steward adopts the followi
 - Create a concise Kaizen reconciliation using `adopt`, `modify`, `reject`, and `defer`.
 - Do not promote Claude's recommendations directly into accepted doctrine.
 
-### Step 3 - Resolve the Operational Postgres and Observatory boundary
+### Step 3 - Resolve the Operational Postgres and Observatory boundary - complete
 
-- Draft a new decision that establishes the broader Operational Postgres database and the Observatory as one bounded domain within it.
+- Decision 0009 establishes the broader Operational Postgres database and the Observatory as one bounded domain within it.
 - Treat the proposed domains as initial planning boundaries, not permanent physical schemas:
 
 ```text
@@ -165,8 +165,8 @@ audit
 reference
 ```
 
-- Amend or supersede the affected portion of Decision 0004 through the accepted decision process; do not silently rewrite accepted doctrine.
-- After the decision is accepted, revise or split `05-specs/postgres-observatory-authority.md` into the appropriate database-wide and Observatory-domain authority documents.
+- Decision 0009 explicitly amends the affected terminology and ownership scope in Decision 0004.
+- After the decision is accepted, revise or split `05-specs/operational-postgres-authority.md` into the appropriate database-wide and Observatory-domain authority documents.
 
 ### Step 4 - Make the feedback loops operationally explicit
 
@@ -681,7 +681,7 @@ Material governance changes belong in the appropriate decision or specification 
 
 1. Repair the corrupted field-registry and validation-gate tokens.
 2. Preserve Claude's audit in `03-research-results/` and write the Kaizen reconciliation.
-3. Review and accept, revise, or reject proposed Decision 0009 for the Operational Postgres and Observatory boundary.
+3. Review the Operational Postgres reconciliation and begin Research Batch A: agent access and write safety.
 4. Add the implementation-return feedback path to the Phase 4 dry-run requirements and Phase 5 standard requirements.
 5. Review the full planning diff and create a clean Git checkpoint.
 6. Run Research Batch A before any Hermes write-access test or implementation-roadmap work.

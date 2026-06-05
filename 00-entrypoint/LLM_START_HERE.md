@@ -18,7 +18,7 @@ This repository is **not** the future Obsidian vault. It is the design workspace
 
 ```text
 Markdown / Obsidian = canonical project intelligence
-Postgres Observatory = operational source of truth for observations, jobs, runs, costs, and logs
+Operational Postgres database = operational source of truth for governed structured records; Observatory is one bounded intelligence domain
 Qdrant = rebuildable semantic retrieval index over approved Markdown
 Hermes / agents = constrained clerks through approved typed tools
 Humans = authority-bearing review, approval, and promotion
@@ -33,12 +33,12 @@ Humans = authority-bearing review, approval, and promotion
 - Baseline-to-v0.2 reconciliation map: active draft
 - Future canonical vault: not created yet
 - Sibling staging root: design accepted, not created for production use yet
-- Postgres Observatory: not implemented
+- Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: designated Kaizen agent clerk; canonical read/search is required; write access remains unapproved until staging boundary tests pass
 - Decisions 0001 through 0007: accepted
 - Decision 0008 operating conventions: proposed and awaiting review
-- Decision 0009 Operational Postgres/Observatory boundary: proposed and awaiting review
+- Decision 0009 Operational Postgres/Observatory boundary: accepted
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
 - Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
@@ -63,14 +63,14 @@ Read in this order unless the user gives a narrower task:
 12. `04-design-decisions/0005-api-only-structured-data-access.md`
 13. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
 14. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
-- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - proposed, not accepted
+- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted
 15. `05-specs/kaizen-field-registry.md`
 16. `05-specs/kaizen-note-type-registry.md`
 17. `05-specs/kaizen-id-and-prefix-registry.md`
 18. `05-specs/staging-and-promotion-workflow.md`
 19. `05-specs/promotion-event-schema.md`
 20. `05-specs/kaizen-validation-gate-spec.md`
-21. `05-specs/postgres-observatory-authority.md`
+21. `05-specs/operational-postgres-authority.md`
 22. `05-specs/kaizen-hammer-test-strategy.md`
 23. `07-hermes/hermes-permission-matrix.md`
 24. `07-hermes/hermes-write-access-preconditions.md`

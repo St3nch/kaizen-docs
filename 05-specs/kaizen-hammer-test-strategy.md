@@ -123,5 +123,5 @@ A material change inside reviewed paths or interfaces stales the approval. An un
 ## Related files
 
 - `05-specs/kaizen-validation-gate-spec.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `07-hermes/hermes-permission-matrix.md`

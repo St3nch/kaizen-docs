@@ -40,7 +40,7 @@ The project steward independently verified these findings after receiving Claude
 - The working tree is intentionally dirty and still based on commit `08233d52c94f2f056410ab94beb3ef24c8c15e70`.
 - Corrupted control characters and truncated Markdown tokens existed in `05-specs/kaizen-field-registry.md` and `05-specs/kaizen-validation-gate-spec.md`; they were introduced during recent PowerShell edits and require repair before commit.
 - `ROADMAP.md` incorrectly marked both Phase 2 and Phase 3 active; Phase 3 must remain ready and dependent on Phase 2.
-- `00-entrypoint/LLM_START_HERE.md`, accepted Decision 0004, and `05-specs/postgres-observatory-authority.md` still use the broader term `Postgres Observatory` where the intended vision distinguishes an Operational Postgres database from an Observatory domain.
+- At audit time, `00-entrypoint/LLM_START_HERE.md`, accepted Decision 0004, and the former `05-specs/postgres-observatory-authority.md` used the broader term `Postgres Observatory`. This finding was resolved by accepted Decision 0009 and the renamed `05-specs/operational-postgres-authority.md`.
 
 ## Adopt
 
@@ -266,7 +266,7 @@ Only Phase 2 is active. Phase 3 is ready and depends on Phase 2 completion.
 - `ROADMAP.md`
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - a future Operational Postgres and Observatory boundary decision
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-validation-gate-spec.md`
 - `05-specs/kaizen-note-type-registry.md`

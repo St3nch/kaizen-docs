@@ -71,6 +71,6 @@ Every important capability needs valid-path and invalid-path coverage. High-risk
 ## Related files
 
 - `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `07-hermes/hermes-permission-matrix.md`

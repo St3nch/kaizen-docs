@@ -303,7 +303,7 @@ These remain deferred until concrete workflow friction proves need:
 | `roadmap` | current-state can carry now/next/later until a separate roadmap earns itself |
 | `raw-source` | no governed ingestion system exists yet |
 | `source-import-map` | add when the first real migration/import workflow exists |
-| `observatory-insight` | Postgres Observatory does not exist yet |
+| `observatory-insight` | Operational Postgres database and Observatory domain do not exist yet |
 | `opportunity` | can initially be represented through claims and proposed decisions |
 | `domain-note` | cross-project domain governance has not yet been proven |
 | `promotion-record` | promotion events use append-only JSONL |

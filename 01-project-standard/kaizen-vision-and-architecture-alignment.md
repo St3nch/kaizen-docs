@@ -629,7 +629,7 @@ Those require research, decisions, specifications, and later implementation plan
 2. The current document-contract batch remains valuable but must be reviewed against this broader vision.
 3. The planning roadmap must be revised so this alignment and research phase precede final v0.2 standard acceptance.
 4. The entrypoint must use this document as a read-first source.
-5. "Postgres Observatory" terminology must be corrected to distinguish the broader Operational Postgres database from the Observatory domain.
+5. Decision 0009 corrects the former `Postgres Observatory` terminology by distinguishing the broader Operational Postgres database from the Observatory domain.
 6. Claude should next perform an independent research-gap and architecture-alignment review.
 7. No implementation roadmap should be accepted until that research and reconciliation are complete.
 
@@ -640,7 +640,7 @@ Those require research, decisions, specifications, and later implementation plan
 - `01-project-standard/standard-revision-plan.md`
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-validation-gate-spec.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `07-hermes/hermes-permission-matrix.md`

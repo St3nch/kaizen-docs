@@ -65,7 +65,7 @@ It should remain proposed until human review and, ideally, Claude's independent 
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-note-type-registry.md`
 - `05-specs/kaizen-id-and-prefix-registry.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-validation-gate-spec.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `05-specs/staging-and-promotion-workflow.md`
@@ -144,7 +144,7 @@ The v0.2 standard revision does not implement:
 
 - the production Obsidian vault
 - Qdrant
-- the Postgres Observatory
+- the Operational Postgres database and Observatory domain
 - Hermes write access
 - validation code
 - promotion tooling

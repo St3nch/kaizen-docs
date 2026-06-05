@@ -188,4 +188,4 @@ validation_status: pending | passed | failed
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `05-specs/kaizen-note-type-registry.md`
 - `05-specs/kaizen-validation-gate-spec.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`

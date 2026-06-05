@@ -79,5 +79,5 @@ Hermes must never receive:
 
 - `07-hermes/hermes-permission-matrix.md`
 - `07-hermes/hermes-write-access-preconditions.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-hammer-test-strategy.md`

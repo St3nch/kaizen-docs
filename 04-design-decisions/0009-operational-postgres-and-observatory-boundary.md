@@ -1,7 +1,8 @@
 # Decision 0009 - Operational Postgres and Observatory Boundary
 
-Status: proposed
+Status: accepted
 Date: 2026-06-05
+Accepted: 2026-06-05
 Related accepted decision:
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 Related evidence and planning:
@@ -9,7 +10,7 @@ Related evidence and planning:
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`
 - `03-research-results/005-veda-db-governance-hammer-patterns-claude-summary.md`
 - `03-research-results/007-kaizen-vision-architecture-research-gap-audit-claude-summary.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `ROADMAP.md`
 
 ## Context
@@ -46,7 +47,7 @@ Decision 0004 remains accepted for its core system-of-record rule:
 - Qdrant is a rebuildable semantic index and owns no unique truth.
 - agents own no canonical domain.
 
-This decision proposes to supersede only the terminology and ownership scope implied by the phrase `Postgres Observatory` in Decision 0004.
+This decision supersedes only the terminology and ownership scope implied by the phrase `Postgres Observatory` in Decision 0004.
 
 ## Initial planning domains
 
@@ -213,19 +214,19 @@ These risks are addressed by treating the domain list as planning boundaries and
 
 ## Supersedence and amendment effect
 
-If accepted, this decision supersedes only the following portion of Decision 0004:
+This accepted decision supersedes only the following portion of Decision 0004:
 
 > the use of `Postgres Observatory` as the name and implied owner of the entire structured operational layer.
 
 Decision 0004's broader system-of-record rules remain accepted.
 
-After acceptance, affected current guidance and draft specifications should be updated through a reviewable reconciliation batch, including:
+Affected current guidance and draft specifications must be updated through a reviewable reconciliation batch, including:
 
 - `00-entrypoint/LLM_START_HERE.md`
 - `01-project-standard/baseline-v0.2-reconciliation-map.md`
 - `01-project-standard/standard-revision-plan.md`
 - `04-design-decisions/0004-system-of-record-boundaries.md` through an explicit amendment or supersedence note
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `05-specs/kaizen-note-type-registry.md`
 
 Historical research and prompts may retain original terminology when clearly identified as historical evidence.
@@ -275,5 +276,5 @@ This decision is ready for acceptance only when the human reviewer confirms that
 - `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
 - `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 - `03-research-results/007-kaizen-vision-architecture-research-gap-audit-claude-summary.md`
-- `05-specs/postgres-observatory-authority.md`
+- `05-specs/operational-postgres-authority.md`
 - `ROADMAP.md`
