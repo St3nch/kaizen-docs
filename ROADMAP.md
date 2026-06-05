@@ -119,6 +119,7 @@ It includes continuous external and operational intelligence, cross-project know
 - `ROADMAP.md`
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
+- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - proposed boundary correction
 - `05-specs/postgres-observatory-authority.md`
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`
 
@@ -680,7 +681,7 @@ Material governance changes belong in the appropriate decision or specification 
 
 1. Repair the corrupted field-registry and validation-gate tokens.
 2. Preserve Claude's audit in `03-research-results/` and write the Kaizen reconciliation.
-3. Draft the Operational Postgres and Observatory boundary decision.
+3. Review and accept, revise, or reject proposed Decision 0009 for the Operational Postgres and Observatory boundary.
 4. Add the implementation-return feedback path to the Phase 4 dry-run requirements and Phase 5 standard requirements.
 5. Review the full planning diff and create a clean Git checkpoint.
 6. Run Research Batch A before any Hermes write-access test or implementation-roadmap work.

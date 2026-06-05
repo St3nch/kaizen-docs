@@ -38,6 +38,7 @@ Humans = authority-bearing review, approval, and promotion
 - Hermes Desktop / Hermes Agent: designated Kaizen agent clerk; canonical read/search is required; write access remains unapproved until staging boundary tests pass
 - Decisions 0001 through 0007: accepted
 - Decision 0008 operating conventions: proposed and awaiting review
+- Decision 0009 Operational Postgres/Observatory boundary: proposed and awaiting review
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
 - Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
@@ -62,6 +63,7 @@ Read in this order unless the user gives a narrower task:
 12. `04-design-decisions/0005-api-only-structured-data-access.md`
 13. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
 14. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
+- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - proposed, not accepted
 15. `05-specs/kaizen-field-registry.md`
 16. `05-specs/kaizen-note-type-registry.md`
 17. `05-specs/kaizen-id-and-prefix-registry.md`
