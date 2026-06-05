@@ -95,7 +95,7 @@ Definitions:
 - `proposed` - submitted as a candidate governing position
 - `accepted` - human-approved and binding within its defined scope
 
-Evidence is represented by note type, sources, and confidence rather than an authority value.
+Evidence is represented by note type, sources, and confidence rather than an authority value. Audit notes always use `authority: none`; their force comes from a human verdict and promotion evidence.
 
 Only humans may set `accepted`.
 
@@ -113,11 +113,13 @@ Only humans may set `accepted`.
 | `related_claims` | decisions, specs, audits, other claims | list of stable Kaizen IDs |
 | `related_decisions` | specs and audits | list of stable Kaizen IDs |
 | `related_specs` | audits and task packets | list of stable Kaizen IDs |
+| `primary_spec` | task packets | exactly one stable Kaizen spec ID; must also appear in `related_specs` when that list is present |
+| `audit_verdict` | audits after human verdict | enum: `pass`, `pass-with-notes`, `fail`, `stale`; human-controlled |
 | `observatory_result_ids` | future Observatory-derived notes | stable Postgres result IDs; deferred until Observatory exists |
 | `supersedes` | claims, decisions, specs | stable Kaizen ID; governance-sensitive |
 | `superseded_by` | claims, decisions, specs | stable Kaizen ID; governance-sensitive |
 | `conflict_with` | claims and audits | stable Kaizen ID list for explicit unresolved conflicts |
-| `approval_event_id` | promoted governed notes | promotion-log event ID |
+| `approval_event_id` | promoted governed notes | latest authority-bearing promotion-event ID; event history remains append-only in the governance log |
 
 ## Agent provenance
 

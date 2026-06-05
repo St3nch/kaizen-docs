@@ -14,7 +14,7 @@ Related decisions:
 
 Define what must exist before Hermes receives write access to any Kaizen workspace.
 
-Hermes may be useful before write access by operating read-only, producing drafts in chat, or helping design validation and test tooling.
+Hermes will be used with the Kaizen vault. Before write access, it operates through reliable canonical read/search access, drafts in chat or other non-canonical output, and helps exercise validation and test tooling.
 
 ## Current status
 
@@ -29,7 +29,7 @@ C:\dev\kaizen-vault
 C:\dev\kaizen-staging
 ```
 
-Hermes may eventually receive write access only to the staging root. Canonical content remains read-only.
+Hermes receives write access only to the staging root after every required boundary control passes. Canonical content remains read-only to Hermes.
 
 ## Minimum preconditions
 

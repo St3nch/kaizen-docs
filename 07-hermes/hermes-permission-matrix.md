@@ -12,9 +12,9 @@ This document is a draft policy. It does not grant Hermes write access by itself
 
 ## Core principle
 
-Hermes is a drafting and mechanical-work agent, not an authority-bearing agent.
+Hermes is Kaizen's designated agent clerk and a first-class consumer of the canonical vault. It is a drafting and mechanical-work agent, not an authority-bearing agent.
 
-Hermes may produce evidence, drafts, diffs, summaries, validation reports, and proposals. It must not decide what becomes doctrine, what passes audit, or what is implementation-ready.
+Kaizen must be designed so Hermes can reliably read, search, trace relationships, and prepare governed drafts. Hermes may produce evidence, drafts, diffs, summaries, validation reports, and proposals. It must not decide what becomes doctrine, issue an audit verdict, or mark work implementation-ready.
 
 ## Authority levels
 
@@ -61,7 +61,7 @@ Hermes must not perform these actions. These must be blocked by configuration, p
 | Create or modify accepted specs | Specs require design judgment and review |
 | Create or modify accepted decisions | Decisions are doctrine-bearing |
 | Change Kaizen source-of-truth rules | Governance belongs to human/frontier review |
-| Mark audits as passed or failed | Audit verdicts require judgment |
+| Issue or change audit verdicts | `pass`, `pass-with-notes`, `fail`, and `stale` are human judgments |
 | Mark task packets implementation-ready | This is an authority-bearing transition |
 | Delete canonical notes | Destructive and irreversible without review |
 | Move or rename canonical notes | Can break links and history |
@@ -89,8 +89,8 @@ Hermes must not perform these actions. These must be blocked by configuration, p
 |---|---:|---:|---:|
 | Read/search | Owns | Optional | Not required |
 | Raw source draft | Owns | Optional | Not required |
-| Source summary draft | Owns | Reviews if high-stakes | Optional |
-| Claim extraction | Drafts | Reviews if high-stakes | Optional |
+| Source summary draft | Owns in staging; separates evidence and interpretation | Reviews if high-stakes | Optional |
+| Claim extraction | Drafts one core assertion with supporting/conflicting evidence | Reviews if high-stakes | Optional |
 | Log append | Owns | Not required | Not required |
 | Index regeneration | Owns | Not required | Optional |
 | Validation checks | Runs scripts | Not required | Optional |

@@ -10,6 +10,8 @@ Define the safe path from agent-created drafts to canonical Kaizen notes.
 
 The design goal is structural separation: agents may draft in staging, but only a human-controlled promotion operation may write canonical content.
 
+Hermes is the designated Kaizen agent clerk and a required vault consumer. Kaizen therefore provides reliable canonical read/search access from the beginning while keeping Hermes writes staging-only until the boundary controls and tests pass.
+
 ## Folder boundary
 
 Recommended initial layout:
@@ -197,7 +199,7 @@ Examples:
 - unresolved link or ID: stop
 - stale approval after content changes: stop and require review again
 
-Any content change after human review makes the approval stale unless the reviewer explicitly approves the changed diff.
+Any material content change after human review makes the approval stale unless the reviewer explicitly approves the changed diff. Exact hashes detect change; scoped review determines whether a change is material, clerical, or unrelated.
 
 ## Future Postgres migration
 

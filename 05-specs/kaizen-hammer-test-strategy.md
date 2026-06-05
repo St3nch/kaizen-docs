@@ -83,7 +83,15 @@ Known private/customer/secret patterns block promotion and indexing and create e
 
 ### HT-10 Hermes authorization boundary
 
-Forbidden tools do not exist; staging tools force staged/non-authoritative state; failed attempts are logged.
+Hermes has reliable canonical read/search access but no unapproved canonical mutation, verdict, promotion, Git, SQL, or Qdrant-write capability. Staging tools force staged/non-authoritative state; failed attempts are logged.
+
+### HT-11 Document-contract enforcement
+
+Source evidence and interpretation remain separated; claims contain one core assertion; audits reject agent-issued verdicts; task packets reject missing primary specs, validation, or completion-report sections.
+
+### HT-12 Scoped approval staleness
+
+A material change inside reviewed paths or interfaces stales the approval. An unrelated repository commit and a formatting-only change outside the reviewed boundary do not automatically stale it.
 
 ## Hammer module rules
 

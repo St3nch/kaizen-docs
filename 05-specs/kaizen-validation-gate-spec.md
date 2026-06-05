@@ -139,10 +139,11 @@ The validator enforces the requirements in `05-specs/kaizen-note-type-registry.m
 Examples:
 
 - `command-center` and `current-state` require `pipeline_stage`
-- `claim` requires `confidence` and stable source references
+- `source-summary` requires one independently governed source unit and separated evidence/interpretation sections
+- `claim` requires `confidence`, stable source references, and one core assertion
 - `spec` requires `related_decisions`
-- `audit` requires at least one governed target relationship
-- `task-packet` requires `related_specs`
+- `audit` requires at least one governed target relationship; any `audit_verdict` must be human-issued
+- `task-packet` requires `primary_spec`, runnable validation, and a completion-report section
 
 ### 8. Required body sections
 
@@ -185,7 +186,9 @@ Examples:
 - `authority: accepted` without `review_status: approved`
 - `authority: accepted` without a matching human promotion event
 - `authority: accepted` on a type that cannot carry authority
-- `task-packet` marked accepted when a related spec is not accepted
+- `task-packet` marked accepted when its primary governing spec is not approved and accepted
+- `audit_verdict` set by an agent or without a matching human promotion event
+- `audit_verdict: pass-with-notes` while blocker/major findings or promotion-required conditions remain
 
 `status: active` means usable at its current authority level and does not imply review approval.
 
@@ -287,7 +290,25 @@ Promotion and indexing fail when prohibited content is detected, including:
 
 Detection must be conservative and support reviewed false-positive overrides. Overrides require a human event and may never permit secrets into canonical content.
 
-### 19. Protected content
+### 19. Approval freshness and scoped drift
+
+Approval binds to exact reviewed content and relevant reviewed state.
+
+For governed audits and task packets, promotion validation records or verifies:
+
+- exact artifact content hash
+- validator version and validation run ID
+- governing decision/spec IDs
+- reviewed repository and ref when source-repository state is relevant
+- reviewed paths, interfaces, or schemas
+- relevant dependency versions when material
+- required hammer evidence
+
+A prior review becomes stale when changed state affects reviewed paths, in-scope files, interfaces, schemas, governing invariants, validation commands, or relevant dependencies.
+
+Unrelated commits and formatting-only changes do not automatically stale approval. Hashes detect change; a governed review determines materiality.
+
+### 20. Protected content
 
 The gate blocks unauthorized changes to:
 
@@ -307,7 +328,7 @@ The validation gate does not:
 
 - determine whether research is true
 - determine whether a design is optimal
-- issue a human audit verdict
+- issue or change a human audit verdict
 - approve authority transitions
 - replace frontier-model or human review
 - mutate Qdrant or Postgres

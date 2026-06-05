@@ -7,6 +7,8 @@ Date: 2026-06-04
 
 Define how the original Kaizen Project Standard will be revised into v0.2 without silently turning research or implementation assumptions into doctrine.
 
+Project-wide planning sequence is tracked in `ROADMAP.md`. This file remains the detailed owner for the standard-revision workstream.
+
 ## Baseline status
 
 The full original 591-line Kaizen Project Standard has now been imported exactly into:
@@ -86,25 +88,32 @@ The following are resolved for v0.2:
 11. Initial note/event prefix registry direction.
 12. Initial promotion-event action vocabulary and event contract direction.
 
-## Remaining research before v0.2 draft
+## Vision alignment dependency
 
-One major research pass remains:
+Before finalizing the document contracts or complete v0.2 standard, review and reconcile:
 
 ```text
-source-summary, claim, decision, spec, audit, and task-packet document contracts
+01-project-standard/kaizen-vision-and-architecture-alignment.md
 ```
 
-The prepared prompt is:
+The next external review should ask Claude to identify evidence gaps, contradictions, and missing research across the full intended Kaizen system. Claude's findings remain recommendations until reconciled through Kaizen decisions and specifications.
+## Document-contract research status
+
+The major document-contract research pass is complete.
+
+The Kaizen-specific adopt/modify/reject/defer disposition is recorded in:
+
+```text
+03-research-results/006-document-contract-standards-reconciliation.md
+```
+
+The original prompt remains historical provenance at:
 
 ```text
 02-research-prompts/002-document-contract-standards.md
 ```
 
-Recommended workflow:
-
-1. Claude clones/reads the repo and returns the report only.
-2. GPT independently critiques the report against accepted Kaizen constraints.
-3. Update the field registry, note-type registry, validation spec, and task-packet contract only where justified.
+It is not live doctrine and should not be re-executed by default.
 
 ## Remaining human/design decisions
 
@@ -145,20 +154,15 @@ The standard defines the governed plan. Implementation follows only after the pl
 
 ## Next recommended actions
 
-Tonight:
-
-1. Review the imported baseline and reconciliation map.
-2. Review Decision 0008 as a proposal, not accepted doctrine.
-3. Commit and push the baseline/design batch.
-
-Tomorrow:
-
-1. Run `002-document-contract-standards.md` with Claude.
-2. Paste the report back for independent critique.
-3. Reconcile the document contracts.
-4. Draft the complete v0.2 standard.
+1. Review and accept or revise the document-contract reconciliation and updated draft contracts.
+2. Dry-run one real project through the proposed Decision 0008 stages and folder placement.
+3. Accept, revise, or reject Decision 0008.
+4. Draft and audit the complete v0.2 standard.
+5. Commit and push only after the reviewed change set is approved.
 
 ## Related files
+
+- `ROADMAP.md`
 
 - `01-project-standard/kaizen-project-standard.md`
 - `01-project-standard/baseline-v0.2-reconciliation-map.md`

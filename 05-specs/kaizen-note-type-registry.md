@@ -17,11 +17,11 @@ Adding a new note type is a governed change, not an ad hoc convenience.
 | `command-center` | `cc` | curated project entrypoint and LLM orientation | read; propose edits only | review not required; no authority | exclude |
 | `overview` | `ov` | durable project purpose, scope, and orientation | draft | review not required unless promoted as governing guidance | index |
 | `current-state` | `cs` | human-readable snapshot of project position, blockers, and next move | draft | review not required by default | index selectively |
-| `source-summary` | `ss` | distilled meaning and provenance from one or more sources | draft | pending review; no authority | index |
+| `source-summary` | `ss` | evidence and interpretation from one independently governed source unit | draft | pending review; no authority | index |
 | `claim` | `clm` | discrete, testable assertion supported by sources | draft | pending review; proposed or accepted authority | index |
 | `decision` | `dec` | explicit governing choice with alternatives and consequences | draft proposal only | pending review; proposed or accepted authority | index |
 | `spec` | `spec` | implementation definition and acceptance boundaries | draft proposal only | pending review; proposed or accepted authority | index |
-| `audit` | `aud` | structured review of a claim, decision, spec, or task packet | draft findings only; never human verdict | pending review; no independent authority | index |
+| `audit` | `aud` | structured review of a claim, decision, spec, or task packet | draft evidence/findings only; never human verdict | pending review; authority remains none | index |
 | `task-packet` | `tp` | implementation-ready handoff to a coding agent | draft from approved spec | pending review; proposed or accepted authority | index |
 
 ## Universal fields
@@ -187,19 +187,28 @@ A task packet is implementation-ready only when:
 
 ### `source-summary`
 
+Required:
+
 - `## Summary`
-- `## Key points`
+- `## Extracted Evidence`
+- `## Interpretation`
 - `## Provenance`
 - `## Caveats`
-- `## Project relevance`
+
+Conditional:
+
+- `## Project Relevance` when the source's current project use is not obvious from the summary
+
+A source summary covers one independently governed source unit. Evidence items identify their type and a precise locator when available. Interpretations must not be presented as extracted evidence.
 
 ### `claim`
 
 - `## Statement`
-- `## Evidence`
-- `## Confidence and caveats`
-- `## Sources`
-- `## Conflicts` when applicable
+- `## Supporting Evidence`
+- `## Conflicting Evidence`
+- `## Confidence and Caveats`
+
+A claim contains one core evidence-checkable assertion. `## Conflicting Evidence` remains present even when no conflicting evidence is currently known. Confidence must include a rationale and must not be calculated from source count alone.
 
 ### `decision`
 
@@ -212,33 +221,68 @@ A task packet is implementation-ready only when:
 
 ### `spec`
 
+Required:
+
 - `## Goal`
-- `## Context`
 - `## Scope`
-- `## Non-goals`
+- `## Non-Goals`
 - `## Requirements`
 - `## Constraints`
-- `## Acceptance criteria`
-- `## Open questions`
+- `## Acceptance Criteria`
+- `## Open Questions`
+
+Conditional when applicable:
+
+- `## Context`
+- `## Interfaces and Data`
+- `## Failure Behavior`
+- `## Migrations`
+- `## Test Strategy`
+- `## Dependencies`
+- `## Examples`
+
+A spec must not introduce hidden governing decisions. Accepted authority does not by itself make a spec task-packet-ready. Unresolved correctness questions block readiness.
 
 ### `audit`
 
 - `## Scope`
-- `## Evidence reviewed`
+- `## Evidence Reviewed`
 - `## Findings`
-- `## Contradictions and gaps`
+- `## Contradictions and Gaps`
 - `## Recommendation`
-- `## Human verdict`
+- `## Human Verdict`
+
+Finding severities are `blocker`, `major`, `minor`, and `info`.
+
+Human verdicts are `pass`, `pass-with-notes`, `fail`, and `stale`. `pass-with-notes` may contain only non-blocking observations. Any unmet condition required before promotion means `fail`.
 
 ### `task-packet`
 
+Required:
+
 - `## Objective`
-- `## Read first`
-- `## Context pack`
+- `## Read First`
+- `## Scope`
+- `## Non-Scope`
+- `## Implementation Requirements`
 - `## Constraints`
-- `## Output location`
-- `## Acceptance criteria`
-- `## Do not touch`
+- `## Validation`
+- `## Acceptance Criteria`
+- `## Completion Report`
+
+Conditional when applicable:
+
+- `## Context Pack`
+- `## Allowed Changes`
+- `## Do Not Touch`
+- `## Output Location`
+- `## Interfaces and Data`
+- `## Migrations`
+- `## Documentation Updates`
+- `## Rollback and Recovery`
+- `## Dependencies and Blockers`
+
+A task packet identifies exactly one primary governing spec. Additional related specs may provide supporting constraints. Conditional sections become required when the implementation touches their concern.
 
 ## Authority and review rules
 
@@ -281,7 +325,7 @@ Adding a note type requires:
 ## Open questions
 
 - Final `pipeline_stage` enum.
-- Whether source summaries should require a single primary source.
+- Exact machine representation for the independently governed source unit and its reviewed version.
 - Whether audits need a structured verdict field later.
 - When `raw-source` becomes necessary.
 - Whether current-state notes should be indexed once Qdrant exists.

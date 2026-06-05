@@ -130,6 +130,20 @@ Required:
 - `repository_state_before`
 - `repository_state_after`
 
+## Review-context rules
+
+`review_context` is required only when approval depends on repository or external implementation state. It may contain:
+
+- `governing_ids`
+- `repository`
+- `ref`
+- `reviewed_paths`
+- `reviewed_interfaces`
+- `dependency_versions`
+- `hammer_run_ids`
+
+The context must be scoped. Do not bind an approval to every unrelated repository commit.
+
 ## Path rules
 
 - `destination_path` is vault-relative and uses forward slashes.
@@ -208,7 +222,7 @@ The JSON Schema should enforce:
 
 - Exact human actor-ID format.
 - Whether `source_path` should be omitted after Postgres becomes canonical for operations.
-- Whether approval basis needs both human prose and structured audit/decision ID arrays.
+- Exact JSON Schema for scoped `review_context` and material-drift classification.
 - Exact atomic write strategy on Windows.
 - Whether amendment events require a reviewed diff artifact ID.
 

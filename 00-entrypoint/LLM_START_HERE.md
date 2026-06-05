@@ -26,20 +26,22 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Kaizen Project Standard v0.2 planning
+- Current phase: Kaizen vision and architecture alignment within Project Standard v0.2 planning
+- Planning roadmap: active at `ROADMAP.md`
+- Vision alignment: active at `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 - Original 591-line baseline: imported exactly and preserved as historical source material
 - Baseline-to-v0.2 reconciliation map: active draft
 - Future canonical vault: not created yet
 - Sibling staging root: design accepted, not created for production use yet
 - Postgres Observatory: not implemented
 - Qdrant index: not implemented
-- Hermes Desktop / Hermes Agent: installed by user, not approved for Kaizen write access
+- Hermes Desktop / Hermes Agent: designated Kaizen agent clerk; canonical read/search is required; write access remains unapproved until staging boundary tests pass
 - Decisions 0001 through 0007: accepted
 - Decision 0008 operating conventions: proposed and awaiting review
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
-- Remaining major research: document contracts for summaries, claims, decisions, specs, audits, and task packets
-- Prepared Claude prompt: `02-research-prompts/002-document-contract-standards.md`
-- Primary immediate need: complete that research, reconcile the contracts, and draft the complete v0.2 standard
+- Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
+- Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
+- Primary immediate need: review the reconciled contracts, resolve Decision 0008 through a real-project dry run, and draft the complete v0.2 standard
 - Stewardship principle: structure and automation must earn their existence
 
 ## Read-first sequence
@@ -47,30 +49,31 @@ Humans = authority-bearing review, approval, and promotion
 Read in this order unless the user gives a narrower task:
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file
-2. `01-project-standard/kaizen-project-standard.md` - imported original baseline
-3. `01-project-standard/baseline-v0.2-reconciliation-map.md` - preserve/replace/defer map
-4. `01-project-standard/standard-revision-plan.md` - current v0.2 revision path
-5. `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
-6. `04-design-decisions/0001-two-zone-agent-write-model.md`
-7. `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
-8. `04-design-decisions/0003-raw-markdown-is-canonical.md`
-9. `04-design-decisions/0004-system-of-record-boundaries.md`
-10. `04-design-decisions/0005-api-only-structured-data-access.md`
-11. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
-12. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
-13. `05-specs/kaizen-field-registry.md`
-14. `05-specs/kaizen-note-type-registry.md`
-15. `05-specs/kaizen-id-and-prefix-registry.md`
-16. `05-specs/staging-and-promotion-workflow.md`
-17. `05-specs/promotion-event-schema.md`
-18. `05-specs/kaizen-validation-gate-spec.md`
-19. `05-specs/postgres-observatory-authority.md`
-20. `05-specs/kaizen-hammer-test-strategy.md`
-21. `07-hermes/hermes-permission-matrix.md`
-22. `07-hermes/hermes-write-access-preconditions.md`
-23. `02-research-prompts/002-document-contract-standards.md` when preparing the remaining research
-24. `03-research-results/` for supporting evidence
-
+2. `01-project-standard/kaizen-vision-and-architecture-alignment.md` - central intended system vision and missing capability alignment
+3. `ROADMAP.md` - active planning roadmap and phase tracker
+4. `01-project-standard/kaizen-project-standard.md` - imported original baseline
+5. `01-project-standard/baseline-v0.2-reconciliation-map.md` - preserve/replace/defer map
+6. `01-project-standard/standard-revision-plan.md` - current v0.2 revision path
+7. `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+8. `04-design-decisions/0001-two-zone-agent-write-model.md`
+9. `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
+10. `04-design-decisions/0003-raw-markdown-is-canonical.md`
+11. `04-design-decisions/0004-system-of-record-boundaries.md`
+12. `04-design-decisions/0005-api-only-structured-data-access.md`
+13. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
+14. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
+15. `05-specs/kaizen-field-registry.md`
+16. `05-specs/kaizen-note-type-registry.md`
+17. `05-specs/kaizen-id-and-prefix-registry.md`
+18. `05-specs/staging-and-promotion-workflow.md`
+19. `05-specs/promotion-event-schema.md`
+20. `05-specs/kaizen-validation-gate-spec.md`
+21. `05-specs/postgres-observatory-authority.md`
+22. `05-specs/kaizen-hammer-test-strategy.md`
+23. `07-hermes/hermes-permission-matrix.md`
+24. `07-hermes/hermes-write-access-preconditions.md`
+25. `03-research-results/006-document-contract-standards-reconciliation.md`
+26. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -208,10 +211,12 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Remaining v0.2 work
 
-### Research still required
+### Completed research awaiting acceptance
 
 - document contracts for source summaries, claims, decisions, specs, audits, and task packets
-- objective implementation-readiness and acceptance-criteria rules
+- objective implementation-readiness, audit-verdict, approval-freshness, and acceptance-criteria rules
+
+The Kaizen disposition is recorded in `03-research-results/006-document-contract-standards-reconciliation.md`.
 
 ### Proposed conventions awaiting review
 
