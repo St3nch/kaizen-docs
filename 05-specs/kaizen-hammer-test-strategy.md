@@ -83,7 +83,7 @@ Known private/customer/secret patterns block promotion and indexing and create e
 
 ### HT-10 Hermes authorization boundary
 
-Hermes has reliable canonical read/search access but no unapproved canonical mutation, verdict, promotion, Git, SQL, or Qdrant-write capability. Staging tools force staged/non-authoritative state; failed attempts are logged.
+Hermes has reliable canonical read/search access but no unapproved canonical mutation, verdict, promotion, Git, SQL, or Qdrant-write capability. The staging-create wrapper enforces create-new behavior, final-path confinement, operating-system permissions, and append-only evidence. Relative traversal, absolute paths, UNC and extended-length forms, symbolic links, Windows junctions, overwrite attempts, and sibling-repository writes are rejected and logged.
 
 ### HT-11 Document-contract enforcement
 
@@ -93,6 +93,13 @@ Source evidence and interpretation remain separated; claims contain one core ass
 
 A material change inside reviewed paths or interfaces stales the approval. An unrelated repository commit and a formatting-only change outside the reviewed boundary do not automatically stale it.
 
+### HT-13 Promotion interruption and recovery
+
+Crash or failure is injected after intent append, temporary write, canonical installation, and completion append. Recovery produces one explicit committed, rollback, conflict, or recovery-required result without silently losing the staged artifact or overwriting divergent canonical content.
+
+### HT-14 Windows path confinement
+
+The staging wrapper rejects traversal, absolute, drive-relative, UNC, device, extended-length, symbolic-link, junction, mixed-separator, overwrite, and parent-path replacement probes. Final resolved targets remain strict descendants of the configured staging root.
 ## Hammer module rules
 
 - independently runnable from clean fixtures
@@ -123,5 +130,6 @@ A material change inside reviewed paths or interfaces stales the approval. An un
 ## Related files
 
 - `05-specs/kaizen-validation-gate-spec.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `05-specs/operational-postgres-authority.md`
 - `07-hermes/hermes-permission-matrix.md`

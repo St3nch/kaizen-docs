@@ -46,6 +46,7 @@ Hermes may not receive write access until all of the following exist.
 | v0.2 note-type registry | active draft | See `05-specs/kaizen-note-type-registry.md` |
 | Validation gate spec | active draft | See `05-specs/kaizen-validation-gate-spec.md` |
 | Staging/promotion workflow | active draft | See `05-specs/staging-and-promotion-workflow.md` |
+| Staging-write wrapper and promotion recovery | active draft | See `05-specs/staging-write-wrapper-and-promotion-recovery.md` |
 | ULID generator | missing | Required before valid note authoring |
 | Exact duplicate detection | missing | Title, summary, filename, and ID checks |
 | Broken-link checker | missing | Canonical relative Markdown links only |
@@ -53,12 +54,12 @@ Hermes may not receive write access until all of the following exist.
 | Promotion log schema | missing | JSON Schema for `_governance/promotion-log.jsonl` |
 | Audit/action log format | missing | Must record agent/model/session/action/outcome |
 | Backup/recovery plan | missing | Required before automated writes to important content |
-| Root-scope enforcement | unverified | Must prove staging-only writes and canonical read-only behavior |
-| Traversal/junction resistance | unverified | Must test `..`, absolute paths, symlinks, and Windows junctions |
+| Root-scope enforcement | unverified | Must use final resolved target checks, operating-system permissions, and create-new wrapper behavior |
+| Windows path confinement | unverified | Must test traversal, absolute, drive-relative, UNC, device, extended-length, symlink, junction, overwrite, and race probes |
 
 ## Required operating mode for first test
 
-The first Hermes test remains read-only.
+The first live Hermes test remains read-only, but it belongs to the future implementation roadmap after read/search integration and dedicated profile verification exist.
 
 Hermes should:
 
@@ -123,11 +124,17 @@ Hermes write access may be reconsidered only when this checklist is complete:
 - [ ] Dedicated Kaizen Hermes profile exists
 - [ ] Tool configuration captured
 - [ ] Staging root created
+- [ ] Staging-create wrapper implemented
+- [ ] Wrapper audit log implemented
 - [ ] Canonical root protected as read-only
 - [ ] Valid in-root write tested
 - [ ] Relative traversal escape rejected
 - [ ] Absolute canonical write rejected
-- [ ] Symlink/junction escape tested
+- [ ] Symbolic-link escape rejected
+- [ ] Windows junction escape rejected
+- [ ] UNC, device, extended-length, and drive-relative paths rejected
+- [ ] Overwrite and sibling-repository writes rejected
+- [ ] Final resolved target remains inside staging
 - [ ] ULID generator implemented
 - [ ] Validation gate implemented
 - [ ] Promotion event schema implemented
@@ -141,4 +148,5 @@ Hermes write access may be reconsidered only when this checklist is complete:
 - `07-hermes/hermes-first-read-only-test.md`
 - `07-hermes/hermes-first-staging-write-test.md`
 - `05-specs/staging-and-promotion-workflow.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `05-specs/kaizen-validation-gate-spec.md`

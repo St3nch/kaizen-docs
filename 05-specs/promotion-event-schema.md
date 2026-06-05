@@ -42,10 +42,16 @@ Agents may draft content or proposals associated with these actions. Only a huma
 
 ## Minimum event shape
 
+Each JSONL line is one event record. A promotion workflow uses multiple records with unique `event_id` values. The intent event ID also becomes the shared `operation_id` for the workflow.
+
+Intent example:
+
 ```json
 {
   "schema_version": "1.0",
-  "event_id": "kz-prom-01JX...",
+  "event_id": "kz-prom-01JXEVENT...",
+  "operation_id": "kz-prom-01JXEVENT...",
+  "event_phase": "intent",
   "action": "promote",
   "note_id": "kz-spec-01JX...",
   "note_type": "spec",
@@ -64,23 +70,82 @@ Agents may draft content or proposals associated with these actions. Only a huma
 }
 ```
 
+Committed example:
+
+```json
+{
+  "schema_version": "1.0",
+  "event_id": "kz-prom-01JXCOMMIT...",
+  "operation_id": "kz-prom-01JXEVENT...",
+  "event_phase": "committed",
+  "action": "promote",
+  "intent_event_id": "kz-prom-01JXEVENT...",
+  "note_id": "kz-spec-01JX...",
+  "note_type": "spec",
+  "project": "kaizen",
+  "destination_path": "projects/kaizen/specs/example.md",
+  "content_sha256": "hex-sha256",
+  "approved_by": "human-actor-id",
+  "approved_at": "2026-06-04T23:30:00Z",
+  "validation_run_id": "kz-val-01JX...",
+  "basis": "Passed audit kz-aud-01JX..."
+}
+```
 ## Required fields for every event
 
 | Field | Type | Rule |
 |---|---|---|
 | `schema_version` | string | initial value `1.0` |
-| `event_id` | string | immutable `kz-prom-<ulid>` |
+| `event_id` | string | unique immutable ID for this JSONL line |
+| `operation_id` | string | equals the intent event ID; copied unchanged to all later records in the workflow |
+| `event_phase` | enum | `intent`, `committed`, `failed`, or `recovered` |
 | `action` | enum | one of the approved action values |
 | `note_id` | string | stable Kaizen note ID |
 | `note_type` | enum | registered note type |
 | `project` | string | lowercase kebab-case project slug |
 | `destination_path` | string | canonical vault-relative path; never an absolute canonical path in the stored event |
-| `content_sha256` | string | SHA-256 of exact canonical file content after the action |
+| `content_sha256` | string | approved content hash for `intent`; verified canonical hash for terminal phases |
 | `approved_by` | string | human actor identifier |
 | `approved_at` | string | ISO-8601 UTC timestamp |
 | `validation_run_id` | string | successful validation run ID |
 | `basis` | string | concise approval basis and audit/decision references |
 
+## Event-phase requirements
+
+### `event_phase: intent`
+
+Required:
+
+- `source_path`
+- approved `destination_path`
+- approved `content_sha256`
+- approval and validation evidence
+
+### `event_phase: committed`
+
+Required:
+
+- `intent_event_id`
+- verified canonical `content_sha256`
+- the same `operation_id`, action, note, project, and destination as the intent
+
+### `event_phase: failed`
+
+Required:
+
+- `intent_event_id`
+- `failure_code`
+- `failure_summary`
+- observed filesystem state
+
+### `event_phase: recovered`
+
+Required:
+
+- `intent_event_id`
+- `recovery_action`
+- resulting filesystem state
+- human actor when recovery changes canonical or staged content
 ## Conditional fields
 
 ### `promote`
@@ -173,27 +238,26 @@ The event validator must reject:
 - duplicate event IDs
 - duplicate initial promotion for the same note ID without an intervening governed rollback
 
-## Atomicity and recovery
+## Recoverability and event phases
 
-The promotion workflow must behave atomically or recoverably across:
+The canonical file write and promotion-event append are separate operations. They cannot be treated as one atomic transaction.
 
-1. canonical file write
-2. promotion-event append
-3. staged-copy disposition
+The business `action` describes what is being governed, such as `promote`, `amend`, or `supersede`. The `event_phase` describes progress of one operation.
 
-The implementation should prefer:
+At minimum:
 
-- write canonical file to a temporary path
-- verify content and hash
-- append and fsync the event
-- atomically rename the canonical temporary file into place
-- verify both artifacts
-- remove/archive staged copy last
+1. append and flush a unique `intent` event;
+2. write and flush a temporary file in the destination directory;
+3. verify the temporary file hash;
+4. install the canonical file using the approved same-volume replacement operation;
+5. append and flush a unique `committed` event using the same `operation_id` and referencing the intent;
+6. run recovery when an intent lacks a terminal event.
 
-Exact implementation depends on the target filesystem and tooling.
+Each JSONL line has a unique `event_id`. Multiple records for one workflow copy the intent event ID into `operation_id`; later records must still use new unique `event_id` values.
 
-If partial completion occurs, the system must fail closed and append a `rollback` or `correct` event after human review rather than silently repairing history.
+Recovery appends a new `failed` or `recovered` record. Existing lines are never edited or deleted.
 
+Recovery rules are defined in `05-specs/staging-write-wrapper-and-promotion-recovery.md`.
 ## Schema versioning
 
 Breaking changes to the event shape require a new major `schema_version`.
@@ -223,12 +287,13 @@ The JSON Schema should enforce:
 - Exact human actor-ID format.
 - Whether `source_path` should be omitted after Postgres becomes canonical for operations.
 - Exact JSON Schema for scoped `review_context` and material-drift classification.
-- Exact atomic write strategy on Windows.
+- Exact Windows API and language binding used for same-volume replacement and durable flush behavior.
 - Whether amendment events require a reviewed diff artifact ID.
 
 ## Related files
 
 - `05-specs/staging-and-promotion-workflow.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `05-specs/kaizen-validation-gate-spec.md`
 - `05-specs/kaizen-id-and-prefix-registry.md`
 - `05-specs/kaizen-hammer-test-strategy.md`

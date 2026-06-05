@@ -55,7 +55,9 @@ Runs against the exact staged content and proposed destination. Includes all sta
 - file must be UTF-8 Markdown
 - staging validation path must resolve inside the configured staging root
 - canonical path must resolve inside the configured canonical root
-- path traversal and symlink/junction escape must fail
+- path checks must use final resolved filesystem targets, not string-prefix comparison alone
+- relative traversal, absolute paths, drive-relative paths, UNC paths, device paths, and extended-length paths must fail where not explicitly allowed
+- symbolic-link, junction, mount-point, and other reparse-point escape must fail
 - destination must not silently overwrite an unrelated note
 
 ### 2. YAML/frontmatter parse
@@ -375,5 +377,6 @@ This spec becomes implementation-ready when:
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-note-type-registry.md`
 - `05-specs/staging-and-promotion-workflow.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `07-hermes/hermes-write-access-preconditions.md`

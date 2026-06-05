@@ -16,6 +16,8 @@ Hermes is Kaizen's designated agent clerk and a first-class consumer of the cano
 
 Kaizen must be designed so Hermes can reliably read, search, trace relationships, and prepare governed drafts. Hermes may produce evidence, drafts, diffs, summaries, validation reports, and proposals. It must not decide what becomes doctrine, issue an audit verdict, or mark work implementation-ready.
 
+MCP root configuration and Hermes profile settings are defense in depth, not the primary write boundary. Any future staging write must pass through the narrow wrapper defined in `05-specs/staging-write-wrapper-and-promotion-recovery.md`, backed by operating-system permissions and hammer-tested final-path confinement.
+
 ## Authority levels
 
 | Level | Meaning | Example |
@@ -31,7 +33,7 @@ Hermes may do these actions after the relevant preconditions exist:
 | Action | Conditions | Required output |
 |---|---|---|
 | Search/read Kaizen docs or vault files | Read access has been granted to the target root | Search result summary with paths checked against filesystem |
-| Create raw source draft | Must search first; write only to staging/inbox | New draft note with required frontmatter |
+| Create raw source draft | Must search first; only through the approved staging-create wrapper after all write preconditions pass | New staged draft note with required frontmatter and audit evidence |
 | Create source-summary draft | Must preserve source; must link source material | Draft summary note |
 | Extract claims from source material | Must cite exact source quote or line when possible | Draft claim note or claim section |
 | Append log entry | Log must be append-only | New timestamped log entry |
@@ -67,6 +69,8 @@ Hermes must not perform these actions. These must be blocked by configuration, p
 | Move or rename canonical notes | Can break links and history |
 | Silently overwrite existing files | Destroys auditability |
 | Commit or push to GitHub | Source-control publication is human authority |
+| Use terminal or arbitrary code execution | Bypasses the constrained tool and path boundary |
+| Use general-purpose filesystem delete, move, rename, or overwrite tools | Broad filesystem mutation is outside the clerk surface |
 | Modify source code repos | Out of Kaizen vault scope |
 | Publish externally or customer-facing | High blast radius |
 | Edit its own skill files or memory as accepted policy | Self-improvement drift risk |
@@ -115,3 +119,4 @@ Hermes must not perform these actions. These must be blocked by configuration, p
 - `03-research-results/001-hermes-agent-boundaries-claude-summary.md`
 - `07-hermes/hermes-write-access-preconditions.md`
 - `05-specs/kaizen-validation-gate-spec.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`

@@ -143,7 +143,7 @@ Claude's audit is evidence, not doctrine. The project steward adopts the followi
 - Correct the corrupted Markdown tokens in `05-specs/kaizen-field-registry.md` and `05-specs/kaizen-validation-gate-spec.md`.
 - Keep only Phase 2 active; Phase 3 remains ready and dependent on Phase 2.
 - Run `git diff --check`, scan for control characters and backup files, and review the complete diff before any commit.
-- Do not run the Hermes read-only test until the entrypoint and governed drafts are internally consistent.
+- Keep Hermes test plans current, but do not run live Hermes integration tests during the current vision-and-architecture planning phase.
 
 ### Step 2 - Preserve and reconcile Claude's audit
 
@@ -184,9 +184,11 @@ task packet
 - Decide the artifact shape only after the dry run. Do not assume a new note type is required.
 - Require the v0.2 standard to cover implementation, operational, and Kaizen self-improvement feedback paths.
 
-### Step 5 - Run Research Batch A: agent access and write safety
+### Step 5 - Research Batch A: agent access and write safety - research complete
 
-- Active prompt: `02-research-prompts/003-agent-access-and-write-safety.md`
+- Completed prompt: `02-research-prompts/003-agent-access-and-write-safety.md`
+- Reconciliation: `03-research-results/008-agent-access-and-write-safety-claude-summary.md`
+- Remaining planning outputs: staging-write wrapper specification, promotion-recovery specification, updated boundary tests, and implementation-roadmap prerequisites. Live Hermes tests are deferred to the implementation roadmap.
 
 Priority: P0/P1
 
@@ -208,6 +210,74 @@ Expected output:
 
 This batch gates agent write access and must precede any approval of Hermes writes.
 
+### Step 5A - Comparative MCP and typed-tool audits
+
+Priority: P0/P1
+
+Before selecting integration tools, compare prominent real implementations against Kaizen's authority and safety requirements.
+
+#### Obsidian and filesystem tools
+
+Evaluate:
+
+- Obsidian community-plugin MCP servers, including previously used `Vault as MCP` if verified
+- direct filesystem MCP servers
+- Obsidian Local REST API wrappers
+- read-only versus read/write tool separation
+- search, metadata, patch, delete, command-execution, and plugin dependencies
+- Windows path confinement, junctions, symlinks, and audit logging
+
+#### Postgres tools
+
+Evaluate prominent Postgres MCP servers, database gateways, and typed API patterns for:
+
+- read-only query surfaces
+- parameterized, allowlisted queries
+- project and domain scope injection
+- row-level security and database roles
+- schema introspection exposure
+- mutation, DDL, migration, and transaction capabilities
+- credential handling
+- result-size and cost limits
+- query logging and audit evidence
+- whether unsafe SQL tools can be completely absent
+
+Kaizen must not expose arbitrary SQL, direct credentials, unrestricted schema mutation, or agent-controlled migrations.
+
+#### Qdrant tools
+
+Evaluate prominent Qdrant MCP servers, gateways, and typed API patterns for:
+
+- scoped semantic search
+- payload filtering and project isolation
+- collection discovery and metadata exposure
+- point upsert, delete, collection creation, and index mutation
+- rebuild and reindex operations
+- authority, supersedence, freshness, and privacy filters
+- result-size, rate, and cost controls
+- logging and traceability
+- whether all mutation tools can be absent from agent-facing surfaces
+
+Kaizen agents should normally receive constrained search and retrieval tools. Index construction, rebuilds, collection administration, and destructive mutation remain controlled operational capabilities.
+
+#### Required output
+
+For each candidate, record:
+
+```text
+maintenance and provenance
+transport and authentication
+tool inventory
+read/write/admin separation
+scope enforcement
+Windows behavior where relevant
+logging and auditability
+known vulnerabilities or issue reports
+Kaizen reuse/wrap/fork/reject recommendation
+hands-on verification still required
+```
+
+Do not select a final server from README claims alone. Tool schemas and source code must be inspected, and high-risk candidates must be tested in disposable environments.
 ### Step 6 - Run Research Batch B: external intelligence providers and source rights
 
 Priority: P1
@@ -326,6 +396,7 @@ This phase defines how source summaries, claims, decisions, specs, audits, and t
 - `05-specs/promotion-event-schema.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `05-specs/staging-and-promotion-workflow.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `07-hermes/hermes-permission-matrix.md`
 - `07-hermes/hermes-write-access-preconditions.md`
 
@@ -374,6 +445,7 @@ The purpose is to expose friction and ambiguity before these conventions become 
 - A list of conventions that worked without modification.
 - A list of conventions that caused ambiguity or needless friction.
 - A recommendation to accept, revise, split, or reject Decision 0008.
+- A dry-run implementation-return path covering completion reports, tests, deviations, discoveries, and reviewed Kaizen updates.
 
 ## Exit criteria
 
@@ -415,6 +487,7 @@ The draft must replace obsolete baseline mechanics without losing the original p
 - Validation, promotion, supersedence, and approval-freshness rules.
 - Plugin and Obsidian posture.
 - Planning-to-implementation handoff requirements.
+- Implementation, operational, and Kaizen self-improvement feedback paths.
 
 ## Exit criteria
 
@@ -482,6 +555,7 @@ This phase identifies what the implementation roadmap must cover and what planni
 - `05-specs/kaizen-id-and-prefix-registry.md`
 - `05-specs/kaizen-validation-gate-spec.md`
 - `05-specs/staging-and-promotion-workflow.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `05-specs/promotion-event-schema.md`
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `07-hermes/hermes-write-access-preconditions.md`
@@ -540,14 +614,16 @@ Define:
 
 ### Hermes
 
+Phase 7 defines Hermes test plans and gates; it does not run live Hermes integration tests.
+
 Define:
 
 - canonical read/search tools
 - staging-write wrapper
 - permission profile
 - provenance fields
-- first read-only test
-- first staging-write test
+- first read-only test plan, prerequisites, and evidence contract
+- first staging-write test plan, prerequisites, and evidence contract
 - audit logging
 - escalation behavior
 
@@ -563,6 +639,8 @@ Define:
 - logging
 - rate and budget controls
 - prohibited broad filesystem or database surfaces
+- comparative Obsidian, Postgres, and Qdrant tool-surface audit results
+- explicit read, write, administrative, and destructive capability separation
 
 ### Qdrant
 
@@ -629,6 +707,39 @@ The implementation roadmap should cover at least:
 
 - `IMPLEMENTATION_ROADMAP.md` - create only after Phases 0 through 7 are complete
 
+## Hermes integration execution order
+
+The implementation roadmap must place Hermes testing in this order:
+
+### H1 - Read-only integration
+
+Run `07-hermes/hermes-first-read-only-test.md` only after:
+
+- a Kaizen integration environment exists;
+- canonical read/search interfaces are available;
+- a dedicated Hermes profile is captured;
+- the exposed tool set is verified;
+- write, patch, delete, move, terminal, and skill-management capabilities are absent or disabled;
+- the target repository or vault is clean and backed up.
+
+This test proves orientation and no-write behavior only. It does not prove staging-write safety.
+
+### H2 - Wrapper and boundary hammer tests
+
+Before Hermes receives any staging-write tool:
+
+- implement the narrow staging-create wrapper;
+- apply operating-system permissions;
+- run traversal, absolute-path, UNC, extended-path, symlink, junction, race, overwrite, and audit-log probes in a disposable sandbox;
+- obtain a human go/no-go verdict.
+
+### H3 - Controlled staging-write integration
+
+Run `07-hermes/hermes-first-staging-write-test.md` only after H2 passes and the validator, ID generator, provenance, and audit logging are available.
+
+### H4 - Human-operated promotion and recovery
+
+Implement and test canonical promotion only after the validation and recovery prerequisites exist. Hermes never receives canonical promotion authority.
 ## Required implementation-roadmap qualities
 
 - dependency-ordered phases
@@ -681,10 +792,11 @@ Material governance changes belong in the appropriate decision or specification 
 
 ## Immediate next actions
 
-1. Repair the corrupted field-registry and validation-gate tokens.
-2. Preserve Claude's audit in `03-research-results/` and write the Kaizen reconciliation.
-3. Run `02-research-prompts/003-agent-access-and-write-safety.md` with Claude and return the report for steward reconciliation.
-4. Add the implementation-return feedback path to the Phase 4 dry-run requirements and Phase 5 standard requirements.
-5. Review the full planning diff and create a clean Git checkpoint.
-6. Run Research Batch A before any Hermes write-access test or implementation-roadmap work.
-7. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
+1. Review and revise `05-specs/staging-write-wrapper-and-promotion-recovery.md`.
+2. Review the Batch A reconciliation changes to staging, promotion, and Hermes planning documents.
+3. Create a clean Git checkpoint for Research Result 008 and the Batch A specification reconciliation.
+4. Prepare comparative Obsidian, Postgres, and Qdrant MCP/typed-tool audit prompts.
+5. Prepare Research Batch B: external intelligence providers and source rights.
+6. Recheck the document-contract batch against the aligned vision and verified Batch A evidence.
+7. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
+8. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.

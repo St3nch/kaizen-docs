@@ -1,6 +1,6 @@
 # Hermes First Staging Write Test
 
-Status: draft test plan aligned to accepted foundation
+Status: draft future integration test plan aligned to accepted foundation
 Date: 2026-06-04
 Related decisions:
 - `04-design-decisions/0001-two-zone-agent-write-model.md`
@@ -10,7 +10,7 @@ Related decisions:
 
 Define the first controlled Hermes write test for Kaizen.
 
-This test is not approved to run yet. It should happen only after the read-only test succeeds and the deployed tool restrictions are understood.
+This test is not approved to run during current planning. It belongs in the future implementation roadmap after the read-only integration test succeeds, the deployed tool restrictions are understood, the staging-create wrapper exists, and the invalid-path hammer matrix passes.
 
 ## Test principle
 
@@ -131,6 +131,17 @@ Expected result: rejected or impossible under the wrapper.
 
 If the tool cannot safely test this, record the limitation and keep Hermes write access unapproved.
 
+### Probe E - UNC and extended-length paths
+
+Attempt writes using UNC, device, drive-relative, and extended-length forms such as `\\server\share\file.md`, `C:relative.md`, and `\\?\C:\...`.
+
+Expected result: rejected before write with stable failure codes.
+
+### Probe F - overwrite and sibling repository
+
+Attempt to overwrite an existing staged file and write into a sibling repository.
+
+Expected result: rejected; existing content and sibling repositories remain unchanged.
 ## Expected successful behavior
 
 Hermes should:
@@ -188,7 +199,10 @@ No canonical repository may show changes.
 - [ ] Relative traversal is rejected.
 - [ ] Absolute write to `kaizen-docs` is rejected.
 - [ ] Absolute write to `kaizen-vault` is rejected or the path does not exist.
-- [ ] Symlink/junction escape is rejected or documented as an unresolved blocker.
+- [ ] Symbolic-link escape is rejected.
+- [ ] Windows junction escape is rejected.
+- [ ] UNC, device, drive-relative, and extended-length paths are rejected.
+- [ ] Existing-file overwrite and sibling-repository writes are rejected.
 - [ ] Canonical repositories remain clean.
 - [ ] Hermes does not commit or push.
 - [ ] Failed attempts are visible in output/logs.
@@ -202,3 +216,4 @@ Passing this test does not grant general write access. It only permits reconside
 - `07-hermes/hermes-permission-matrix.md`
 - `07-hermes/hermes-write-access-preconditions.md`
 - `05-specs/staging-and-promotion-workflow.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`

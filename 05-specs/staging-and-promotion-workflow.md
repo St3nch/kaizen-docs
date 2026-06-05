@@ -94,7 +94,7 @@ A staged note may be promoted only when all conditions are satisfied:
 8. `validation_status: passed` is set by the validator, not the drafting agent.
 9. Required human review is complete.
 10. Authority transition, when applicable, is human-approved.
-11. A promotion event is ready to append atomically with the canonical write.
+11. A recoverable promotion intent event is ready, and the recovery protocol is available if the file write and event sequence is interrupted.
 
 ## Promotion operation
 
@@ -107,12 +107,15 @@ Promotion is a human-controlled operation that performs these steps as one gover
 5. Remove `validation_status`.
 6. Preserve durable agent provenance (`agent`, `model`, `session`).
 7. Apply the approved `review_status` and `authority` transition.
-8. Write the canonical file.
-9. Append one event to `_governance/promotion-log.jsonl`.
-10. Verify the canonical file and log event are both present.
-11. Remove or archive the staged copy only after successful verification.
+8. Append and flush a unique `intent` event with a shared promotion `operation_id`.
+9. Write and flush a uniquely named temporary file in the canonical destination directory.
+10. Verify the temporary file hash against the approved content.
+11. Install the canonical file using the approved same-volume replacement operation.
+12. Append and flush a unique `committed` event using the same `operation_id` and referencing the intent event.
+13. Verify the canonical file and terminal event are both present.
+14. Remove or archive the staged copy only after successful verification.
 
-If any step fails, the promotion fails. Partial success must be reported explicitly and recovered without widening scope.
+If any step fails, the promotion is incomplete rather than silently successful. Partial state must remain visible and be reconciled through the recovery protocol in `05-specs/staging-write-wrapper-and-promotion-recovery.md`. The file write and JSONL append are separate operations and must not be described as one atomic transaction.
 
 ## Promotion log
 
@@ -124,11 +127,8 @@ _governance/promotion-log.jsonl
 
 Each line is one JSON object.
 
-Minimum event shape:
+Minimum event shape and phase requirements are defined in `05-specs/promotion-event-schema.md`. One promotion operation produces at least an `intent` record and a terminal `committed`, `failed`, or `recovered` record.
 
-```json
-{"event_id":"kz-prom-01JX...","note_id":"kz-spec-01JX...","action":"promote","source_path":"C:/dev/kaizen-staging/specs/example.md","destination_path":"projects/example/specs/example.md","prior_review_status":"pending","new_review_status":"approved","prior_authority":"proposed","new_authority":"accepted","approved_by":"human-actor-id","approved_at":"2026-06-04T23:30:00Z","validation_run_id":"kz-val-01JX...","basis":"Passed audit kz-aud-01JX..."}
-```
 
 Required event fields:
 
