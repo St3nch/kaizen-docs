@@ -27,14 +27,19 @@ Humans = authority-bearing review, approval, and promotion
 ## Current project posture
 
 - Current phase: Kaizen Project Standard v0.2 planning
+- Original 591-line baseline: imported exactly and preserved as historical source material
+- Baseline-to-v0.2 reconciliation map: active draft
 - Future canonical vault: not created yet
 - Sibling staging root: design accepted, not created for production use yet
 - Postgres Observatory: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: installed by user, not approved for Kaizen write access
 - Decisions 0001 through 0007: accepted
-- Field, note-type, validation, hammer, Observatory, and promotion specs: active drafts
-- Primary immediate need: import the original baseline standard, resolve the remaining v0.2 questions, and draft the complete v0.2 standard
+- Decision 0008 operating conventions: proposed and awaiting review
+- Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
+- Remaining major research: document contracts for summaries, claims, decisions, specs, audits, and task packets
+- Prepared Claude prompt: `02-research-prompts/002-document-contract-standards.md`
+- Primary immediate need: complete that research, reconcile the contracts, and draft the complete v0.2 standard
 - Stewardship principle: structure and automation must earn their existence
 
 ## Read-first sequence
@@ -42,24 +47,29 @@ Humans = authority-bearing review, approval, and promotion
 Read in this order unless the user gives a narrower task:
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file
-2. `01-project-standard/kaizen-project-standard.md` - baseline import placeholder
-3. `01-project-standard/standard-revision-plan.md` - current v0.2 revision path
-4. `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
-5. `04-design-decisions/0001-two-zone-agent-write-model.md`
-6. `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
-7. `04-design-decisions/0003-raw-markdown-is-canonical.md`
-8. `04-design-decisions/0004-system-of-record-boundaries.md`
-9. `04-design-decisions/0005-api-only-structured-data-access.md`
-10. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
-11. `05-specs/kaizen-field-registry.md`
-12. `05-specs/kaizen-note-type-registry.md`
-13. `05-specs/staging-and-promotion-workflow.md`
-14. `05-specs/kaizen-validation-gate-spec.md`
-15. `05-specs/postgres-observatory-authority.md`
-16. `05-specs/kaizen-hammer-test-strategy.md`
-17. `07-hermes/hermes-permission-matrix.md`
-18. `07-hermes/hermes-write-access-preconditions.md`
-19. `03-research-results/` for supporting evidence
+2. `01-project-standard/kaizen-project-standard.md` - imported original baseline
+3. `01-project-standard/baseline-v0.2-reconciliation-map.md` - preserve/replace/defer map
+4. `01-project-standard/standard-revision-plan.md` - current v0.2 revision path
+5. `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+6. `04-design-decisions/0001-two-zone-agent-write-model.md`
+7. `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
+8. `04-design-decisions/0003-raw-markdown-is-canonical.md`
+9. `04-design-decisions/0004-system-of-record-boundaries.md`
+10. `04-design-decisions/0005-api-only-structured-data-access.md`
+11. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
+12. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
+13. `05-specs/kaizen-field-registry.md`
+14. `05-specs/kaizen-note-type-registry.md`
+15. `05-specs/kaizen-id-and-prefix-registry.md`
+16. `05-specs/staging-and-promotion-workflow.md`
+17. `05-specs/promotion-event-schema.md`
+18. `05-specs/kaizen-validation-gate-spec.md`
+19. `05-specs/postgres-observatory-authority.md`
+20. `05-specs/kaizen-hammer-test-strategy.md`
+21. `07-hermes/hermes-permission-matrix.md`
+22. `07-hermes/hermes-write-access-preconditions.md`
+23. `02-research-prompts/002-document-contract-standards.md` when preparing the remaining research
+24. `03-research-results/` for supporting evidence
 
 ## Folder map
 
@@ -196,18 +206,34 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 13. When uncertain, record an open question or propose a decision rather than inventing policy.
 14. Never treat a mutable frontmatter field as an access-control mechanism.
 
-## Remaining v0.2 decisions
+## Remaining v0.2 work
 
-- Final `pipeline_stage` enum
-- Exact canonical folder placement for the nine initial note types
-- Portable vault-root naming/path convention
-- Promotion-log JSON Schema and event action vocabulary
-- ULID generator command and machine-readable type-prefix registry
-- Plugin install/defer policy
-- Intentional `.obsidian` version-control policy
-- Whether source URLs remain after stable source IDs are assigned
-- Initial private-data scanning and raw-data size thresholds
-- Whether current-state notes are indexed in future Qdrant
+### Research still required
+
+- document contracts for source summaries, claims, decisions, specs, audits, and task packets
+- objective implementation-readiness and acceptance-criteria rules
+
+### Proposed conventions awaiting review
+
+Decision 0008 currently proposes:
+
+- final `pipeline_stage` enum
+- exact canonical folder placement
+- portable vault-root naming/path convention
+- plugin install/defer policy
+- intentional `.obsidian` version-control policy
+- source URL retention after stable source IDs exist
+- initial private/raw-data validation thresholds
+- future Qdrant treatment of current-state notes
+
+### Specs awaiting implementation decisions
+
+- promotion-event JSON Schema and action vocabulary
+- ULID generator implementation language and repository location
+- human actor-ID format
+- validation and promotion tooling location
+
+Do not treat Decision 0008 or these implementation choices as accepted until explicit human review.
 
 ## Required output shape for future docs
 
