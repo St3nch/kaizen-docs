@@ -294,6 +294,44 @@ Humans retain final authority over:
 - credentials and permissions
 - exceptions and risk acceptance
 
+## Internet Marketing Intelligence capability
+
+Kaizen is intended to become a shared, longitudinal Internet Marketing Intelligence system for the owner's full project portfolio.
+
+Detailed vision:
+
+- `01-project-standard/internet-marketing-intelligence-vision.md`
+
+This capability should accumulate public-market, search, marketplace, LLM-citation, research, and project-outcome evidence over years; reuse lawful observations across projects; detect cross-source and cross-project patterns; and produce reviewable opportunity candidates and strategy hypotheses.
+
+The intended model is:
+
+```text
+shared public-market and research observations
+-> normalized longitudinal intelligence
+-> project-specific lenses
+-> signals, anomalies, trends, and gaps
+-> opportunity candidates and strategy hypotheses
+-> human-approved experiments
+-> measured outcomes returned to Kaizen
+```
+
+One observation may serve many projects. The observation itself should remain distinct from the requests, provider jobs, costs, projects, analyses, experiments, and decisions that use it.
+
+Kaizen should preserve the distinction between:
+
+- globally shareable public observations;
+- portfolio-internal intelligence;
+- project-private evidence;
+- customer-restricted or licensed data.
+
+The Observatory should support portfolio-wide analysis over approved operational evidence, while canonical Markdown remains the human-reviewed home for accepted strategies, decisions, experiment interpretations, and durable lessons.
+
+Kaizen may propose opportunities and strategies, but humans retain authority over spending, experiments, publication, business action, and acceptance of strategy.
+
+Exact tables, scores, models, providers, collection cadence, retention rules, and note types remain deferred until provider, legal, workload, and prototype evidence exists.
+
+Proposed Decision 0010 records the likely need for a dedicated Internet Marketing Intelligence database boundary, initially on the same PostgreSQL deployment as the Kaizen Core Operational database. It also requires a focused database-design session before any schema work and explicitly anticipates additional ranking and visibility data families as the project develops.
 ## Research and intelligence sources
 
 Kaizen should eventually gather or ingest project-relevant information from source classes including:
@@ -587,6 +625,9 @@ The future implementation roadmap should cover at minimum:
 - operational Postgres domains
 - source ingestion and monitoring
 - Observatory analysis and governed results
+- portfolio-wide Internet Marketing Intelligence and opportunity discovery
+- project lenses over shared longitudinal observations
+- strategy-hypothesis and experiment-outcome feedback
 - Qdrant indexing and retrieval
 - context-pack assembly
 - MCP and typed tool interfaces

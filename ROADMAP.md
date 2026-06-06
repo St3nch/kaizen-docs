@@ -110,16 +110,18 @@ Restore and preserve the full intended Kaizen system vision before further contr
 
 This phase establishes Kaizen as a continuously improving, agent-connected project intelligence system rather than only a governed documentation pipeline.
 
-It includes continuous external and operational intelligence, cross-project knowledge compounding, implementation and operational feedback loops, portfolio intelligence, context packs, project resumption, research queues, freshness, cost governance, dynamic Obsidian views, distinct agent roles, and the broader Operational Postgres database.
+It includes continuous external and operational intelligence, cross-project knowledge compounding, implementation and operational feedback loops, portfolio intelligence, a shared longitudinal Internet Marketing Intelligence signal system, context packs, project resumption, research queues, freshness, cost governance, dynamic Obsidian views, distinct agent roles, and the broader Operational Postgres database.
 
 ## Detailed phase documents
 
 - `01-project-standard/kaizen-vision-and-architecture-alignment.md`
+- `01-project-standard/internet-marketing-intelligence-vision.md`
 - `00-entrypoint/LLM_START_HERE.md`
 - `ROADMAP.md`
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
 - `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted boundary decision
+- `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - proposed database boundary; no schema authorization
 - `05-specs/operational-postgres-authority.md`
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`
 
@@ -298,25 +300,48 @@ hands-on verification still required
 Do not select a final server from README claims alone. Tool schemas and source code must be inspected, and high-risk candidates must be tested in disposable environments.
 - Composed capability map: `03-research-results/012-step-5a-composed-tool-capability-map.md`
 
-### Step 6 - Run Research Batch B: external intelligence providers and source rights
+### Step 6 - Run Research Batch B: Internet Marketing Intelligence providers, source rights, and longitudinal reuse
 
 Priority: P1
 
+Required vision input:
+
+- `01-project-standard/internet-marketing-intelligence-vision.md`
+
+Research Batch B must investigate the data foundation for Kaizen's portfolio-wide marketing signal engine, not merely compare provider feature lists.
+
 Research:
 
-- DataForSEO and credible alternatives
-- SERP, ranking, visibility, and cost capabilities
-- LLM citation and retrievability measurement providers
-- scientific-paper, patent, news, documentation, dataset, and transcript ingestion constraints
-- copyright, licensing, provider terms, storage, citation, and retention boundaries
+- DataForSEO and credible alternatives;
+- SERP, ranking, visibility, marketplace, and cost capabilities;
+- LLM citation, mention, and retrievability measurement providers;
+- scientific-paper, patent, news, documentation, dataset, and transcript ingestion constraints;
+- copyright, licensing, provider terms, storage, citation, quotation, embedding, transformation, redistribution, and retention boundaries;
+- which observations may be retained longitudinally and reused across projects;
+- which data must remain project-private, customer-restricted, licensed, summarized, referenced, or left at the source;
+- lawful deduplication when multiple projects request the same observation;
+- project attribution, provider-job provenance, spend attribution, and shared-observation reuse;
+- freshness, recapture, historical-snapshot, and provider-change requirements;
+- public, portfolio-internal, project-private, customer-restricted, and licensed-data scope;
+- evidence and provenance required for opportunity candidates and strategy hypotheses;
+- uncertainty, contradiction, and falsification requirements;
+- restrictions affecting derived datasets, model-assisted analysis, and long-term compounding.
+- whether a dedicated Intelligence database should be accepted after provider and workload research;
+- what current and future ranking/visibility data families the later design session must consider;
+- what evidence is required before schema, partitioning, extension, or deployment choices.
 
 Expected output:
 
-- provider capability and cost matrix
-- source-class legal and operational constraints
-- migrate-versus-reference guidance
-- freshness expectations for volatile providers and observations
+- provider capability, rights, and cost matrix;
+- source-class legal and operational constraints;
+- store-versus-summarize-versus-reference guidance;
+- longitudinal-retention and cross-project-reuse guidance;
+- freshness and historical-observation requirements;
+- privacy and scope classes as planning inputs, not final enums;
+- provenance requirements for signals, opportunities, strategies, and experiments;
+- recommendations for later storage and provider prototypes without premature provider or schema selection.
 
+Batch B should preserve the goal that public and lawfully reusable observations compound across the portfolio while private, customer, and licensed data remain correctly scoped.
 ### Step 7 - Run Research Batch C: storage, retrieval, and recovery constraints
 
 Priority: P1
@@ -812,10 +837,12 @@ Material governance changes belong in the appropriate decision or specification 
 
 ## Immediate next actions
 
-1. Review Research Results 010, 011, and 012 as the completed Step 5A reconciliation package.
-2. Create a clean Git checkpoint for the Postgres and Qdrant audits plus the composed capability map.
-3. Prepare Research Batch B: external intelligence providers and source rights.
-4. Recheck the document-contract batch against the aligned vision and verified Step 5A evidence.
-5. Carry the Postgres and Qdrant prototype and hammer requirements into Phase 7 implementation-planning inputs; do not run those prototypes during the current planning phase.
-6. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
-7. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
+1. Review `01-project-standard/internet-marketing-intelligence-vision.md` and proposed Decision 0010; confirm the portfolio-wide signal engine and dedicated database boundary direction.
+2. Create Research Prompt 007 from the reviewed vision and proposed database boundary, covering providers, source rights, longitudinal retention, cross-project reuse, provenance, freshness, privacy, cost, and evidence needed before database acceptance.
+3. Create a clean Git checkpoint for the Internet Marketing Intelligence vision and proposed Decision 0010.
+4. Run Research Batch B and return the report for steward reconciliation.
+5. After Batch B, decide whether to accept, revise, or reject Decision 0010; if accepted, schedule the focused database-design session before schema work.
+6. Recheck the document-contract batch against the aligned vision and verified Step 5A evidence.
+7. Carry the Postgres and Qdrant prototype and hammer requirements into Phase 7 implementation-planning inputs; do not run those prototypes during the current planning phase.
+8. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
+9. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.

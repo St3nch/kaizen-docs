@@ -29,6 +29,7 @@ Humans = authority-bearing review, approval, and promotion
 - Current phase: Kaizen vision and architecture alignment within Project Standard v0.2 planning
 - Planning roadmap: active at `ROADMAP.md`
 - Vision alignment: active at `01-project-standard/kaizen-vision-and-architecture-alignment.md`
+- Internet Marketing Intelligence vision: active at `01-project-standard/internet-marketing-intelligence-vision.md`
 - Original 591-line baseline: imported exactly and preserved as historical source material
 - Baseline-to-v0.2 reconciliation map: active draft
 - Future canonical vault: not created yet
@@ -39,10 +40,11 @@ Humans = authority-bearing review, approval, and promotion
 - Decisions 0001 through 0007: accepted
 - Decision 0008 operating conventions: proposed and awaiting review
 - Decision 0009 Operational Postgres/Observatory boundary: accepted
+- Decision 0010 dedicated Internet Marketing Intelligence database boundary: proposed; no schema work authorized
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
 - Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
-- Primary immediate need: review the reconciled contracts, resolve Decision 0008 through a real-project dry run, and draft the complete v0.2 standard
+- Primary immediate need: review the Internet Marketing Intelligence vision, create Research Prompt 007 for provider/source-rights research, then continue Phase 2 evidence reconciliation before final contract and v0.2 standard work
 - Stewardship principle: structure and automation must earn their existence
 
 ## Read-first sequence
@@ -51,31 +53,34 @@ Read in this order unless the user gives a narrower task:
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file
 2. `01-project-standard/kaizen-vision-and-architecture-alignment.md` - central intended system vision and missing capability alignment
-3. `ROADMAP.md` - active planning roadmap and phase tracker
-4. `01-project-standard/kaizen-project-standard.md` - imported original baseline
-5. `01-project-standard/baseline-v0.2-reconciliation-map.md` - preserve/replace/defer map
-6. `01-project-standard/standard-revision-plan.md` - current v0.2 revision path
-7. `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
-8. `04-design-decisions/0001-two-zone-agent-write-model.md`
-9. `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
-10. `04-design-decisions/0003-raw-markdown-is-canonical.md`
-11. `04-design-decisions/0004-system-of-record-boundaries.md`
-12. `04-design-decisions/0005-api-only-structured-data-access.md`
-13. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
-14. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
-- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted
-15. `05-specs/kaizen-field-registry.md`
-16. `05-specs/kaizen-note-type-registry.md`
-17. `05-specs/kaizen-id-and-prefix-registry.md`
-18. `05-specs/staging-and-promotion-workflow.md`
-19. `05-specs/promotion-event-schema.md`
-20. `05-specs/kaizen-validation-gate-spec.md`
-21. `05-specs/operational-postgres-authority.md`
-22. `05-specs/kaizen-hammer-test-strategy.md`
-23. `07-hermes/hermes-permission-matrix.md`
-24. `07-hermes/hermes-write-access-preconditions.md`
-25. `03-research-results/006-document-contract-standards-reconciliation.md`
-26. Other files in `03-research-results/` for supporting evidence
+3. `01-project-standard/internet-marketing-intelligence-vision.md` - portfolio-wide longitudinal marketing intelligence vision
+4. `ROADMAP.md` - active planning roadmap and phase tracker
+5. `01-project-standard/kaizen-project-standard.md` - imported original baseline
+6. `01-project-standard/baseline-v0.2-reconciliation-map.md` - preserve/replace/defer map
+7. `01-project-standard/standard-revision-plan.md` - current v0.2 revision path
+8. `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+9. `04-design-decisions/0001-two-zone-agent-write-model.md`
+10. `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
+11. `04-design-decisions/0003-raw-markdown-is-canonical.md`
+12. `04-design-decisions/0004-system-of-record-boundaries.md`
+13. `04-design-decisions/0005-api-only-structured-data-access.md`
+14. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
+15. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
+16. `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted
+17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - proposed; dedicated boundary and pre-schema design gate
+18. `05-specs/kaizen-field-registry.md`
+19. `05-specs/kaizen-note-type-registry.md`
+20. `05-specs/kaizen-id-and-prefix-registry.md`
+21. `05-specs/staging-and-promotion-workflow.md`
+22. `05-specs/promotion-event-schema.md`
+23. `05-specs/kaizen-validation-gate-spec.md`
+24. `05-specs/operational-postgres-authority.md`
+25. `05-specs/kaizen-hammer-test-strategy.md`
+26. `07-hermes/hermes-permission-matrix.md`
+27. `07-hermes/hermes-write-access-preconditions.md`
+28. `03-research-results/006-document-contract-standards-reconciliation.md`
+29. Other files in `03-research-results/` for supporting evidence
+
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -193,6 +198,9 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 10. Research and observations are evidence, not doctrine.
 11. Search-before-create and diff-before-write are mandatory agent rules.
 12. Declared invariants require validation and eventually real-execution hammer coverage.
+13. Kaizen is intended to compound lawful public-market observations across projects while preserving project-private, customer-restricted, and licensed-data boundaries.
+14. Opportunity and strategy outputs remain reviewable candidates until humans accept them.
+15. No Internet Marketing Intelligence schema work begins until the dedicated database decision is reviewed and a focused owner/steward design session is completed.
 
 ## Rules for LLMs
 
