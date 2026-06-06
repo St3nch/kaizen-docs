@@ -23,16 +23,19 @@ Prompts are inputs, not conclusions.
 
 ### Completed
 
-- `003-agent-access-and-write-safety.md` - Research Batch A; report reconciled in Research Result 008
+- `003-agent-access-and-write-safety.md` - Research Batch A; reconciled in Research Result 008
+- `004-obsidian-mcp-tool-surface-audit.md` - Obsidian MCP audit; reconciled in Research Result 009
 
-### Active next prompt
+### Active next prompts
 
-- `004-obsidian-mcp-tool-surface-audit.md` - Step 5A Obsidian and filesystem MCP comparative audit
+- `005-postgres-mcp-typed-tool-audit.md` - Postgres MCP, gateway, and typed-tool comparative audit
+- `006-qdrant-mcp-typed-tool-audit.md` - Qdrant MCP, gateway, and typed-tool comparative audit
 
-### Planned next prompts
+### Planned after Step 5A
 
-- Postgres MCP and typed-tool comparative audit
-- Qdrant MCP and typed-tool comparative audit
+- external intelligence providers and source rights
+- storage, retrieval, backup, and recovery constraints
+- knowledge quality, freshness, and context assembly
 
 ## Promotion path
 

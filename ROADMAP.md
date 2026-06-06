@@ -238,6 +238,8 @@ Evaluate:
 
 #### Postgres tools
 
+- Active Postgres audit prompt: `02-research-prompts/005-postgres-mcp-typed-tool-audit.md`
+
 Evaluate prominent Postgres MCP servers, database gateways, and typed API patterns for:
 
 - read-only query surfaces
@@ -254,6 +256,8 @@ Evaluate prominent Postgres MCP servers, database gateways, and typed API patter
 Kaizen must not expose arbitrary SQL, direct credentials, unrestricted schema mutation, or agent-controlled migrations.
 
 #### Qdrant tools
+
+- Active Qdrant audit prompt: `02-research-prompts/006-qdrant-mcp-typed-tool-audit.md`
 
 Evaluate prominent Qdrant MCP servers, gateways, and typed API patterns for:
 
@@ -804,9 +808,10 @@ Material governance changes belong in the appropriate decision or specification 
 1. Review and revise `05-specs/staging-write-wrapper-and-promotion-recovery.md`.
 2. Review the Batch A reconciliation changes to staging, promotion, and Hermes planning documents.
 3. Create a clean Git checkpoint for Research Result 008 and the Batch A specification reconciliation.
-4. Review `03-research-results/009-obsidian-mcp-tool-surface-audit-claude-summary.md` and carry its capability-lane model into the Postgres and Qdrant audit prompts.
-5. Prepare the Postgres and Qdrant comparative audit prompts after the Obsidian audit structure is validated.
-6. Prepare Research Batch B: external intelligence providers and source rights.
-7. Recheck the document-contract batch against the aligned vision and verified Batch A evidence.
-8. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
-9. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
+4. Run `02-research-prompts/005-postgres-mcp-typed-tool-audit.md` with Claude and return the report for steward reconciliation.
+5. Run `02-research-prompts/006-qdrant-mcp-typed-tool-audit.md` with Claude and return the report for steward reconciliation.
+6. Reconcile both tool-surface reports before preparing Research Batch B.
+7. Prepare Research Batch B: external intelligence providers and source rights.
+8. Recheck the document-contract batch against the aligned vision and verified Step 5A evidence.
+9. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
+10. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
