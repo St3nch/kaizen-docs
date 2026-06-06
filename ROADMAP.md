@@ -238,7 +238,9 @@ Evaluate:
 
 #### Postgres tools
 
-- Active Postgres audit prompt: `02-research-prompts/005-postgres-mcp-typed-tool-audit.md`
+- Completed Postgres audit prompt: `02-research-prompts/005-postgres-mcp-typed-tool-audit.md`
+- Reconciliation: `03-research-results/010-postgres-mcp-typed-tool-audit-claude-summary.md`
+- Leading Lane 1 candidate: PostgREST plus database roles/RLS/views/functions, pending disposable prototype and hammer evidence
 
 Evaluate prominent Postgres MCP servers, database gateways, and typed API patterns for:
 
@@ -257,7 +259,10 @@ Kaizen must not expose arbitrary SQL, direct credentials, unrestricted schema mu
 
 #### Qdrant tools
 
-- Active Qdrant audit prompt: `02-research-prompts/006-qdrant-mcp-typed-tool-audit.md`
+- Completed Qdrant audit prompt: `02-research-prompts/006-qdrant-mcp-typed-tool-audit.md`
+- Reconciliation: `03-research-results/011-qdrant-mcp-typed-tool-audit-claude-summary.md`
+- Leading Lane 1 candidate: typed retrieval gateway backed by scoped Qdrant JWT/RBAC and mandatory payload filters, pending disposable prototype and hammer evidence
+- Required Lane 2 direction: Kaizen-owned headless indexer with provenance, drift detection, and full rebuild
 
 Evaluate prominent Qdrant MCP servers, gateways, and typed API patterns for:
 
@@ -291,6 +296,8 @@ hands-on verification still required
 ```
 
 Do not select a final server from README claims alone. Tool schemas and source code must be inspected, and high-risk candidates must be tested in disposable environments.
+- Composed capability map: `03-research-results/012-step-5a-composed-tool-capability-map.md`
+
 ### Step 6 - Run Research Batch B: external intelligence providers and source rights
 
 Priority: P1
@@ -805,13 +812,10 @@ Material governance changes belong in the appropriate decision or specification 
 
 ## Immediate next actions
 
-1. Review and revise `05-specs/staging-write-wrapper-and-promotion-recovery.md`.
-2. Review the Batch A reconciliation changes to staging, promotion, and Hermes planning documents.
-3. Create a clean Git checkpoint for Research Result 008 and the Batch A specification reconciliation.
-4. Run `02-research-prompts/005-postgres-mcp-typed-tool-audit.md` with Claude and return the report for steward reconciliation.
-5. Run `02-research-prompts/006-qdrant-mcp-typed-tool-audit.md` with Claude and return the report for steward reconciliation.
-6. Reconcile both tool-surface reports before preparing Research Batch B.
-7. Prepare Research Batch B: external intelligence providers and source rights.
-8. Recheck the document-contract batch against the aligned vision and verified Step 5A evidence.
-9. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
-10. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
+1. Review Research Results 010, 011, and 012 as the completed Step 5A reconciliation package.
+2. Create a clean Git checkpoint for the Postgres and Qdrant audits plus the composed capability map.
+3. Prepare Research Batch B: external intelligence providers and source rights.
+4. Recheck the document-contract batch against the aligned vision and verified Step 5A evidence.
+5. Carry the Postgres and Qdrant prototype and hammer requirements into Phase 7 implementation-planning inputs; do not run those prototypes during the current planning phase.
+6. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
+7. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
