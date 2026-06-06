@@ -28,9 +28,12 @@ Prompts are inputs, not conclusions.
 - `005-postgres-mcp-typed-tool-audit.md` - Postgres audit; reconciled in Research Result 010
 - `006-qdrant-mcp-typed-tool-audit.md` - Qdrant audit; reconciled in Research Result 011
 
-### Planned after Step 5A
+### Active
 
-- external intelligence providers and source rights
+- `007-internet-marketing-intelligence-providers-source-rights.md` - Research Batch B; no-new-spend provider, rights, retention, sampling, and provider-neutral intelligence research. Paid DataForSEO LLM capture is deferred until the owner has funds next month.
+
+### Planned after Batch B
+
 - storage, retrieval, backup, and recovery constraints
 - knowledge quality, freshness, and context assembly
 

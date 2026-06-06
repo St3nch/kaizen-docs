@@ -304,6 +304,19 @@ Do not select a final server from README claims alone. Tool schemas and source c
 
 Priority: P1
 
+Active prompt:
+
+- `02-research-prompts/007-internet-marketing-intelligence-providers-source-rights.md`
+
+Current execution posture:
+
+- run all provider, rights, retention, workload, VEDA-reuse, and provider-neutral architecture research now;
+- use the existing real DataForSEO JSON corpus and paired inventories as empirical evidence;
+- make no new paid provider calls during this research pass;
+- defer only the missing DataForSEO LLM mention/citation captures until the owner has funds next month;
+- require the report to produce an exact bounded capture packet with endpoint list, call count, estimated cost, hard ceiling, filenames, quality checks, and stopping conditions before any credit is purchased;
+- keep Ahrefs or another provider as an occasional calibration/comparison source rather than a routine duplicate collector.
+
 Required vision input:
 
 - `01-project-standard/internet-marketing-intelligence-vision.md`
