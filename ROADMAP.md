@@ -218,7 +218,8 @@ Before selecting integration tools, compare prominent real implementations again
 
 #### Obsidian and filesystem tools
 
-- Active Obsidian audit prompt: `02-research-prompts/004-obsidian-mcp-tool-surface-audit.md`
+- Completed Obsidian audit prompt: `02-research-prompts/004-obsidian-mcp-tool-surface-audit.md`
+- Reconciliation: `03-research-results/009-obsidian-mcp-tool-surface-audit-claude-summary.md`
 
 Evaluate:
 
@@ -228,6 +229,12 @@ Evaluate:
 - read-only versus read/write tool separation
 - search, metadata, patch, delete, command-execution, and plugin dependencies
 - Windows path confinement, junctions, symlinks, and audit logging
+- preserve useful ecosystem capabilities rather than optimizing only for the smallest possible tool surface
+- classify capabilities into portable access, Obsidian-aware navigation, Kaizen-governed writes, and human/admin operations
+- apply final-path confinement and private-scope tests to read/navigation tools, not only write tools
+- distinguish capability use from canonical truth ownership
+- determine configure-versus-wrap per candidate based on actual tool discovery and credential granularity
+- preserve both headless canonical access and interactive Obsidian-aware access
 
 #### Postgres tools
 
@@ -797,7 +804,7 @@ Material governance changes belong in the appropriate decision or specification 
 1. Review and revise `05-specs/staging-write-wrapper-and-promotion-recovery.md`.
 2. Review the Batch A reconciliation changes to staging, promotion, and Hermes planning documents.
 3. Create a clean Git checkpoint for Research Result 008 and the Batch A specification reconciliation.
-4. Run `02-research-prompts/004-obsidian-mcp-tool-surface-audit.md` with Claude and return the report for steward reconciliation.
+4. Review `03-research-results/009-obsidian-mcp-tool-surface-audit-claude-summary.md` and carry its capability-lane model into the Postgres and Qdrant audit prompts.
 5. Prepare the Postgres and Qdrant comparative audit prompts after the Obsidian audit structure is validated.
 6. Prepare Research Batch B: external intelligence providers and source rights.
 7. Recheck the document-contract batch against the aligned vision and verified Batch A evidence.

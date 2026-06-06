@@ -18,5 +18,6 @@ Do not copy a research result directly into the Kaizen Project Standard. First p
 - `006-document-contract-standards-reconciliation.md`
 - `007-kaizen-vision-architecture-research-gap-audit-claude-summary.md`
 - `008-agent-access-and-write-safety-claude-summary.md`
+- `009-obsidian-mcp-tool-surface-audit-claude-summary.md`
 
 Where a raw external report cannot be copied into the repository environment, preserve a faithful stewarded evidence summary and record the source and limitation explicitly.
