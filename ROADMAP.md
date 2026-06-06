@@ -835,14 +835,48 @@ A roadmap update must not silently:
 
 Material governance changes belong in the appropriate decision or specification first, then the roadmap is updated to reflect them.
 
+
+### Human-interface implementation-planning inputs
+
+Evidence:
+
+- `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
+- `03-research-results/014-human-interface-technical-verification-and-amendment.md`
+- `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed
+
+Carry forward this staged direction:
+
+```text
+2A - canonical reader, validation, staging, promotion, CLI
+2B - minimal client-neutral read model
+first desktop-shell prototype
+2C - Postgres prototype and scoped database lanes
+2D - Qdrant retrieval and indexing prototype
+later intelligence and operational panels
+optional bridge plugin only if earned
+```
+
+The first desktop-shell prototype should focus on a minimal Home, Projects, Review Inbox, and Open-in-Obsidian flow. It must not require the entire database and retrieval architecture to be complete.
+
+Later prototype gates should cover:
+
+- desktop-to-Obsidian note and heading navigation;
+- changed-since-review and promotion safety;
+- application-command permission and capability selection;
+- client-neutral canonical reads;
+- intelligence pagination and evidence linking;
+- optional bridge only if a real feature needs active-note context.
+
+This lane does not interrupt Research Batch B and does not authorize UI implementation during the current planning phase.
 ## Immediate next actions
 
-1. Review `01-project-standard/internet-marketing-intelligence-vision.md` and proposed Decision 0010; confirm the portfolio-wide signal engine and dedicated database boundary direction.
-2. Create Research Prompt 007 from the reviewed vision and proposed database boundary, covering providers, source rights, longitudinal retention, cross-project reuse, provenance, freshness, privacy, cost, and evidence needed before database acceptance.
-3. Create a clean Git checkpoint for the Internet Marketing Intelligence vision and proposed Decision 0010.
-4. Run Research Batch B and return the report for steward reconciliation.
-5. After Batch B, decide whether to accept, revise, or reject Decision 0010; if accepted, schedule the focused database-design session before schema work.
-6. Recheck the document-contract batch against the aligned vision and verified Step 5A evidence.
-7. Carry the Postgres and Qdrant prototype and hammer requirements into Phase 7 implementation-planning inputs; do not run those prototypes during the current planning phase.
-8. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
-9. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
+1. Review Research Results 013 and 014 and proposed Decision 0011 as one human-interface planning package.
+2. Decide whether to accept, revise, or keep Decision 0011 proposed; do not begin UI implementation.
+3. Create Research Prompt 007 from the reviewed Internet Marketing Intelligence vision and proposed database boundary, covering providers, source rights, longitudinal retention, cross-project reuse, provenance, freshness, privacy, cost, and evidence needed before database acceptance.
+4. Create a clean Git checkpoint for the human-interface research package and Decision 0011.
+5. Run Research Batch B and return the report for steward reconciliation.
+6. After Batch B, decide whether to accept, revise, or reject Decision 0010; if accepted, schedule the focused database-design session before schema work.
+7. Carry the human-interface, Postgres, and Qdrant prototype requirements into Phase 7 and Phase 8 implementation-planning inputs; do not run those prototypes during the current planning phase.
+8. Recheck the document-contract batch against the aligned vision and verified evidence.
+9. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
+10. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.

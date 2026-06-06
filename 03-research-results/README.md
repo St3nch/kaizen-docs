@@ -22,5 +22,7 @@ Do not copy a research result directly into the Kaizen Project Standard. First p
 - `010-postgres-mcp-typed-tool-audit-claude-summary.md`
 - `011-qdrant-mcp-typed-tool-audit-claude-summary.md`
 - `012-step-5a-composed-tool-capability-map.md`
+- `013-kaizen-human-interface-architecture-claude-summary.md`
+- `014-human-interface-technical-verification-and-amendment.md`
 
 Where a raw external report cannot be copied into the repository environment, preserve a faithful stewarded evidence summary and record the source and limitation explicitly.

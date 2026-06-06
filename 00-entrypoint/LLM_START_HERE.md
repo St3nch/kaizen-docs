@@ -41,6 +41,7 @@ Humans = authority-bearing review, approval, and promotion
 - Decision 0008 operating conventions: proposed and awaiting review
 - Decision 0009 Operational Postgres/Observatory boundary: accepted
 - Decision 0010 dedicated Internet Marketing Intelligence database boundary: proposed; no schema work authorized
+- Decision 0011 progressive hybrid human interface direction: proposed; architecture only, no UI implementation authorized
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
 - Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
@@ -68,19 +69,21 @@ Read in this order unless the user gives a narrower task:
 15. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
 16. `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted
 17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - proposed; dedicated boundary and pre-schema design gate
-18. `05-specs/kaizen-field-registry.md`
-19. `05-specs/kaizen-note-type-registry.md`
-20. `05-specs/kaizen-id-and-prefix-registry.md`
-21. `05-specs/staging-and-promotion-workflow.md`
-22. `05-specs/promotion-event-schema.md`
-23. `05-specs/kaizen-validation-gate-spec.md`
-24. `05-specs/operational-postgres-authority.md`
-25. `05-specs/kaizen-hammer-test-strategy.md`
-26. `07-hermes/hermes-permission-matrix.md`
-27. `07-hermes/hermes-write-access-preconditions.md`
-28. `03-research-results/006-document-contract-standards-reconciliation.md`
-29. Other files in `03-research-results/` for supporting evidence
-
+18. `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed; architecture direction only
+19. `05-specs/kaizen-field-registry.md`
+20. `05-specs/kaizen-note-type-registry.md`
+21. `05-specs/kaizen-id-and-prefix-registry.md`
+22. `05-specs/staging-and-promotion-workflow.md`
+23. `05-specs/promotion-event-schema.md`
+24. `05-specs/kaizen-validation-gate-spec.md`
+25. `05-specs/operational-postgres-authority.md`
+26. `05-specs/kaizen-hammer-test-strategy.md`
+27. `07-hermes/hermes-permission-matrix.md`
+28. `07-hermes/hermes-write-access-preconditions.md`
+29. `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
+30. `03-research-results/014-human-interface-technical-verification-and-amendment.md`
+31. `03-research-results/006-document-contract-standards-reconciliation.md`
+32. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -201,6 +204,7 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 13. Kaizen is intended to compound lawful public-market observations across projects while preserving project-private, customer-restricted, and licensed-data boundaries.
 14. Opportunity and strategy outputs remain reviewable candidates until humans accept them.
 15. No Internet Marketing Intelligence schema work begins until the dedicated database decision is reviewed and a focused owner/steward design session is completed.
+16. Kaizen will pursue a progressive hybrid human-interface direction only through reviewed decisions and later implementation gates; Obsidian remains the canonical document workspace.
 
 ## Rules for LLMs
 

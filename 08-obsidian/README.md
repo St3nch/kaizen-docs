@@ -92,3 +92,31 @@ Interactive workflows may use backlinks, properties, tags, reveal/open-note acti
 - Runtime denial of an advertised dangerous tool is not sufficient.
 - Coarse-token REST APIs require a thin Kaizen allowlisting proxy for selected read/navigation endpoints.
 - The proxy must hold the upstream credential, enforce scope, validate parameters, and expose no generic pass-through operation.
+## Progressive hybrid human-interface direction
+
+Evidence:
+
+- `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
+- `03-research-results/014-human-interface-technical-verification-and-amendment.md`
+- `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed
+
+Obsidian remains Kaizen's primary canonical document, research, evidence, writing, and deep-review workspace.
+
+The proposed long-term human-interface direction adds a separate desktop control shell for portfolio, review, intelligence, agent, job, cost, and system-health workflows that are poorly suited to a document editor.
+
+```text
+Obsidian
+= canonical document workspace
+
+Desktop control shell
+= operational, intelligence, portfolio, and review interface
+
+Typed Kaizen services
+= shared authority and data-access boundary
+```
+
+Tauri is the leading desktop-shell candidate but is not accepted implementation doctrine.
+
+Initial integration should use supported URI and deep-link mechanisms. A custom Obsidian bridge plugin is not accepted now and may be proposed only when observed workflow friction proves that URI navigation, canonical readers, and typed services are insufficient.
+
+Obsidian must not be reduced to a generic folder viewer, and the desktop shell must not replace or hide canonical Markdown.

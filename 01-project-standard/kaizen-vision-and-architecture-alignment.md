@@ -686,3 +686,27 @@ Those require research, decisions, specifications, and later implementation plan
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `07-hermes/hermes-permission-matrix.md`
 - `03-research-results/006-document-contract-standards-reconciliation.md`
+
+## Human interface direction
+
+Kaizen's likely long-term human interface is progressive and hybrid:
+
+```text
+Obsidian-native workflow proof
+-> client-neutral typed services
+-> minimal desktop control shell
+-> intelligence and operational panels as their backends mature
+-> optional bridge plugin only if earned
+```
+
+Obsidian remains the primary workspace for canonical documents, research, evidence, writing, and deep review.
+
+A separate desktop control shell is the leading direction for portfolio state, review queues, Internet Marketing Intelligence, agents, jobs, costs, and system health.
+
+Tauri is the leading implementation candidate, but proposed Decision 0011 intentionally defers final framework selection, transport, process topology, secret storage, updater mechanics, frontend libraries, and screen design.
+
+Evidence and decision:
+
+- `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
+- `03-research-results/014-human-interface-technical-verification-and-amendment.md`
+- `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed
