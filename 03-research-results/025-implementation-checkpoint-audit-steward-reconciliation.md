@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T19:35:16Z
+updated: 2026-06-07T19:40:21Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -237,7 +237,7 @@ Status: complete in platform commit `f377f53` and Research Result 026.
 1. retire the current combined Packet 006 from approval consideration - complete;
 2. draft Packet 006A for the native first-time install prototype - complete;
 3. security-audit 006A - Result 027 pass;
-4. owner approves 006A - pending;
+4. owner approves 006A - complete on 2026-06-07;
 5. implement and hammer-test 006A;
 6. draft 006B using 006A's proven primitive;
 7. define plan storage, hashes, IDs, governance log, and recovery contracts;
@@ -277,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Present security-audited Packet 006A for owner approval. If approved, implement only the disposable-root Windows first-time atomic-install primitive and its hammer tests.
+Implement and hammer-test the owner-approved Packet 006A disposable-root Windows first-time atomic-install primitive. Stop as blocked if collision refusal, same-volume proof, or deterministic failure classification cannot be proved.
 
-Do not begin Packet 006A implementation without explicit owner approval, and do not begin the full canonical-promotion workflow under any interpretation of that approval.
+Packet 006A implementation is now authorized. Do not begin Packet 006B or the full canonical-promotion workflow under any interpretation of this approval.
