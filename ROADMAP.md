@@ -1008,7 +1008,7 @@ This lane remains a future implementation input and does not authorize UI implem
 
 1. Close Result 025 Gate A documentation and backup findings.
 2. Correct the two canonical bootstrap notes and validate them.
-3. Configure approved private remotes for `C:\dev\kaizen\platform` and `C:\dev\kaizen\vault`.
+3. Preserve the owner-approved local-only development period; decide public/private remote visibility at the working-project checkpoint.
 4. Add and review the adopted cross-process, abrupt-termination, malformed-log, and no-side-effect hammer tests.
 5. Retire the current combined Packet 006 from approval consideration.
 6. Draft and security-audit Packet 006A for the Windows first-time atomic-install primitive.

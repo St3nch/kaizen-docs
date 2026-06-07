@@ -130,7 +130,7 @@ platform/
 
 # Milestone 2 - Canonical vault bootstrap
 
-Status: implementation complete; remote-backup exit criterion open
+Status: implementation complete; remote backup intentionally deferred by owner until the working-project checkpoint
 
 ## Objective
 
@@ -152,7 +152,7 @@ Create the first canonical vault root and one minimal project bootstrap after Mi
 - bootstrap notes validate;
 - portable path rules hold;
 - `.obsidian` is not required for operation;
-- remote backup exists.
+- remote backup exists, or the owner has explicitly accepted a temporary local-only development period and recorded the later remote decision checkpoint.
 
 # Milestone 3 - Safe staging and promotion
 
@@ -277,7 +277,7 @@ Close the implementation-checkpoint remediation gate defined by:
 Immediate priorities:
 
 1. correct stale entrypoint, roadmap, and canonical bootstrap-note claims;
-2. configure and push approved private remotes for the platform and vault repositories;
+2. preserve clean local repositories and revisit public/private remote visibility at the owner-defined working-project checkpoint;
 3. add the adopted subprocess, abrupt-termination, malformed-log, and no-side-effect hammer tests;
 4. retire the current combined Packet 006 from approval consideration;
 5. draft and audit Packet 006A for the Windows first-time atomic-install primitive;

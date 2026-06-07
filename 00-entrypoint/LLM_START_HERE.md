@@ -31,9 +31,9 @@ Humans = authority-bearing review, approval, and promotion
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `3de6042`; remote backup not yet configured
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `f377f86`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
-- Platform repository: exists at `C:\dev\kaizen\platform`, commit `36fa419`; remote backup not yet configured
+- Platform repository: exists at `C:\dev\kaizen\platform`, commit `36fa419`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
 - Task Packet 005: complete and audited pass-with-notes
 - Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
 - Operational Postgres database and Observatory domain: not implemented
@@ -251,7 +251,7 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 - follow `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`;
 - correct the two canonical bootstrap notes and revalidate them;
-- configure approved private remotes for the platform and vault repositories;
+- preserve the explicit owner-deferred remote gap until the working-project checkpoint;
 - add the adopted subprocess, abrupt-termination, malformed-log, and no-side-effect hammer tests;
 - retire the current combined Packet 006 from approval consideration;
 - draft and audit Packet 006A for the Windows first-time atomic-install primitive;

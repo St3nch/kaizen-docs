@@ -37,7 +37,7 @@ No Critical finding invalidates Milestones 1 or 2, and no finding requires aband
 Allowed while the remediation gate is active:
 
 - documentation correction;
-- repository backup/remotes;
+- repository backup/remotes when they do not obstruct the active development workflow;
 - canonical bootstrap-note correction through a reviewed human edit;
 - test hardening;
 - Packet 006 restructuring or splitting;
@@ -103,7 +103,7 @@ Items marked `E` are tracked but do not block the first slice.
 | ID | Disposition | Gate | Steward decision | Closure evidence |
 |---|---|---:|---|---|
 | F-01 | adopt | A | Correct `\build` in both canonical bootstrap notes. Review the entire two notes for other stale body claims while editing. | Vault diff reviewed; notes validate; vault commit recorded and pushed after remote exists. |
-| F-02 | adopt with modification | A/D | Configure private remotes for platform and vault. Milestone 2 status becomes `complete-with-backup-gap` until vault remote is pushed; platform remote is required before promotion implementation, not part of Milestone 2's original canonical-vault exit criterion. | `git remote -v`, successful push, clean status, roadmap status corrected. |
+| F-02 | owner-deferred | D | Do not create platform or vault remotes during the active build phase. Private repositories would block the owner's mobile Claude workflow, while public visibility is not yet decided. Preserve the local repositories and revisit remote visibility at the working-project checkpoint. This backup gap does not block current remediation, Packet 006A research, or local implementation work. | Owner selects public or private visibility at the working-project checkpoint; remotes are then configured and pushed; clean status and roadmap state are recorded. |
 | F-03 | adopt | A | Rewrite current posture in `LLM_START_HERE.md`. | Entrypoint lists real repositories, commits, Packet 005 completion, audit-remediation gate, and Packet 006 pending status. |
 | F-04 | adopt | A | Replace ROADMAP's Packet 005 next actions with the audit-remediation gate. | ROADMAP links Result 024 and 025 and lists ordered closure work. |
 | F-05 | adopt | A | Update implementation roadmap immediate action and Milestone 3 wording. | Implementation roadmap points to Result 025 and no longer instructs Packet 005 work. |
@@ -166,9 +166,9 @@ The combined Packet 006 draft remains useful source material but must not be app
 
 Do not rewrite or migrate the existing attempt log merely to add schema version or normalized separators. New formats should be forward-compatible without falsifying old evidence.
 
-### S-04 - remote creation requires owner involvement
+### S-04 - remote creation deferred by owner for development access
 
-Creating private GitHub repositories changes external state and ownership. The steward may prepare exact commands and names, but the owner must approve repository names/visibility before creation.
+On 2026-06-07, the owner deferred platform and vault remote creation until Kaizen reaches a working-project checkpoint. Private visibility would prevent the required mobile Claude workflow, while public visibility should not be selected prematurely. The repositories remain local by explicit owner decision. This is an accepted development-access tradeoff, not an accidental omission.
 
 ## Adopted hammer-test improvements
 
@@ -213,12 +213,12 @@ Tests that only inflate coverage or restate implementation are rejected.
 
 ## Ordered remediation plan
 
-### Phase R1 - truth and backup
+### Phase R1 - truth and checkpoint alignment
 
 1. update entrypoint and both roadmaps;
 2. correct the two canonical bootstrap notes;
-3. create and push private remotes for platform and vault after owner approval;
-4. mark Milestone 2 accurately until remote backup exists;
+3. record the owner decision to defer platform and vault remotes until the working-project checkpoint;
+4. keep the local repositories clean and preserve the documented backup gap;
 5. commit the audit package and remediation ledger.
 
 ### Phase R2 - staging boundary evidence hardening
