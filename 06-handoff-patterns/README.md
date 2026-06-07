@@ -12,3 +12,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `004-implement-staging-root-and-path-confinement-foundations.md` - completed and audited pass-with-notes
 - `005-implement-create-only-staging-write-wrapper.md` - completed and audited pass-with-notes
 - `006-implement-human-operated-canonical-promotion.md` - retired combined draft; not eligible for approval; preserved as source material for the required 006A/006B split
+- `006a-prove-windows-first-time-atomic-install.md` - steward-drafted and security-audited pass; pending owner approval; disposable-root native primitive only

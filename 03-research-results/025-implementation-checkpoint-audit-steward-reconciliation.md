@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T19:28:27Z
+updated: 2026-06-07T19:35:16Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -110,13 +110,13 @@ Items marked `E` are tracked but do not block the first slice.
 | F-06 | closed | A | Preserve historical planning phases while marking active execution as handed to the implementation roadmap. | Closed in docs commit `6be8af1`; the active remediation gate is unambiguous and historical phase detail remains intact. |
 | F-07 | closed | B | Added a true independent-process contention test. | Platform commit `f377f53` and Result 026: two independent interpreters contend; exactly one physical create; second result is `destination_exists`; filesystem and event sequence asserted. |
 | F-08 | closed | B | Added abrupt child-process termination after durable intent without claiming power-loss durability. | Platform commit `f377f53` and Result 026: child exits through `os._exit(91)`; next process recovers deterministically; disposable roots only. |
-| F-09 | adopt | A | Add `canonical_candidate_sha256` explicitly to Packet 006 request/plan contract. | Packet text and tests/spec references agree. |
-| F-10 | adopt | A | Restore required `Implementation Requirements`, `Constraints`, and `Validation` sections in Packet 006 or successor packets. | Packet validates against task-packet contract. |
-| F-11 | adopt | A | Fix test numbering and perform full editorial pass. | No duplicate numbering; Markdown integrity scan clean. |
-| F-12 | modify | A/B | Split Packet 006. Packet 006A will prototype and hammer-test first-time atomic install only. Packet 006B will implement full promotion only after 006A passes. Do not pin a primitive from Claude's memory alone; verify against primary Microsoft documentation and live disposable tests. | 006A approved, implementation evidence and audit pass; 006B references proven primitive. |
-| F-13 | adopt | A | Define immutable promotion-plan storage, hash binding, invalidation, and lookup before 006B approval. Recommended location: staging-local governed plan file or dedicated sibling plan directory, never canonical vault. Final location remains a steward decision after 006A. | Packet contract states exact path, schema, lifecycle, and replay rules. |
-| F-14 | modify | A/C | Bootstrap `_governance/README.md` and empty `promotion-log.jsonl` through a separate owner-approved human vault maintenance step before first promotion. Do not let first promotion invent governance structure as a hidden side effect. | Vault commit with empty parseable log and README; validation/Git review passes. |
-| F-15 | adopt | A | Require promotion-event IDs from the registered `promotion-event` prefix. Do not generalize staging attempt IDs in this gate unless needed for compatibility. | Packet/schema/tests assert `kz-prom-<ULID>`. |
+| F-09 | assigned to 006B | A | Add `canonical_candidate_sha256` explicitly to the later promotion request/plan contract. It is intentionally excluded from 006A's native primitive boundary. | Packet 006B text and tests/spec references must agree before 006B approval. |
+| F-10 | closed for 006A | A | Required `Implementation Requirements`, `Constraints`, and `Validation` sections are present in Packet 006A. | Result 027 security audit; 006B must independently satisfy the same contract before its approval. |
+| F-11 | closed for 006A | A | Packet 006A has unique sequential test numbering and passed editorial/integrity review. | Result 027 security audit; 006B requires a separate editorial pass. |
+| F-12 | Gate A closed; Gate B open | A/B | The combined Packet 006 is retired. Packet 006A is drafted and security-audited for native primitive proof only; Packet 006B remains prohibited until 006A implementation passes and is steward-audited. | Result 027; owner approval of 006A still required before implementation. |
+| F-13 | assigned to 006B | A | Define immutable promotion-plan storage, hash binding, invalidation, and lookup before 006B approval. It is intentionally excluded from 006A. | Packet 006B states exact path, schema, lifecycle, and replay rules. |
+| F-14 | assigned to pre-promotion maintenance | C | Bootstrap `_governance/README.md` and empty `promotion-log.jsonl` through a separate owner-approved human vault maintenance step before first promotion. It is outside 006A and must not be hidden inside 006B execution. | Vault commit with empty parseable log and README; validation/Git review passes. |
+| F-15 | assigned to 006B | A | Require promotion-event IDs from the registered `promotion-event` prefix in the later promotion workflow. It is intentionally excluded from 006A. | Packet 006B, schema, and tests assert `kz-prom-<ULID>`. |
 | F-16 | modify/defer | D | Documentation-repository task packets are planning artifacts, not canonical vault notes. Do not mass-convert them now. Before Milestone 4, define whether promoted task packets must translate path references into stable IDs. | Explicit reconciliation note or accepted contract amendment before first governed project loop. |
 | F-17 | reject as defect; record deviation | E | Packet 005's `_audit/` path was illustrative, and implementation/README consistently use the staging-root log. Do not move it now. Record the location as the accepted first-slice implementation detail. | Packet 005 completion or spec note references actual location. |
 | F-18 | adopt narrowly | B | Promotion-event paths must use forward-slash vault-relative form. Existing staging attempt log may retain Windows logical paths for first-slice compatibility; new schema-versioned records should normalize. | Promotion tests assert normalized destination paths. |
@@ -234,10 +234,10 @@ Status: complete in platform commit `f377f53` and Research Result 026.
 
 ### Phase R3 - promotion packet restructuring
 
-1. retire the current combined Packet 006 from approval consideration;
-2. draft Packet 006A for the native first-time install prototype;
-3. security-audit 006A;
-4. owner approves 006A;
+1. retire the current combined Packet 006 from approval consideration - complete;
+2. draft Packet 006A for the native first-time install prototype - complete;
+3. security-audit 006A - Result 027 pass;
+4. owner approves 006A - pending;
 5. implement and hammer-test 006A;
 6. draft 006B using 006A's proven primitive;
 7. define plan storage, hashes, IDs, governance log, and recovery contracts;
@@ -277,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Draft and security-audit Packet 006A for the Windows first-time atomic-install primitive. Keep it strictly separated from full promotion planning, approval, event logging, and recovery.
+Present security-audited Packet 006A for owner approval. If approved, implement only the disposable-root Windows first-time atomic-install primitive and its hammer tests.
 
-Do not begin the full canonical-promotion workflow. Packet 006A may authorize only disposable-root native primitive research and implementation after owner approval.
+Do not begin Packet 006A implementation without explicit owner approval, and do not begin the full canonical-promotion workflow under any interpretation of that approval.
