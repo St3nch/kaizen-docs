@@ -102,12 +102,12 @@ Items marked `E` are tracked but do not block the first slice.
 
 | ID | Disposition | Gate | Steward decision | Closure evidence |
 |---|---|---:|---|---|
-| F-01 | adopt | A | Correct `\build` in both canonical bootstrap notes. Review the entire two notes for other stale body claims while editing. | Vault diff reviewed; notes validate; vault commit recorded and pushed after remote exists. |
+| F-01 | closed locally | A | Corrected `\build` in both canonical bootstrap notes and reviewed the full notes for stale claims. | Vault commits `f377f86` and `b86952a`; both notes validate with zero errors and zero warnings. Remote push is owner-deferred under F-02 and no longer blocks local closure. |
 | F-02 | owner-deferred | D | Do not create platform or vault remotes during the active build phase. Private repositories would block the owner's mobile Claude workflow, while public visibility is not yet decided. Preserve the local repositories and revisit remote visibility at the working-project checkpoint. This backup gap does not block current remediation, Packet 006A research, or local implementation work. | Owner selects public or private visibility at the working-project checkpoint; remotes are then configured and pushed; clean status and roadmap state are recorded. |
-| F-03 | adopt | A | Rewrite current posture in `LLM_START_HERE.md`. | Entrypoint lists real repositories, commits, Packet 005 completion, audit-remediation gate, and Packet 006 pending status. |
-| F-04 | adopt | A | Replace ROADMAP's Packet 005 next actions with the audit-remediation gate. | ROADMAP links Result 024 and 025 and lists ordered closure work. |
-| F-05 | adopt | A | Update implementation roadmap immediate action and Milestone 3 wording. | Implementation roadmap points to Result 025 and no longer instructs Packet 005 work. |
-| F-06 | modify | A | Do not rewrite all historical planning phases immediately. Mark the planning roadmap as having handed active execution to the implementation roadmap, while preserving historical phase detail. | Clear supersedence/handoff note added; current active gate is unambiguous. |
+| F-03 | closed | A | Rewrite current posture in `LLM_START_HERE.md`. | Closed in docs commits `6be8af1` and `f8a5c83`; entrypoint reflects live repositories, completed Packet 005, active remediation, archived Packet 006, and owner-deferred remotes. |
+| F-04 | closed | A | Replace ROADMAP's Packet 005 next actions with the audit-remediation gate. | Closed in docs commits `6be8af1` and `f8a5c83`; ROADMAP links Results 024/025 and points to R2 evidence hardening. |
+| F-05 | closed | A | Update implementation roadmap immediate action and Milestone 3 wording. | Closed in docs commits `6be8af1` and `f8a5c83`; implementation roadmap points to Result 025 and no longer instructs Packet 005 work. |
+| F-06 | closed | A | Preserve historical planning phases while marking active execution as handed to the implementation roadmap. | Closed in docs commit `6be8af1`; the active remediation gate is unambiguous and historical phase detail remains intact. |
 | F-07 | adopt | B | Add a true independent-process contention test. The manual smoke is evidence but does not replace automation. | Two subprocesses start concurrently; exactly one physical create; second result is governed and deterministic; evidence includes outputs and filesystem state. |
 | F-08 | adopt | B | Add at least one abrupt child-process termination test. Do not claim power-loss durability from this test. | Child exits through `os._exit` or equivalent after an injected persistence point; next process recovers deterministically; no live roots touched. |
 | F-09 | adopt | A | Add `canonical_candidate_sha256` explicitly to Packet 006 request/plan contract. | Packet text and tests/spec references agree. |
@@ -253,7 +253,7 @@ Tests that only inflate coverage or restate implementation are rejected.
 
 ```text
 Milestone 1: complete
-Milestone 2: implementation complete; remote-backup exit criterion open
+Milestone 2: implementation complete; remote backup owner-deferred until the working-project checkpoint
 Milestone 3A: path confinement complete
 Milestone 3B: create-only staging write complete; evidence-hardening open
 Milestone 3C: canonical promotion not approved; packet restructuring required
@@ -275,6 +275,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Update the entrypoint and roadmaps to link this reconciliation, then prepare the new-chat handoff prompt.
+Begin Phase R2 staging-boundary evidence hardening through a reviewed, tightly bounded test-only change. Add genuine subprocess contention, abrupt child-process recovery, malformed/truncated JSONL handling, and no-side-effect rejection assertions using disposable roots.
 
-No canonical-promotion packet may be approved until Gate A is closed.
+Do not begin canonical-promotion implementation. Packet 006A research may proceed only after the R2 evidence work is reviewed and the remaining Gate A packet-structure findings are reconciled.
