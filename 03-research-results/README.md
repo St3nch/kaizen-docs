@@ -25,5 +25,7 @@ Do not copy a research result directly into the Kaizen Project Standard. First p
 - `013-kaizen-human-interface-architecture-claude-summary.md`
 - `014-human-interface-technical-verification-and-amendment.md`
 - `015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
+- `016-kaizen-planning-acceleration-audit.md`
+- `017-decision-0008-end-to-end-dry-run-simulation.md`
 
 Where a raw external report cannot be copied into the repository environment, preserve a faithful stewarded evidence summary and record the source and limitation explicitly.

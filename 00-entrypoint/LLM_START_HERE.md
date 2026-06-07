@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Kaizen vision and architecture alignment within Project Standard v0.2 planning
+- Current phase: accelerated foundation closure and first vertical-slice planning
 - Planning roadmap: active at `ROADMAP.md`
 - Vision alignment: active at `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 - Internet Marketing Intelligence vision: active at `01-project-standard/internet-marketing-intelligence-vision.md`
@@ -38,7 +38,7 @@ Humans = authority-bearing review, approval, and promotion
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: designated Kaizen agent clerk; canonical read/search is required; write access remains unapproved until staging boundary tests pass
 - Decisions 0001 through 0007: accepted
-- Decision 0008 operating conventions: proposed and awaiting review
+- Decision 0008 operating conventions: accepted after end-to-end dry-run simulation
 - Decision 0009 Operational Postgres/Observatory boundary: accepted
 - Decision 0010 dedicated Internet Marketing Intelligence database boundary: accepted; no schema work authorized
 - Decision 0011 progressive hybrid human interface direction: proposed; architecture only, no UI implementation authorized
@@ -66,7 +66,7 @@ Read in this order unless the user gives a narrower task:
 12. `04-design-decisions/0004-system-of-record-boundaries.md`
 13. `04-design-decisions/0005-api-only-structured-data-access.md`
 14. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
-15. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
+15. `04-design-decisions/0008-v0.2-operating-conventions.md` - accepted
 16. `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted
 17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - accepted; dedicated boundary and pre-schema design gate
 18. `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed; architecture direction only
@@ -84,8 +84,10 @@ Read in this order unless the user gives a narrower task:
 30. `03-research-results/014-human-interface-technical-verification-and-amendment.md`
 31. `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
 32. `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` - deferred; execution not authorized
-33. `03-research-results/006-document-contract-standards-reconciliation.md`
-34. Other files in `03-research-results/` for supporting evidence
+33. `03-research-results/016-kaizen-planning-acceleration-audit.md`
+34. `03-research-results/017-decision-0008-end-to-end-dry-run-simulation.md`
+35. `03-research-results/006-document-contract-standards-reconciliation.md`
+36. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -227,35 +229,23 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Remaining v0.2 work
 
-### Completed research awaiting acceptance
+### Immediate foundation-closure work
 
-- document contracts for source summaries, claims, decisions, specs, audits, and task packets
-- objective implementation-readiness, audit-verdict, approval-freshness, and acceptance-criteria rules
+- freeze the first-slice document, metadata, validation, and promotion contracts through a narrow accepted decision or reviewed implementation baseline;
+- choose the implementation language and repository for Kaizen tooling;
+- define the first vertical slice and explicit exclusions;
+- write Implementation Roadmap v0.1 for the tools and vault-foundation milestones;
+- create and audit the first implementation task packet.
 
-The Kaizen disposition is recorded in `03-research-results/006-document-contract-standards-reconciliation.md`.
+### Non-blocking future work
 
-### Proposed conventions awaiting review
+- marketplace-ranking coverage before the Internet Marketing Intelligence database-design session;
+- provider-rights completion before permanent retention or external-use policy;
+- Postgres and Qdrant storage/recovery work in their implementation phases;
+- knowledge-quality and context-assembly research after real promoted notes exist;
+- Hermes, desktop-shell, bridge-plugin, and provider-adapter implementation through later roadmap gates.
 
-Decision 0008 currently proposes:
-
-- final `pipeline_stage` enum
-- exact canonical folder placement
-- portable vault-root naming/path convention
-- plugin install/defer policy
-- intentional `.obsidian` version-control policy
-- source URL retention after stable source IDs exist
-- initial private/raw-data validation thresholds
-- future Qdrant treatment of current-state notes
-
-### Specs awaiting implementation decisions
-
-- promotion-event JSON Schema and action vocabulary
-- ULID generator implementation language and repository location
-- human actor-ID format
-- validation and promotion tooling location
-
-Do not treat Decision 0008 or these implementation choices as accepted until explicit human review.
-
+Decision 0008 is accepted. The broad research lanes above do not block the first vertical slice.
 ## Required output shape for future docs
 
 Prefer:

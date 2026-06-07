@@ -2,7 +2,9 @@
 
 Status: active draft aligned to accepted foundation
 Date: 2026-06-04
-Related decision: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+Related decisions:
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `04-design-decisions/0008-v0.2-operating-conventions.md`
 
 ## Purpose
 
@@ -108,8 +110,8 @@ Only humans may set `accepted`.
 | `pipeline_stage` | command centers and current-state notes | controlled enum defined by the project standard |
 | `domain` | cross-project or domain-oriented knowledge | optional; lowercase kebab-case when present |
 | `confidence` | claims and evidence interpretations | controlled enum; initial values `low`, `medium`, `high` |
-| `source_docs` | source summaries, claims | list of stable Kaizen IDs |
-| `source_urls` | pre-ingestion source summaries | list of external URLs; allowed until a source registry exists |
+| `source_docs` | source summaries, claims | list of stable governed source-artifact IDs, normally source-summary IDs |
+| `source_urls` | source summaries | list of external source URLs retained as human-readable provenance |
 | `related_claims` | decisions, specs, audits, other claims | list of stable Kaizen IDs |
 | `related_decisions` | specs and audits | list of stable Kaizen IDs |
 | `related_specs` | audits and task packets | list of stable Kaizen IDs |
@@ -123,7 +125,7 @@ Only humans may set `accepted`.
 
 ## Agent provenance
 
-These fields are set at creation when an agent drafts the note and remain as durable history after promotion.
+These fields are set at creation when an agent drafts or materially generates the note and remain as durable history after promotion.
 
 ```yaml
 agent:
@@ -133,9 +135,12 @@ session:
 
 Rules:
 
-- Humans must not fabricate agent provenance on human-authored notes.
+- Human-authored notes omit `agent`, `model`, and `session`.
+- Humans must not fabricate agent provenance.
+- Empty-string provenance values are invalid.
+- When agent provenance applies, all required provenance fields must be present and non-empty.
 - Promotion must not erase true agent provenance.
-- Provenance fields never grant authority.
+- Provenance fields never grant review or authority.
 
 ## Staging-transient field
 
@@ -177,9 +182,7 @@ validation_status: pending | passed | failed
 
 ## Open questions
 
-- Exact `pipeline_stage` enum for v0.2.
 - Whether `confidence` needs an `unknown` value.
-- Whether source URLs should remain after stable source IDs are assigned.
 - When unknown fields should switch from warning to error.
 - Whether optional readable aliases become necessary after real authoring.
 

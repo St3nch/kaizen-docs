@@ -2,7 +2,11 @@
 
 Status: active draft aligned to accepted foundation
 Date: 2026-06-04
-Related decision: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+Updated: 2026-06-07
+Related decisions:
+- `04-design-decisions/0001-two-zone-agent-write-model.md`
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `04-design-decisions/0008-v0.2-operating-conventions.md`
 
 ## Purpose
 
@@ -79,6 +83,34 @@ review_status: pending
 ```
 
 Hermes may use `authority: none` or `authority: proposed` only where the registry permits it.
+
+## Completion reports and follow-up artifacts
+
+A task packet's `## Completion Report` is implementation evidence, not governing authority.
+
+When a task packet is managed through staging and promotion, completion-report content is added through a governed amendment using the `amend` action defined by `05-specs/promotion-event-schema.md`.
+
+The completion report should record:
+
+- deliverables produced;
+- validation and tests executed;
+- deviations from the packet;
+- failures and unresolved issues;
+- discoveries;
+- recommended follow-up work.
+
+Findings that change project intelligence must become separate governed notes or governed amendments, such as:
+
+- a new or revised claim;
+- a decision proposal or amendment;
+- a revised specification;
+- a new audit;
+- a follow-up task packet;
+- an amendment to `current-state.md`.
+
+Those artifacts follow the normal validation, review, and promotion workflow. The completion report itself does not grant authority or silently change accepted doctrine.
+
+Humans may edit canonical Markdown directly when authorized. Agent-created or staged candidate artifacts require deterministic validation and human-controlled promotion. Authority transitions and governed staged promotions remain auditable.
 
 ## Promotion preconditions
 

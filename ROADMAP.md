@@ -24,7 +24,7 @@ The planning outcome is:
 - A phase is complete only when its exit criteria are met.
 - Proposed decisions remain proposed until explicitly accepted.
 - Research remains evidence until reconciled and approved.
-- Implementation work begins only after the planning roadmap reaches its final handoff phase.
+- Implementation work begins after the acceleration exit gate is satisfied and Implementation Roadmap v0.1 authorizes the first milestone.
 
 ## Status vocabulary
 
@@ -39,14 +39,111 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Phase 2 - Vision and architecture alignment
-Current objective: preserve the full Kaizen vision, obtain an independent Claude research-gap audit, and reconcile verified evidence before final contract and standard work
+Current phase: Foundation closure and first vertical-slice planning
+Current objective: freeze the minimum safe first-slice contracts, write Implementation Roadmap v0.1, and begin one governed vertical slice
 Current implementation status: not started
 Hermes posture: required first-class vault consumer; canonical writes remain unapproved
 ```
 
 ---
 
+# Acceleration amendment - 2026-06-07
+
+Status: active
+
+## Reason
+
+The planning foundation is coherent enough to begin a narrow implementation slice. Remaining broad research is useful but no longer treated as a serial prerequisite unless it protects canonical data, authority, security, customer information, money, or an expensive-to-reverse boundary.
+
+## Accepted acceleration direction
+
+```text
+minimum safe contract freeze
+-> Implementation Roadmap v0.1
+-> first implementation task packet
+-> one working vertical slice
+-> retrospective
+-> evidence-driven v0.2 consolidation
+```
+
+## Pre-implementation-roadmap blockers
+
+Only these items block writing Implementation Roadmap v0.1:
+
+1. Decision 0008 accepted after dry-run simulation - complete.
+2. First-slice document, metadata, validation, and promotion contracts explicitly frozen.
+3. Tooling language and repository selected.
+4. First vertical slice scoped with explicit exclusions.
+5. First task-packet format confirmed for implementation use.
+
+## First vertical slice
+
+The first slice proves:
+
+```text
+canonical Markdown
+-> deterministic validation
+-> sibling staging
+-> human-controlled safe promotion
+-> task packet
+-> implementation completion evidence
+-> governed current-state update
+```
+
+Included:
+
+- Kaizen ID generation;
+- Markdown and flat-YAML parsing;
+- first-slice validation;
+- safe human-operated promotion with confinement, hashes, journal, and recovery;
+- canonical vault bootstrap;
+- one realistic project chain;
+- completion report and self-audit.
+
+Excluded:
+
+- Hermes integration;
+- Operational Postgres;
+- Internet Marketing Intelligence database;
+- Qdrant;
+- DataForSEO;
+- marketplace-ranking collection;
+- desktop control shell;
+- Obsidian bridge plugin;
+- final backup architecture;
+- advanced knowledge-quality scoring.
+
+## Reclassified research lanes
+
+### Step 6A marketplace-ranking coverage
+
+Remains required before the focused Internet Marketing Intelligence database-design session. It does not block the first vertical slice or Implementation Roadmap v0.1.
+
+### Research Batch C
+
+Compressed for the first slice to Git remote backup for canonical Markdown, disposable staging, and the accepted promotion-recovery protocol. Full Postgres, Qdrant, and production recovery work moves to the relevant implementation phase.
+
+### Research Batch D
+
+Deferred until real promoted corpora exist. Initial notes use the accepted fields, stable source relationships, timestamps, and existing confidence enum.
+
+### Decision 0011 and interface work
+
+Remain future implementation inputs and do not block the first slice.
+
+## Planning exit gate
+
+The planning roadmap may hand off to Implementation Roadmap v0.1 when:
+
+- Decision 0008 is accepted;
+- the first-slice contracts are frozen;
+- the tools language and repository are selected;
+- the first slice and exclusions are recorded;
+- the first implementation milestone and task packet are reviewable.
+
+The exit gate does not require completion of every future research lane.
+
+---
 # Phase 0 - Repository and stewardship foundation
 
 Status: complete
@@ -900,16 +997,16 @@ Later prototype gates should cover:
 - intelligence pagination and evidence linking;
 - optional bridge only if a real feature needs active-note context.
 
-This lane does not interrupt Research Batch B and does not authorize UI implementation during the current planning phase.
+This lane remains a future implementation input and does not authorize UI implementation before its own roadmap gate.
 ## Immediate next actions
 
-1. Decision 0010 is accepted; preserve the dedicated Internet Marketing Intelligence database boundary and keep all schema and implementation work gated.
-2. Complete and reconcile Step 6A marketplace-ranking coverage before the focused Internet Marketing Intelligence database-design session.
-3. Prepare provider-rights clarification questions before adopting any permanent retention, customer-facing display, redistribution, or model-analysis policy.
-4. Keep all live DataForSEO capture deferred until the owner approves `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` and current access requirements are verified.
-5. Run Research Batch C for storage, retrieval, backup, and recovery constraints after the marketplace addendum is scoped.
-6. Schedule the focused owner/steward database-design session only after Step 6A and required provider-rights inputs are reconciled; do not design the schema beforehand.
-7. Continue the remaining Phase 2 evidence reconciliation and document-contract recheck against the aligned vision.
-8. Carry human-interface, Postgres, Qdrant, provider-adapter, rights, drift, cost-control, and marketplace prototype requirements into Phase 7 and Phase 8 implementation-planning inputs.
-9. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
-10. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, decisions, and implementation-planning inputs are accepted.
+1. Freeze the first-slice document, metadata, validation, and promotion contracts in one compact foundation-closure decision or implementation baseline.
+2. Select Python 3.12 and the `kaizen-tools` repository unless the owner chooses another supported direction.
+3. Define Implementation Roadmap v0.1 with five milestones: tools foundation, canonical vault bootstrap, safe staging/promotion, one governed project loop, and slice retrospective.
+4. Draft and audit the first task packet for the Kaizen tools foundation.
+5. Create the canonical vault and staging roots only when the first implementation milestone authorizes them.
+6. Execute one vertical slice before returning to broad v0.2 consolidation.
+7. Keep Step 6A before the Intelligence database-design session, but do not let it block the first slice.
+8. Keep live DataForSEO capture deferred and separately authorized.
+9. Keep Hermes, Postgres, Qdrant, and desktop-shell work in later implementation milestones.
+10. Use implementation evidence to revise the standard instead of running another broad planning audit.
