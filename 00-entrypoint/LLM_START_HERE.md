@@ -33,7 +33,7 @@ Humans = authority-bearing review, approval, and promotion
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 - Canonical vault: exists at `C:\dev\kaizen\vault`, commit `f377f86`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
-- Platform repository: exists at `C:\dev\kaizen\platform`, commit `36fa419`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
+- Platform repository: exists at `C:\dev\kaizen\platform`, commit `f377f53`; R2 staging-boundary evidence hardening passes 130 tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
 - Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
 - Operational Postgres database and Observatory domain: not implemented
@@ -252,7 +252,7 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - follow `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`;
 - correct the two canonical bootstrap notes and revalidate them;
 - preserve the explicit owner-deferred remote gap until the working-project checkpoint;
-- add the adopted subprocess, abrupt-termination, malformed-log, and no-side-effect hammer tests;
+- R2 subprocess, abrupt-termination, malformed-log, and no-side-effect evidence is complete in Result 026;
 - retire the current combined Packet 006 from approval consideration;
 - draft and audit Packet 006A for the Windows first-time atomic-install primitive;
 - draft Packet 006B only after 006A passes;

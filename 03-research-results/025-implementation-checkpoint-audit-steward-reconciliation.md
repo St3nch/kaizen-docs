@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T18:10:00Z
+updated: 2026-06-07T19:28:27Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -108,8 +108,8 @@ Items marked `E` are tracked but do not block the first slice.
 | F-04 | closed | A | Replace ROADMAP's Packet 005 next actions with the audit-remediation gate. | Closed in docs commits `6be8af1` and `f8a5c83`; ROADMAP links Results 024/025 and points to R2 evidence hardening. |
 | F-05 | closed | A | Update implementation roadmap immediate action and Milestone 3 wording. | Closed in docs commits `6be8af1` and `f8a5c83`; implementation roadmap points to Result 025 and no longer instructs Packet 005 work. |
 | F-06 | closed | A | Preserve historical planning phases while marking active execution as handed to the implementation roadmap. | Closed in docs commit `6be8af1`; the active remediation gate is unambiguous and historical phase detail remains intact. |
-| F-07 | adopt | B | Add a true independent-process contention test. The manual smoke is evidence but does not replace automation. | Two subprocesses start concurrently; exactly one physical create; second result is governed and deterministic; evidence includes outputs and filesystem state. |
-| F-08 | adopt | B | Add at least one abrupt child-process termination test. Do not claim power-loss durability from this test. | Child exits through `os._exit` or equivalent after an injected persistence point; next process recovers deterministically; no live roots touched. |
+| F-07 | closed | B | Added a true independent-process contention test. | Platform commit `f377f53` and Result 026: two independent interpreters contend; exactly one physical create; second result is `destination_exists`; filesystem and event sequence asserted. |
+| F-08 | closed | B | Added abrupt child-process termination after durable intent without claiming power-loss durability. | Platform commit `f377f53` and Result 026: child exits through `os._exit(91)`; next process recovers deterministically; disposable roots only. |
 | F-09 | adopt | A | Add `canonical_candidate_sha256` explicitly to Packet 006 request/plan contract. | Packet text and tests/spec references agree. |
 | F-10 | adopt | A | Restore required `Implementation Requirements`, `Constraints`, and `Validation` sections in Packet 006 or successor packets. | Packet validates against task-packet contract. |
 | F-11 | adopt | A | Fix test numbering and perform full editorial pass. | No duplicate numbering; Markdown integrity scan clean. |
@@ -123,7 +123,7 @@ Items marked `E` are tracked but do not block the first slice.
 | F-19 | adopt narrowly | B | Add `schema_version` to promotion events as already required. Evaluate adding it to future staging attempt events without rewriting existing JSONL history. | New emitted records include version; old evidence remains untouched. |
 | F-20 | defer | E | Base64 detection is warning-only and not a security boundary. Improve before agent writes or customer data. | Backlog entry for pre-Hermes hardening. |
 | F-21 | defer | E | Editable-install schema discovery is acceptable for the first slice. Fix before packaged distribution. | Packaging milestone includes resource loading tests. |
-| F-22 | modify | B | Keep `_PROCESS_LOCK` unless the subprocess tests show it masks defects. Document that named mutex is the cross-process boundary. | Concurrency tests pass with clear coverage of both thread and process cases. |
+| F-22 | closed | B | Retained `_PROCESS_LOCK` as an in-process aid and proved the named mutex as the cross-process boundary. | Platform commit `f377f53` and Result 026; both thread and independent-process tests pass. |
 | F-23 | adopt | C | Never promote the current smoke claim. Author a clean, relationship-valid first-promotion artifact. | First promotion request references resolvable source evidence. |
 | F-24 | defer | E | Redundant digest work is harmless. Optimize only if code cleanup is already occurring. | Optional maintenance issue. |
 | F-25 | defer | E | Whole-file JSONL reads are acceptable at current scale. Add threshold/streaming design after real volume exists. | Performance trigger documented later. |
@@ -223,12 +223,14 @@ Tests that only inflate coverage or restate implementation are rejected.
 
 ### Phase R2 - staging boundary evidence hardening
 
-1. add genuine subprocess contention test;
-2. add abrupt child-process recovery test;
-3. add malformed/truncated JSONL test;
-4. add no-side-effect assertions on governed rejections;
-5. rerun full suite with zero unexplained skips;
-6. write a focused steward audit of the new evidence.
+Status: complete in platform commit `f377f53` and Research Result 026.
+
+1. genuine subprocess contention test - complete;
+2. abrupt child-process recovery test - complete;
+3. malformed/truncated JSONL test - complete;
+4. no-side-effect assertions on governed rejections - complete;
+5. full suite with zero unexplained skips - 130 passed, zero skipped reported;
+6. focused steward audit - Result 026 complete.
 
 ### Phase R3 - promotion packet restructuring
 
@@ -255,7 +257,7 @@ Tests that only inflate coverage or restate implementation are rejected.
 Milestone 1: complete
 Milestone 2: implementation complete; remote backup owner-deferred until the working-project checkpoint
 Milestone 3A: path confinement complete
-Milestone 3B: create-only staging write complete; evidence-hardening open
+Milestone 3B: create-only staging write complete; R2 evidence hardening complete
 Milestone 3C: canonical promotion not approved; packet restructuring required
 Milestone 4: blocked by Milestone 3C
 Milestone 5: planned
@@ -275,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Begin Phase R2 staging-boundary evidence hardening through a reviewed, tightly bounded test-only change. Add genuine subprocess contention, abrupt child-process recovery, malformed/truncated JSONL handling, and no-side-effect rejection assertions using disposable roots.
+Draft and security-audit Packet 006A for the Windows first-time atomic-install primitive. Keep it strictly separated from full promotion planning, approval, event logging, and recovery.
 
-Do not begin canonical-promotion implementation. Packet 006A research may proceed only after the R2 evidence work is reviewed and the remaining Gate A packet-structure findings are reconciled.
+Do not begin the full canonical-promotion workflow. Packet 006A may authorize only disposable-root native primitive research and implementation after owner approval.
