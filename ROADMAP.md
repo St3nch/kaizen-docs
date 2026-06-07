@@ -1011,6 +1011,6 @@ This lane remains a future implementation input and does not authorize UI implem
 3. Preserve the owner-approved local-only development period; decide public/private remote visibility at the working-project checkpoint.
 4. R2 cross-process, abrupt-termination, malformed-log, and no-side-effect evidence complete in platform commit `f377f53` and Result 026.
 5. Retire the current combined Packet 006 from approval consideration.
-6. Draft and security-audit Packet 006A for the Windows first-time atomic-install primitive.
-7. Draft Packet 006B only after 006A passes and is steward-audited.
+6. Packet 006A complete at platform commit `26271ce` and steward-audited in Result 028.
+7. Draft and security-audit Packet 006B before seeking owner approval; no implementation or live promotion yet.
 8. Keep canonical promotion, Hermes/MCP writes, databases, providers, retrieval, and UI implementation unauthorized until their gates close.

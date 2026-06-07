@@ -156,7 +156,7 @@ Create the first canonical vault root and one minimal project bootstrap after Mi
 
 # Milestone 3 - Safe staging and promotion
 
-Status: split; path confinement, create-only staging writes, and R2 evidence hardening complete; canonical-promotion design open
+Status: split; path confinement, create-only staging writes, R2 evidence hardening, and Packet 006A primitive proof complete; Packet 006B design open
 
 ## Objective
 
@@ -280,7 +280,7 @@ Immediate priorities:
 2. preserve clean local repositories and revisit public/private remote visibility at the owner-defined working-project checkpoint;
 3. R2 evidence hardening complete at platform commit `f377f53` with 130 passing tests;
 4. retire the current combined Packet 006 from approval consideration;
-5. draft and audit Packet 006A for the Windows first-time atomic-install primitive;
-6. draft Packet 006B only after 006A passes.
+5. Packet 006A complete at platform commit `26271ce` and steward-audited in Result 028;
+6. draft and security-audit Packet 006B before any implementation approval.
 
 Canonical-promotion approval and implementation remain blocked until Result 025 Gate A and Gate B requirements close.

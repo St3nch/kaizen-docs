@@ -1,11 +1,11 @@
 ---
 id: kz-tp-01KTHS7HBYG02WFC12C95QMVHF
 type: task-packet
-status: active
+status: complete
 project: kaizen-platform
 summary: Prove a Windows first-time atomic canonical-install primitive in disposable roots without implementing promotion.
 created: 2026-06-07T19:33:51Z
-updated: 2026-06-07T19:40:21Z
+updated: 2026-06-07T19:53:28Z
 review_status: approved
 authority: accepted
 primary_spec: 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -17,7 +17,7 @@ related_specs:
 
 # Task Packet 006A - Prove Windows First-Time Atomic Install
 
-> Security status: security-audited pass and explicitly owner-approved on 2026-06-07. This packet authorizes only the bounded disposable-root implementation and tests below. It still authorizes no live canonical-vault mutation, no promotion workflow, and no agent-facing write surface.
+> Completion status: implemented at platform commit `26271ce` and steward-audited pass-with-documented-limitations in Research Result 028. This packet authorized no live canonical-vault mutation, no promotion workflow, and no agent-facing write surface.
 
 ## Objective
 

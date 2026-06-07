@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T19:40:21Z
+updated: 2026-06-07T19:53:28Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -113,7 +113,7 @@ Items marked `E` are tracked but do not block the first slice.
 | F-09 | assigned to 006B | A | Add `canonical_candidate_sha256` explicitly to the later promotion request/plan contract. It is intentionally excluded from 006A's native primitive boundary. | Packet 006B text and tests/spec references must agree before 006B approval. |
 | F-10 | closed for 006A | A | Required `Implementation Requirements`, `Constraints`, and `Validation` sections are present in Packet 006A. | Result 027 security audit; 006B must independently satisfy the same contract before its approval. |
 | F-11 | closed for 006A | A | Packet 006A has unique sequential test numbering and passed editorial/integrity review. | Result 027 security audit; 006B requires a separate editorial pass. |
-| F-12 | Gate A closed; Gate B open | A/B | The combined Packet 006 is retired. Packet 006A is drafted and security-audited for native primitive proof only; Packet 006B remains prohibited until 006A implementation passes and is steward-audited. | Result 027; owner approval of 006A still required before implementation. |
+| F-12 | 006A closed; 006B gate open | A/B | The combined Packet 006 is retired. Packet 006A is implemented and steward-audited pass-with-documented-limitations. Packet 006B remains prohibited until separately drafted, security-audited, and owner-approved. | Platform commit `26271ce` and Result 028. |
 | F-13 | assigned to 006B | A | Define immutable promotion-plan storage, hash binding, invalidation, and lookup before 006B approval. It is intentionally excluded from 006A. | Packet 006B states exact path, schema, lifecycle, and replay rules. |
 | F-14 | assigned to pre-promotion maintenance | C | Bootstrap `_governance/README.md` and empty `promotion-log.jsonl` through a separate owner-approved human vault maintenance step before first promotion. It is outside 006A and must not be hidden inside 006B execution. | Vault commit with empty parseable log and README; validation/Git review passes. |
 | F-15 | assigned to 006B | A | Require promotion-event IDs from the registered `promotion-event` prefix in the later promotion workflow. It is intentionally excluded from 006A. | Packet 006B, schema, and tests assert `kz-prom-<ULID>`. |
@@ -238,7 +238,7 @@ Status: complete in platform commit `f377f53` and Research Result 026.
 2. draft Packet 006A for the native first-time install prototype - complete;
 3. security-audit 006A - Result 027 pass;
 4. owner approves 006A - complete on 2026-06-07;
-5. implement and hammer-test 006A;
+5. implement and hammer-test 006A - complete at `26271ce`; steward audit Result 028;
 6. draft 006B using 006A's proven primitive;
 7. define plan storage, hashes, IDs, governance log, and recovery contracts;
 8. security-audit 006B before approval.
@@ -277,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Implement and hammer-test the owner-approved Packet 006A disposable-root Windows first-time atomic-install primitive. Stop as blocked if collision refusal, same-volume proof, or deterministic failure classification cannot be proved.
+Draft and security-audit Packet 006B using the proven Packet 006A primitive. Define exact approval-plan storage, source and canonical-candidate hashes, event IDs, normalized paths, schema versioning, governance bootstrap boundary, and recovery state machine before seeking owner approval.
 
-Packet 006A implementation is now authorized. Do not begin Packet 006B or the full canonical-promotion workflow under any interpretation of this approval.
+Do not begin Packet 006B implementation or any live canonical promotion. Packet 006B requires its own security audit and explicit owner approval.
