@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T19:53:28Z
+updated: 2026-06-07T20:14:00Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -110,17 +110,17 @@ Items marked `E` are tracked but do not block the first slice.
 | F-06 | closed | A | Preserve historical planning phases while marking active execution as handed to the implementation roadmap. | Closed in docs commit `6be8af1`; the active remediation gate is unambiguous and historical phase detail remains intact. |
 | F-07 | closed | B | Added a true independent-process contention test. | Platform commit `f377f53` and Result 026: two independent interpreters contend; exactly one physical create; second result is `destination_exists`; filesystem and event sequence asserted. |
 | F-08 | closed | B | Added abrupt child-process termination after durable intent without claiming power-loss durability. | Platform commit `f377f53` and Result 026: child exits through `os._exit(91)`; next process recovers deterministically; disposable roots only. |
-| F-09 | assigned to 006B | A | Add `canonical_candidate_sha256` explicitly to the later promotion request/plan contract. It is intentionally excluded from 006A's native primitive boundary. | Packet 006B text and tests/spec references must agree before 006B approval. |
-| F-10 | closed for 006A | A | Required `Implementation Requirements`, `Constraints`, and `Validation` sections are present in Packet 006A. | Result 027 security audit; 006B must independently satisfy the same contract before its approval. |
-| F-11 | closed for 006A | A | Packet 006A has unique sequential test numbering and passed editorial/integrity review. | Result 027 security audit; 006B requires a separate editorial pass. |
+| F-09 | closed for 006B draft | A | Packet 006B explicitly binds `source_sha256` and `canonical_candidate_sha256` in plan, approval, execution, and events. | Result 029 security audit; implementation evidence still required before Gate B closure. |
+| F-10 | closed | A | Required packet-contract sections are present in both successor packets. | Results 027 and 029. |
+| F-11 | closed | A | Packets 006A and 006B have unique sequential test numbering and passed editorial/integrity review. | Results 027 and 029. |
 | F-12 | 006A closed; 006B gate open | A/B | The combined Packet 006 is retired. Packet 006A is implemented and steward-audited pass-with-documented-limitations. Packet 006B remains prohibited until separately drafted, security-audited, and owner-approved. | Platform commit `26271ce` and Result 028. |
-| F-13 | assigned to 006B | A | Define immutable promotion-plan storage, hash binding, invalidation, and lookup before 006B approval. It is intentionally excluded from 006A. | Packet 006B states exact path, schema, lifecycle, and replay rules. |
+| F-13 | closed for 006B draft | A | Packet 006B defines exact staging-local operation evidence paths, write order, immutable ready marker, approval record, canonical JSON hashes, invalidation, and retry rules. | Result 029 security audit; implementation evidence still required. |
 | F-14 | assigned to pre-promotion maintenance | C | Bootstrap `_governance/README.md` and empty `promotion-log.jsonl` through a separate owner-approved human vault maintenance step before first promotion. It is outside 006A and must not be hidden inside 006B execution. | Vault commit with empty parseable log and README; validation/Git review passes. |
-| F-15 | assigned to 006B | A | Require promotion-event IDs from the registered `promotion-event` prefix in the later promotion workflow. It is intentionally excluded from 006A. | Packet 006B, schema, and tests assert `kz-prom-<ULID>`. |
+| F-15 | closed for 006B draft | A | Packet 006B requires `kz-prom-<ULID>` for every event and the intent-derived operation ID. | Result 029 security audit; schema and implementation tests remain required. |
 | F-16 | modify/defer | D | Documentation-repository task packets are planning artifacts, not canonical vault notes. Do not mass-convert them now. Before Milestone 4, define whether promoted task packets must translate path references into stable IDs. | Explicit reconciliation note or accepted contract amendment before first governed project loop. |
 | F-17 | reject as defect; record deviation | E | Packet 005's `_audit/` path was illustrative, and implementation/README consistently use the staging-root log. Do not move it now. Record the location as the accepted first-slice implementation detail. | Packet 005 completion or spec note references actual location. |
-| F-18 | adopt narrowly | B | Promotion-event paths must use forward-slash vault-relative form. Existing staging attempt log may retain Windows logical paths for first-slice compatibility; new schema-versioned records should normalize. | Promotion tests assert normalized destination paths. |
-| F-19 | adopt narrowly | B | Add `schema_version` to promotion events as already required. Evaluate adding it to future staging attempt events without rewriting existing JSONL history. | New emitted records include version; old evidence remains untouched. |
+| F-18 | closed for 006B draft; implementation open | B | Packet 006B requires every canonical event destination path to be vault-relative with forward slashes. Existing staging evidence remains untouched. | Result 029; implementation tests must close Gate B. |
+| F-19 | closed for 006B draft; implementation open | B | Packet 006B requires `schema_version: 1.0` for plan, validation, approval, and promotion events without rewriting old staging evidence. | Result 029; emitted-record tests must close Gate B. |
 | F-20 | defer | E | Base64 detection is warning-only and not a security boundary. Improve before agent writes or customer data. | Backlog entry for pre-Hermes hardening. |
 | F-21 | defer | E | Editable-install schema discovery is acceptable for the first slice. Fix before packaged distribution. | Packaging milestone includes resource loading tests. |
 | F-22 | closed | B | Retained `_PROCESS_LOCK` as an in-process aid and proved the named mutex as the cross-process boundary. | Platform commit `f377f53` and Result 026; both thread and independent-process tests pass. |
@@ -128,7 +128,7 @@ Items marked `E` are tracked but do not block the first slice.
 | F-24 | defer | E | Redundant digest work is harmless. Optimize only if code cleanup is already occurring. | Optional maintenance issue. |
 | F-25 | defer | E | Whole-file JSONL reads are acceptable at current scale. Add threshold/streaming design after real volume exists. | Performance trigger documented later. |
 | F-26 | defer with threat-model note | E | `Local\\` mutex is acceptable for single-user desktop first slice. Revisit before service, multi-user, or scheduled-agent operation. | Threat model explicitly states single-session assumption. |
-| F-27 | adopt low-cost | B | Assert the Windows reparse constant exists rather than silently falling back to zero on supported runtime. | Unit test or startup assertion on Python 3.11.15 Windows. |
+| F-27 | closed for 006B draft; implementation open | B | Packet 006B requires an explicit nonzero `stat.FILE_ATTRIBUTE_REPARSE_POINT` assertion on the supported runtime. | Result 029; implementation test must close Gate B. |
 | F-28 | defer | E | Email/phone warning precision does not block promotion safety. | Revisit after real corpora expose noise. |
 | F-29 | reject as issue | E | Link case matches actual filenames on the current vault. No change required. | None. |
 
@@ -239,9 +239,9 @@ Status: complete in platform commit `f377f53` and Research Result 026.
 3. security-audit 006A - Result 027 pass;
 4. owner approves 006A - complete on 2026-06-07;
 5. implement and hammer-test 006A - complete at `26271ce`; steward audit Result 028;
-6. draft 006B using 006A's proven primitive;
-7. define plan storage, hashes, IDs, governance log, and recovery contracts;
-8. security-audit 006B before approval.
+6. draft 006B using 006A's proven primitive - complete;
+7. define plan storage, hashes, IDs, governance log, and recovery contracts - complete in Packet 006B draft;
+8. security-audit 006B before approval - Result 029 pass; owner approval pending.
 
 ### Phase R4 - first real promotion
 
@@ -277,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Draft and security-audit Packet 006B using the proven Packet 006A primitive. Define exact approval-plan storage, source and canonical-candidate hashes, event IDs, normalized paths, schema versioning, governance bootstrap boundary, and recovery state machine before seeking owner approval.
+Present security-audited Packet 006B for explicit owner approval. If approved, implementation remains disposable-root only and must not perform governance bootstrap or live canonical promotion.
 
-Do not begin Packet 006B implementation or any live canonical promotion. Packet 006B requires its own security audit and explicit owner approval.
+Do not begin Packet 006B implementation without explicit owner approval. Approval would still not authorize `_governance` bootstrap or live canonical promotion.

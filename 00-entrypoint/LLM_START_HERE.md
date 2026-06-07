@@ -26,16 +26,18 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: implementation checkpoint remediation gate active; canonical-promotion approval is blocked pending Result 025 closure
+- Current phase: Packet 006B is drafted and security-audited pass; implementation is blocked pending explicit owner approval, and live canonical promotion remains prohibited
 - Planning roadmap: historical planning source plus current remediation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `f377f86`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e6267df`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `26271ce`; Packet 006A atomic-install proof passes 145 tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
 - Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
+- Task Packet 006A: complete at platform commit `26271ce`; steward-audited in Result 028
+- Task Packet 006B: drafted and security-audited pass in Result 029; implementation pending explicit owner approval
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized during the remediation gate
@@ -100,12 +102,14 @@ Read in this order unless the user gives a narrower task:
 43. `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 44. `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 45. `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`
-46. `06-handoff-patterns/006-implement-human-operated-canonical-promotion.md` - pending draft; do not approve as written
-47. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
-48. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
-49. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
-50. `03-research-results/006-document-contract-standards-reconciliation.md`
-51. Other files in `03-research-results/` for supporting evidence
+46. `06-handoff-patterns/006-implement-human-operated-canonical-promotion.md` - retired combined draft; do not approve
+47. `06-handoff-patterns/006a-prove-windows-first-time-atomic-install.md` - complete; Result 028
+48. `06-handoff-patterns/006b-implement-human-operated-first-promotion.md` - security-audited pass; pending explicit owner approval
+49. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
+50. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
+51. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
+52. `03-research-results/006-document-contract-standards-reconciliation.md`
+53. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -255,7 +259,7 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - R2 subprocess, abrupt-termination, malformed-log, and no-side-effect evidence is complete in Result 026;
 - retire the current combined Packet 006 from approval consideration;
 - Packet 006A is complete and audited in Result 028;
-- draft and security-audit Packet 006B; do not implement it without separate owner approval;
+- Packet 006B is drafted and security-audited pass in Result 029; implementation is pending explicit owner approval;
 - keep canonical promotion blocked until Result 025 Gate A and Gate B close.
 
 ### Non-blocking future work

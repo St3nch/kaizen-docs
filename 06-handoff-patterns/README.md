@@ -13,3 +13,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `005-implement-create-only-staging-write-wrapper.md` - completed and audited pass-with-notes
 - `006-implement-human-operated-canonical-promotion.md` - retired combined draft; not eligible for approval; preserved as source material for the required 006A/006B split
 - `006a-prove-windows-first-time-atomic-install.md` - complete at platform commit `26271ce`; steward-audited pass-with-documented-limitations in Result 028
+- `006b-implement-human-operated-first-promotion.md` - steward-drafted and security-audited pass; pending explicit owner approval; disposable-root implementation only
