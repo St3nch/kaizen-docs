@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T20:14:00Z
+updated: 2026-06-07T20:16:36Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -241,7 +241,7 @@ Status: complete in platform commit `f377f53` and Research Result 026.
 5. implement and hammer-test 006A - complete at `26271ce`; steward audit Result 028;
 6. draft 006B using 006A's proven primitive - complete;
 7. define plan storage, hashes, IDs, governance log, and recovery contracts - complete in Packet 006B draft;
-8. security-audit 006B before approval - Result 029 pass; owner approval pending.
+8. security-audit 006B before approval - Result 029 pass; owner approved 006B on 2026-06-07.
 
 ### Phase R4 - first real promotion
 
@@ -277,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Present security-audited Packet 006B for explicit owner approval. If approved, implementation remains disposable-root only and must not perform governance bootstrap or live canonical promotion.
+Implement and hammer-test the owner-approved Packet 006B workflow in disposable roots only. Stop as blocked if immutable evidence, exact hash binding, event integrity, intent-before-mutation, no-replacement execution, or deterministic recovery cannot be proved.
 
-Do not begin Packet 006B implementation without explicit owner approval. Approval would still not authorize `_governance` bootstrap or live canonical promotion.
+Packet 006B implementation is now authorized in disposable roots only. Do not create live `_governance` or perform any real canonical promotion.

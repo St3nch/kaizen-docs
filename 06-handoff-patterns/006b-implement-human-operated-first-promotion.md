@@ -1,13 +1,13 @@
 ---
 id: kz-tp-01KTHV0M3N7Q8R9S1T2VVWXYZ0
 type: task-packet
-status: draft
+status: active
 project: kaizen-platform
 summary: Implement one human-operated, hash-bound, recoverable first-time canonical promotion workflow after separate governance bootstrap.
 created: 2026-06-07T20:10:00Z
-updated: 2026-06-07T20:10:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-07T20:16:36Z
+review_status: approved
+authority: accepted
 primary_spec: 05-specs/staging-write-wrapper-and-promotion-recovery.md
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -19,7 +19,7 @@ related_specs:
 
 # Task Packet 006B - Implement Human-Operated First Promotion
 
-> Security status: steward draft pending security audit and explicit owner approval. This packet authorizes no implementation, governance bootstrap, live canonical promotion, agent-triggered promotion, amendment, supersedence, correction, rollback execution, or Hermes/MCP exposure.
+> Security status: security-audited pass and explicitly owner-approved on 2026-06-07. This authorizes only the bounded disposable-root implementation and hammer tests below. It still authorizes no governance bootstrap, live canonical promotion, agent-triggered promotion, amendment, supersedence, correction, rollback execution, or Hermes/MCP exposure.
 
 ## Objective
 
