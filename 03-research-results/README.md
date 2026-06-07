@@ -30,5 +30,6 @@ Do not copy a research result directly into the Kaizen Project Standard. First p
 - `018-milestone-1-tools-foundation-steward-audit.md`
 - `019-deterministic-note-validation-steward-audit.md`
 - `020-canonical-vault-bootstrap-steward-audit.md`
+- `021-staging-path-confinement-steward-audit.md`
 
 Where a raw external report cannot be copied into the repository environment, preserve a faithful stewarded evidence summary and record the source and limitation explicitly.

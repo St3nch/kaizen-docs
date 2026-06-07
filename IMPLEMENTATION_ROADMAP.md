@@ -156,7 +156,7 @@ Create the first canonical vault root and one minimal project bootstrap after Mi
 
 # Milestone 3 - Safe staging and promotion
 
-Status: split; path-confinement foundation pending owner approval
+Status: split; path-confinement foundation complete, create-only write wrapper next
 
 ## Objective
 
@@ -267,10 +267,10 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Owner review of:
+Draft and audit:
 
 ```text
-06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md
+06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md
 ```
 
-Task Packet 004 is owner-approved and accepted for execution. It authorizes root configuration and dry-run Windows path-confinement evidence only; staged note writes and canonical promotion remain unauthorized.
+The next packet may authorize a create-only staging-write prototype only. Canonical promotion remains a separate later gate.

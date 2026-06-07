@@ -39,8 +39,8 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Task Packet 004 approved; staging-root and path-confinement implementation authorized
-Current objective: execute Task Packet 004 within the dry-run path-confinement boundary
+Current phase: Task Packet 004 complete; create-only staging-write wrapper packet not yet drafted
+Current objective: draft and audit the create-only staging-write wrapper packet without authorizing canonical promotion
 Current implementation status: not started
 Hermes posture: required first-class vault consumer; canonical writes remain unapproved
 ```
@@ -1000,9 +1000,8 @@ Later prototype gates should cover:
 This lane remains a future implementation input and does not authorize UI implementation before its own roadmap gate.
 ## Immediate next actions
 
-1. Owner reviews and approves or rejects `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`.
-2. Commit and push the Task Packet 003 completion evidence, vault audit, and Task Packet 004 package after approval.
-3. Keep `C:\dev\kaizen\vault` clean and read-only to Task Packet 004.
-4. Create `C:\dev\kaizen\staging` only after the path library and hammer tests pass.
-5. Do not implement staged-note writes, promotion events, canonical writes, Hermes, databases, providers, retrieval, or UI work.
-6. Audit path confinement before authorizing the create-only staging-write wrapper.
+1. Draft Task Packet 005 for the create-only staging-write wrapper.
+2. Require create-new semantics, exact validation, provenance, idempotency, and append-only attempt evidence.
+3. Keep canonical promotion, overwrite, edit, move, rename, delete, Hermes, databases, providers, retrieval, and UI out of scope.
+4. Resolve whether Python can provide a race-resistant native handle-relative create primitive; fail closed if not.
+5. Approve Task Packet 005 only after a security-focused steward audit.

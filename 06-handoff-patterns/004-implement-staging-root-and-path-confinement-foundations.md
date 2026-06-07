@@ -393,26 +393,20 @@ Never delete or modify canonical vault content during rollback.
 
 ## Completion Report
 
-Return:
-
 ```text
-Status: complete | partial | blocked
-Platform repository and commit:
-Vault repository status and commit:
-Staging root contents:
-Files created:
-Files modified:
-Stable failure codes:
-Commands run:
-Tests and hammer tests:
-Skipped tests with reasons:
-CLI exit checks:
-Acceptance criteria result:
-Deviations:
-Unresolved issues:
-Contract findings for kaizen-docs:
-Recommended next task:
-Final Git statuses:
+Status: complete
+Platform commit: b39b3a6
+Vault: clean at 3de6042
+Staging: README.md only; not a Git repository
+Tests: 105 passed, 2 skipped
+Skipped: two directory-symlink fixtures; current account lacks symlink privilege
+Junction/reparse test: passed
+CLI exits: safe 0; traversal/absolute/UNC/device 1; config failure 2 covered by tests
+Acceptance criteria: all satisfied
+Deviations: symlink fixtures unavailable; equivalent junction refusal verified
+Unresolved: no race-resistant content-write primitive yet; path checks remain dry-run only
+Next: create-only staging-write wrapper prototype; canonical promotion remains out of scope
+Final status: platform and vault clean
 ```
 
-Do not mark complete with failing tests, a dirty platform or vault tree, unexplained skips, or unauthorized writes.
+This milestone proves root boundaries and dry-run confinement only. It does not authorize staged-note writes or canonical promotion.
