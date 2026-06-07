@@ -10,4 +10,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `002-implement-deterministic-note-validation.md` - completed and audited pass-with-notes
 - `003-bootstrap-canonical-kaizen-vault.md` - completed and audited pass
 - `004-implement-staging-root-and-path-confinement-foundations.md` - completed and audited pass-with-notes
-- `005-implement-create-only-staging-write-wrapper.md` - steward-drafted; security-audited pass-with-notes; pending owner approval
+- `005-implement-create-only-staging-write-wrapper.md` - owner-approved; accepted for execution

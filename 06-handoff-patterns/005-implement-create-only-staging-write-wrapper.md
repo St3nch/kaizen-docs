@@ -6,8 +6,8 @@ project: kaizen-platform
 summary: Implement a create-only staging-write wrapper with exact validation, provenance, idempotency, and append-only attempt evidence.
 created: 2026-06-07T00:00:00Z
 updated: 2026-06-07T00:00:00Z
-review_status: pending
-authority: proposed
+review_status: approved
+authority: accepted
 primary_spec: 05-specs/staging-write-wrapper-and-promotion-recovery.md
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -18,7 +18,7 @@ related_specs:
 
 # Task Packet 005 - Implement Create-Only Staging-Write Wrapper
 
-> Security status: steward-drafted and pending owner approval. This packet may create new Markdown files only inside the trusted sibling staging root. It does not authorize canonical writes, overwrite, edit, move, rename, delete, promotion, or agent integration.
+> Security status: owner-approved and accepted for execution. This packet may create new Markdown files only inside the trusted sibling staging root. It does not authorize canonical writes, overwrite, edit, move, rename, delete, promotion, or agent integration.
 
 ## Objective
 

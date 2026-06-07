@@ -273,4 +273,4 @@ Owner review of:
 06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md
 ```
 
-Task Packet 005 is steward-drafted and security-audited `pass-with-notes`. It remains pending/proposed until owner approval. Canonical promotion remains a separate later gate.
+Task Packet 005 is owner-approved and accepted for execution. Canonical promotion remains a separate later gate.
