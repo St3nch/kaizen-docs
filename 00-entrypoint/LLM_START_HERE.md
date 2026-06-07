@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestone 1 authorized through owner-approved Task Packet 001
+- Current phase: Task Packet 002 owner-approved; deterministic validator implementation authorized
 - Planning roadmap: active at `ROADMAP.md`
 - Vision alignment: active at `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 - Internet Marketing Intelligence vision: active at `01-project-standard/internet-marketing-intelligence-vision.md`
@@ -89,8 +89,10 @@ Read in this order unless the user gives a narrower task:
 34. `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` - deferred; execution not authorized
 35. `03-research-results/016-kaizen-planning-acceleration-audit.md`
 36. `03-research-results/017-decision-0008-end-to-end-dry-run-simulation.md`
-37. `03-research-results/006-document-contract-standards-reconciliation.md`
-38. Other files in `03-research-results/` for supporting evidence
+37. `03-research-results/018-milestone-1-tools-foundation-steward-audit.md`
+38. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
+39. `03-research-results/006-document-contract-standards-reconciliation.md`
+40. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

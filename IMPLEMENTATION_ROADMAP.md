@@ -68,7 +68,7 @@ canonical Markdown
 
 # Milestone 1 - Kaizen tools foundation
 
-Status: next
+Status: complete
 
 ## Objective
 
@@ -267,10 +267,10 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Draft and audit the first implementation task packet:
+Owner review of:
 
 ```text
-Bootstrap Kaizen platform and implement ID/parser foundations
+06-handoff-patterns/002-implement-deterministic-note-validation.md
 ```
 
-The packet must identify exact files allowed to change, commands to run, fixtures to add, tests to pass, and completion-report requirements.
+Task Packet 002 is owner-approved and accepted for execution. Deterministic validator implementation is authorized within the packet boundary.
