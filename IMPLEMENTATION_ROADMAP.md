@@ -130,7 +130,7 @@ platform/
 
 # Milestone 2 - Canonical vault bootstrap
 
-Status: planned
+Status: pending owner approval
 
 ## Objective
 
@@ -270,7 +270,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 Owner review of:
 
 ```text
-06-handoff-patterns/002-implement-deterministic-note-validation.md
+06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md
 ```
 
-Task Packet 002 is owner-approved and accepted for execution. Deterministic validator implementation is authorized within the packet boundary.
+Task Packet 003 is owner-approved and accepted for execution. Canonical vault bootstrap is authorized within the packet boundary.

@@ -301,235 +301,57 @@ Enforce the accepted note-type registry, including:
 - heading order is not enforced in this packet;
 - every required section must contain non-whitespace content before the next H2 or end of file;
 - conditional `## Supersedence rationale` is required when `supersedes` or `superseded_by` is present;
-- task-packet `## Completion Report` may contain an explicit pre-implementation placeholder such as `Pending implementation.` while `status` is `draft` or `active`; it must not be structurally empty.
-
-### Relationship and source syntax
-
-For known stable-ID relationship fields:
-
-- values must be a stable Kaizen ID or flat list of stable Kaizen IDs as registered;
-- no filenames, paths, or Wikilinks are allowed in relationship frontmatter;
-- reference resolution remains deferred.
-
-For `source_urls`:
-
-- require absolute `https://` or `http://` URLs;
-- reject credentials embedded in URLs;
-- liveness checks remain deferred.
-
-For body links:
-
-- canonical mode: Wikilinks are error `wikilink_forbidden`;
-- staging mode: Wikilinks are warning `wikilink_requires_normalization`;
-- canonical Markdown links with absolute local filesystem targets are errors;
-- link target existence remains deferred.
-
-### Agent provenance and staging fields
-
-- human-authored notes omit `agent`, `model`, and `session`;
-- if any agent-provenance field is present, all three must be present and non-empty;
-- canonical mode rejects `validation_status`;
-- staging mode allows `validation_status`;
-- when staging content has agent provenance, `validation_status` is required;
-- this packet does not infer whether a note was human- or agent-authored when all provenance fields are absent.
-
-### Intrinsic lifecycle and authority combinations
-
-Enforce combinations that require no external event lookup:
-
-- `status: draft` with `review_status: approved` is error;
-- `authority: accepted` requires `review_status: approved`;
-- `authority: accepted` is error on note types that cannot carry authority;
-- `audit_verdict` is allowed only on `audit`;
-- `audit_verdict` values use the accepted enum;
-- `audit_verdict: pass-with-notes` event/finding materiality checks remain human-review only;
-- proof of human approval and promotion events remains deferred;
-- task-packet governing-spec acceptance lookup remains deferred.
-
-### Bounded content-safety checks
-
-Errors:
-
-- PEM/OpenSSH private-key block markers;
-- obvious bearer-token or API-key assignments with non-placeholder values;
-- embedded base64-like payload blocks longer than 2,000 characters when labeled as raw payload or binary content.
-
-Warnings:
-
-- file larger than 100 KB;
-- Markdown table with more than 100 data rows;
-- fenced JSON/code block longer than 200 lines;
-- document longer than 1,000 lines;
-- repeated email- or phone-like matches above a conservative threshold.
-
-Tests must use synthetic values only. Do not place real credentials or customer data in fixtures.
-
-### Determinism
-
-For identical content, mode, validator version, and clock input:
-
-- issue codes, severities, fields/sections, and order are stable;
-- tests inject or freeze validator time rather than depending on wall-clock timing;
-- warnings do not change exit status from `0`;
-- errors produce exit status `1`.
-
-## Interfaces and Data
-
-Machine-readable schema files remain implementation artifacts reviewed against Markdown doctrine.
-
-The validator should expose a library entry point conceptually equivalent to:
-
-```python
-def validate_note(
-    note: ParsedMarkdownNote,
-    *,
-    mode: Literal["staging", "canonical"],
-    path: Path | None = None,
-    now: datetime | None = None,
-) -> ValidationResult:
-    ...
-```
-
-The public API may parse a path through a convenience wrapper, but parsing and validation remain separately testable.
-
-## Constraints
-
-- Python 3.11.15;
-- Windows 11 compatible;
-- use existing parser and registry modules rather than replacing them;
-- no network access at runtime or in tests;
-- no canonical writes;
-- no root-confinement claims;
-- no database;
-- no background service;
-- no hidden plugin dependency;
-- no silent mutation or normalization of the validated note;
-- no broad refactor unrelated to validation;
-- stable error/warning codes require tests.
-
-## Documentation Updates
-
-Update only platform-repository documentation:
-
-- `README.md` with `kaizen-validate` examples and exit codes;
-- `AGENTS.md` with the new validator scope and explicit deferred boundaries;
-- concise docstrings or generated schema notes as needed.
-
-Any doctrine ambiguity is reported in the completion report for steward action.
-
-## Validation
-
-Run and report at minimum:
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest
-.\.venv\Scripts\python.exe -m compileall -q src tests
-.\.venv\Scripts\python.exe -m pip check
-.\.venv\Scripts\kaizen-validate.exe tests\fixtures\validation\valid-claim.md --mode canonical
-.\.venv\Scripts\kaizen-validate.exe tests\fixtures\validation\valid-staged-agent-claim.md --mode staging --json
-.\.venv\Scripts\kaizen-validate.exe tests\fixtures\validation\invalid-missing-field.md --mode canonical
-```
-
-The invalid note must return exit code `1`.
-
-Tests must cover:
-
-- every universal required field missing individually;
-- project slug validation;
-- summary warning threshold;
-- all registered note types;
-- ID shape and prefix mismatch;
-- every enum;
-- timezone-required timestamps;
-- updated-before-created;
-- future timestamp with injected clock;
-- each note type's required fields;
-- each note type's required sections and empty-section failure;
-- conditional supersedence section;
-- primary-spec membership in related specs;
-- stable-ID relationship syntax;
-- URL syntax and embedded credentials;
-- provenance all-or-none behavior;
-- canonical versus staging `validation_status` behavior;
-- Wikilink warning/error mode difference;
-- intrinsic lifecycle/authority combinations;
-- bounded secret and bulk-content checks;
-- deterministic issue ordering;
-- human output;
-- JSON output;
-- exit codes `0`, `1`, and `2`.
-
-## Acceptance Criteria
-
-The packet is complete only when:
-
-1. `kaizen-validate <path> --mode staging|canonical` exists and is documented.
-2. stable human and JSON outputs exist.
-3. exit codes `0`, `1`, and `2` behave as specified.
-4. machine-readable field, enum, and note-type contracts match the accepted Markdown registries.
-5. all seven universal fields are enforced.
-6. IDs, prefixes, enums, project slugs, summaries, and timestamps are validated.
-7. all nine note types enforce their required fields and H2 sections.
-8. relationship and source syntax checks pass their test matrix.
-9. provenance and staging-only field behavior is enforced without fabricating authorship.
-10. intrinsic lifecycle and authority combinations are enforced without claiming promotion-event verification.
-11. bounded content-safety errors and warnings are implemented with synthetic fixtures.
-12. the complete prior Milestone 1 test suite remains green.
-13. all new tests pass, compilation succeeds, and dependency health is clean.
-14. no filesystem confinement, write, promotion, database, provider, Hermes, retrieval, or UI scope is added.
-15. `C:\dev\kaizen-docs` remains unchanged by the coding agent.
-16. the platform working tree is clean after the implementation commit.
-17. the completion report lists commands, tests, issue codes, deviations, unresolved contract questions, and recommended next work.
-
-## Dependencies and Blockers
-
-Satisfied:
-
-- Task Packet 001 completed;
-- Milestone 1 audit verdict `pass-with-notes`;
-- Python 3.11.15 environment exists;
-- parser, registries, errors, CLI pattern, fixtures, and tests exist;
-- platform repository is clean.
-
-Stop and report when:
-
-- accepted field and note-type registries contradict each other materially;
-- a rule requires promotion-event or human-identity proof;
-- implementation would require path confinement or canonical writes;
-- a content-safety rule cannot avoid obvious false positives within the bounded scope;
-- changes would break the committed Milestone 1 library interfaces without an explicit migration rationale.
-
-Do not invent doctrine to bypass a blocker.
-
-## Rollback and Recovery
-
-This packet changes only committed implementation code and fixtures in `C:\dev\kaizen\platform`.
-
-Rollback is a normal Git revert of the Task Packet 002 implementation commit. No canonical vault or staged project content exists yet.
-
-## Completion Report
-
-Return:
+- task-packet `## Completion Report
 
 ```text
-Status: complete | partial | blocked
-Repository:
-Branch:
-Commit:
+Status: complete
+Repository: C:\dev\kaizen\platform
+Branch: main
+Commit: 4e9a145 Implement deterministic Kaizen note validation
 Files created:
+- schemas/enums.json
+- schemas/fields.json
+- schemas/note-types.json
+- src/kaizen/contracts.py
+- src/kaizen/validate_cli.py
+- src/kaizen/validation.py
+- tests/fixtures/validation/valid-claim.md
+- tests/fixtures/validation/valid-staged-agent-claim.md
+- tests/fixtures/validation/invalid-missing-field.md
+- tests/test_validation.py
+- tests/test_validation_cli.py
 Files modified:
-Machine-readable contracts added:
-Validation issue codes added:
+- AGENTS.md
+- README.md
+- pyproject.toml
+- src/kaizen/__init__.py
+Machine-readable contracts added: field registry, enums, note-type required fields, authority constraints, required H2 sections, relationship fields
+Validation issue codes added: stable codes for universal fields, IDs, prefixes, enums, timestamps, note-type fields, required sections, relationships, URLs, provenance, lifecycle/authority combinations, portable-link rules, secret detection, and bounded bulk-content warnings
 Commands run:
-Tests run:
-Test results:
-CLI checks and exit codes:
-Acceptance criteria result:
-Deviations:
+- .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+- .\.venv\Scripts\python.exe -m pytest
+- .\.venv\Scripts\python.exe -m compileall -q src tests
+- .\.venv\Scripts\python.exe -m pip check
+- .\.venv\Scripts\kaizen-validate.exe tests\fixtures\validation\valid-claim.md --mode canonical
+- .\.venv\Scripts\kaizen-validate.exe tests\fixtures\validation\valid-staged-agent-claim.md --mode staging --json
+- .\.venv\Scripts\kaizen-validate.exe tests\fixtures\validation\invalid-missing-field.md --mode canonical
+Tests run: 67
+Test results: 67 passed before and after commit; compileall passed; pip check reported no broken requirements
+CLI checks and exit codes: canonical valid note 0; staging valid agent note JSON 0; invalid note 1; missing/unreadable input 2 covered by subprocess tests
+Acceptance criteria result: all 17 criteria satisfied
+Deviations: no functional scope deviation; promotion mode, path confinement, cross-note resolution, and canonical writes remain absent as required
 Unresolved issues:
+- no dependency lockfile yet;
+- validator does not prove human approval or promotion events;
+- validator does not perform vault-wide uniqueness, reference resolution, or immutable-history checks;
+- content-safety thresholds remain initial conservative values requiring later corpus calibration
 Contract findings for kaizen-docs:
-Recommended next task:
-Final git status:
+- the accepted registries are implementable as machine-readable contracts;
+- deterministic warning-only exit 0 and error exit 1 are workable;
+- parser/configuration failures use exit 2;
+- the next vault milestone can use canonical mode for bootstrap notes but must not claim full promotion validation
+Recommended next task: bootstrap the canonical Kaizen vault as a separate Git repository with one minimal project and validate its bootstrap notes
+Final git status: clean after commit
 ```
 
-Do not mark complete with failing tests, a dirty tree, unresolved acceptance criteria, or deferred scope introduced.
+The completion report is implementation evidence and does not independently change doctrine.

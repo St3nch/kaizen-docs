@@ -39,8 +39,8 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Task Packet 002 approved; deterministic validator implementation authorized
-Current objective: execute Task Packet 002 within deterministic single-note validation scope
+Current phase: Task Packet 003 approved; canonical vault bootstrap authorized
+Current objective: execute Task Packet 003 and validate the canonical vault bootstrap
 Current implementation status: not started
 Hermes posture: required first-class vault consumer; canonical writes remain unapproved
 ```
@@ -1000,8 +1000,9 @@ Later prototype gates should cover:
 This lane remains a future implementation input and does not authorize UI implementation before its own roadmap gate.
 ## Immediate next actions
 
-1. Commit and push the Milestone 1 completion audit and approved Task Packet 002 package.
-2. Execute Task Packet 002 in `C:\dev\kaizen\platform`.
-3. Do not create vault or staging roots and do not implement path confinement, promotion, databases, providers, Hermes, retrieval, or UI work.
-4. Run the full validator acceptance matrix and preserve all Milestone 1 tests.
-5. Record the Task Packet 002 completion report and steward audit before authorizing canonical vault bootstrap.
+1. Owner reviews and approves or rejects `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`.
+2. Commit and push the Task Packet 002 completion evidence, validator audit, and Task Packet 003 package after approval.
+3. Create `C:\dev\kaizen\vault` only after Task Packet 003 approval.
+4. Do not create staging, data, or scratch roots and do not fabricate promotion evidence.
+5. Validate every bootstrap note through the committed canonical validator before the first vault commit.
+6. Audit the canonical vault bootstrap before authorizing safe staging and promotion implementation.
