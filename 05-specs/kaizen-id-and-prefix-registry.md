@@ -1,8 +1,11 @@
 # Spec - Kaizen ID and Type-Prefix Registry
 
-Status: draft
+Status: implementation baseline accepted by Decision 0012
 Date: 2026-06-04
-Related decision: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+Updated: 2026-06-07
+Related decisions:
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
 
 ## Purpose
 
@@ -148,15 +151,35 @@ Adding a new prefix requires:
 
 Prefixes must not be renamed after IDs using them have been created.
 
+## Implementation location
+
+The first implementation uses Python 3.11.15 in:
+
+```text
+C:\dev\kaizen\platform
+```
+
+The machine-readable type-prefix registry belongs under:
+
+```text
+schemas/note-type-prefixes.json
+```
+
+The CLI entry point is exposed as:
+
+```text
+kaizen-id <registered-type-or-event>
+```
+
 ## Open questions
 
-- Implementation language and repository location for `kaizen-id`.
 - Whether normal output includes a trailing newline only.
 - Whether a batch-generation mode is ever needed.
 - Whether archived/deleted ID reservation is tracked by Git scan, registry file, or future Postgres service.
 
 ## Related files
 
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-note-type-registry.md`
 - `05-specs/kaizen-validation-gate-spec.md`

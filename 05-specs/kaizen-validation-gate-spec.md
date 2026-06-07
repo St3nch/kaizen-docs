@@ -1,12 +1,15 @@
 # Spec - Kaizen Validation Gate
 
-Status: active draft aligned to accepted foundation
+Status: implementation baseline accepted by Decision 0012
 Date: 2026-06-04
+Updated: 2026-06-07
 Related decisions:
 - `04-design-decisions/0001-two-zone-agent-write-model.md`
 - `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
 - `04-design-decisions/0003-raw-markdown-is-canonical.md`
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `04-design-decisions/0008-v0.2-operating-conventions.md`
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
 
 ## Purpose
 
@@ -354,18 +357,33 @@ kaizen-validate-promotion <staged-path> <destination-path> <event-json>
 
 This spec becomes implementation-ready when:
 
-- [ ] final `pipeline_stage` enum is accepted
+- [x] final `pipeline_stage` enum is accepted
 - [ ] ULID type-prefix map is machine-readable
 - [ ] JSON Schema or equivalent schemas exist for frontmatter and promotion events
-- [ ] canonical folder placement is accepted
-- [ ] staging and canonical roots are configurable
-- [ ] private-data scanning policy is defined
-- [ ] duplicate-detection thresholds are defined for exact checks
+- [x] canonical folder placement is accepted
+- [ ] staging and canonical roots are configurable in implementation
+- [x] initial private-data scanning policy is defined
+- [x] exact duplicate-detection checks are defined
 - [ ] a first implementation task packet is written
+
+## Implementation location
+
+The first implementation uses Python 3.11.15 in:
+
+```text
+C:\dev\kaizen\platform
+```
+
+The primary CLI entry point is:
+
+```text
+kaizen-validate <path> --mode staging|canonical|promotion
+```
+
+Machine-readable validator contracts belong under the platform repository's `schemas/` directory and must be reviewed against the accepted Markdown specifications.
 
 ## Open questions
 
-- Validation implementation language and repository location.
 - Exact file-size and raw-data thresholds.
 - How immutable IDs and `created` values are checked before the vault has long Git history.
 - Whether validation reports are ephemeral, JSONL, or stored in Postgres later.

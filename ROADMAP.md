@@ -39,8 +39,8 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Foundation closure and first vertical-slice planning
-Current objective: freeze the minimum safe first-slice contracts, write Implementation Roadmap v0.1, and begin one governed vertical slice
+Current phase: Milestone 1 authorized; platform implementation may begin
+Current objective: execute Task Packet 001 within the accepted Milestone 1 boundary
 Current implementation status: not started
 Hermes posture: required first-class vault consumer; canonical writes remain unapproved
 ```
@@ -68,7 +68,7 @@ minimum safe contract freeze
 
 ## Pre-implementation-roadmap blockers
 
-Only these items block writing Implementation Roadmap v0.1:
+Implementation Roadmap v0.1 is now written. The remaining gate before Milestone 1 is the first reviewed task packet:
 
 1. Decision 0008 accepted after dry-run simulation - complete.
 2. First-slice document, metadata, validation, and promotion contracts explicitly frozen.
@@ -880,7 +880,7 @@ The implementation roadmap should cover at least:
 
 ## Future detailed phase document
 
-- `IMPLEMENTATION_ROADMAP.md` - create only after Phases 0 through 7 are complete
+- `IMPLEMENTATION_ROADMAP.md` - active first-slice roadmap under the acceleration amendment
 
 ## Hermes integration execution order
 
@@ -1000,13 +1000,11 @@ Later prototype gates should cover:
 This lane remains a future implementation input and does not authorize UI implementation before its own roadmap gate.
 ## Immediate next actions
 
-1. Freeze the first-slice document, metadata, validation, and promotion contracts in one compact foundation-closure decision or implementation baseline.
-2. Select Python 3.12 and the `kaizen-tools` repository unless the owner chooses another supported direction.
-3. Define Implementation Roadmap v0.1 with five milestones: tools foundation, canonical vault bootstrap, safe staging/promotion, one governed project loop, and slice retrospective.
-4. Draft and audit the first task packet for the Kaizen tools foundation.
-5. Create the canonical vault and staging roots only when the first implementation milestone authorizes them.
-6. Execute one vertical slice before returning to broad v0.2 consolidation.
-7. Keep Step 6A before the Intelligence database-design session, but do not let it block the first slice.
+1. Owner reviews and approves or rejects `06-handoff-patterns/001-bootstrap-kaizen-platform-id-parser-foundations.md`.
+2. Commit and push this first-slice foundation, implementation-roadmap, and task-packet batch after approval.
+3. Initialize `C:\dev\kaizen\platform` as a Git repository only after the packet is approved.
+4. Execute Milestone 1 using the existing `uv`-managed Python 3.11.15 runtime.
+5. Do not add vault, staging, Postgres, Qdrant, Hermes, DataForSEO, marketplace, or UI scope.
+6. Record the implementation completion report and return any contract findings to `kaizen-docs` through governed updates.
+7. Keep Step 6A before the Intelligence database-design session, but do not let it block Milestone 1.
 8. Keep live DataForSEO capture deferred and separately authorized.
-9. Keep Hermes, Postgres, Qdrant, and desktop-shell work in later implementation milestones.
-10. Use implementation evidence to revise the standard instead of running another broad planning audit.

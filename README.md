@@ -42,7 +42,7 @@ The entrypoint defines the complete read order and authority hierarchy.
 - MCP and typed agent tools: not implemented
 - Hermes canonical read/search: planned
 - Hermes write access: not approved
-- Implementation roadmap: intentionally deferred until planning gates pass
+- Implementation roadmap: active at `IMPLEMENTATION_ROADMAP.md`
 
 ## Stewardship rule
 
@@ -79,3 +79,9 @@ This repo does **not** hold:
 - generated build artifacts
 - live Postgres or Qdrant state
 - active business operations
+
+## Repository boundary
+
+- C:\dev\kaizen-docs - doctrine and planning
+- C:\dev\kaizen - non-repository umbrella
+- C:\dev\kaizen\platform - implementation repository

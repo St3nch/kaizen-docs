@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: accelerated foundation closure and first vertical-slice planning
+- Current phase: Milestone 1 authorized through owner-approved Task Packet 001
 - Planning roadmap: active at `ROADMAP.md`
 - Vision alignment: active at `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 - Internet Marketing Intelligence vision: active at `01-project-standard/internet-marketing-intelligence-vision.md`
@@ -42,6 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Decision 0009 Operational Postgres/Observatory boundary: accepted
 - Decision 0010 dedicated Internet Marketing Intelligence database boundary: accepted; no schema work authorized
 - Decision 0011 progressive hybrid human interface direction: proposed; architecture only, no UI implementation authorized
+- Decision 0012 first-slice contract and implementation boundary: accepted
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
 - Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
@@ -70,24 +71,26 @@ Read in this order unless the user gives a narrower task:
 16. `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted
 17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - accepted; dedicated boundary and pre-schema design gate
 18. `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed; architecture direction only
-19. `05-specs/kaizen-field-registry.md`
-20. `05-specs/kaizen-note-type-registry.md`
-21. `05-specs/kaizen-id-and-prefix-registry.md`
-22. `05-specs/staging-and-promotion-workflow.md`
-23. `05-specs/promotion-event-schema.md`
-24. `05-specs/kaizen-validation-gate-spec.md`
-25. `05-specs/operational-postgres-authority.md`
-26. `05-specs/kaizen-hammer-test-strategy.md`
-27. `07-hermes/hermes-permission-matrix.md`
-28. `07-hermes/hermes-write-access-preconditions.md`
-29. `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
-30. `03-research-results/014-human-interface-technical-verification-and-amendment.md`
-31. `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
-32. `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` - deferred; execution not authorized
-33. `03-research-results/016-kaizen-planning-acceleration-audit.md`
-34. `03-research-results/017-decision-0008-end-to-end-dry-run-simulation.md`
-35. `03-research-results/006-document-contract-standards-reconciliation.md`
-36. Other files in `03-research-results/` for supporting evidence
+19. `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md` - accepted; first-slice code and repository boundary
+20. `IMPLEMENTATION_ROADMAP.md` - active first-slice implementation roadmap
+21. `05-specs/kaizen-field-registry.md`
+22. `05-specs/kaizen-note-type-registry.md`
+23. `05-specs/kaizen-id-and-prefix-registry.md`
+24. `05-specs/staging-and-promotion-workflow.md`
+25. `05-specs/promotion-event-schema.md`
+26. `05-specs/kaizen-validation-gate-spec.md`
+27. `05-specs/operational-postgres-authority.md`
+28. `05-specs/kaizen-hammer-test-strategy.md`
+29. `07-hermes/hermes-permission-matrix.md`
+30. `07-hermes/hermes-write-access-preconditions.md`
+31. `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
+32. `03-research-results/014-human-interface-technical-verification-and-amendment.md`
+33. `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
+34. `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` - deferred; execution not authorized
+35. `03-research-results/016-kaizen-planning-acceleration-audit.md`
+36. `03-research-results/017-decision-0008-end-to-end-dry-run-simulation.md`
+37. `03-research-results/006-document-contract-standards-reconciliation.md`
+38. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -231,11 +234,11 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ### Immediate foundation-closure work
 
-- freeze the first-slice document, metadata, validation, and promotion contracts through a narrow accepted decision or reviewed implementation baseline;
-- choose the implementation language and repository for Kaizen tooling;
+- Decision 0012 freezes the first-slice document, metadata, validation, promotion, repository, and language baseline;
+- Python 3.11.15 and `C:\dev\kaizen\platform` are selected for the first slice;
 - define the first vertical slice and explicit exclusions;
-- write Implementation Roadmap v0.1 for the tools and vault-foundation milestones;
-- create and audit the first implementation task packet.
+- `IMPLEMENTATION_ROADMAP.md` is active;
+- Task Packet 001 is owner-approved and accepted for execution.
 
 ### Non-blocking future work
 
