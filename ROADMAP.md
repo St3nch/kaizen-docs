@@ -39,8 +39,8 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Task Packet 004 complete; create-only staging-write wrapper packet not yet drafted
-Current objective: draft and audit the create-only staging-write wrapper packet without authorizing canonical promotion
+Current phase: Task Packet 005 drafted and security-audited; pending owner approval
+Current objective: owner review of Task Packet 005 for the create-only staging-write wrapper
 Current implementation status: not started
 Hermes posture: required first-class vault consumer; canonical writes remain unapproved
 ```
@@ -1000,8 +1000,9 @@ Later prototype gates should cover:
 This lane remains a future implementation input and does not authorize UI implementation before its own roadmap gate.
 ## Immediate next actions
 
-1. Draft Task Packet 005 for the create-only staging-write wrapper.
-2. Require create-new semantics, exact validation, provenance, idempotency, and append-only attempt evidence.
-3. Keep canonical promotion, overwrite, edit, move, rename, delete, Hermes, databases, providers, retrieval, and UI out of scope.
-4. Resolve whether Python can provide a race-resistant native handle-relative create primitive; fail closed if not.
-5. Approve Task Packet 005 only after a security-focused steward audit.
+1. Owner reviews and approves or rejects `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`.
+2. If approved, commit and push the Task Packet 005 package before implementation.
+3. Implement only the typed create-only staging-write surface and append-only attempt evidence.
+4. Stop as blocked if race-resistant create-new semantics or pre-write durability cannot be proven.
+5. Keep canonical promotion, agent integration, databases, providers, retrieval, and UI unauthorized.
+6. Run the full concurrency, interruption, recovery, and canonical-isolation hammer suite before completion.

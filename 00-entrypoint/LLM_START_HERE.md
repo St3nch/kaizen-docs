@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Task Packet 004 complete; create-only staging-write wrapper packet is the next planning gate
+- Current phase: Task Packet 005 drafted and security-audited; pending owner approval
 - Planning roadmap: active at `ROADMAP.md`
 - Vision alignment: active at `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 - Internet Marketing Intelligence vision: active at `01-project-standard/internet-marketing-intelligence-vision.md`
@@ -93,11 +93,13 @@ Read in this order unless the user gives a narrower task:
 38. `03-research-results/019-deterministic-note-validation-steward-audit.md`
 39. `03-research-results/020-canonical-vault-bootstrap-steward-audit.md`
 40. `03-research-results/021-staging-path-confinement-steward-audit.md`
-41. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
-42. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
-43. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
-44. `03-research-results/006-document-contract-standards-reconciliation.md`
-45. Other files in `03-research-results/` for supporting evidence
+41. `03-research-results/022-create-only-staging-write-wrapper-packet-audit.md`
+42. `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`
+43. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
+44. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
+45. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
+46. `03-research-results/006-document-contract-standards-reconciliation.md`
+47. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

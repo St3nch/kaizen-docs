@@ -267,10 +267,10 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Draft and audit:
+Owner review of:
 
 ```text
 06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md
 ```
 
-The next packet may authorize a create-only staging-write prototype only. Canonical promotion remains a separate later gate.
+Task Packet 005 is steward-drafted and security-audited `pass-with-notes`. It remains pending/proposed until owner approval. Canonical promotion remains a separate later gate.
