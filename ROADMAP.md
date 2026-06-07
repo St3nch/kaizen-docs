@@ -39,11 +39,17 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Task Packet 005 complete; Task Packet 006 planning is next
-Current objective: draft and audit Task Packet 006
-Current implementation status: not started
-Hermes posture: required first-class vault consumer; canonical writes remain unapproved
+Current phase: implementation checkpoint remediation gate
+Current objective: close Research Result 025 Gate A and Gate B findings before canonical-promotion approval or implementation
+Current implementation status: Milestones 1 and 2 implemented; Milestone 3 staging boundary implemented; canonical promotion not approved
+Active execution roadmap: IMPLEMENTATION_ROADMAP.md
+Hermes posture: deferred beyond the first slice; canonical writes remain unapproved
 ```
+
+The planning roadmap has handed active first-slice execution to `IMPLEMENTATION_ROADMAP.md`. Historical phase detail remains below for provenance. The current closure authority is:
+
+- `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
+- `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 
 ---
 
@@ -1000,9 +1006,11 @@ Later prototype gates should cover:
 This lane remains a future implementation input and does not authorize UI implementation before its own roadmap gate.
 ## Immediate next actions
 
-1. Owner reviews and approves or rejects `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`.
-2. If approved, commit and push the Task Packet 005 package before implementation.
-3. Implement only the typed create-only staging-write surface and append-only attempt evidence.
-4. Stop as blocked if race-resistant create-new semantics or pre-write durability cannot be proven.
-5. Keep canonical promotion, agent integration, databases, providers, retrieval, and UI unauthorized.
-6. Run the full concurrency, interruption, recovery, and canonical-isolation hammer suite before completion.
+1. Close Result 025 Gate A documentation and backup findings.
+2. Correct the two canonical bootstrap notes and validate them.
+3. Configure approved private remotes for `C:\dev\kaizen\platform` and `C:\dev\kaizen\vault`.
+4. Add and review the adopted cross-process, abrupt-termination, malformed-log, and no-side-effect hammer tests.
+5. Retire the current combined Packet 006 from approval consideration.
+6. Draft and security-audit Packet 006A for the Windows first-time atomic-install primitive.
+7. Draft Packet 006B only after 006A passes and is steward-audited.
+8. Keep canonical promotion, Hermes/MCP writes, databases, providers, retrieval, and UI implementation unauthorized until their gates close.

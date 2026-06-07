@@ -25,7 +25,7 @@ C:\dev\kaizen\platform
 = implementation and code repository
 ```
 
-Future `vault`, `staging`, `data`, and `scratch` roots are created only when the milestone that requires them is authorized.
+Current first-slice roots exist at `C:\dev\kaizen\vault` and `C:\dev\kaizen\staging`. Future `data` and `scratch` roots remain deferred until an approved milestone requires them.
 
 ## First-slice objective
 
@@ -130,7 +130,7 @@ platform/
 
 # Milestone 2 - Canonical vault bootstrap
 
-Status: complete
+Status: implementation complete; remote-backup exit criterion open
 
 ## Objective
 
@@ -156,7 +156,7 @@ Create the first canonical vault root and one minimal project bootstrap after Mi
 
 # Milestone 3 - Safe staging and promotion
 
-Status: split; path-confinement foundation complete, create-only write wrapper next
+Status: split; path confinement and create-only staging writes complete, audit-remediation and canonical-promotion design open
 
 ## Objective
 
@@ -267,10 +267,20 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Owner review of:
+Close the implementation-checkpoint remediation gate defined by:
 
 ```text
-06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md
+03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md
+03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md
 ```
 
-Task Packet 005 is owner-approved and accepted for execution. Canonical promotion remains a separate later gate.
+Immediate priorities:
+
+1. correct stale entrypoint, roadmap, and canonical bootstrap-note claims;
+2. configure and push approved private remotes for the platform and vault repositories;
+3. add the adopted subprocess, abrupt-termination, malformed-log, and no-side-effect hammer tests;
+4. retire the current combined Packet 006 from approval consideration;
+5. draft and audit Packet 006A for the Windows first-time atomic-install primitive;
+6. draft Packet 006B only after 006A passes.
+
+Canonical-promotion approval and implementation remain blocked until Result 025 Gate A and Gate B requirements close.

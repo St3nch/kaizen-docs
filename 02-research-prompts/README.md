@@ -29,6 +29,10 @@ Prompts are inputs, not conclusions.
 - `006-qdrant-mcp-typed-tool-audit.md` - Qdrant audit; reconciled in Research Result 011
 - `007-internet-marketing-intelligence-providers-source-rights.md` - Research Batch B; reconciled in Research Result 015. Paid DataForSEO capture remains deferred and separately governed.
 
+### Completed checkpoint audit
+
+- `008-implementation-checkpoint-red-team-audit.md` - completed; preserved in Research Result 024 and reconciled through Research Result 025
+
 ### Planned after Batch B
 
 - storage, retrieval, backup, and recovery constraints

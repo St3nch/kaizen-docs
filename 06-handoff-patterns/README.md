@@ -11,3 +11,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `003-bootstrap-canonical-kaizen-vault.md` - completed and audited pass
 - `004-implement-staging-root-and-path-confinement-foundations.md` - completed and audited pass-with-notes
 - `005-implement-create-only-staging-write-wrapper.md` - completed and audited pass-with-notes
+- `006-implement-human-operated-canonical-promotion.md` - retired combined draft; not eligible for approval; preserved as source material for the required 006A/006B split

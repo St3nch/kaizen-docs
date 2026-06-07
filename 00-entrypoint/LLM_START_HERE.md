@@ -26,17 +26,19 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Task Packet 005 owner-approved; create-only staging-write implementation authorized
-- Planning roadmap: active at `ROADMAP.md`
-- Vision alignment: active at `01-project-standard/kaizen-vision-and-architecture-alignment.md`
-- Internet Marketing Intelligence vision: active at `01-project-standard/internet-marketing-intelligence-vision.md`
-- Original 591-line baseline: imported exactly and preserved as historical source material
-- Baseline-to-v0.2 reconciliation map: active draft
-- Future canonical vault: not created yet
-- Sibling staging root: design accepted, not created for production use yet
+- Current phase: implementation checkpoint remediation gate active; canonical-promotion approval is blocked pending Result 025 closure
+- Planning roadmap: historical planning source plus current remediation gate at `ROADMAP.md`
+- Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
+- Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
+- Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `3de6042`; remote backup not yet configured
+- Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
+- Platform repository: exists at `C:\dev\kaizen\platform`, commit `36fa419`; remote backup not yet configured
+- Task Packet 005: complete and audited pass-with-notes
+- Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
-- Hermes Desktop / Hermes Agent: designated Kaizen agent clerk; canonical read/search is required; write access remains unapproved until staging boundary tests pass
+- Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized during the remediation gate
 - Decisions 0001 through 0007: accepted
 - Decision 0008 operating conventions: accepted after end-to-end dry-run simulation
 - Decision 0009 Operational Postgres/Observatory boundary: accepted
@@ -94,12 +96,16 @@ Read in this order unless the user gives a narrower task:
 39. `03-research-results/020-canonical-vault-bootstrap-steward-audit.md`
 40. `03-research-results/021-staging-path-confinement-steward-audit.md`
 41. `03-research-results/022-create-only-staging-write-wrapper-packet-audit.md`
-42. `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`
-43. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
-44. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
-45. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
-46. `03-research-results/006-document-contract-standards-reconciliation.md`
-47. Other files in `03-research-results/` for supporting evidence
+42. `03-research-results/023-create-only-staging-write-wrapper-steward-audit.md`
+43. `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
+44. `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
+45. `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`
+46. `06-handoff-patterns/006-implement-human-operated-canonical-promotion.md` - pending draft; do not approve as written
+47. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
+48. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
+49. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
+50. `03-research-results/006-document-contract-standards-reconciliation.md`
+51. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -149,11 +155,11 @@ No second UUID is required in v0.2.
 
 ### Staging and promotion
 
-Recommended sibling roots:
+Current sibling roots:
 
 ```text
-C:\dev\kaizen-vault
-C:\dev\kaizen-staging
+C:\dev\kaizen\vault
+C:\dev\kaizen\staging
 ```
 
 - Hermes may eventually write only to the staging root.
@@ -241,13 +247,16 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Remaining v0.2 work
 
-### Immediate foundation-closure work
+### Active implementation-checkpoint remediation
 
-- Decision 0012 freezes the first-slice document, metadata, validation, promotion, repository, and language baseline;
-- Python 3.11.15 and `C:\dev\kaizen\platform` are selected for the first slice;
-- define the first vertical slice and explicit exclusions;
-- `IMPLEMENTATION_ROADMAP.md` is active;
-- Task Packet 001 is owner-approved and accepted for execution.
+- follow `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`;
+- correct the two canonical bootstrap notes and revalidate them;
+- configure approved private remotes for the platform and vault repositories;
+- add the adopted subprocess, abrupt-termination, malformed-log, and no-side-effect hammer tests;
+- retire the current combined Packet 006 from approval consideration;
+- draft and audit Packet 006A for the Windows first-time atomic-install primitive;
+- draft Packet 006B only after 006A passes;
+- keep canonical promotion blocked until Result 025 Gate A and Gate B close.
 
 ### Non-blocking future work
 
