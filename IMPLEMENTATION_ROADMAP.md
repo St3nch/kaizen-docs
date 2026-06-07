@@ -156,7 +156,7 @@ Create the first canonical vault root and one minimal project bootstrap after Mi
 
 # Milestone 3 - Safe staging and promotion
 
-Status: split; path confinement, create-only staging writes, R2 evidence hardening, and Packet 006A primitive proof complete; Packet 006B design open
+Status: implementation complete through Packet 006B; live governance bootstrap and first real promotion remain separate owner-approved gates
 
 ## Objective
 
@@ -195,7 +195,7 @@ Implement the human-operated promotion path from a sibling staging root into the
 - one interruption scenario is recovered or marked recovery-required;
 - escape attempts fail closed;
 - promotion evidence is append-only and verifiable;
-- staged content is removed or archived only after committed verification.
+- staged content is retained as immutable review evidence after committed verification, and duplicate initial promotion is rejected.
 
 # Milestone 4 - One governed project loop
 
@@ -267,21 +267,21 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Close the implementation-checkpoint remediation gate defined by:
+Draft and security-audit a separate owner-controlled governance-bootstrap packet for only:
 
 ```text
-03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md
-03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md
+_governance/README.md
+_governance/promotion-log.jsonl
 ```
 
-Immediate priorities:
+Current state:
 
-1. correct stale entrypoint, roadmap, and canonical bootstrap-note claims;
-2. preserve clean local repositories and revisit public/private remote visibility at the owner-defined working-project checkpoint;
-3. R2 evidence hardening complete at platform commit `f377f53` with 130 passing tests;
-4. retire the current combined Packet 006 from approval consideration;
-5. Packet 006A complete at platform commit `26271ce` and steward-audited in Result 028;
-6. Packet 006B complete at platform commit `703d532`; final steward audit Result 031 pass-with-documented-limitations.
-7. Draft and security-audit the separate live governance-bootstrap packet before seeking owner approval.
+1. Milestones 1 and 2 are complete.
+2. Milestone 3 implementation is complete through Packet 006B at platform commit `703d532`.
+3. Packet 006B final steward audit Result 031 passed with documented limitations.
+4. The live vault remains unchanged by the promotion implementation and tests.
+5. Governance bootstrap remains a separate owner-approved live-vault mutation.
+6. The first real canonical promotion remains a later, separate explicit go/no-go.
+7. Platform and vault remotes remain deferred until the owner-defined working-project checkpoint.
 
-Canonical-promotion approval and implementation remain blocked until Result 025 Gate A and Gate B requirements close.
+Do not create live `_governance`, perform a real promotion, or begin Milestone 4 until the governance-bootstrap packet is drafted, security-audited, and explicitly approved.

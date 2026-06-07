@@ -39,17 +39,18 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: implementation checkpoint remediation gate
-Current objective: close Research Result 025 Gate A and Gate B findings before canonical-promotion approval or implementation
-Current implementation status: Milestones 1 and 2 implemented; Milestone 3 staging boundary implemented; canonical promotion not approved
+Current phase: Packet 006B complete; governance-bootstrap drafting gate active
+Current objective: draft and security-audit the separate live governance-bootstrap packet before any live-vault mutation
+Current implementation status: Milestones 1 and 2 complete; Milestone 3 implementation complete through Packet 006B at platform commit `703d532`; live governance bootstrap and first real promotion remain unapproved
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
-Hermes posture: deferred beyond the first slice; canonical writes remain unapproved
+Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```
 
-The planning roadmap has handed active first-slice execution to `IMPLEMENTATION_ROADMAP.md`. Historical phase detail remains below for provenance. The current closure authority is:
+The planning roadmap has handed active first-slice execution to `IMPLEMENTATION_ROADMAP.md`. Historical phase detail remains below for provenance. The current completed implementation authority and next-gate references are:
 
-- `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
+- `03-research-results/031-packet-006b-final-implementation-steward-audit.md`
+- `IMPLEMENTATION_ROADMAP.md`
 
 ---
 

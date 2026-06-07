@@ -27,7 +27,7 @@ Humans = authority-bearing review, approval, and promotion
 ## Current project posture
 
 - Current phase: Packet 006B is complete and final-audited pass-with-documented-limitations; separate governance bootstrap is the next owner gate, and live canonical promotion remains prohibited
-- Planning roadmap: historical planning source plus current remediation gate at `ROADMAP.md`
+- Planning roadmap: historical planning source plus current governance-bootstrap drafting gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
