@@ -121,7 +121,7 @@ It includes continuous external and operational intelligence, cross-project know
 - `04-design-decisions/0004-system-of-record-boundaries.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
 - `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted boundary decision
-- `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - proposed database boundary; no schema authorization
+- `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - accepted database boundary; no schema authorization
 - `05-specs/operational-postgres-authority.md`
 - `03-research-results/004-markdown-qdrant-postgres-architecture-claude-summary.md`
 
@@ -342,7 +342,39 @@ Evidence:
 
 - `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
 - `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md`
-- `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - proposed
+- `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - accepted
+
+### Step 6A - Research marketplace-ranking coverage before database design
+
+Priority: P1
+
+Status: planned; required before the owner/steward Internet Marketing Intelligence database-design session
+
+Purpose:
+
+- close the remaining marketplace-ranking gap left by Research Batch B;
+- determine which project classes need marketplace-specific ranking and visibility intelligence;
+- map relevant sources for Amazon, Etsy, Fiverr, merchant and shopping surfaces, app stores, plugin directories, software directories, and other project-specific marketplaces;
+- distinguish marketplace data available through DataForSEO from data requiring marketplace-native APIs, exports, project-owned analytics, or another provider;
+- identify source rights, retention, freshness, cost, and cross-project reuse constraints;
+- define provider-neutral evidence families without designing tables or schemas.
+
+Required output:
+
+- marketplace and directory coverage matrix;
+- project-class relevance matrix;
+- primary versus secondary source recommendations;
+- rights, retention, and cost constraints;
+- missing empirical samples and later capture requirements;
+- database-design-session inputs;
+- explicit deferrals for unsupported or low-value surfaces.
+
+Gate:
+
+- complete and reconcile this addendum before the focused owner/steward Internet Marketing Intelligence database-design session;
+- do not block acceptance of the high-level dedicated database boundary solely on this addendum;
+- do not begin schema design from this step.
+
 ### Step 7 - Run Research Batch C: storage, retrieval, and recovery constraints
 
 Priority: P1
@@ -871,12 +903,12 @@ Later prototype gates should cover:
 This lane does not interrupt Research Batch B and does not authorize UI implementation during the current planning phase.
 ## Immediate next actions
 
-1. Review Research Result 015 and the amended proposed Decision 0010 as one Internet Marketing Intelligence planning package.
-2. Decide whether to accept, revise, or keep Decision 0010 proposed; no schema work begins from the research report alone.
-3. Decide whether marketplace-ranking coverage requires a focused Batch B addendum before the database-design session.
-4. Prepare provider-rights clarification questions before adopting any permanent retention, customer-facing display, redistribution, or model-analysis policy.
-5. Keep all live DataForSEO capture deferred until the owner approves `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` and current access requirements are verified.
-6. If Decision 0010 is accepted, schedule the focused owner/steward database-design session using Result 015 as evidence; do not design the schema beforehand.
+1. Decision 0010 is accepted; preserve the dedicated Internet Marketing Intelligence database boundary and keep all schema and implementation work gated.
+2. Complete and reconcile Step 6A marketplace-ranking coverage before the focused Internet Marketing Intelligence database-design session.
+3. Prepare provider-rights clarification questions before adopting any permanent retention, customer-facing display, redistribution, or model-analysis policy.
+4. Keep all live DataForSEO capture deferred until the owner approves `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` and current access requirements are verified.
+5. Run Research Batch C for storage, retrieval, backup, and recovery constraints after the marketplace addendum is scoped.
+6. Schedule the focused owner/steward database-design session only after Step 6A and required provider-rights inputs are reconciled; do not design the schema beforehand.
 7. Continue the remaining Phase 2 evidence reconciliation and document-contract recheck against the aligned vision.
 8. Carry human-interface, Postgres, Qdrant, provider-adapter, rights, drift, cost-control, and marketplace prototype requirements into Phase 7 and Phase 8 implementation-planning inputs.
 9. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.

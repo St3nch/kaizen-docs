@@ -278,3 +278,18 @@ This decision is ready for acceptance only when the human reviewer confirms that
 - `03-research-results/007-kaizen-vision-architecture-research-gap-audit-claude-summary.md`
 - `05-specs/operational-postgres-authority.md`
 - `ROADMAP.md`
+
+## Amendment by Decision 0010
+
+Accepted Decision 0010 establishes a dedicated Internet Marketing Intelligence database boundary separate from the Kaizen Core Operational database.
+
+This amends Decision 0009 as follows:
+
+- `Operational Postgres database` now refers to the broader structured operational architecture, not necessarily one physical database;
+- Kaizen Core Operational records remain responsible for ingestion control, automation, governance, audit, authorization, agent and tool runs, provider-job orchestration, and related operational state;
+- longitudinal SERP, ranking, LLM visibility, marketplace, public-market, shared-observation, and derived intelligence workloads are planned under the dedicated Internet Marketing Intelligence database boundary;
+- the Observatory remains an analytical and intelligence domain, not the name of either entire physical database;
+- the initial planning domains in Decision 0009 remain conceptual workload boundaries and are not approved physical schemas;
+- exact record-family placement, cross-database identifiers, retention, storage, migrations, and APIs remain deferred to the focused database-design session and later implementation planning.
+
+This amendment does not authorize schema design, provider spending, raw-retention policy, direct agent access, or implementation.

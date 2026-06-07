@@ -40,7 +40,7 @@ Humans = authority-bearing review, approval, and promotion
 - Decisions 0001 through 0007: accepted
 - Decision 0008 operating conventions: proposed and awaiting review
 - Decision 0009 Operational Postgres/Observatory boundary: accepted
-- Decision 0010 dedicated Internet Marketing Intelligence database boundary: proposed; no schema work authorized
+- Decision 0010 dedicated Internet Marketing Intelligence database boundary: accepted; no schema work authorized
 - Decision 0011 progressive hybrid human interface direction: proposed; architecture only, no UI implementation authorized
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
@@ -68,7 +68,7 @@ Read in this order unless the user gives a narrower task:
 14. `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
 15. `04-design-decisions/0008-v0.2-operating-conventions.md` - proposed, not accepted
 16. `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md` - accepted
-17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - proposed; dedicated boundary and pre-schema design gate
+17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - accepted; dedicated boundary and pre-schema design gate
 18. `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed; architecture direction only
 19. `05-specs/kaizen-field-registry.md`
 20. `05-specs/kaizen-note-type-registry.md`

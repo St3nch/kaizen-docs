@@ -1,8 +1,9 @@
 # Decision 0010 - Dedicated Internet Marketing Intelligence Database Boundary
 
-Status: proposed
+Status: accepted
 Date: 2026-06-05
 Updated: 2026-06-06
+Accepted: 2026-06-06
 Owner: Kaizen project steward
 Related accepted decisions:
 - `04-design-decisions/0004-system-of-record-boundaries.md`
@@ -39,7 +40,7 @@ It differs materially from Kaizen's core operational workload, which includes go
 
 The distinction is large enough to justify a dedicated database boundary, while the exact physical design remains premature.
 
-## Proposed decision
+## Decision
 
 Kaizen should plan for a dedicated **Internet Marketing Intelligence database** separate from the Kaizen Core Operational database.
 
@@ -252,7 +253,7 @@ retain raw where allowed and useful
 
 The Observatory remains the analytical and intelligence capability that interprets approved observations and produces governed results.
 
-This proposed decision changes the likely physical database boundary, not the Observatory's conceptual purpose.
+This decision changes the likely physical database boundary, not the Observatory's conceptual purpose.
 
 The final design may place Observatory-owned workloads primarily in the Internet Marketing Intelligence database while keeping orchestration, authorization, audit, and workflow concerns in the Kaizen Core Operational database.
 
@@ -297,7 +298,7 @@ The design session must explicitly allow for ranking and visibility data that ha
 
 ## What this decision does not approve
 
-This proposed decision does not approve:
+This decision does not approve:
 
 - exact database names;
 - exact PostgreSQL schemas;
@@ -343,13 +344,13 @@ These risks are addressed by allowing one PostgreSQL deployment initially and re
 
 Decision 0009 remains accepted for its conceptual distinction between the broader operational layer and the Observatory domain.
 
-If Decision 0010 is accepted, it will amend the likely physical deployment direction:
+Decision 0010 amends the likely physical deployment direction:
 
 - Kaizen Core Operational records and Internet Marketing Intelligence records should be planned as separate database boundaries;
 - the Observatory remains an analytical domain, not necessarily the name of either entire database;
 - initial domain names from Decision 0009 remain planning concepts rather than guaranteed physical schemas.
 
-Decision 0010 does not silently replace Decision 0009. Acceptance should trigger a controlled amendment note or supersedence clarification in Decision 0009 and affected specifications.
+Decision 0010 does not replace Decision 0009. Decision 0009 is explicitly amended to reflect the separate Core Operational and Internet Marketing Intelligence database boundaries.
 
 ## Research dependencies
 
