@@ -1,7 +1,7 @@
 ---
 id: kz-aud-01KTHWEY0VT7PT3NESJTA0BTCN
 type: audit
-status: active
+status: complete
 project: kaizen-platform
 summary: Steward checkpoint audit of the Packet 006B first-time promotion workflow implementation.
 created: 2026-06-07T20:30:19Z

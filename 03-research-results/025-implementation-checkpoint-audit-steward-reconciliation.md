@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T20:30:19Z
+updated: 2026-06-07T20:46:01Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -113,14 +113,14 @@ Items marked `E` are tracked but do not block the first slice.
 | F-09 | closed for 006B draft | A | Packet 006B explicitly binds `source_sha256` and `canonical_candidate_sha256` in plan, approval, execution, and events. | Result 029 security audit; implementation evidence still required before Gate B closure. |
 | F-10 | closed | A | Required packet-contract sections are present in both successor packets. | Results 027 and 029. |
 | F-11 | closed | A | Packets 006A and 006B have unique sequential test numbering and passed editorial/integrity review. | Results 027 and 029. |
-| F-12 | 006A closed; 006B implementation active | A/B | Packet 006B is owner-approved and its core is implemented at `032fa63`/`667f304`, but the remaining hammer gate is open. | Result 030 partial checkpoint audit. |
-| F-13 | closed for 006B draft | A | Packet 006B defines exact staging-local operation evidence paths, write order, immutable ready marker, approval record, canonical JSON hashes, invalidation, and retry rules. | Result 029 security audit; implementation evidence still required. |
+| F-12 | closed | A/B | Packet 006A and Packet 006B are implemented and steward-audited. Packet 006B final hardening is at `703d532`. | Results 028 and 031. |
+| F-13 | closed | A | Immutable operation evidence, ready-marker ordering, plan/approval hashes, tamper detection, and retry invalidation are implemented and tested. | Platform commits through `703d532`; Result 031. |
 | F-14 | assigned to pre-promotion maintenance | C | Bootstrap `_governance/README.md` and empty `promotion-log.jsonl` through a separate owner-approved human vault maintenance step before first promotion. It is outside 006A and must not be hidden inside 006B execution. | Vault commit with empty parseable log and README; validation/Git review passes. |
-| F-15 | closed for 006B draft | A | Packet 006B requires `kz-prom-<ULID>` for every event and the intent-derived operation ID. | Result 029 security audit; schema and implementation tests remain required. |
+| F-15 | closed | A | `kz-prom-<ULID>` event and operation IDs are implemented, schema-checked, duplicate-checked, and race-tested. | Platform commit `703d532`; Result 031. |
 | F-16 | modify/defer | D | Documentation-repository task packets are planning artifacts, not canonical vault notes. Do not mass-convert them now. Before Milestone 4, define whether promoted task packets must translate path references into stable IDs. | Explicit reconciliation note or accepted contract amendment before first governed project loop. |
 | F-17 | reject as defect; record deviation | E | Packet 005's `_audit/` path was illustrative, and implementation/README consistently use the staging-root log. Do not move it now. Record the location as the accepted first-slice implementation detail. | Packet 005 completion or spec note references actual location. |
-| F-18 | closed for 006B draft; implementation open | B | Packet 006B requires every canonical event destination path to be vault-relative with forward slashes. Existing staging evidence remains untouched. | Result 029; implementation tests must close Gate B. |
-| F-19 | closed for 006B draft; implementation open | B | Packet 006B requires `schema_version: 1.0` for plan, validation, approval, and promotion events without rewriting old staging evidence. | Result 029; emitted-record tests must close Gate B. |
+| F-18 | closed | B | Promotion events emit and validate forward-slash vault-relative canonical destination paths. | Platform commit `703d532`; Result 031. |
+| F-19 | closed | B | Plan, validation, approval, and promotion events use `schema_version: 1.0`; representative phase records are schema/runtime validated. | Platform commit `703d532`; Result 031. |
 | F-20 | defer | E | Base64 detection is warning-only and not a security boundary. Improve before agent writes or customer data. | Backlog entry for pre-Hermes hardening. |
 | F-21 | defer | E | Editable-install schema discovery is acceptable for the first slice. Fix before packaged distribution. | Packaging milestone includes resource loading tests. |
 | F-22 | closed | B | Retained `_PROCESS_LOCK` as an in-process aid and proved the named mutex as the cross-process boundary. | Platform commit `f377f53` and Result 026; both thread and independent-process tests pass. |
@@ -128,7 +128,7 @@ Items marked `E` are tracked but do not block the first slice.
 | F-24 | defer | E | Redundant digest work is harmless. Optimize only if code cleanup is already occurring. | Optional maintenance issue. |
 | F-25 | defer | E | Whole-file JSONL reads are acceptable at current scale. Add threshold/streaming design after real volume exists. | Performance trigger documented later. |
 | F-26 | defer with threat-model note | E | `Local\\` mutex is acceptable for single-user desktop first slice. Revisit before service, multi-user, or scheduled-agent operation. | Threat model explicitly states single-session assumption. |
-| F-27 | closed for 006B draft; implementation open | B | Packet 006B requires an explicit nonzero `stat.FILE_ATTRIBUTE_REPARSE_POINT` assertion on the supported runtime. | Result 029; implementation test must close Gate B. |
+| F-27 | closed | B | Supported Windows runtime asserts a nonzero reparse constant; source, governance, log, and destination reparse cases are directly tested. | Platform commit `703d532`; Result 031. |
 | F-28 | defer | E | Email/phone warning precision does not block promotion safety. | Revisit after real corpora expose noise. |
 | F-29 | reject as issue | E | Link case matches actual filenames on the current vault. No change required. | None. |
 
@@ -277,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Complete the remaining Packet 006B reparse, lock/share, race-window, terminal-append-failure, and schema-validation hammers in disposable roots, then perform the final steward audit.
+Draft and security-audit a separate owner-controlled governance-bootstrap packet for live `_governance/README.md` and an empty `_governance/promotion-log.jsonl`. Do not implement it before explicit owner approval.
 
-Packet 006B remains active and partial. Do not create live `_governance`, perform real canonical promotion, or describe the packet as complete before Result 030's remaining hammer gate closes.
+Packet 006B is complete, but this does not authorize live `_governance` creation or a real promotion. F-14 remains the next separate owner gate.

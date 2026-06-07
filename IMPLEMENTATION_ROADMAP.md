@@ -281,6 +281,7 @@ Immediate priorities:
 3. R2 evidence hardening complete at platform commit `f377f53` with 130 passing tests;
 4. retire the current combined Packet 006 from approval consideration;
 5. Packet 006A complete at platform commit `26271ce` and steward-audited in Result 028;
-6. Packet 006B owner-approved; core implemented at `032fa63`/`667f304`; Result 030 partial checkpoint audit; remaining hammer gate open.
+6. Packet 006B complete at platform commit `703d532`; final steward audit Result 031 pass-with-documented-limitations.
+7. Draft and security-audit the separate live governance-bootstrap packet before seeking owner approval.
 
 Canonical-promotion approval and implementation remain blocked until Result 025 Gate A and Gate B requirements close.
