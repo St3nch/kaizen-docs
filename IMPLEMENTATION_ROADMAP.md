@@ -130,7 +130,7 @@ platform/
 
 # Milestone 2 - Canonical vault bootstrap
 
-Status: pending owner approval
+Status: complete
 
 ## Objective
 
@@ -156,7 +156,7 @@ Create the first canonical vault root and one minimal project bootstrap after Mi
 
 # Milestone 3 - Safe staging and promotion
 
-Status: planned
+Status: split; path-confinement foundation pending owner approval
 
 ## Objective
 
@@ -270,7 +270,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 Owner review of:
 
 ```text
-06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md
+06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md
 ```
 
-Task Packet 003 is owner-approved and accepted for execution. Canonical vault bootstrap is authorized within the packet boundary.
+Task Packet 004 is owner-approved and accepted for execution. It authorizes root configuration and dry-run Windows path-confinement evidence only; staged note writes and canonical promotion remain unauthorized.

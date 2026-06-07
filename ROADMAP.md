@@ -39,8 +39,8 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Task Packet 003 approved; canonical vault bootstrap authorized
-Current objective: execute Task Packet 003 and validate the canonical vault bootstrap
+Current phase: Task Packet 004 approved; staging-root and path-confinement implementation authorized
+Current objective: execute Task Packet 004 within the dry-run path-confinement boundary
 Current implementation status: not started
 Hermes posture: required first-class vault consumer; canonical writes remain unapproved
 ```
@@ -1000,9 +1000,9 @@ Later prototype gates should cover:
 This lane remains a future implementation input and does not authorize UI implementation before its own roadmap gate.
 ## Immediate next actions
 
-1. Owner reviews and approves or rejects `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`.
-2. Commit and push the Task Packet 002 completion evidence, validator audit, and Task Packet 003 package after approval.
-3. Create `C:\dev\kaizen\vault` only after Task Packet 003 approval.
-4. Do not create staging, data, or scratch roots and do not fabricate promotion evidence.
-5. Validate every bootstrap note through the committed canonical validator before the first vault commit.
-6. Audit the canonical vault bootstrap before authorizing safe staging and promotion implementation.
+1. Owner reviews and approves or rejects `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`.
+2. Commit and push the Task Packet 003 completion evidence, vault audit, and Task Packet 004 package after approval.
+3. Keep `C:\dev\kaizen\vault` clean and read-only to Task Packet 004.
+4. Create `C:\dev\kaizen\staging` only after the path library and hammer tests pass.
+5. Do not implement staged-note writes, promotion events, canonical writes, Hermes, databases, providers, retrieval, or UI work.
+6. Audit path confinement before authorizing the create-only staging-write wrapper.

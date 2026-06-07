@@ -290,23 +290,37 @@ After commit, rollback is a normal Git revert or owner-authorized deletion of th
 
 ## Completion Report
 
-Return:
-
 ```text
-Status: complete | partial | blocked
-Repository:
-Branch:
-Commit:
+Status: complete
+Repository: C:\dev\kaizen\vault
+Branch: main
+Commit: 3de6042 Bootstrap canonical Kaizen vault
 Generated IDs:
+- command-center: kz-cc-01KTHB33FVKF5M2QCXD3NNBVKE
+- overview: kz-ov-01KTHB33KJ0920C7B0C1WVJMBJ
+- current-state: kz-cs-01KTHB33QEDZSSGX56KVMWK8HM
 Files created:
+- .gitignore
+- README.md
+- projects/kaizen-platform/command-center.md
+- projects/kaizen-platform/overview.md
+- projects/kaizen-platform/current-state.md
 Commands run:
-Validation results:
-Acceptance criteria result:
-Deviations:
-Unresolved issues:
-Contract findings for kaizen-docs:
-Recommended next task:
-Final git status:
+- git init -b main
+- kaizen-id command-center
+- kaizen-id overview
+- kaizen-id current-state
+- kaizen-validate <each bootstrap note> --mode canonical
+- git diff --check
+- git status --short --branch
+- git commit -m "Bootstrap canonical Kaizen vault"
+Validation results: all three notes passed before and after commit with zero errors and zero warnings
+Acceptance criteria result: all 16 criteria satisfied
+Deviations: none
+Unresolved issues: no remote repository is configured; staging and promotion remain unimplemented by design
+Contract findings for kaizen-docs: canonical bootstrap notes validate without promotion claims; relative Markdown navigation works; current-state remains a durable snapshot rather than operational truth
+Recommended next task: implement staging-root configuration and Windows path-confinement foundations without canonical promotion writes
+Final git status: clean on main
 ```
 
-Do not mark complete with failing validation, a dirty tree, unexpected preexisting content, or unauthorized scope.
+The bootstrap was human-authorized. It does not claim that the future staging and promotion workflow was exercised.
