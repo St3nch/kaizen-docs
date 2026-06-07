@@ -281,6 +281,6 @@ Immediate priorities:
 3. R2 evidence hardening complete at platform commit `f377f53` with 130 passing tests;
 4. retire the current combined Packet 006 from approval consideration;
 5. Packet 006A complete at platform commit `26271ce` and steward-audited in Result 028;
-6. Packet 006B drafted and security-audited pass in Result 029; explicit owner approval is pending.
+6. Packet 006B owner-approved; core implemented at `032fa63`/`667f304`; Result 030 partial checkpoint audit; remaining hammer gate open.
 
 Canonical-promotion approval and implementation remain blocked until Result 025 Gate A and Gate B requirements close.

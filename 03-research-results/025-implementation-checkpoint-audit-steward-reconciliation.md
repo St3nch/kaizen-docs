@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Steward reconciliation and remediation ledger for the implementation checkpoint red-team audit.
 created: 2026-06-07T18:10:00Z
-updated: 2026-06-07T20:16:36Z
+updated: 2026-06-07T20:30:19Z
 review_status: approved
 related_specs:
   - 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -113,7 +113,7 @@ Items marked `E` are tracked but do not block the first slice.
 | F-09 | closed for 006B draft | A | Packet 006B explicitly binds `source_sha256` and `canonical_candidate_sha256` in plan, approval, execution, and events. | Result 029 security audit; implementation evidence still required before Gate B closure. |
 | F-10 | closed | A | Required packet-contract sections are present in both successor packets. | Results 027 and 029. |
 | F-11 | closed | A | Packets 006A and 006B have unique sequential test numbering and passed editorial/integrity review. | Results 027 and 029. |
-| F-12 | 006A closed; 006B gate open | A/B | The combined Packet 006 is retired. Packet 006A is implemented and steward-audited pass-with-documented-limitations. Packet 006B remains prohibited until separately drafted, security-audited, and owner-approved. | Platform commit `26271ce` and Result 028. |
+| F-12 | 006A closed; 006B implementation active | A/B | Packet 006B is owner-approved and its core is implemented at `032fa63`/`667f304`, but the remaining hammer gate is open. | Result 030 partial checkpoint audit. |
 | F-13 | closed for 006B draft | A | Packet 006B defines exact staging-local operation evidence paths, write order, immutable ready marker, approval record, canonical JSON hashes, invalidation, and retry rules. | Result 029 security audit; implementation evidence still required. |
 | F-14 | assigned to pre-promotion maintenance | C | Bootstrap `_governance/README.md` and empty `promotion-log.jsonl` through a separate owner-approved human vault maintenance step before first promotion. It is outside 006A and must not be hidden inside 006B execution. | Vault commit with empty parseable log and README; validation/Git review passes. |
 | F-15 | closed for 006B draft | A | Packet 006B requires `kz-prom-<ULID>` for every event and the intent-derived operation ID. | Result 029 security audit; schema and implementation tests remain required. |
@@ -277,6 +277,6 @@ Do not delete closed findings. Preserve the history.
 
 ## Immediate next action
 
-Implement and hammer-test the owner-approved Packet 006B workflow in disposable roots only. Stop as blocked if immutable evidence, exact hash binding, event integrity, intent-before-mutation, no-replacement execution, or deterministic recovery cannot be proved.
+Complete the remaining Packet 006B reparse, lock/share, race-window, terminal-append-failure, and schema-validation hammers in disposable roots, then perform the final steward audit.
 
-Packet 006B implementation is now authorized in disposable roots only. Do not create live `_governance` or perform any real canonical promotion.
+Packet 006B remains active and partial. Do not create live `_governance`, perform real canonical promotion, or describe the packet as complete before Result 030's remaining hammer gate closes.

@@ -1012,5 +1012,5 @@ This lane remains a future implementation input and does not authorize UI implem
 4. R2 cross-process, abrupt-termination, malformed-log, and no-side-effect evidence complete in platform commit `f377f53` and Result 026.
 5. Retire the current combined Packet 006 from approval consideration.
 6. Packet 006A complete at platform commit `26271ce` and steward-audited in Result 028.
-7. Packet 006B drafted and security-audited pass in Result 029; explicit owner approval is pending and live promotion remains prohibited.
+7. Packet 006B core implemented at `032fa63`/`667f304` and checkpoint-audited partial in Result 030; remaining hammer gate open and live promotion prohibited.
 8. Keep canonical promotion, Hermes/MCP writes, databases, providers, retrieval, and UI implementation unauthorized until their gates close.

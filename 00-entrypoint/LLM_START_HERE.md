@@ -26,18 +26,18 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 006B is drafted and security-audited pass; implementation is blocked pending explicit owner approval, and live canonical promotion remains prohibited
+- Current phase: Packet 006B core is implemented and checkpoint-audited partial; remaining hammer evidence is open, and live canonical promotion remains prohibited
 - Planning roadmap: historical planning source plus current remediation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 - Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e6267df`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
-- Platform repository: exists at `C:\dev\kaizen\platform`, commit `26271ce`; Packet 006A atomic-install proof passes 145 tests; remote creation is owner-deferred until the working-project checkpoint
+- Platform repository: exists at `C:\dev\kaizen\platform`, commit `667f304`; Packet 006B checkpoint passes 32 focused tests and 177 full-suite tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
 - Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
 - Task Packet 006A: complete at platform commit `26271ce`; steward-audited in Result 028
-- Task Packet 006B: drafted and security-audited pass in Result 029; implementation pending explicit owner approval
+- Task Packet 006B: owner-approved; core implemented at `032fa63`/`667f304`; Result 030 partial checkpoint audit; remaining hammer gate open
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized during the remediation gate
@@ -259,7 +259,7 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - R2 subprocess, abrupt-termination, malformed-log, and no-side-effect evidence is complete in Result 026;
 - retire the current combined Packet 006 from approval consideration;
 - Packet 006A is complete and audited in Result 028;
-- Packet 006B is drafted and security-audited pass in Result 029; implementation is pending explicit owner approval;
+- Packet 006B core is implemented and checkpoint-audited partial in Result 030; complete the remaining hammer gate before closure;
 - keep canonical promotion blocked until Result 025 Gate A and Gate B close.
 
 ### Non-blocking future work
