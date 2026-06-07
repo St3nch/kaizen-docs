@@ -39,8 +39,8 @@ The planning outcome is:
 ## Current position
 
 ```text
-Current phase: Task Packet 005 approved; create-only staging-write implementation authorized
-Current objective: execute Task Packet 005 within the create-only staging boundary
+Current phase: Task Packet 005 complete; Task Packet 006 planning is next
+Current objective: draft and audit Task Packet 006
 Current implementation status: not started
 Hermes posture: required first-class vault consumer; canonical writes remain unapproved
 ```

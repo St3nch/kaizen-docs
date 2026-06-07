@@ -1,11 +1,11 @@
 ---
 id: kz-tp-01KTHDKAM3KDPMS474WAKXRJCA
 type: task-packet
-status: active
+status: complete
 project: kaizen-platform
 summary: Implement a create-only staging-write wrapper with exact validation, provenance, idempotency, and append-only attempt evidence.
 created: 2026-06-07T00:00:00Z
-updated: 2026-06-07T00:00:00Z
+updated: 2026-06-07T17:15:00Z
 review_status: approved
 authority: accepted
 primary_spec: 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -478,29 +478,53 @@ Never alter canonical vault content during rollback.
 
 ## Completion Report
 
-Return:
-
 ```text
-Status: complete | partial | blocked
-Platform repository and commit:
-Vault status and commit:
+Status: complete
+Platform repository and commit: C:\dev\kaizen\platform @ 36fa419
+Vault status and commit: clean main @ 3de6042
 Staging artifacts and audit log:
+- C:\dev\kaizen\staging\README.md
+- C:\dev\kaizen\staging\staging-write-attempts.jsonl
+- C:\dev\kaizen\staging\projects\kaizen-platform\claims\create-only-wrapper-smoke.md
 Files created:
+- src/kaizen/windows_fs.py
+- src/kaizen/staging_write.py
+- src/kaizen/stage_create_cli.py
+- tests/test_windows_fs.py
+- tests/test_staging_write.py
+- tests/test_stage_create_cli.py
+- tests/fixtures/staging-write/valid-request.json
 Files modified:
-Request/response models:
-Failure codes:
+- AGENTS.md
+- README.md
+- pyproject.toml
+- src/kaizen/__init__.py
+Request/response models: immutable typed StagingWriteRequest and StagingWriteResult plus stable StagingWriteError
+Failure codes: invalid_request, invalid_provenance/search evidence failures through typed request validation, content_too_large, content_hash_mismatch, frontmatter_request_mismatch, agent_authority_forbidden, existing path-confinement codes, prewrite_audit_failed, destination_exists, create_new_failed, persisted_hash_mismatch, validation_failed, idempotency_conflict, recovery_required, recovery_hash_mismatch, audit_terminal_append_failed, internal_failure, and native handle/mutex failure codes
 Commands run:
-Tests and concurrency results:
-Recovery scenarios:
-CLI exit checks:
+- editable package install
+- full pytest suite
+- compileall
+- pip check
+- real two-process kaizen-stage-create smoke execution
+- independent staging-mode validation
+- SHA-256 and JSONL audit-chain verification
+- cached diff, scope, text-integrity, junk-file, and Git-state checks
+Tests and concurrency results: 126 passed, 0 skipped; native exclusive-create race passed; real two-process smoke produced one physical create and one idempotent replay with both processes exiting 0
+Recovery scenarios: intent/no-file retry, create-before-validation recovery, validation-before-terminal-event recovery, matching-file recovery, mismatched-file fail-closed recovery, terminal-audit failure, and committed-file mismatch cases covered
+CLI exit checks: 0 for created and idempotent prior success; governed rejection 1 and configuration/audit/recovery/internal failure 2 covered by tests
 Representative hashes and event IDs:
-Acceptance criteria result:
-Skipped tests with reasons:
-Deviations:
-Unresolved issues:
-Contract findings for kaizen-docs:
-Recommended next task:
-Final Git statuses:
+- SHA-256: d6033bacf6325abf40082fdca9bf7376888e6d7d1380bca966d3fdbc8e60d42e
+- intent event: 4696cfe3-ef72-4bc1-82fb-7a1f8deb7dba
+- committed event: 5e6674cd-1f62-405a-9a3f-6c34d848d030
+- validation run: 22dff208-44b9-4c82-a539-01fb2d200676
+Acceptance criteria result: all 20 satisfied
+Skipped tests with reasons: none; Developer Mode enabled full Windows symlink coverage
+Deviations: none requiring doctrine changes
+Unresolved issues: canonical promotion remains unimplemented; wrapper remains human-run with no Hermes or MCP exposure
+Contract findings for kaizen-docs: race-resistant create-only staging writes required a Windows handle-relative FILE_CREATE primitive plus a named cross-process mutex; Python path prechecks alone were insufficient
+Recommended next task: draft and security-audit Task Packet 006 for human-operated canonical promotion and recoverable promotion events; do not implement it without owner approval
+Final Git statuses: docs clean before closeout; platform clean at 36fa419; vault clean at 3de6042; staging contains only the boundary README, append-only attempt log, and one validated smoke claim
 ```
 
-Do not mark complete with failing tests, a dirty platform or vault tree, unexplained recovery ambiguity, unauthorized writes, or unreviewed scope expansion.
+This milestone authorizes only the human-run create-only staging boundary. It does not authorize canonical promotion, overwrite/edit/delete operations, Hermes, MCP, or a general filesystem surface.
