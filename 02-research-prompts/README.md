@@ -27,10 +27,7 @@ Prompts are inputs, not conclusions.
 - `004-obsidian-mcp-tool-surface-audit.md` - Obsidian MCP audit; reconciled in Research Result 009
 - `005-postgres-mcp-typed-tool-audit.md` - Postgres audit; reconciled in Research Result 010
 - `006-qdrant-mcp-typed-tool-audit.md` - Qdrant audit; reconciled in Research Result 011
-
-### Active
-
-- `007-internet-marketing-intelligence-providers-source-rights.md` - Research Batch B; no-new-spend provider, rights, retention, sampling, and provider-neutral intelligence research. Paid DataForSEO LLM capture is deferred until the owner has funds next month.
+- `007-internet-marketing-intelligence-providers-source-rights.md` - Research Batch B; reconciled in Research Result 015. Paid DataForSEO capture remains deferred and separately governed.
 
 ### Planned after Batch B
 

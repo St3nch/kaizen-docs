@@ -2,6 +2,7 @@
 
 Status: proposed
 Date: 2026-06-05
+Updated: 2026-06-06
 Owner: Kaizen project steward
 Related accepted decisions:
 - `04-design-decisions/0004-system-of-record-boundaries.md`
@@ -12,7 +13,9 @@ Related vision and evidence:
 - `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 - `03-research-results/010-postgres-mcp-typed-tool-audit-claude-summary.md`
 - `03-research-results/012-step-5a-composed-tool-capability-map.md`
+- `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
 - `05-specs/operational-postgres-authority.md`
+- `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md`
 - `ROADMAP.md`
 
 ## Context
@@ -140,6 +143,20 @@ Separating the database boundary supports distinct credentials, roles, APIs, and
 
 Interactive reasoning agents should receive typed, scoped intelligence operations rather than broad access to either database.
 
+## Provider-neutral design
+
+The database boundary must remain provider-neutral.
+
+DataForSEO is the leading first provider candidate, but no provider response shape becomes Kaizen's universal model. Provider-reported metrics and classifications remain provider-attributed.
+
+## Distinct AI and LLM evidence families
+
+The design must not collapse AI Overviews, LLM responses, LLM scrapes, LLM mention clusters, LLM citations, and AI keyword-volume estimates into one generic AI-search record.
+
+## Multi-provider comparison
+
+Kaizen may later use secondary providers for selective calibration or gap-filling. Provider disagreement must be preserved rather than averaged into false certainty. No recurring secondary-provider subscription program or annual calibration budget is approved by this decision.
+
 ## Scope of ranking and visibility data
 
 The intelligence database is not limited to conventional web-search rankings.
@@ -215,7 +232,21 @@ object or file storage
 └── compressed raw response when rights, cost, and retention policy permit
 ```
 
-Exact retention and storage rules depend on Research Batch B and later recovery planning.
+Exact retention and storage rules depend on provider rights, Research Batch B reconciliation, and later recovery planning.
+
+The technical capability to retain and analyze data is not proof of contractual permission for every use. No indefinite raw-retention policy is approved by this decision.
+
+Until written provider clarification or legal review exists, rights claims should be classified as expressly permitted, expressly restricted, not expressly prohibited, not expressly granted, provider clarification required, or legal review required before external or customer-facing use.
+
+A provisional planning posture is:
+
+```text
+retain raw where allowed and useful
+-> assign rights and privacy class
+-> preserve hash and provenance
+-> review retention window
+-> purge, reduce, or continue based on rights, value, and cost
+```
 
 ## Relationship to the Observatory
 
@@ -227,6 +258,17 @@ The final design may place Observatory-owned workloads primarily in the Internet
 
 Exact ownership by record family remains deferred until workload analysis.
 
+## Controlled paid-data capture
+
+Paid data collection is an authority-bearing operational action.
+
+Future captures require an exact research question, approved endpoint family, conceptual target, maximum rows or calls, an authorized provider-consumption ceiling, stop conditions, duplicate-call prevention, unique filenames, paired inventory notes, cost verification, and steward approval before execution.
+
+Account funding and authorized API consumption are separate concepts. Unused provider balance is not authorization to spend.
+
+The deferred planning artifact is:
+
+- `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md`
 ## Explicit schema-design gate
 
 No schema design should begin from this decision alone.

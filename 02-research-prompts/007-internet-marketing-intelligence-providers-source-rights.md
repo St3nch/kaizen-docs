@@ -419,7 +419,7 @@ Verify:
 - differences from the existing ChatGPT LLM Responses sample;
 - current product maturity and documented limitations.
 
-The owner reports that a former $200 credit requirement has been lowered to $100. Verify the current requirement from primary sources and report uncertainty if the rule is account-specific or not publicly documented.
+Verify the current account access and funding requirement from primary sources or the owner's account, and report uncertainty if the rule is account-specific or not publicly documented.
 
 Prepare a no-execution capture packet for next month containing:
 

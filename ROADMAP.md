@@ -300,61 +300,49 @@ hands-on verification still required
 Do not select a final server from README claims alone. Tool schemas and source code must be inspected, and high-risk candidates must be tested in disposable environments.
 - Composed capability map: `03-research-results/012-step-5a-composed-tool-capability-map.md`
 
-### Step 6 - Run Research Batch B: Internet Marketing Intelligence providers, source rights, and longitudinal reuse
+### Step 6 - Research Batch B: Internet Marketing Intelligence providers, source rights, and longitudinal reuse
 
 Priority: P1
 
-Active prompt:
+Status: research complete; steward reconciliation preserved in `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
+
+Research prompt:
 
 - `02-research-prompts/007-internet-marketing-intelligence-providers-source-rights.md`
 
-Current execution posture:
+Current posture:
 
-- run all provider, rights, retention, workload, VEDA-reuse, and provider-neutral architecture research now;
-- use the existing real DataForSEO JSON corpus and paired inventories as empirical evidence;
-- make no new paid provider calls during this research pass;
-- defer only the missing DataForSEO LLM mention/citation captures until the owner has funds next month;
-- require the report to produce an exact bounded capture packet with endpoint list, call count, estimated cost, hard ceiling, filenames, quality checks, and stopping conditions before any credit is purchased;
-- keep Ahrefs or another provider as an occasional calibration/comparison source rather than a routine duplicate collector.
+- provider, rights, retention, workload, VEDA-reuse, and provider-neutral architecture research is complete at the evidence level;
+- the existing real DataForSEO JSON corpus and paired inventories remain the empirical baseline;
+- no live provider collection occurred during Research Batch B;
+- missing DataForSEO captures remain deferred and governed by `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md`;
+- execution requires separate owner and steward authorization;
+- Ahrefs or another provider remains an optional calibration source rather than a routine duplicate collector;
+- marketplace-ranking coverage remains a focused follow-up gap.
 
 Required vision input:
 
 - `01-project-standard/internet-marketing-intelligence-vision.md`
 
-Research Batch B must investigate the data foundation for Kaizen's portfolio-wide marketing signal engine, not merely compare provider feature lists.
+Research Batch B investigated the data foundation for Kaizen's portfolio-wide marketing signal engine rather than merely comparing provider feature lists.
 
-Research:
+Completed output:
 
-- DataForSEO and credible alternatives;
-- SERP, ranking, visibility, marketplace, and cost capabilities;
-- LLM citation, mention, and retrievability measurement providers;
-- scientific-paper, patent, news, documentation, dataset, and transcript ingestion constraints;
-- copyright, licensing, provider terms, storage, citation, quotation, embedding, transformation, redistribution, and retention boundaries;
-- which observations may be retained longitudinally and reused across projects;
-- which data must remain project-private, customer-restricted, licensed, summarized, referenced, or left at the source;
-- lawful deduplication when multiple projects request the same observation;
-- project attribution, provider-job provenance, spend attribution, and shared-observation reuse;
-- freshness, recapture, historical-snapshot, and provider-change requirements;
-- public, portfolio-internal, project-private, customer-restricted, and licensed-data scope;
-- evidence and provenance required for opportunity candidates and strategy hypotheses;
-- uncertainty, contradiction, and falsification requirements;
-- restrictions affecting derived datasets, model-assisted analysis, and long-term compounding.
-- whether a dedicated Intelligence database should be accepted after provider and workload research;
-- what current and future ranking/visibility data families the later design session must consider;
-- what evidence is required before schema, partitioning, extension, or deployment choices.
+- provider capability and coverage direction;
+- source-rights and retention uncertainty classification;
+- provider-neutral observation requirements;
+- longitudinal reuse and project-relationship guidance;
+- selective collection tiers;
+- deferred DataForSEO capture packet;
+- secondary-provider calibration posture;
+- Decision 0010 evidence and database-design-session inputs;
+- remaining marketplace-ranking research gap.
 
-Expected output:
+Evidence:
 
-- provider capability, rights, and cost matrix;
-- source-class legal and operational constraints;
-- store-versus-summarize-versus-reference guidance;
-- longitudinal-retention and cross-project-reuse guidance;
-- freshness and historical-observation requirements;
-- privacy and scope classes as planning inputs, not final enums;
-- provenance requirements for signals, opportunities, strategies, and experiments;
-- recommendations for later storage and provider prototypes without premature provider or schema selection.
-
-Batch B should preserve the goal that public and lawfully reusable observations compound across the portfolio while private, customer, and licensed data remain correctly scoped.
+- `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
+- `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md`
+- `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - proposed
 ### Step 7 - Run Research Batch C: storage, retrieval, and recovery constraints
 
 Priority: P1
@@ -883,13 +871,13 @@ Later prototype gates should cover:
 This lane does not interrupt Research Batch B and does not authorize UI implementation during the current planning phase.
 ## Immediate next actions
 
-1. Review Research Results 013 and 014 and proposed Decision 0011 as one human-interface planning package.
-2. Decide whether to accept, revise, or keep Decision 0011 proposed; do not begin UI implementation.
-3. Create Research Prompt 007 from the reviewed Internet Marketing Intelligence vision and proposed database boundary, covering providers, source rights, longitudinal retention, cross-project reuse, provenance, freshness, privacy, cost, and evidence needed before database acceptance.
-4. Create a clean Git checkpoint for the human-interface research package and Decision 0011.
-5. Run Research Batch B and return the report for steward reconciliation.
-6. After Batch B, decide whether to accept, revise, or reject Decision 0010; if accepted, schedule the focused database-design session before schema work.
-7. Carry the human-interface, Postgres, and Qdrant prototype requirements into Phase 7 and Phase 8 implementation-planning inputs; do not run those prototypes during the current planning phase.
-8. Recheck the document-contract batch against the aligned vision and verified evidence.
+1. Review Research Result 015 and the amended proposed Decision 0010 as one Internet Marketing Intelligence planning package.
+2. Decide whether to accept, revise, or keep Decision 0010 proposed; no schema work begins from the research report alone.
+3. Decide whether marketplace-ranking coverage requires a focused Batch B addendum before the database-design session.
+4. Prepare provider-rights clarification questions before adopting any permanent retention, customer-facing display, redistribution, or model-analysis policy.
+5. Keep all live DataForSEO capture deferred until the owner approves `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` and current access requirements are verified.
+6. If Decision 0010 is accepted, schedule the focused owner/steward database-design session using Result 015 as evidence; do not design the schema beforehand.
+7. Continue the remaining Phase 2 evidence reconciliation and document-contract recheck against the aligned vision.
+8. Carry human-interface, Postgres, Qdrant, provider-adapter, rights, drift, cost-control, and marketplace prototype requirements into Phase 7 and Phase 8 implementation-planning inputs.
 9. Do not run live Hermes tests until the future implementation roadmap reaches the Hermes integration lane.
-10. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, and implementation-planning inputs are accepted.
+10. Do not begin the implementation roadmap until the vision, required research, v0.2 standard, decisions, and implementation-planning inputs are accepted.

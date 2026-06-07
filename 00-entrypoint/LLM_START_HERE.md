@@ -45,7 +45,7 @@ Humans = authority-bearing review, approval, and promotion
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
 - Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
-- Primary immediate need: review the Internet Marketing Intelligence vision, create Research Prompt 007 for provider/source-rights research, then continue Phase 2 evidence reconciliation before final contract and v0.2 standard work
+- Research Batch B: completed and reconciled in `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`; paid provider capture remains deferred and separately governed
 - Stewardship principle: structure and automation must earn their existence
 
 ## Read-first sequence
@@ -82,8 +82,10 @@ Read in this order unless the user gives a narrower task:
 28. `07-hermes/hermes-write-access-preconditions.md`
 29. `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
 30. `03-research-results/014-human-interface-technical-verification-and-amendment.md`
-31. `03-research-results/006-document-contract-standards-reconciliation.md`
-32. Other files in `03-research-results/` for supporting evidence
+31. `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
+32. `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` - deferred; execution not authorized
+33. `03-research-results/006-document-contract-standards-reconciliation.md`
+34. Other files in `03-research-results/` for supporting evidence
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

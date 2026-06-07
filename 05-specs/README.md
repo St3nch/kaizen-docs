@@ -15,6 +15,7 @@ Specifications are planning artifacts until they are reviewed, audited, and expl
 - `staging-write-wrapper-and-promotion-recovery.md`
 - `promotion-event-schema.md`
 - `operational-postgres-authority.md`
+- `deferred-dataforseo-llm-ranking-capture-packet.md` - deferred planning artifact; execution not authorized
 
 ## Current rule
 
