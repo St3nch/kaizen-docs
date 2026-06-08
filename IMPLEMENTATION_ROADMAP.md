@@ -267,17 +267,22 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Draft and security-audit the ordered Packet 009B promotion sequence for the six-note Milestone 4 planning bundle.
+Review and explicitly approve or reject Packet 009B Phase 0 plus Wave 1 plan generation:
+
+```text
+06-handoff-patterns/009b-finalize-review-and-run-ordered-bundle-promotion.md
+03-research-results/043-packet-009b-security-audit.md
+```
 
 Current state:
 
 1. Milestones 1 through 3 are complete.
-2. Packet 008B is complete at vault commit `80bc093`; Result 040 passed.
-3. Packet 009A is complete; Result 042 passed.
-4. Six proposed staged notes now exist with exact hashes, zero validation errors/warnings, and fully resolved relationships.
-5. The bundle defines governed amendment support as the smallest missing capability for the Milestone 4 return leg.
-6. Canonical command-center, overview, and current-state notes remain unchanged.
-7. No bundle note has been promoted, approved, or accepted canonically.
-8. Packet 009B must promote in dependency order and separately bind every reviewed diff, authority transition, earned directory, event, and vault Git commit.
+2. Packet 009A is complete; Result 042 passed.
+3. Six proposed staged notes validate with zero errors/warnings and fully resolved relationships.
+4. The staged audit still requires one exact human-verdict revision before canonical promotion.
+5. Packet 009B binds that revision from SHA-256 `746310f46d5b31337ac656653d10b244bbea01686ff802a6f92538b960d8c26c` to `ab78d9e4b9421fcca9e2b39374c62968ab75ee292d04efc787183ae5f6675944`.
+6. Result 043 security-audits Packet 009B pass for initial owner review.
+7. Initial approval may authorize only the exact audit edit, validation, and Wave 1 source-summary plan generation using operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJG`.
+8. Wave 1 execution and all later waves remain prohibited until their exact plan hashes receive separate owner approvals.
 
-Do not promote any bundle note, implement amendment support, or modify canonical project-state notes before Packet 009B is security-audited and explicitly owner-approved.
+Do not execute any canonical promotion, platform implementation, or live amendment under the initial Packet 009B approval.
