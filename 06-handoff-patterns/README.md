@@ -14,4 +14,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `006-implement-human-operated-canonical-promotion.md` - retired combined draft; not eligible for approval; preserved as source material for the required 006A/006B split
 - `006a-prove-windows-first-time-atomic-install.md` - complete at platform commit `26271ce`; steward-audited pass-with-documented-limitations in Result 028
 - `006b-implement-human-operated-first-promotion.md` - complete at platform commit `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
-- `007-bootstrap-live-promotion-governance.md` - security-audited pass in Result 032; awaiting explicit owner approval; two-file live-vault bootstrap only
+- `007-bootstrap-live-promotion-governance.md` - complete at vault commit `248b26a`; Result 033 pass; no promotion authority

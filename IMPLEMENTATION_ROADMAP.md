@@ -267,11 +267,14 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject security-audited Packet 007 for only:
+Select or author a clean low-risk first-promotion candidate, then draft and security-audit a separate execution packet for:
 
 ```text
-_governance/README.md
-_governance/promotion-log.jsonl
+reviewed staged artifact
+immutable plan and validation evidence
+human approval
+one first-time live promotion
+event and Git verification
 ```
 
 Current state:
@@ -279,9 +282,9 @@ Current state:
 1. Milestones 1 and 2 are complete.
 2. Milestone 3 implementation is complete through Packet 006B at platform commit `703d532`.
 3. Packet 006B final steward audit Result 031 passed with documented limitations.
-4. Packet 007 is drafted and security-audited pass in Result 032; execution awaits explicit owner approval.
-5. The live vault remains unchanged by the promotion implementation, tests, and Packet 007 drafting.
-6. The first real canonical promotion remains a later, separate explicit go/no-go.
+4. Packet 007 is complete at vault commit `248b26a`; Result 033 passed.
+5. Live `_governance/README.md` and an empty `promotion-log.jsonl` now exist and validate.
+6. The first real canonical promotion remains a separate explicit owner go/no-go.
 7. Platform and vault remotes remain deferred until the owner-defined working-project checkpoint.
 
-Do not create live `_governance`, perform a real promotion, or begin Milestone 4 until Packet 007 is explicitly owner-approved and then executed with a passing completion audit.
+Do not perform a real promotion or begin Milestone 4 until the first-promotion candidate and execution packet are reviewed, security-audited, and explicitly owner-approved.

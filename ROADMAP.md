@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 007 drafted and security-audited; owner-approval gate active
-Current objective: obtain explicit owner approval or rejection before any live-vault governance-bootstrap mutation
-Current implementation status: Milestones 1 and 2 complete; Milestone 3 implementation complete through Packet 006B at platform commit `703d532`; live governance bootstrap and first real promotion remain unapproved
+Current phase: Packet 007 complete; first-real-promotion planning gate active
+Current objective: select or author a clean low-risk candidate and draft/security-audit a separate first-real-promotion execution packet
+Current implementation status: Milestones 1 and 2 complete; Milestone 3 implementation complete through Packet 006B at platform commit `703d532`; live governance bootstrap complete at vault commit `248b26a`; first real promotion remains unapproved
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```
@@ -1013,5 +1013,6 @@ This lane remains a future implementation input and does not authorize UI implem
 5. Retire the current combined Packet 006 from approval consideration.
 6. Packet 006A complete at platform commit `26271ce` and steward-audited in Result 028.
 7. Packet 006B complete at `703d532` and final-audited in Result 031.
-8. Draft and security-audit a separate live governance-bootstrap packet; no live mutation or promotion yet.
+8. Packet 007 governance bootstrap complete at vault commit `248b26a`; Result 033 pass.
+9. Select or author the first clean promotion candidate and draft/security-audit its separate execution packet; no promotion yet.
 8. Keep canonical promotion, Hermes/MCP writes, databases, providers, retrieval, and UI implementation unauthorized until their gates close.
