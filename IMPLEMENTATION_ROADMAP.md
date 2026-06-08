@@ -267,20 +267,16 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject security-audited Packet 008A:
-
-```text
-06-handoff-patterns/008a-implement-owner-controlled-live-promotion-operator.md
-```
+Draft and security-audit Packet 008B around the held first-promotion source-summary.
 
 Current state:
 
 1. Milestones 1 and 2 are complete.
 2. Packet 006B's disposable promotion engine is complete at platform commit `703d532`.
 3. Packet 007 governance bootstrap is complete at vault commit `248b26a`.
-4. A clean source-summary candidate is staged and validated at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`.
-5. The existing promotion contract deliberately rejects the exact live roots, and `kaizen-promote` is sandbox-only.
-6. Packet 008A is drafted and security-audited pass in Result 034; implementation awaits explicit owner approval.
-7. Packet 008B will separately govern the first live plan, approval, destination-parent preparation, execution, events, and Git commit.
+4. Packet 008A fixed-root live operator is complete at platform commit `1a890dd`; Result 035 passed.
+5. A clean source-summary candidate remains staged and validated at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`.
+6. The live governance log remains empty and no live plan exists.
+7. Packet 008B must separately bind live plan generation, reviewed diff, destination-parent preparation, human approval, one execution, event verification, and local vault commit.
 
-Do not invoke a live promotion command, generate a live plan, modify the held candidate, or begin Milestone 4 before Packet 008A is implemented and Packet 008B is separately reviewed and owner-approved.
+Do not invoke `kaizen-promote-live`, generate a live plan, modify the held candidate, create the live research parent, or begin Milestone 4 before Packet 008B is security-audited and explicitly owner-approved.

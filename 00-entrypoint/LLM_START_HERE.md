@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: a clean first-promotion source-summary is staged and hash-bound; Packet 008A live-operator implementation is drafted and security-audited pass in Result 034, awaiting explicit owner approval; live promotion remains prohibited
+- Current phase: Packet 008A live operator is complete at platform commit `1a890dd`; the held first-promotion source-summary remains hash-bound; Packet 008B drafting and security audit are next, and live promotion remains prohibited
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -39,7 +39,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 006A: complete at platform commit `26271ce`; steward-audited in Result 028
 - Task Packet 006B: complete at `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
 - Task Packet 007: complete at vault commit `248b26a`; Result 033 pass; no promotion occurred
-- Task Packet 008A: drafted and security-audited pass in Result 034; implementation awaits explicit owner approval; no live command may run
+- Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -117,6 +117,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 56. `03-research-results/033-packet-007-completion-steward-audit.md` - Packet 007 completion audit
 57. `06-handoff-patterns/008a-implement-owner-controlled-live-promotion-operator.md` - security-audited pass; awaiting explicit owner approval
 58. `03-research-results/034-packet-008a-security-audit.md` - Packet 008A security audit
+59. `03-research-results/035-packet-008a-completion-steward-audit.md` - Packet 008A completion audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -263,8 +264,9 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - Packet 006A and Packet 006B are complete and steward-audited;
 - Packet 007 is complete and steward-audited pass in Result 033;
 - a clean low-risk source-summary candidate is staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`;
-- Packet 008A is drafted and security-audited pass in Result 034; obtain explicit owner approval before implementation;
-- do not generate a live plan or run a live command until Packet 008A completes and Packet 008B is separately approved;
+- Packet 008A is complete and steward-audited pass in Result 035;
+- draft and security-audit Packet 008B around the held source-summary;
+- do not generate a live plan or run a live command until Packet 008B is explicitly owner-approved;
 - use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
 - preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.
 
