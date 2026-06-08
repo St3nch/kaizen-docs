@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: renewed owner review of corrected Packet 008B Gate A command and docs preflight for plan-only evidence generation
+- Current gate: explicit owner review of Packet 008B Gate B for operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV` and plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; live governance bootstrap and real canonical promotion remain unapproved

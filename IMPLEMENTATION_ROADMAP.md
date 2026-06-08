@@ -267,7 +267,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly re-approve or reject the corrected Packet 008B Gate A command and docs preflight:
+Review and explicitly approve or reject Packet 008B Gate B for operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV` and plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`:
 
 ```text
 06-handoff-patterns/008b-first-real-promotion-two-gate-execution.md
@@ -281,8 +281,8 @@ Current state:
 3. Packet 007 governance bootstrap is complete at vault commit `248b26a`.
 4. Packet 008A fixed-root live operator is complete at platform commit `1a890dd`; Result 035 passed.
 5. A clean source-summary candidate remains staged and validated at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`.
-6. Packet 008B Gate A command ordering and impossible docs-commit binding are corrected and re-audited through Result 038; no plan exists and no live mutation occurred.
-7. Gate A may generate and inspect one immutable live plan only.
-8. Gate B remains prohibited until the generated plan receives a second security review and second explicit owner approval.
+6. Packet 008B Gate A completed successfully; immutable plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d` and candidate `bd54d1b5c63ba27e4839bdbf6b042aa395d1e3532c99c0280eb80176b6ef5191` are verified in Result 039.
+7. Result 039 security-audits Gate B pass against the generated evidence.
+8. Gate B remains prohibited until explicit owner approval names the exact operation ID and plan hash.
 
-Do not create the destination parent, generate approval evidence, run execute/recover, append an event, or modify the vault under Gate A.
+Do not create the destination parent, generate approval evidence, run execute/recover, append an event, or modify the vault before explicit Gate B approval.

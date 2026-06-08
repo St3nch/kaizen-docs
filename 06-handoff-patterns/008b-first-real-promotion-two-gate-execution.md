@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Govern the first real canonical promotion through a plan-only Gate A and a separately approved execution Gate B.
 created: 2026-06-08T21:15:00Z
-updated: 2026-06-08T21:33:31Z
+updated: 2026-06-08T21:47:08Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -18,7 +18,7 @@ related_specs:
 
 # Task Packet 008B - First Real Promotion Through Two Explicit Gates
 
-> Security status: Gate A command ordering is corrected in Result 037. Result 038 corrects an impossible self-referential docs commit preflight. Renewed owner approval is required. Gate B remains prohibited.
+> Gate status: Gate A completed successfully. Result 039 verifies the immutable evidence and security-audits Gate B pass. Gate B awaits explicit owner approval tied to operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV` and plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`.
 
 ## Objective
 
