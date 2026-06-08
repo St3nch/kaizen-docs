@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: draft and security-audit Packet 008B for the first real canonical promotion
+- Current gate: explicit owner review of Packet 008B Gate A for plan-only live evidence generation
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; live governance bootstrap and real canonical promotion remain unapproved
@@ -41,7 +41,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant retrieval layer: not implemented
 - Hermes integration: deferred beyond the first slice; no canonical write authority
-- Live `_governance`: complete at vault commit `248b26a`; live operator complete at platform commit `1a890dd`; first real promotion remains prohibited until Packet 008B approval
+- Live `_governance`: complete at vault commit `248b26a`; live operator complete at platform commit `1a890dd`; Packet 008B Gate A may only generate a plan after approval, and Gate B remains prohibited
 
 ## Stewardship rule
 

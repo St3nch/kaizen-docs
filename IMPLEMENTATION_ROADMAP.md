@@ -267,7 +267,12 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Draft and security-audit Packet 008B around the held first-promotion source-summary.
+Review and explicitly approve or reject Packet 008B Gate A:
+
+```text
+06-handoff-patterns/008b-first-real-promotion-two-gate-execution.md
+03-research-results/036-packet-008b-gate-a-security-audit.md
+```
 
 Current state:
 
@@ -276,7 +281,8 @@ Current state:
 3. Packet 007 governance bootstrap is complete at vault commit `248b26a`.
 4. Packet 008A fixed-root live operator is complete at platform commit `1a890dd`; Result 035 passed.
 5. A clean source-summary candidate remains staged and validated at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`.
-6. The live governance log remains empty and no live plan exists.
-7. Packet 008B must separately bind live plan generation, reviewed diff, destination-parent preparation, human approval, one execution, event verification, and local vault commit.
+6. Packet 008B Gate A is drafted and security-audited pass in Result 036.
+7. Gate A may generate and inspect one immutable live plan only.
+8. Gate B remains prohibited until the generated plan receives a second security review and second explicit owner approval.
 
-Do not invoke `kaizen-promote-live`, generate a live plan, modify the held candidate, create the live research parent, or begin Milestone 4 before Packet 008B is security-audited and explicitly owner-approved.
+Do not create the destination parent, generate approval evidence, run execute/recover, append an event, or modify the vault under Gate A.

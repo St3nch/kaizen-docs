@@ -45,5 +45,6 @@ Do not copy a research result directly into the Kaizen Project Standard. First p
 - `033-packet-007-completion-steward-audit.md`
 - `034-packet-008a-security-audit.md`
 - `035-packet-008a-completion-steward-audit.md`
+- `036-packet-008b-gate-a-security-audit.md`
 
 Where a raw external report cannot be copied into the repository environment, preserve a faithful stewarded evidence summary and record the source and limitation explicitly.
