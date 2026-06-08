@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 008B Gate A is drafted and security-audited pass in Result 036; explicit owner approval may authorize plan generation only, while Gate B and live promotion remain prohibited
+- Current phase: Packet 008B Gate A preflight passed, but the approved exact command failed before mutation due global flag ordering; Result 037 passes the corrected command for renewed owner approval; Gate B remains prohibited
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -40,7 +40,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 006B: complete at `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
 - Task Packet 007: complete at vault commit `248b26a`; Result 033 pass; no promotion occurred
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
-- Task Packet 008B: Gate A drafted and security-audited pass in Result 036; awaiting explicit owner approval; Gate B prohibited
+- Task Packet 008B: Gate A command corrected and re-audited pass in Result 037; renewed explicit owner approval required; Gate B prohibited
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -121,6 +121,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 59. `03-research-results/035-packet-008a-completion-steward-audit.md` - Packet 008A completion audit
 60. `06-handoff-patterns/008b-first-real-promotion-two-gate-execution.md` - Gate A security-audited pass; Gate B prohibited
 61. `03-research-results/036-packet-008b-gate-a-security-audit.md` - Packet 008B Gate A security audit
+62. `03-research-results/037-packet-008b-gate-a-command-correction-audit.md` - Gate A command correction and zero-side-effect audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -268,8 +269,8 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - Packet 007 is complete and steward-audited pass in Result 033;
 - a clean low-risk source-summary candidate is staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`;
 - Packet 008A is complete and steward-audited pass in Result 035;
-- Packet 008B Gate A is drafted and security-audited pass in Result 036;
-- require explicit owner approval naming Packet 008B Gate A before generating the immutable live plan;
+- Packet 008B Gate A corrected command is security-audited pass in Result 037;
+- require renewed explicit owner approval naming Packet 008B Gate A before generating the immutable live plan;
 - keep Gate B prohibited until the generated evidence receives a second audit and second explicit owner approval;
 - use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
 - preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.

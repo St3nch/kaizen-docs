@@ -18,7 +18,7 @@ related_specs:
 
 # Task Packet 008B - First Real Promotion Through Two Explicit Gates
 
-> Security status: pending Result 036. This packet is deliberately split. Gate A may generate and inspect one immutable live plan only after explicit owner approval. Gate B remains prohibited until the generated plan, canonical candidate, validation evidence, reviewed diff, destination-parent action, event expectations, and Git commit scope receive a second security review and a second explicit owner approval.
+> Security status: Gate A originally passed Result 036, but the approved exact command failed before mutation because `--json` was placed after the subcommand. Result 037 passes the corrected command for renewed owner review. Gate B remains prohibited.
 
 ## Objective
 
@@ -124,12 +124,11 @@ Gate A must not create it. Gate B may create exactly this one absent regular non
 After explicit owner approval of Gate A, invoke exactly the fixed live entrypoint with the fixed source, destination, packet ID, and operation ID:
 
 ```powershell
-C:\dev\kaizen\platform\.venv\Scripts\kaizen-promote-live.exe plan `
+C:\dev\kaizen\platform\.venv\Scripts\kaizen-promote-live.exe --json plan `
   C:\dev\kaizen\staging\projects\kaizen-platform\research\packet-007-governance-bootstrap-completion.md `
   --destination projects/kaizen-platform/research/packet-007-governance-bootstrap-completion.md `
   --packet-id kz-tp-01KTMHA87Z529QH5ES2GWKV2AG `
-  --operation-id kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV `
-  --json
+  --operation-id kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV
 ```
 
 No wrapper script, alternate Python entrypoint, changed timestamp, alternate destination, replacement operation ID, or root override is authorized.

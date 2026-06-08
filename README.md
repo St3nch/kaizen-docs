@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: explicit owner review of Packet 008B Gate A for plan-only live evidence generation
+- Current gate: renewed owner review of corrected Packet 008B Gate A command for plan-only evidence generation
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; live governance bootstrap and real canonical promotion remain unapproved
