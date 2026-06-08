@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 006B is complete and final-audited pass-with-documented-limitations; separate governance bootstrap is the next owner gate, and live canonical promotion remains prohibited
+- Current phase: Packet 007 governance bootstrap is drafted and security-audited pass in Result 032; execution awaits explicit owner approval, and live canonical promotion remains prohibited
 - Planning roadmap: historical planning source plus current governance-bootstrap drafting gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -38,6 +38,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
 - Task Packet 006A: complete at platform commit `26271ce`; steward-audited in Result 028
 - Task Packet 006B: complete at `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
+- Task Packet 007: drafted and security-audited pass in Result 032; awaiting explicit owner approval; no live mutation yet
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the governance-bootstrap gate
@@ -110,6 +111,8 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 51. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
 52. `03-research-results/006-document-contract-standards-reconciliation.md`
 53. Other files in `03-research-results/` for supporting evidence
+54. `06-handoff-patterns/007-bootstrap-live-promotion-governance.md` - security-audited pass; awaiting explicit owner approval
+55. `03-research-results/032-packet-007-security-audit.md` - Packet 007 security audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -254,8 +257,8 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 ### Current next gate
 
 - Packet 006A and Packet 006B are complete and steward-audited;
-- draft and security-audit a separate owner-controlled governance-bootstrap packet for live `_governance/README.md` and `_governance/promotion-log.jsonl`;
-- do not mutate the live vault before explicit owner approval of that packet;
+- Packet 007 is drafted and security-audited pass in Result 032;
+- do not mutate the live vault before explicit owner approval of Packet 007;
 - require a later, separate explicit go/no-go for the first real canonical promotion;
 - use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
 - preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.

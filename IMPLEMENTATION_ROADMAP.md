@@ -267,7 +267,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Draft and security-audit a separate owner-controlled governance-bootstrap packet for only:
+Review and explicitly approve or reject security-audited Packet 007 for only:
 
 ```text
 _governance/README.md
@@ -279,9 +279,9 @@ Current state:
 1. Milestones 1 and 2 are complete.
 2. Milestone 3 implementation is complete through Packet 006B at platform commit `703d532`.
 3. Packet 006B final steward audit Result 031 passed with documented limitations.
-4. The live vault remains unchanged by the promotion implementation and tests.
-5. Governance bootstrap remains a separate owner-approved live-vault mutation.
+4. Packet 007 is drafted and security-audited pass in Result 032; execution awaits explicit owner approval.
+5. The live vault remains unchanged by the promotion implementation, tests, and Packet 007 drafting.
 6. The first real canonical promotion remains a later, separate explicit go/no-go.
 7. Platform and vault remotes remain deferred until the owner-defined working-project checkpoint.
 
-Do not create live `_governance`, perform a real promotion, or begin Milestone 4 until the governance-bootstrap packet is drafted, security-audited, and explicitly approved.
+Do not create live `_governance`, perform a real promotion, or begin Milestone 4 until Packet 007 is explicitly owner-approved and then executed with a passing completion audit.
