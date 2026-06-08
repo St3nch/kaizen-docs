@@ -156,7 +156,7 @@ Create the first canonical vault root and one minimal project bootstrap after Mi
 
 # Milestone 3 - Safe staging and promotion
 
-Status: implementation complete through Packet 006B; live governance bootstrap and first real promotion remain separate owner-approved gates
+Status: complete; first real canonical promotion committed at vault `80bc093` and audited in Result 040
 
 ## Objective
 
@@ -199,7 +199,7 @@ Implement the human-operated promotion path from a sibling staging root into the
 
 # Milestone 4 - One governed project loop
 
-Status: planned
+Status: planning gate active
 
 ## Objective
 
@@ -267,12 +267,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 008B Gate B for operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV` and plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`:
-
-```text
-06-handoff-patterns/008b-first-real-promotion-two-gate-execution.md
-03-research-results/036-packet-008b-gate-a-security-audit.md
-```
+Draft and security-audit the smallest Milestone 4 packet sequence for one complete governed project loop.
 
 Current state:
 
@@ -280,9 +275,9 @@ Current state:
 2. Packet 006B's disposable promotion engine is complete at platform commit `703d532`.
 3. Packet 007 governance bootstrap is complete at vault commit `248b26a`.
 4. Packet 008A fixed-root live operator is complete at platform commit `1a890dd`; Result 035 passed.
-5. A clean source-summary candidate remains staged and validated at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`.
-6. Packet 008B Gate A completed successfully; immutable plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d` and candidate `bd54d1b5c63ba27e4839bdbf6b042aa395d1e3532c99c0280eb80176b6ef5191` are verified in Result 039.
-7. Result 039 security-audits Gate B pass against the generated evidence.
-8. Gate B remains prohibited until explicit owner approval names the exact operation ID and plan hash.
+5. Packet 008B is complete at vault commit `80bc093`; Result 040 passed.
+6. The first real canonical promotion produced operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV`, plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`, and canonical note SHA-256 `bd54d1b5c63ba27e4839bdbf6b042aa395d1e3532c99c0280eb80176b6ef5191`.
+7. Milestone 3 now has real live evidence and is complete.
+8. Milestone 4 must prove one full governed project loop, including coding-agent task execution, completion evidence, and reviewed current-state return.
 
-Do not create the destination parent, generate approval evidence, run execute/recover, append an event, or modify the vault before explicit Gate B approval.
+Do not expand into deferred Postgres, Qdrant, Hermes, providers, UI, website, or deployment systems merely because the first promotion succeeded.

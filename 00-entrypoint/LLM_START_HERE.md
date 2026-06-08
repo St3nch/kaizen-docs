@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 008B Gate A is complete; Result 039 verifies the immutable plan and security-audits Gate B pass; explicit owner approval tied to the exact operation and plan hash is required
+- Current phase: Packet 008B is complete; the first real canonical promotion is committed at vault `80bc093`; Milestone 4 governed-project-loop planning is next
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `248b26a`; live `_governance` bootstrap is complete; remote creation is owner-deferred until the working-project checkpoint
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `80bc093`; live governance and first real promotion are complete; remote creation remains owner-deferred until the working-project checkpoint
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `703d532`; Packet 006B passes 45 focused tests, 40 repeated process races, and 190 full-suite tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
@@ -40,7 +40,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 006B: complete at `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
 - Task Packet 007: complete at vault commit `248b26a`; Result 033 pass; no promotion occurred
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
-- Task Packet 008B: Gate A complete; Gate B security-audited pass in Result 039; explicit owner approval required; no vault mutation yet
+- Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -124,6 +124,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 62. `03-research-results/037-packet-008b-gate-a-command-correction-audit.md` - Gate A command correction and zero-side-effect audit
 63. `03-research-results/038-packet-008b-gate-a-docs-binding-correction-audit.md` - Gate A docs-binding correction audit
 64. `03-research-results/039-packet-008b-gate-a-evidence-and-gate-b-security-audit.md` - Gate A evidence and Gate B security audit
+65. `03-research-results/040-packet-008b-completion-steward-audit.md` - Packet 008B completion audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -271,9 +272,9 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - Packet 007 is complete and steward-audited pass in Result 033;
 - a clean low-risk source-summary candidate is staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`;
 - Packet 008A is complete and steward-audited pass in Result 035;
-- Packet 008B Gate A is complete and Result 039 verifies the generated evidence;
-- require explicit owner approval naming Packet 008B Gate B, operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV`, and plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`;
-- do not create the destination parent, approval evidence, event, canonical file, or vault commit before that approval;
+- Packet 008B is complete and Result 040 verifies the first real promotion;
+- begin Milestone 4 planning for one complete governed project loop including task-packet execution and the implementation-return leg;
+- keep Postgres, Qdrant, Hermes, providers, UI, websites, and other deferred systems out of scope until earned;
 - use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
 - preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.
 

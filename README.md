@@ -30,10 +30,10 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: explicit owner review of Packet 008B Gate B for operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV` and plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`
+- Current gate: draft and security-audit the Milestone 4 governed-project-loop packet sequence
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
-- Canonical vault: exists at `C:\dev\kaizen\vault`; live governance bootstrap and real canonical promotion remain unapproved
+- Canonical vault: exists at `C:\dev\kaizen\vault`; first real canonical promotion committed at vault `80bc093`
 - Platform implementation repository: exists at `C:\dev\kaizen\platform`
 - Live staging root: exists at `C:\dev\kaizen\staging`
 - Active execution roadmap: `IMPLEMENTATION_ROADMAP.md`

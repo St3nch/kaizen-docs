@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 008B Gate B owner-approval gate active
-Current objective: obtain explicit owner approval tied to the exact Gate B operation ID and plan hash before the first real promotion
-Current implementation status: Packet 006B disposable engine complete at `703d532`; governance bootstrap complete at vault `248b26a`; fixed-root live operator complete at platform `1a890dd`; clean candidate staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`; Gate B and first real promotion remain unapproved
+Current phase: Milestone 4 governed-project-loop planning gate active
+Current objective: draft and security-audit the smallest packet sequence for one complete governed project loop, including the implementation-return leg
+Current implementation status: Packet 006B disposable engine complete at `703d532`; fixed-root live operator complete at platform `1a890dd`; first real canonical promotion complete at vault `80bc093`; Result 040 passed; Milestone 4 has not begun
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```
