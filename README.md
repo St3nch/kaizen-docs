@@ -1,10 +1,8 @@
 # Kaizen Docs Repo
 
-This repository is the planning and stewardship workspace for the Kaizen project.
+This repository is the planning, doctrine, and stewardship workspace for the Kaizen project.
 
-Kaizen is intended to become a continuously improving, agent-connected project intelligence system built around a dynamic Obsidian vault. It will gather and evaluate external and operational evidence, compound reusable knowledge across projects, support human strategy and technical decisions, and produce audited implementation-ready handoffs for coding agents working in each project's own source repository.
-
-The intended lifecycle is a loop:
+Kaizen is a Markdown-first project-intelligence system designed to move work through a governed loop:
 
 ```text
 idea or migrated project material
@@ -18,31 +16,32 @@ idea or migrated project material
 -> reviewed updates to Kaizen project intelligence
 ```
 
-This repo is **not** the future Obsidian vault. It is where we align the vision, research unresolved architecture, define governance and document contracts, audit the planned system, and prepare the eventual implementation roadmap.
+This repository is separate from both the running platform code and the canonical Obsidian vault. It preserves the vision, accepted decisions, specifications, audits, task packets, research evidence, and implementation roadmap.
 
 ## Start here
 
 LLMs and humans should begin with:
 
 1. [`00-entrypoint/LLM_START_HERE.md`](00-entrypoint/LLM_START_HERE.md)
-2. [`01-project-standard/kaizen-vision-and-architecture-alignment.md`](01-project-standard/kaizen-vision-and-architecture-alignment.md)
-3. [`ROADMAP.md`](ROADMAP.md)
+2. [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md)
+3. [`ROADMAP.md`](ROADMAP.md) for historical planning provenance and the current planning gate
 
-The entrypoint defines the complete read order and authority hierarchy.
+The entrypoint defines the authority hierarchy, current project posture, and task-dependent reading guidance.
 
 ## Current status
 
-- Active phase: vision and architecture alignment
-- Planning roadmap: `ROADMAP.md`
-- Source of truth: this repo for Kaizen planning and stewardship only
-- Future production Obsidian vault: not created yet
-- Operational Postgres database: not implemented
-- Observatory domain: not implemented
+- Current gate: draft and security-audit a separate owner-controlled live governance-bootstrap packet
+- Packet 006A: complete and steward-audited
+- Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
+- Canonical vault: exists at `C:\dev\kaizen\vault`; live governance bootstrap and real canonical promotion remain unapproved
+- Platform implementation repository: exists at `C:\dev\kaizen\platform`
+- Live staging root: exists at `C:\dev\kaizen\staging`
+- Active execution roadmap: `IMPLEMENTATION_ROADMAP.md`
+- Historical planning roadmap: `ROADMAP.md`
+- Operational Postgres database and Observatory domain: not implemented
 - Qdrant retrieval layer: not implemented
-- MCP and typed agent tools: not implemented
-- Hermes canonical read/search: planned
-- Hermes write access: not approved
-- Implementation roadmap: active at `IMPLEMENTATION_ROADMAP.md`
+- Hermes integration: deferred beyond the first slice; no canonical write authority
+- Live `_governance` creation and first real canonical promotion: prohibited until separately drafted, audited, and owner-approved
 
 ## Stewardship rule
 
@@ -61,27 +60,30 @@ research evidence
 
 This repo holds:
 
-- the Kaizen vision and planning roadmap
-- project-standard drafts
+- Kaizen vision and roadmaps
+- project-standard baselines and revision planning
 - research prompts and evidence summaries
 - architecture and governance decisions
-- document and system specification drafts
-- Hermes and multi-agent boundary planning
-- Obsidian, Operational Postgres, Observatory, Qdrant, and MCP planning
-- validation, promotion, and hammer-test strategy
-- handoff and implementation-readiness contracts
+- document and system specifications
+- Hermes, Obsidian, database, retrieval, and interface planning
+- validation, promotion, recovery, and hammer-test strategy
+- task packets and implementation-readiness contracts
+- steward audits and reconciliation ledgers
 
 This repo does **not** hold:
 
 - running Kaizen code
-- the production Obsidian vault
+- the canonical Obsidian vault
 - private customer or project data
 - generated build artifacts
 - live Postgres or Qdrant state
 - active business operations
 
-## Repository boundary
+## Repository boundaries
 
-- C:\dev\kaizen-docs - doctrine and planning
-- C:\dev\kaizen - non-repository umbrella
-- C:\dev\kaizen\platform - implementation repository
+```text
+C:\dev\kaizen-docs      doctrine, planning, specifications, audits, and task packets
+C:\dev\kaizen\platform  implementation code and tests
+C:\dev\kaizen\vault     canonical project intelligence
+C:\dev\kaizen\staging   governed staging evidence and candidates
+```

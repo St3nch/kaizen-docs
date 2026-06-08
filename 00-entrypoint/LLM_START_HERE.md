@@ -31,7 +31,7 @@ Humans = authority-bearing review, approval, and promotion
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e6267df`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `4bd394a`; remote creation is owner-deferred until the working-project checkpoint to preserve mobile development access
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `703d532`; Packet 006B passes 45 focused tests, 40 repeated process races, and 190 full-suite tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
@@ -40,7 +40,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 006B: complete at `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
-- Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized during the remediation gate
+- Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the governance-bootstrap gate
 - Decisions 0001 through 0007: accepted
 - Decision 0008 operating conventions: accepted after end-to-end dry-run simulation
 - Decision 0009 Operational Postgres/Observatory boundary: accepted
@@ -55,15 +55,15 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Read-first sequence
 
-Read in this order unless the user gives a narrower task:
+This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and `IMPLEMENTATION_ROADMAP.md`; then read only the decisions, specs, audits, and task packets relevant to the requested work unless the user explicitly requests a full-repository audit.
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file
 2. `01-project-standard/kaizen-vision-and-architecture-alignment.md` - central intended system vision and missing capability alignment
 3. `01-project-standard/internet-marketing-intelligence-vision.md` - portfolio-wide longitudinal marketing intelligence vision
-4. `ROADMAP.md` - active planning roadmap and phase tracker
+4. `ROADMAP.md` - historical planning provenance with a maintained current-gate summary
 5. `01-project-standard/kaizen-project-standard.md` - imported original baseline
 6. `01-project-standard/baseline-v0.2-reconciliation-map.md` - preserve/replace/defer map
-7. `01-project-standard/standard-revision-plan.md` - current v0.2 revision path
+7. `01-project-standard/standard-revision-plan.md` - deferred v0.2 consolidation path; resume after Milestone 4 evidence
 8. `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 9. `04-design-decisions/0001-two-zone-agent-write-model.md`
 10. `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
@@ -104,7 +104,7 @@ Read in this order unless the user gives a narrower task:
 45. `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`
 46. `06-handoff-patterns/006-implement-human-operated-canonical-promotion.md` - retired combined draft; do not approve
 47. `06-handoff-patterns/006a-prove-windows-first-time-atomic-install.md` - complete; Result 028
-48. `06-handoff-patterns/006b-implement-human-operated-first-promotion.md` - security-audited pass; pending explicit owner approval
+48. `06-handoff-patterns/006b-implement-human-operated-first-promotion.md` - complete at platform commit `703d532`; Result 031 pass-with-documented-limitations
 49. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
 50. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
 51. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
@@ -251,16 +251,14 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Remaining v0.2 work
 
-### Active implementation-checkpoint remediation
+### Current next gate
 
-- follow `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`;
-- correct the two canonical bootstrap notes and revalidate them;
-- preserve the explicit owner-deferred remote gap until the working-project checkpoint;
-- R2 subprocess, abrupt-termination, malformed-log, and no-side-effect evidence is complete in Result 026;
-- retire the current combined Packet 006 from approval consideration;
-- Packet 006A is complete and audited in Result 028;
-- Packet 006B is complete and final-audited in Result 031; draft and audit the separate governance-bootstrap packet before any live vault mutation;
-- keep live governance bootstrap and canonical promotion blocked until their separate owner-approved packets close.
+- Packet 006A and Packet 006B are complete and steward-audited;
+- draft and security-audit a separate owner-controlled governance-bootstrap packet for live `_governance/README.md` and `_governance/promotion-log.jsonl`;
+- do not mutate the live vault before explicit owner approval of that packet;
+- require a later, separate explicit go/no-go for the first real canonical promotion;
+- use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
+- preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.
 
 ### Non-blocking future work
 

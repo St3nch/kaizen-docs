@@ -1,30 +1,29 @@
 # Kaizen Planning Roadmap
 
-Status: active
+Status: historical planning provenance with a maintained current-gate summary
 Date: 2026-06-05
 Owner: Kaizen project steward
 
 ## Purpose
 
-This roadmap is the project-wide planning guide for Kaizen.
+This roadmap preserves the planning history that led to Kaizen's current implementation direction.
 
-It exists to keep the planning, governance, research, and specification work moving in a deliberate order until Kaizen is ready for a separate implementation roadmap.
+The maintained `Current position` section below records the present planning gate. Active execution priorities and milestone status live in `IMPLEMENTATION_ROADMAP.md`. The phase bodies that follow are historical provenance and must not be interpreted as the current execution queue.
 
-This document is not the implementation roadmap. It does not authorize coding, production vault creation, database schema work, Hermes write access, MCP deployment, or Qdrant implementation.
+This document does not authorize coding, live vault mutation, database schema work, Hermes write access, MCP deployment, or Qdrant implementation.
 
-The planning outcome is:
+The original planning outcome was:
 
 > An accepted Kaizen Project Standard, audited implementation boundaries, and a complete set of planning inputs from which a coding and implementation roadmap can be written without guessing.
 
 ## How to use this roadmap
 
-- Read phases in order.
-- Use the linked document as the detailed source for each phase.
-- Do not start a later phase merely because part of it looks interesting.
-- A phase is complete only when its exit criteria are met.
+- Read `Current position` for the maintained planning gate.
+- Use `IMPLEMENTATION_ROADMAP.md` for active execution status and next actions.
+- Consult the historical phases below only for provenance, rationale, and deferred inputs.
+- Do not treat historical `active`, `ready`, or `planned` labels as current authorization.
 - Proposed decisions remain proposed until explicitly accepted.
 - Research remains evidence until reconciled and approved.
-- Implementation work begins after the acceleration exit gate is satisfied and Implementation Roadmap v0.1 authorizes the first milestone.
 
 ## Status vocabulary
 
@@ -56,7 +55,7 @@ The planning roadmap has handed active first-slice execution to `IMPLEMENTATION_
 
 # Acceleration amendment - 2026-06-07
 
-Status: active
+Status: complete; retained as historical implementation-handoff provenance
 
 ## Reason
 
@@ -206,7 +205,7 @@ This phase established canonical Markdown, system-of-record boundaries, agent st
 
 # Phase 2 - Vision and architecture alignment
 
-Status: active
+Status: superseded by the acceleration amendment; retained for historical provenance
 
 ## Description
 

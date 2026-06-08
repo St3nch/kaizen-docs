@@ -1,13 +1,17 @@
 # Kaizen Project Standard Revision Plan
 
-Status: active
+Status: deferred pending Milestone 4 governed-loop evidence
 Date: 2026-06-04
 
 ## Purpose
 
 Define how the original Kaizen Project Standard will be revised into v0.2 without silently turning research or implementation assumptions into doctrine.
 
-Project-wide planning sequence is tracked in `ROADMAP.md`. This file remains the detailed owner for the standard-revision workstream.
+Project-wide execution is tracked in `IMPLEMENTATION_ROADMAP.md`. This file preserves the detailed standard-revision workstream, but it does not authorize drafting the consolidated v0.2 standard before Milestone 4 supplies real governed-loop and implementation-return evidence.
+
+## Current posture
+
+The original serial revision sequence was superseded by the accepted acceleration amendment. Decisions 0008 through 0012 and the first-slice implementation now provide evidence that did not exist when this plan was written. The consolidated v0.2 standard remains intentionally deferred until Milestone 4 and the Milestone 5 retrospective can reconcile proven behavior, friction, and remaining assumptions.
 
 ## Baseline status
 
@@ -154,11 +158,11 @@ The standard defines the governed plan. Implementation follows only after the pl
 
 ## Next recommended actions
 
-1. Review and accept or revise the document-contract reconciliation and updated draft contracts.
-2. Dry-run one real project through the proposed Decision 0008 stages and folder placement.
-3. Accept, revise, or reject Decision 0008.
-4. Draft and audit the complete v0.2 standard.
-5. Commit and push only after the reviewed change set is approved.
+1. Complete the separate governance-bootstrap gate and first real canonical promotion.
+2. Run Milestone 4 as one complete governed project loop, including the implementation-return leg.
+3. Use the Milestone 5 retrospective to identify proven contracts, friction, superseded assumptions, and proportionality changes.
+4. Draft and audit the consolidated v0.2 standard from that evidence.
+5. Accept v0.2 only after explicit human review.
 
 ## Related files
 
