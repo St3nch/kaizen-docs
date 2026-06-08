@@ -267,24 +267,20 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Select or author a clean low-risk first-promotion candidate, then draft and security-audit a separate execution packet for:
+Review and explicitly approve or reject security-audited Packet 008A:
 
 ```text
-reviewed staged artifact
-immutable plan and validation evidence
-human approval
-one first-time live promotion
-event and Git verification
+06-handoff-patterns/008a-implement-owner-controlled-live-promotion-operator.md
 ```
 
 Current state:
 
 1. Milestones 1 and 2 are complete.
-2. Milestone 3 implementation is complete through Packet 006B at platform commit `703d532`.
-3. Packet 006B final steward audit Result 031 passed with documented limitations.
-4. Packet 007 is complete at vault commit `248b26a`; Result 033 passed.
-5. Live `_governance/README.md` and an empty `promotion-log.jsonl` now exist and validate.
-6. The first real canonical promotion remains a separate explicit owner go/no-go.
-7. Platform and vault remotes remain deferred until the owner-defined working-project checkpoint.
+2. Packet 006B's disposable promotion engine is complete at platform commit `703d532`.
+3. Packet 007 governance bootstrap is complete at vault commit `248b26a`.
+4. A clean source-summary candidate is staged and validated at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`.
+5. The existing promotion contract deliberately rejects the exact live roots, and `kaizen-promote` is sandbox-only.
+6. Packet 008A is drafted and security-audited pass in Result 034; implementation awaits explicit owner approval.
+7. Packet 008B will separately govern the first live plan, approval, destination-parent preparation, execution, events, and Git commit.
 
-Do not perform a real promotion or begin Milestone 4 until the first-promotion candidate and execution packet are reviewed, security-audited, and explicitly owner-approved.
+Do not invoke a live promotion command, generate a live plan, modify the held candidate, or begin Milestone 4 before Packet 008A is implemented and Packet 008B is separately reviewed and owner-approved.

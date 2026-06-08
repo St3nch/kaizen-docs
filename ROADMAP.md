@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 007 complete; first-real-promotion planning gate active
-Current objective: select or author a clean low-risk candidate and draft/security-audit a separate first-real-promotion execution packet
-Current implementation status: Milestones 1 and 2 complete; Milestone 3 implementation complete through Packet 006B at platform commit `703d532`; live governance bootstrap complete at vault commit `248b26a`; first real promotion remains unapproved
+Current phase: Packet 008A drafted and security-audited; owner-approval gate active
+Current objective: implement and hammer-test a fixed-root human-only live promotion operator without invoking it against live roots
+Current implementation status: Packet 006B disposable engine complete at `703d532`; governance bootstrap complete at vault `248b26a`; clean candidate staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`; live operator and first real promotion remain unapproved
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```
