@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 008B is complete; the first real canonical promotion is committed at vault `80bc093`; Milestone 4 governed-project-loop planning is next
+- Current phase: Packet 009A is drafted and security-audited pass in Result 041; explicit owner approval may authorize six create-only staging writes and validation only
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -41,6 +41,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 007: complete at vault commit `248b26a`; Result 033 pass; no promotion occurred
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
+- Task Packet 009A: drafted and security-audited pass in Result 041; awaiting explicit owner approval; no canonical or platform mutation authorized
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -125,6 +126,8 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 63. `03-research-results/038-packet-008b-gate-a-docs-binding-correction-audit.md` - Gate A docs-binding correction audit
 64. `03-research-results/039-packet-008b-gate-a-evidence-and-gate-b-security-audit.md` - Gate A evidence and Gate B security audit
 65. `03-research-results/040-packet-008b-completion-steward-audit.md` - Packet 008B completion audit
+66. `06-handoff-patterns/009a-generate-milestone-4-governed-planning-bundle.md` - staging-only Milestone 4 bundle packet
+67. `03-research-results/041-packet-009a-security-audit.md` - Packet 009A security audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -273,7 +276,8 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - a clean low-risk source-summary candidate is staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`;
 - Packet 008A is complete and steward-audited pass in Result 035;
 - Packet 008B is complete and Result 040 verifies the first real promotion;
-- begin Milestone 4 planning for one complete governed project loop including task-packet execution and the implementation-return leg;
+- Packet 009A is security-audited pass in Result 041 and awaits explicit owner approval;
+- approval authorizes only six create-only staged notes plus validation, not promotion or implementation;
 - keep Postgres, Qdrant, Hermes, providers, UI, websites, and other deferred systems out of scope until earned;
 - use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
 - preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.

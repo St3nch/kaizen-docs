@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Milestone 4 governed-project-loop planning gate active
-Current objective: draft and security-audit the smallest packet sequence for one complete governed project loop, including the implementation-return leg
-Current implementation status: Packet 006B disposable engine complete at `703d532`; fixed-root live operator complete at platform `1a890dd`; first real canonical promotion complete at vault `80bc093`; Result 040 passed; Milestone 4 has not begun
+Current phase: Packet 009A owner-approval gate active
+Current objective: generate and validate the six-note Milestone 4 planning bundle in staging after explicit owner approval
+Current implementation status: Milestone 3 complete at vault `80bc093`; Packet 009A drafted and security-audited pass in Result 041; no Milestone 4 staged bundle, canonical promotion, or amendment implementation exists yet
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```

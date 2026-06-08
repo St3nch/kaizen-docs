@@ -267,17 +267,22 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Draft and security-audit the smallest Milestone 4 packet sequence for one complete governed project loop.
+Review and explicitly approve or reject Packet 009A:
+
+```text
+06-handoff-patterns/009a-generate-milestone-4-governed-planning-bundle.md
+03-research-results/041-packet-009a-security-audit.md
+```
 
 Current state:
 
-1. Milestones 1 and 2 are complete.
-2. Packet 006B's disposable promotion engine is complete at platform commit `703d532`.
-3. Packet 007 governance bootstrap is complete at vault commit `248b26a`.
-4. Packet 008A fixed-root live operator is complete at platform commit `1a890dd`; Result 035 passed.
-5. Packet 008B is complete at vault commit `80bc093`; Result 040 passed.
-6. The first real canonical promotion produced operation `kz-prom-01KTMHA8F1HXCDXS4SBPC17VNV`, plan `5e091900f6f4d73bb3dd00fb4abb031f4e2c3938bc18f668a5c213361947fd3d`, and canonical note SHA-256 `bd54d1b5c63ba27e4839bdbf6b042aa395d1e3532c99c0280eb80176b6ef5191`.
-7. Milestone 3 now has real live evidence and is complete.
-8. Milestone 4 must prove one full governed project loop, including coding-agent task execution, completion evidence, and reviewed current-state return.
+1. Milestones 1 through 3 are complete.
+2. Packet 008B is complete at vault commit `80bc093`; Result 040 passed.
+3. Canonical command-center, overview, and current-state notes remain intentionally stale, creating the real return-leg debt Milestone 4 must close.
+4. Decision 0008 requires staged/promotion-controlled completion reports and project-intelligence changes to return through governed amendments.
+5. The promotion-event schema defines `action: amend`, but platform code and tests currently contain no amendment implementation.
+6. Packet 009A reserves stable IDs for a six-note source-summary -> claim -> decision -> spec -> audit -> task-packet chain.
+7. Result 041 security-audits Packet 009A pass as a staging-only evidence-generation gate.
+8. Packet 009A does not authorize canonical promotion, accepted authority, platform implementation, or amendment execution.
 
-Do not expand into deferred Postgres, Qdrant, Hermes, providers, UI, website, or deployment systems merely because the first promotion succeeded.
+Do not create canonical notes, promotion plans, approval evidence, platform changes, or live amendment events under Packet 009A.

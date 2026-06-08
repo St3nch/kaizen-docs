@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: draft and security-audit the Milestone 4 governed-project-loop packet sequence
+- Current gate: explicit owner review of Packet 009A for staging-only generation of the six-note Milestone 4 planning bundle
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; first real canonical promotion committed at vault `80bc093`
