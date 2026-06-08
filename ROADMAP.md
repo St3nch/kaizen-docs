@@ -38,8 +38,8 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 009B Phase 0 and Wave 1 plan owner-approval gate active
-Current objective: finalize the staged audit verdict and generate the immutable Wave 1 source-summary plan after explicit owner approval
+Current phase: Packet 009B lifecycle-activation and Wave 1 plan-retry owner-approval gate active
+Current objective: activate all six reviewed notes from draft to active and retry immutable Wave 1 planning after renewed owner approval
 Current implementation status: Milestone 3 complete at vault `80bc093`; Packet 009A complete with Result 042 pass; Packet 009B drafted and security-audited in Result 043; no bundle promotion or amendment implementation exists yet
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited

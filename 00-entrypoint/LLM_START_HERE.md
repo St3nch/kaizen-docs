@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 009B is drafted and security-audited pass in Result 043; explicit owner approval may authorize only the exact audit-verdict revision and Wave 1 source-summary plan generation
+- Current phase: Packet 009B Phase 0 completed; Wave 1 planning failed closed on draft lifecycle status; Result 044 passes exact six-note lifecycle activation for renewed owner approval
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: drafted and security-audited pass in Result 043; initial approval covers Phase 0 and Wave 1 plan generation only
+- Task Packet 009B: Phase 0 complete; Wave 1 plan absent; lifecycle activation correction security-audited pass in Result 044; renewed owner approval required
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -132,6 +132,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 68. `03-research-results/042-packet-009a-completion-steward-audit.md` - Packet 009A completion audit
 69. `06-handoff-patterns/009b-finalize-review-and-run-ordered-bundle-promotion.md` - ordered multi-gate bundle promotion packet
 70. `03-research-results/043-packet-009b-security-audit.md` - Packet 009B security audit
+71. `03-research-results/044-packet-009b-lifecycle-activation-correction-audit.md` - lifecycle activation correction audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -281,8 +282,9 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - Packet 008A is complete and steward-audited pass in Result 035;
 - Packet 008B is complete and Result 040 verifies the first real promotion;
 - Packet 009A is complete and Result 042 verifies all six staged notes;
-- Packet 009B is security-audited pass in Result 043 and awaits explicit owner approval;
-- initial approval authorizes only the exact audit-verdict edit plus Wave 1 source-summary plan generation;
+- Packet 009B Phase 0 is complete and the audit verdict edit is valid;
+- Wave 1 planning failed closed because all six staged notes remained `status: draft`;
+- Result 044 passes exact six-note `draft -> active` lifecycle activation plus Wave 1 plan retry for renewed owner approval;
 - no canonical promotion is authorized until the exact Wave 1 plan hash is separately approved;
 - keep Postgres, Qdrant, Hermes, providers, UI, websites, and other deferred systems out of scope until earned;
 - use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;

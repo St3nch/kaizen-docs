@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: explicit owner review of Packet 009B Phase 0 and Wave 1 plan generation
+- Current gate: renewed owner review of Packet 009B lifecycle activation and Wave 1 plan retry
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; first real canonical promotion committed at vault `80bc093`

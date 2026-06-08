@@ -267,22 +267,21 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Phase 0 plus Wave 1 plan generation:
+Review and explicitly approve or reject Packet 009B lifecycle activation plus Wave 1 plan retry:
 
 ```text
 06-handoff-patterns/009b-finalize-review-and-run-ordered-bundle-promotion.md
-03-research-results/043-packet-009b-security-audit.md
+03-research-results/044-packet-009b-lifecycle-activation-correction-audit.md
 ```
 
 Current state:
 
-1. Milestones 1 through 3 are complete.
-2. Packet 009A is complete; Result 042 passed.
-3. Six proposed staged notes validate with zero errors/warnings and fully resolved relationships.
-4. The staged audit still requires one exact human-verdict revision before canonical promotion.
-5. Packet 009B binds that revision from SHA-256 `746310f46d5b31337ac656653d10b244bbea01686ff802a6f92538b960d8c26c` to `ab78d9e4b9421fcca9e2b39374c62968ab75ee292d04efc787183ae5f6675944`.
-6. Result 043 security-audits Packet 009B pass for initial owner review.
-7. Initial approval may authorize only the exact audit edit, validation, and Wave 1 source-summary plan generation using operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJG`.
-8. Wave 1 execution and all later waves remain prohibited until their exact plan hashes receive separate owner approvals.
+1. Packet 009A is complete; Result 042 passed.
+2. Packet 009B Phase 0 completed successfully; the staged audit now has `audit_verdict: pass` and SHA-256 `ab78d9e4b9421fcca9e2b39374c62968ab75ee292d04efc787183ae5f6675944`.
+3. Wave 1 planning failed closed because the staged source-summary remained `status: draft`, which cannot become canonically approved.
+4. No operation directory, canonical path, approval evidence, event, or vault mutation was created.
+5. Result 044 identifies the same lifecycle issue across all six staged notes.
+6. Renewed approval may authorize only exact `status: draft -> status: active` edits for all six notes, validation, and Wave 1 plan retry using operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJG`.
+7. Wave 1 execution and all later waves remain prohibited.
 
-Do not execute any canonical promotion, platform implementation, or live amendment under the initial Packet 009B approval.
+Do not execute canonical promotion or alter any byte beyond the six exact lifecycle fields under the renewed approval.

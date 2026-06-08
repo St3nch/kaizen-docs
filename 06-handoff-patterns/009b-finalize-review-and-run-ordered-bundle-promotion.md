@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Finalize the staged audit verdict and govern ordered promotion of the six-note Milestone 4 planning bundle through explicit plan-hash gates.
 created: 2026-06-08T22:28:09Z
-updated: 2026-06-08T22:28:09Z
+updated: 2026-06-08T22:40:22Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-and-promotion-workflow.md
@@ -17,7 +17,7 @@ related_specs:
 
 # Task Packet 009B - Finalize Review and Run Ordered Bundle Promotion
 
-> Security status: pending Result 043. This packet is multi-gate. Initial approval may authorize only the exact staged-audit verdict revision and Wave 1 source-summary plan generation. No canonical promotion is authorized until the owner separately approves the exact generated plan hash for that wave.
+> Correction status: Phase 0 audit-verdict finalization succeeded, but Wave 1 planning failed closed because all six staged notes remained `status: draft`. Result 044 passes exact lifecycle activation for renewed owner review. Wave 1 execution and all later waves remain prohibited.
 
 ## Objective
 
@@ -73,16 +73,40 @@ After the edit:
 - the staging-write attempt log must remain unchanged because this is a separately owner-approved human review edit, not a new create-only write;
 - no other staged note may change.
 
+
+## Phase 0B - Exact Lifecycle Activation
+
+Before any promotion plan is generated, renewed owner approval must authorize one exact human lifecycle edit in each staged bundle note:
+
+```text
+status: draft -> status: active
+```
+
+No other byte may change. Expected active SHA-256 values:
+
+```text
+source-summary: 8534805beb26f5002f20c4977be77a5d3afcefc2f0454c729e9323f047a1e1c8
+claim: a35f8bd85832c5146774fe6971ab59584b8034b3a2c57ddbb8f71bb195b4ac20
+decision: c368ea6bede4cf42e549c50d128ac7bf2ab3767e991684eb7e59704e927670ef
+spec: d2886674d06b13a41e0c2c279ad935f8c63d0d304de73d8040ef719146ce9c15
+audit: 204982aaa28a0404e6bade93df3ce72a22aa2923fd2a763b9a7af1ad5ad5c4f6
+task-packet: a140e5ceede4c681c3d8fdbaa84f0a3ab5f884ffd734ce0a37309d5e758bbcc3
+```
+
+After activation, all six notes must pass staging validation with zero errors, relationships must remain unchanged, and the staging-write attempt log must remain at SHA-256 `3419bc43e1588c7e97d44626bb3e9e263cd3d109647f79c8bda150c422905059`.
+
+Wave 1 planning may then be retried using the same unused operation ID `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJG`.
+
 ## Ordered Promotion Waves
 
 | Wave | Type | Source SHA-256 before canonical normalization | Operation ID |
 |---|---|---|---|
-| 1 | source-summary | `56693230c79e04b846a914d06282cd206f3265e5518a435784cbe211477b676b` | `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJG` |
-| 2 | claim | `29c70cbb1dc425c648887b623a380d671892fd20f507ee8f40a67264adf76f86` | `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH` |
-| 3 | decision | `38ac21e59df68e4a9130d51e1093518cf5bce0d1ba9ca3bd16d52e6d11e65739` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP92` |
-| 4 | spec | `7b9a6c93187f8ff5134e3d3a5b9cddf5da286b02c5579991297c87d98615eee3` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP93` |
-| 5 | audit | `ab78d9e4b9421fcca9e2b39374c62968ab75ee292d04efc787183ae5f6675944` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP94` |
-| 6 | task-packet | `a9e2f131fe0eaa14620419d8a0fecfec9049eb2bc969857903a8e7168845b0a1` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP95` |
+| 1 | source-summary | `8534805beb26f5002f20c4977be77a5d3afcefc2f0454c729e9323f047a1e1c8` | `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJG` |
+| 2 | claim | `a35f8bd85832c5146774fe6971ab59584b8034b3a2c57ddbb8f71bb195b4ac20` | `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH` |
+| 3 | decision | `c368ea6bede4cf42e549c50d128ac7bf2ab3767e991684eb7e59704e927670ef` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP92` |
+| 4 | spec | `d2886674d06b13a41e0c2c279ad935f8c63d0d304de73d8040ef719146ce9c15` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP93` |
+| 5 | audit | `204982aaa28a0404e6bade93df3ce72a22aa2923fd2a763b9a7af1ad5ad5c4f6` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP94` |
+| 6 | task-packet | `a140e5ceede4c681c3d8fdbaa84f0a3ab5f884ffd734ce0a37309d5e758bbcc3` | `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP95` |
 
 Canonical destinations:
 
