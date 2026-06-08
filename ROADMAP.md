@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 009A owner-approval gate active
-Current objective: generate and validate the six-note Milestone 4 planning bundle in staging after explicit owner approval
-Current implementation status: Milestone 3 complete at vault `80bc093`; Packet 009A drafted and security-audited pass in Result 041; no Milestone 4 staged bundle, canonical promotion, or amendment implementation exists yet
+Current phase: Packet 009B ordered-promotion drafting gate active
+Current objective: draft and security-audit ordered promotion of the six-note Milestone 4 planning bundle
+Current implementation status: Milestone 3 complete at vault `80bc093`; Packet 009A complete with Result 042 pass; six-note bundle staged and validated; no bundle promotion or amendment implementation exists yet
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```

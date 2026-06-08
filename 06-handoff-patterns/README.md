@@ -17,4 +17,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `007-bootstrap-live-promotion-governance.md` - complete at vault commit `248b26a`; Result 033 pass; no promotion authority
 - `008a-implement-owner-controlled-live-promotion-operator.md` - complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - `008b-first-real-promotion-two-gate-execution.md` - complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
-- `009a-generate-milestone-4-governed-planning-bundle.md` - security-audited pass in Result 041; awaiting explicit owner approval; staging-only
+- `009a-generate-milestone-4-governed-planning-bundle.md` - complete; Result 042 pass; six-note Milestone 4 bundle staged and validated

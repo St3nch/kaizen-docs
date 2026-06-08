@@ -1,13 +1,13 @@
 ---
 id: kz-tp-01KTMMKZPEY5R0C7NPBAMVNC3W
 type: task-packet
-status: active
+status: complete
 project: kaizen-platform
 summary: Generate and validate the six-note Milestone 4 planning bundle for governed amendment support without canonical promotion.
 created: 2026-06-08T22:10:00Z
-updated: 2026-06-08T22:10:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-08T22:23:58Z
+review_status: approved
+authority: accepted
 primary_spec: 05-specs/staging-and-promotion-workflow.md
 related_specs:
   - 05-specs/staging-and-promotion-workflow.md
@@ -18,7 +18,7 @@ related_specs:
 
 # Task Packet 009A - Generate Milestone 4 Governed Planning Bundle
 
-> Security status: pending Result 041. This packet authorizes create-only staging writes and validation only. It does not authorize canonical promotion, accepted authority, platform implementation, amendment execution, or canonical note updates.
+> Completion status: owner-approved and complete. Result 042 verifies all six staged notes, twelve staging events, zero validation errors/warnings, and full relationship resolution. Canonical promotion and implementation remain separately gated.
 
 ## Objective
 
@@ -162,95 +162,20 @@ Create an implementation-ready proposed packet that:
 - preserves all first-time promotion behavior;
 - requires completion evidence but does not authorize populating its own completion report yet;
 - explicitly defers live amendment to a later packet;
-- contains every required task-packet body section, including an initially unpopulated `## Completion Report` that states implementation evidence is pending.
-
-## Non-Scope
-
-Packet 009A does not authorize:
-
-- canonical promotion of any of the six notes;
-- changing `review_status` to `approved`;
-- changing authority to `accepted`;
-- platform source-code changes;
-- live or disposable amendment execution;
-- edits to canonical command-center, overview, current-state, or promoted task packets;
-- creation of promotion plans or approval evidence;
-- append to the live promotion log;
-- Hermes, LangGraph, Postgres, Qdrant, providers, UI, website, or deployment work.
-
-## Implementation Requirements
-
-1. Preflight the bound repository commits and clean states.
-2. Confirm all six target paths are absent.
-3. Confirm reserved IDs do not exist anywhere in canonical or staging Markdown.
-4. Build six request JSON files in a packet-owned temporary directory outside canonical and staging note destinations.
-5. Compute and record each content SHA-256 before invoking the writer.
-6. Invoke `kaizen-stage-create` exactly once per note in dependency order.
-7. Stop immediately on the first nonzero result.
-8. Preserve created notes and attempt-log evidence on failure; do not delete or regenerate automatically.
-9. Re-run staging validation on every created note after all six exist.
-10. Verify stable-ID relationships and required body sections.
-11. Record request IDs, intent/terminal staging events, file hashes, validation run IDs, and final attempt-log hash.
-12. Remove packet-owned request JSON files only after their contents and hashes are recorded in the completion report.
-
-## Constraints
-
-- Agent provenance:
-
-  ```text
-  agent: kaizen-steward
-  model: gpt-5.5-thinking
-  session: packet-009a
-  ```
-
-- Staged notes use `status: draft` and `validation_status: pending` before the writer validates them.
-- Governed notes use `review_status: pending`.
-- Source summary and audit use `authority: none`.
-- Claim, decision, spec, and task packet use at most `authority: proposed`.
-- No note may claim human approval or accepted authority.
-- Request IDs must be unique and begin `packet-009a-`.
-- Search evidence IDs must be non-empty and begin `packet-009a-search-`.
-- The create-only wrapper must remain the only writer for note files.
-
-## Validation
-
-Packet 009A passes only if:
-
-- all six writes return `created` or valid idempotent success for the exact same request/content;
-- all six files exist at the exact paths;
-- each file hash matches its request;
-- staging validation passes with zero errors;
-- required body sections pass;
-- all stable-ID relationships resolve within the six-note bundle or existing canonical vault;
-- no duplicate IDs, summaries, or initial destinations exist;
-- the live vault and promotion log are unchanged;
-- platform and docs repositories remain unchanged;
-- no promotion operation directory is created for the six notes.
-
-## Acceptance Criteria
-
-- The six-note bundle exists in staging with exact reserved IDs and paths.
-- The evidence chain is internally consistent and validates.
-- The proposed task packet is implementation-ready after later human review/promotion.
-- No canonical mutation, authority transition, platform change, or live event occurs.
-- A completion audit presents exact hashes and recommends whether to proceed to the separate promotion gate.
-
-## Completion Report
-
-Pending execution. The report must later record:
+- contains every required task-packet body section, including an initially unpopulated `## Completion Report
 
 ```text
-result
-preflight heads and hashes
-request-file hashes
-request IDs
-created paths and note IDs
-content hashes
-staging intent/terminal event IDs
-validation run IDs and counts
-relationship-resolution results
-final staging-write log hash
-vault/platform/docs preservation checks
-deviations and failures
-promotion-gate recommendation
+result: pass
+docs baseline: 2824353d8ac2d3bf4566ab35d67e77421ab32286
+platform baseline: 1a890dd80d022e711f385525c202264b95d5faba
+vault baseline: 80bc0932c505770a57dd8790f105cca1915f9a23
+created notes: 6
+staging events: 12 (6 intent, 6 committed)
+validation errors: 0
+validation warnings: 0
+relationship checks: all resolved
+staging log after: 3419bc43e1588c7e97d44626bb3e9e263cd3d109647f79c8bda150c422905059
+live vault/platform/docs mutation during execution: none
 ```
+
+Exact note, request, event, and validation evidence is recorded in Result 042. The temporary packet-owned request files may be removed after this completion record is committed. The next gate is a separate ordered promotion packet; no promotion or implementation authority is implied by Packet 009A completion.

@@ -267,22 +267,17 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009A:
-
-```text
-06-handoff-patterns/009a-generate-milestone-4-governed-planning-bundle.md
-03-research-results/041-packet-009a-security-audit.md
-```
+Draft and security-audit the ordered Packet 009B promotion sequence for the six-note Milestone 4 planning bundle.
 
 Current state:
 
 1. Milestones 1 through 3 are complete.
 2. Packet 008B is complete at vault commit `80bc093`; Result 040 passed.
-3. Canonical command-center, overview, and current-state notes remain intentionally stale, creating the real return-leg debt Milestone 4 must close.
-4. Decision 0008 requires staged/promotion-controlled completion reports and project-intelligence changes to return through governed amendments.
-5. The promotion-event schema defines `action: amend`, but platform code and tests currently contain no amendment implementation.
-6. Packet 009A reserves stable IDs for a six-note source-summary -> claim -> decision -> spec -> audit -> task-packet chain.
-7. Result 041 security-audits Packet 009A pass as a staging-only evidence-generation gate.
-8. Packet 009A does not authorize canonical promotion, accepted authority, platform implementation, or amendment execution.
+3. Packet 009A is complete; Result 042 passed.
+4. Six proposed staged notes now exist with exact hashes, zero validation errors/warnings, and fully resolved relationships.
+5. The bundle defines governed amendment support as the smallest missing capability for the Milestone 4 return leg.
+6. Canonical command-center, overview, and current-state notes remain unchanged.
+7. No bundle note has been promoted, approved, or accepted canonically.
+8. Packet 009B must promote in dependency order and separately bind every reviewed diff, authority transition, earned directory, event, and vault Git commit.
 
-Do not create canonical notes, promotion plans, approval evidence, platform changes, or live amendment events under Packet 009A.
+Do not promote any bundle note, implement amendment support, or modify canonical project-state notes before Packet 009B is security-audited and explicitly owner-approved.
