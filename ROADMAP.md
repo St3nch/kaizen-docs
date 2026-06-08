@@ -38,7 +38,7 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 008B Gate A corrected-command reapproval gate active
+Current phase: Packet 008B Gate A command-and-preflight reapproval gate active
 Current objective: generate and inspect one immutable live plan only after explicit Gate A approval
 Current implementation status: Packet 006B disposable engine complete at `703d532`; governance bootstrap complete at vault `248b26a`; fixed-root live operator complete at platform `1a890dd`; clean candidate staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`; Gate B and first real promotion remain unapproved
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md

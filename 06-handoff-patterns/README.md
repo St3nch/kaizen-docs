@@ -16,4 +16,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `006b-implement-human-operated-first-promotion.md` - complete at platform commit `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
 - `007-bootstrap-live-promotion-governance.md` - complete at vault commit `248b26a`; Result 033 pass; no promotion authority
 - `008a-implement-owner-controlled-live-promotion-operator.md` - complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
-- `008b-first-real-promotion-two-gate-execution.md` - corrected Gate A command re-audited pass in Result 037; renewed owner approval required; Gate B prohibited
+- `008b-first-real-promotion-two-gate-execution.md` - command and docs-binding corrections re-audited through Result 038; renewed owner approval required; Gate B prohibited

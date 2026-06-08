@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Govern the first real canonical promotion through a plan-only Gate A and a separately approved execution Gate B.
 created: 2026-06-08T21:15:00Z
-updated: 2026-06-08T21:15:00Z
+updated: 2026-06-08T21:33:31Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-write-wrapper-and-promotion-recovery.md
@@ -18,7 +18,7 @@ related_specs:
 
 # Task Packet 008B - First Real Promotion Through Two Explicit Gates
 
-> Security status: Gate A originally passed Result 036, but the approved exact command failed before mutation because `--json` was placed after the subcommand. Result 037 passes the corrected command for renewed owner review. Gate B remains prohibited.
+> Security status: Gate A command ordering is corrected in Result 037. Result 038 corrects an impossible self-referential docs commit preflight. Renewed owner approval is required. Gate B remains prohibited.
 
 ## Objective
 
@@ -70,7 +70,9 @@ Only Gate B may authorize:
 ## Bound State
 
 ```text
-docs commit: 262b20b82ea0578c56909daaffcffe0988eed96f
+docs branch: main
+docs working tree: clean
+docs required tracked files: Packet 008B and Results 036, 037, and 038
 platform commit: 1a890dd80d022e711f385525c202264b95d5faba
 vault commit: 248b26a648142164c30d0e1126b821fce9f36cd3
 platform branch: main
@@ -137,7 +139,7 @@ No wrapper script, alternate Python entrypoint, changed timestamp, alternate des
 
 Before plan generation, prove:
 
-- docs HEAD equals `262b20b82ea0578c56909daaffcffe0988eed96f` and tree is clean;
+- docs branch is `main`, the working tree is clean, and Packet 008B plus Results 036, 037, and 038 are tracked at HEAD;
 - platform HEAD equals `1a890dd80d022e711f385525c202264b95d5faba`, branch is `main`, and tree is clean;
 - vault HEAD equals `248b26a648142164c30d0e1126b821fce9f36cd3`, branch is `main`, and tree is clean;
 - fixed live roots resolve exactly to `C:\dev\kaizen\vault` and `C:\dev\kaizen\staging`;

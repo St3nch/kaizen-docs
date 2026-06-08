@@ -267,7 +267,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly re-approve or reject the corrected Packet 008B Gate A command:
+Review and explicitly re-approve or reject the corrected Packet 008B Gate A command and docs preflight:
 
 ```text
 06-handoff-patterns/008b-first-real-promotion-two-gate-execution.md
@@ -281,7 +281,7 @@ Current state:
 3. Packet 007 governance bootstrap is complete at vault commit `248b26a`.
 4. Packet 008A fixed-root live operator is complete at platform commit `1a890dd`; Result 035 passed.
 5. A clean source-summary candidate remains staged and validated at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`.
-6. Packet 008B Gate A preflight passed, but the exact approved command failed before mutation because the global JSON flag was ordered incorrectly; Result 037 re-audits the corrected command pass.
+6. Packet 008B Gate A command ordering and impossible docs-commit binding are corrected and re-audited through Result 038; no plan exists and no live mutation occurred.
 7. Gate A may generate and inspect one immutable live plan only.
 8. Gate B remains prohibited until the generated plan receives a second security review and second explicit owner approval.
 
