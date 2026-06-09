@@ -18,4 +18,4 @@ The goal is to make handoffs specific enough that a coding agent can execute the
 - `008a-implement-owner-controlled-live-promotion-operator.md` - complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - `008b-first-real-promotion-two-gate-execution.md` - complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - `009a-generate-milestone-4-governed-planning-bundle.md` - complete; Result 042 pass; six-note Milestone 4 bundle staged and validated
-- `009b-finalize-review-and-run-ordered-bundle-promotion.md` - Waves 1 and 2 complete at vault `665d2a1`; Result 048 pass; Wave 3 decision plan generation awaits explicit owner approval
+- `009b-finalize-review-and-run-ordered-bundle-promotion.md` - Waves 1 and 2 complete; Wave 3 immutable decision plan ready and security-audited pass in Result 049; exact execution approval required

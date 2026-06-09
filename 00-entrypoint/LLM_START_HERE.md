@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 009B Wave 2 claim promotion is complete at vault commit `665d2a1` and steward-audited pass in Result 048; Wave 3 decision plan generation awaits explicit owner approval
+- Current phase: Packet 009B Wave 3 immutable decision plan is ready and security-audited pass in Result 049; exact owner approval is required before execution
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: Waves 1 and 2 complete; Result 048 pass; Wave 3 decision plan generation awaits explicit owner approval; Wave 3 execution and Waves 4 through 6 remain prohibited
+- Task Packet 009B: Waves 1 and 2 complete; Wave 3 decision plan ready; Result 049 pass; exact execution approval required; Wave 4 planning and Waves 4 through 6 execution remain prohibited
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -137,6 +137,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 73. `03-research-results/046-packet-009b-wave-1-completion-steward-audit.md` - Wave 1 completion audit
 74. `03-research-results/047-packet-009b-wave-2-plan-security-audit.md` - Wave 2 immutable plan security audit
 75. `03-research-results/048-packet-009b-wave-2-completion-steward-audit.md` - Wave 2 completion steward audit
+76. `03-research-results/049-packet-009b-wave-3-plan-security-audit.md` - Wave 3 immutable plan security audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

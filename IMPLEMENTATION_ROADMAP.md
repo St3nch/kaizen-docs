@@ -267,12 +267,12 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 3 decision plan generation:
+Review and explicitly approve or reject Packet 009B Wave 3 execution:
 
 ```text
 operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP92
-staged source: projects/kaizen-platform/decisions/governed-amendment-slice.md
-source sha256: c368ea6bede4cf42e549c50d128ac7bf2ab3767e991684eb7e59704e927670ef
+plan: aa3c73e78651d95b925f5ed5bcbae433b4793dd8ca603a090327e4a073b51ccd
+review: 03-research-results/049-packet-009b-wave-3-plan-security-audit.md
 ```
 
 Current state:
@@ -284,7 +284,10 @@ Current state:
 5. Exactly one `intent` and one `committed` event exist for Wave 2.
 6. The vault is clean and has no remote.
 7. The Wave 3 staged decision and both canonical dependencies exist with the reserved hashes and IDs.
-8. No Wave 3 operation directory exists.
-9. Wave 3 execution and Waves 4 through 6 remain prohibited.
+8. The immutable Wave 3 plan payload hash is `aa3c73e78651d95b925f5ed5bcbae433b4793dd8ca603a090327e4a073b51ccd`.
+9. Validation passed with zero errors and warnings; the candidate transition is `active/pending/proposed -> active/approved/accepted`.
+10. No approval evidence, canonical destination, event, or vault mutation exists.
+11. Result 049 security-audits Wave 3 execution pass.
+12. Wave 4 planning and Waves 4 through 6 execution remain prohibited.
 
-Do not generate the Wave 3 plan until the owner explicitly approves the named operation ID.
+Do not execute Wave 3 until the owner approval names the exact operation ID and plan hash.
