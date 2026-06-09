@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: current-state amendment execution owner-approval gate active
-Current objective: execute the reviewed current-state amendment only after exact owner approval
-Current implementation status: governed amendment implementation and task-packet completion amendment are complete; current-state amendment plan is ready with Result 060 pass; no current-state amendment has executed
+Current phase: Milestone 4 implementation-return closure audit gate active
+Current objective: audit the full implementation-return loop and close Milestone 4
+Current implementation status: governed amendment implementation and both canonical return amendments are complete; current-state amendment committed at vault `e5e4eec` with Result 061 pass; Milestone 4 closure remains incomplete
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```

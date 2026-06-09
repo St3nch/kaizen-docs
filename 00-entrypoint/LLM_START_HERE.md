@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: immutable `current-state.md` amendment plan is ready and security-audited pass in Result 060; exact owner execution approval is required
+- Current phase: `current-state.md` amendment complete at vault commit `e5e4eec` and steward-audited pass in Result 061; Milestone 4 implementation-return closure audit is next
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `9c5dcdb`; task-packet completion report is amended; no remote exists and no push is authorized
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e5e4eec`; task-packet completion report and current-state return amendments are complete; no remote exists and no push is authorized
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `845d65f`; governed amendment support passes 230 full-suite tests and Result 057; no remote exists
 - Task Packet 005: complete and audited pass-with-notes
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: complete; governed amendment implementation and completion-report amendment are complete; `current-state.md` plan `f3740e34...ec260` is ready and Result 060 passed; execution and Milestone 4 closure remain prohibited
+- Task Packet 009B: complete; governed amendment implementation, completion-report amendment, and current-state amendment are complete; Result 061 passed; Milestone 4 closure audit remains incomplete
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -149,6 +149,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 85. `03-research-results/058-task-packet-completion-amendment-plan-security-audit.md` - task-packet completion amendment plan security audit
 86. `03-research-results/059-task-packet-completion-amendment-steward-audit.md` - task-packet completion amendment steward audit
 87. `03-research-results/060-current-state-amendment-plan-security-audit.md` - current-state amendment plan security audit
+88. `03-research-results/061-current-state-amendment-completion-steward-audit.md` - current-state amendment completion steward audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

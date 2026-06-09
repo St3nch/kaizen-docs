@@ -199,7 +199,7 @@ Implement the human-operated promotion path from a sibling staging root into the
 
 # Milestone 4 - One governed project loop
 
-Status: planning gate active
+Status: implementation-return closure audit active
 
 ## Objective
 
@@ -267,16 +267,16 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject `current-state.md` amendment execution:
+Audit the full Milestone 4 implementation-return loop and document explicit closure:
 
 ```text
-operation: kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK
-plan: f3740e348cecdd46c8e55325748d4dd9f64455ce65e5dea1fd5020cc423ec260
-destination: projects/kaizen-platform/current-state.md
-review: 03-research-results/060-current-state-amendment-plan-security-audit.md
+platform implementation: 845d65f356bd684c2f858f36aef54d0344791e43
+task-packet completion amendment: 9c5dcdb6a5c25fa0e17248df7a7a66e4f6c36305
+current-state amendment: e5e4eec1adc4ef26f9e735333dbb229b7bb59368
+latest evidence: 03-research-results/061-current-state-amendment-completion-steward-audit.md
 ```
 
-Execution and Milestone 4 closure remain prohibited until exact owner approval.
+Milestone 5 work remains prohibited until Milestone 4 closure is explicitly documented and committed.
 
 Current state:
 
@@ -309,10 +309,11 @@ Current state:
 27. The amended task-packet SHA-256 is `4e8c6081b1cfa6442f4c777abdf4eb4b1e883e0e1e1eb5d3f4b8838be971ce84`.
 28. Exactly one `intent` and one `committed` event exist for the amendment.
 29. The vault is clean and has no remote.
-30. `current-state.md` amendment operation `kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK` is planned at hash `f3740e348cecdd46c8e55325748d4dd9f64455ce65e5dea1fd5020cc423ec260`; Result 060 passed.
-31. The prior canonical SHA-256 is `b4de71f355fcd463d6bdb9173061d070c6289bbdba88cdad2d3403c3be1436a6`; candidate SHA-256 is `8ad7233e70d7194cc5bd93999f3eebbaa98168a39735de2e1d405c1cd2385d17`.
-32. Approval evidence is absent, event count is zero, and canonical bytes remain unchanged.
-33. The vault remains clean at `9c5dcdb` and has no remote.
-34. Milestone 4 closure remains prohibited until this amendment is committed locally and the implementation-return loop is audited.
+30. `current-state.md` amendment operation `kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK` completed at vault commit `e5e4eec`; Result 061 passed.
+31. The amended current-state SHA-256 is `8ad7233e70d7194cc5bd93999f3eebbaa98168a39735de2e1d405c1cd2385d17`.
+32. Exactly one `intent` and one `committed` event exist for the amendment.
+33. The vault is clean at `e5e4eec`; no push occurred and no remote was created.
+34. The governed implementation-return path is complete through canonical task-packet and current-state updates.
+35. Milestone 4 remains open only for the final implementation-return closure audit and explicit closure record.
 
-Do not execute the `current-state.md` amendment until the owner approval names the exact operation ID and plan hash.
+Do not begin Milestone 5 consolidation until Milestone 4 closure is documented and committed.
