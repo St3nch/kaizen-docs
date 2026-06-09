@@ -31,7 +31,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Packet 010B.1 is complete at platform commit `c56e1cc`; revised Packet 010C is audited in Result 080 at SHA-256 `fd09d15d0da3fc2c80d643aba47ce18ff77f9afeda9df6cfa4f9d5ed2225333d` and awaits exact owner approval; no MCP implementation, console work, vault/staging mutation, remote creation, or Packet 010D through 010F work is authorized
+- Current gate: Packet 010C is complete in the temporary non-Git `kaizen-mcp` proving ground; Result 081 records owner authorization and Result 082 records completion at the exact eight-file manifest; runtime activation, connector evidence, production MCP migration, console work, vault/staging mutation, remote creation, and Packet 010D through 010F remain unauthorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote

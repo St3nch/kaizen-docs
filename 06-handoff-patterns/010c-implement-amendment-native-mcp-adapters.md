@@ -1,12 +1,12 @@
 ---
 id: kz-tp-01KTPW9BNS1K6V9Z743SKVQD26
 type: task-packet
-status: draft
+status: complete
 project: kaizen-platform
 created: 2026-06-09T18:30:00Z
-updated: 2026-06-09T18:30:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-09T19:49:31Z
+review_status: approved
+authority: accepted
 summary: "Revised Packet 010C - implement amendment-native typed adapters in the temporary kaizen-mcp proving ground, delegating preparation to the accepted Packet 010B.1 platform API."
 primary_spec: kz-spec-01KTPJBRH0RQTCNRVQYTZJPVVG
 related_specs:
@@ -15,7 +15,7 @@ related_specs:
 
 # Task Packet 010C (Revised) - Implement Amendment-Native MCP Proving-Ground Adapters
 
-> Packet 010C is a revised proposed implementation packet. Drafting and auditing it does not authorize MCP changes, platform changes, candidate preparation, planning, approval, execution, recovery, connector mutation attempts, vault or staging mutation, remote creation, console work, or work under Packets 010D through 010F. Implementation remains prohibited until the owner approves the exact audited revised Packet 010C SHA-256.
+> Packet 010C was owner-approved at SHA-256 `fd09d15d0da3fc2c80d643aba47ce18ff77f9afeda9df6cfa4f9d5ed2225333d` and is complete in the temporary non-Git `kaizen-mcp` proving ground. Result 081 records authorization and Result 082 records completion. No Packet 010D through 010F, production MCP migration, Git initialization, canonical vault mutation, live staging mutation, remote creation, or console work is authorized.
 
 ## What changed from the blocked draft
 
@@ -630,7 +630,29 @@ An approved implementation must return:
 
 ## Completion Report
 
-Not applicable before implementation. An approved implementation must replace this section with exact changed paths, local test evidence, connector allow/block outcomes, deviations, and zero-platform/vault/staging/Git-mutation proof.
+Packet 010C is complete against the exact non-Git MCP manifest recorded in Result 082.
+
+Implemented:
+
+- amendment status and prepared-evidence read-only tools;
+- constrained amendment-candidate preparation;
+- amendment planning, approval, execution, and recovery adapters;
+- exact tool metadata and mutation gating;
+- prepared-candidate timestamp/hash continuity into planning;
+- focused adapter, server-schema, and disposable-root integration tests;
+- proving-ground documentation updates.
+
+Verification:
+
+```text
+complete kaizen-mcp suite: 20 passed
+focused platform amendment/status suite: 20 passed
+full kaizen-platform suite: 267 passed
+Ruff: all checks passed
+Python compilation: pass
+```
+
+No platform, vault, live staging, Git, remote, production-MCP, console, or Packet 010D through 010F change occurred. The live MCP process was not restarted during completion review.
 
 ## Current gate
 
@@ -638,7 +660,7 @@ Not applicable before implementation. An approved implementation must replace th
 Packet 010A: complete
 Packet 010B: complete
 Packet 010B.1: complete at platform commit c56e1cc
-Packet 010C: revised draft pending audit and owner approval
-Packet 010C implementation: prohibited
+Packet 010C: complete in non-Git kaizen-mcp at the Result 082 manifest
+Packet 010C implementation: complete
 Packets 010D through 010F: not approved
 ```
