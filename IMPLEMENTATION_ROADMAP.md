@@ -267,15 +267,16 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject `current-state.md` amendment candidate preparation and plan generation:
+Review and explicitly approve or reject `current-state.md` amendment execution:
 
 ```text
 operation: kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK
+plan: f3740e348cecdd46c8e55325748d4dd9f64455ce65e5dea1fd5020cc423ec260
 destination: projects/kaizen-platform/current-state.md
-current sha256: b4de71f355fcd463d6bdb9173061d070c6289bbdba88cdad2d3403c3be1436a6
+review: 03-research-results/060-current-state-amendment-plan-security-audit.md
 ```
 
-This approval would authorize staging-only candidate preparation and immutable plan generation. Execution remains separately prohibited.
+Execution and Milestone 4 closure remain prohibited until exact owner approval.
 
 Current state:
 
@@ -308,7 +309,10 @@ Current state:
 27. The amended task-packet SHA-256 is `4e8c6081b1cfa6442f4c777abdf4eb4b1e883e0e1e1eb5d3f4b8838be971ce84`.
 28. Exactly one `intent` and one `committed` event exist for the amendment.
 29. The vault is clean and has no remote.
-30. `current-state.md` remains unchanged at SHA-256 `b4de71f355fcd463d6bdb9173061d070c6289bbdba88cdad2d3403c3be1436a6`.
-31. No `current-state.md` amendment operation exists yet.
+30. `current-state.md` amendment operation `kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK` is planned at hash `f3740e348cecdd46c8e55325748d4dd9f64455ce65e5dea1fd5020cc423ec260`; Result 060 passed.
+31. The prior canonical SHA-256 is `b4de71f355fcd463d6bdb9173061d070c6289bbdba88cdad2d3403c3be1436a6`; candidate SHA-256 is `8ad7233e70d7194cc5bd93999f3eebbaa98168a39735de2e1d405c1cd2385d17`.
+32. Approval evidence is absent, event count is zero, and canonical bytes remain unchanged.
+33. The vault remains clean at `9c5dcdb` and has no remote.
+34. Milestone 4 closure remains prohibited until this amendment is committed locally and the implementation-return loop is audited.
 
-Do not prepare or generate the `current-state.md` amendment plan until the owner explicitly approves the reserved operation ID.
+Do not execute the `current-state.md` amendment until the owner approval names the exact operation ID and plan hash.

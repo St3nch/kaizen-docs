@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: separate owner approval to prepare and generate the `current-state.md` amendment plan using reserved operation `kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK`; execution remains prohibited
+- Current gate: exact owner approval to execute `current-state.md` amendment operation `kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK` with plan `f3740e348cecdd46c8e55325748d4dd9f64455ce65e5dea1fd5020cc423ec260`; Milestone 4 closure remains prohibited
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; completion-report amendment is complete at vault `9c5dcdb`; the vault is clean and has no remote

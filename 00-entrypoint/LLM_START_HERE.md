@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: task-packet completion-report amendment complete at vault commit `9c5dcdb` and steward-audited pass in Result 059; `current-state.md` amendment plan generation awaits separate owner approval
+- Current phase: immutable `current-state.md` amendment plan is ready and security-audited pass in Result 060; exact owner execution approval is required
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: complete; governed amendment implementation complete at `845d65f`; completion-report amendment complete at vault `9c5dcdb`; Result 059 passed; `current-state.md` plan generation awaits separate owner approval
+- Task Packet 009B: complete; governed amendment implementation and completion-report amendment are complete; `current-state.md` plan `f3740e34...ec260` is ready and Result 060 passed; execution and Milestone 4 closure remain prohibited
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -148,6 +148,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 84. `03-research-results/057-governed-amendment-implementation-security-steward-audit.md` - governed amendment implementation security and steward audit
 85. `03-research-results/058-task-packet-completion-amendment-plan-security-audit.md` - task-packet completion amendment plan security audit
 86. `03-research-results/059-task-packet-completion-amendment-steward-audit.md` - task-packet completion amendment steward audit
+87. `03-research-results/060-current-state-amendment-plan-security-audit.md` - current-state amendment plan security audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
