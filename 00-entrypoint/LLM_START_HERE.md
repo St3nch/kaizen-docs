@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestone 4 complete and closure-audited pass in Result 062; Milestone 5 retrospective and v0.2 consolidation await separate owner instruction
+- Current phase: Milestone 5 retrospective and v0.2 draft are complete; proposed Decision 0013 passed Result 065 and awaits explicit owner acceptance
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B and Milestone 4: complete; governed amendment implementation and both canonical return amendments passed; Result 062 closes the governed project loop; Milestone 5 has not started
+- Task Packet 009B and Milestone 4: complete; Milestone 5 retrospective Result 063 and draft audit Result 064 are complete; Decision 0013 remains proposed
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -52,6 +52,7 @@ Humans = authority-bearing review, approval, and promotion
 - Decision 0010 dedicated Internet Marketing Intelligence database boundary: accepted; no schema work authorized
 - Decision 0011 progressive hybrid human interface direction: proposed; architecture only, no UI implementation authorized
 - Decision 0012 first-slice contract and implementation boundary: accepted
+- Decision 0013 v0.2 first-slice contract reconciliation: proposed; Result 065 pass; explicit owner acceptance required
 - Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
 - Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
 - Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
@@ -151,6 +152,10 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 87. `03-research-results/060-current-state-amendment-plan-security-audit.md` - current-state amendment plan security audit
 88. `03-research-results/061-current-state-amendment-completion-steward-audit.md` - current-state amendment completion steward audit
 89. `03-research-results/062-milestone-4-implementation-return-closure-audit.md` - Milestone 4 implementation-return closure audit
+90. `03-research-results/063-milestone-5-first-slice-retrospective.md` - Milestone 5 first-slice retrospective
+91. `03-research-results/064-v0.2-draft-contradiction-audit.md` - v0.2 draft contradiction audit
+92. `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md` - proposed v0.2 reconciliation decision
+93. `03-research-results/065-decision-0013-security-steward-audit.md` - Decision 0013 security and steward audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

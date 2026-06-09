@@ -232,7 +232,7 @@ current-state amendment
 
 # Milestone 5 - Slice retrospective and v0.2 consolidation
 
-Status: ready; not started; separate owner instruction required
+Status: retrospective complete; v0.2 consolidation active; Decision 0013 owner gate active
 
 ## Objective
 
@@ -267,7 +267,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Await separate owner instruction to begin the Milestone 5 retrospective and v0.2 consolidation.
+Review and explicitly accept or reject proposed Decision 0013 before reconciling the supporting specifications or accepting v0.2.
 
 Milestone 4 closure evidence:
 
@@ -278,7 +278,7 @@ current-state amendment: e5e4eec1adc4ef26f9e735333dbb229b7bb59368
 closure audit: 03-research-results/062-milestone-4-implementation-return-closure-audit.md
 ```
 
-Milestone 5 has not started.
+Milestone 5 retrospective and non-authoritative v0.2 draft are complete. Decision 0013 remains proposed.
 
 Current state:
 
@@ -321,6 +321,12 @@ Current state:
 37. All six promotion operations and both amendment operations have exactly `intent -> committed`.
 38. The full platform suite passes 230 tests at closure.
 39. Platform, docs, and vault repositories are clean; the vault has no remote.
-40. Milestone 4 is complete. Milestone 5 is ready but not started.
+40. Milestone 4 is complete.
+41. Milestone 5 retrospective Result 063 passed.
+42. The non-authoritative v0.2 draft exists at `01-project-standard/kaizen-project-standard-v0.2-draft.md`.
+43. Result 064 passes the draft for governed review but blocks authoritative acceptance.
+44. Proposed Decision 0013 closes the six blockers at the decision level; Result 065 passed.
+45. Supporting specification edits remain prohibited until explicit owner acceptance of Decision 0013.
+46. No next implementation milestone is authorized.
 
-Do not begin Milestone 5 retrospective or v0.2 consolidation until the owner gives separate instruction.
+Do not mark Decision 0013 accepted or reconcile the supporting specifications until the owner explicitly accepts it.

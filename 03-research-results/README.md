@@ -72,5 +72,8 @@ Do not copy a research result directly into the Kaizen Project Standard. First p
 - `060-current-state-amendment-plan-security-audit.md`
 - `061-current-state-amendment-completion-steward-audit.md`
 - `062-milestone-4-implementation-return-closure-audit.md`
+- `063-milestone-5-first-slice-retrospective.md`
+- `064-v0.2-draft-contradiction-audit.md`
+- `065-decision-0013-security-steward-audit.md`
 
 Where a raw external report cannot be copied into the repository environment, preserve a faithful stewarded evidence summary and record the source and limitation explicitly.
