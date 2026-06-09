@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Finalize the staged audit verdict and govern ordered promotion of the six-note Milestone 4 planning bundle through explicit plan-hash gates.
 created: 2026-06-08T22:28:09Z
-updated: 2026-06-08T22:40:22Z
+updated: 2026-06-09T00:31:20Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-and-promotion-workflow.md
@@ -17,7 +17,7 @@ related_specs:
 
 # Task Packet 009B - Finalize Review and Run Ordered Bundle Promotion
 
-> Correction status: Phase 0 audit-verdict finalization succeeded, but Wave 1 planning failed closed because all six staged notes remained `status: draft`. Result 044 passes exact lifecycle activation for renewed owner review. Wave 1 execution and all later waves remain prohibited.
+> Wave 1 status: complete at vault commit `999ccb0`; Result 046 passed. Wave 2 claim plan generation awaits explicit owner approval for operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH`. Wave 2 execution and Waves 3 through 6 remain prohibited.
 
 ## Objective
 

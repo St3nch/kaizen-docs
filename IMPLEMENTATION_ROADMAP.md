@@ -267,21 +267,23 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B lifecycle activation plus Wave 1 plan retry:
+Review and explicitly approve or reject Packet 009B Wave 2 claim plan generation:
 
 ```text
-06-handoff-patterns/009b-finalize-review-and-run-ordered-bundle-promotion.md
-03-research-results/044-packet-009b-lifecycle-activation-correction-audit.md
+wave: 2
+note type: claim
+operation: kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH
+source: projects/kaizen-platform/claims/governed-amendment-required.md
 ```
 
 Current state:
 
 1. Packet 009A is complete; Result 042 passed.
-2. Packet 009B Phase 0 completed successfully; the staged audit now has `audit_verdict: pass` and SHA-256 `ab78d9e4b9421fcca9e2b39374c62968ab75ee292d04efc787183ae5f6675944`.
-3. Wave 1 planning failed closed because the staged source-summary remained `status: draft`, which cannot become canonically approved.
-4. No operation directory, canonical path, approval evidence, event, or vault mutation was created.
-5. Result 044 identifies the same lifecycle issue across all six staged notes.
-6. Renewed approval may authorize only exact `status: draft -> status: active` edits for all six notes, validation, and Wave 1 plan retry using operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJG`.
-7. Wave 1 execution and all later waves remain prohibited.
+2. Packet 009B Phase 0 and six-note lifecycle activation are complete.
+3. Wave 1 source-summary promotion is complete at vault commit `999ccb0`; Result 046 passed.
+4. The canonical Wave 1 source-summary exists with SHA-256 `6750d278771d6e717ff97c1cde1530aa843809e054b346ead0637a018314ab32`.
+5. The vault is clean and has no remote; no push occurred.
+6. Wave 2 plan generation remains a separate owner-controlled gate.
+7. Wave 2 execution and Waves 3 through 6 remain prohibited.
 
-Do not execute canonical promotion or alter any byte beyond the six exact lifecycle fields under the renewed approval.
+Approval of Wave 2 plan generation may create immutable operation evidence in staging only. It does not authorize approval evidence, canonical mutation, events, or a vault commit.

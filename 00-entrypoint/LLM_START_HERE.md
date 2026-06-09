@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 009B Phase 0 completed; Wave 1 planning failed closed on draft lifecycle status; Result 044 passes exact six-note lifecycle activation for renewed owner approval
+- Current phase: Packet 009B Wave 1 is complete at vault `999ccb0`; Result 046 passed; Wave 2 claim plan generation awaits explicit owner approval
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `80bc093`; live governance and first real promotion are complete; remote creation remains owner-deferred until the working-project checkpoint
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `999ccb0`; Packet 009B Wave 1 source-summary promotion is complete; remote creation remains owner-deferred until the working-project checkpoint
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `703d532`; Packet 006B passes 45 focused tests, 40 repeated process races, and 190 full-suite tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: Phase 0 complete; Wave 1 plan absent; lifecycle activation correction security-audited pass in Result 044; renewed owner approval required
+- Task Packet 009B: Wave 1 complete at vault `999ccb0`; Result 046 pass; Wave 2 claim plan generation awaits explicit owner approval
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -133,6 +133,8 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 69. `06-handoff-patterns/009b-finalize-review-and-run-ordered-bundle-promotion.md` - ordered multi-gate bundle promotion packet
 70. `03-research-results/043-packet-009b-security-audit.md` - Packet 009B security audit
 71. `03-research-results/044-packet-009b-lifecycle-activation-correction-audit.md` - lifecycle activation correction audit
+72. `03-research-results/045-packet-009b-wave-1-plan-security-audit.md` - Wave 1 immutable plan audit
+73. `03-research-results/046-packet-009b-wave-1-completion-steward-audit.md` - Wave 1 completion audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -282,10 +284,9 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 - Packet 008A is complete and steward-audited pass in Result 035;
 - Packet 008B is complete and Result 040 verifies the first real promotion;
 - Packet 009A is complete and Result 042 verifies all six staged notes;
-- Packet 009B Phase 0 is complete and the audit verdict edit is valid;
-- Wave 1 planning failed closed because all six staged notes remained `status: draft`;
-- Result 044 passes exact six-note `draft -> active` lifecycle activation plus Wave 1 plan retry for renewed owner approval;
-- no canonical promotion is authorized until the exact Wave 1 plan hash is separately approved;
+- Packet 009B Wave 1 is complete and Result 046 verifies the source-summary promotion;
+- require explicit owner approval naming Wave 2 claim plan generation and operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH`;
+- Wave 2 execution and Waves 3 through 6 remain prohibited;
 - keep Postgres, Qdrant, Hermes, providers, UI, websites, and other deferred systems out of scope until earned;
 - use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
 - preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.

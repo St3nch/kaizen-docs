@@ -30,10 +30,10 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: renewed owner review of Packet 009B lifecycle activation and Wave 1 plan retry
+- Current gate: explicit owner review of Packet 009B Wave 2 claim plan generation for operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH`
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
-- Canonical vault: exists at `C:\dev\kaizen\vault`; first real canonical promotion committed at vault `80bc093`
+- Canonical vault: exists at `C:\dev\kaizen\vault`; Packet 009B Wave 1 committed at vault `999ccb0`
 - Platform implementation repository: exists at `C:\dev\kaizen\platform`
 - Live staging root: exists at `C:\dev\kaizen\staging`
 - Active execution roadmap: `IMPLEMENTATION_ROADMAP.md`
