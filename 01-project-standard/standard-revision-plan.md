@@ -1,21 +1,21 @@
 # Kaizen Project Standard Revision Plan
 
-Status: deferred pending Milestone 4 governed-loop evidence
-Date: 2026-06-04
+Status: active Milestone 5 consolidation plan
+Date: 2026-06-09
 
 ## Purpose
 
 Define how the original Kaizen Project Standard will be revised into v0.2 without silently turning research or implementation assumptions into doctrine.
 
-Project-wide execution is tracked in `IMPLEMENTATION_ROADMAP.md`. This file preserves the detailed standard-revision workstream, but it does not authorize drafting the consolidated v0.2 standard before Milestone 4 supplies real governed-loop and implementation-return evidence.
+Project-wide execution is tracked in `IMPLEMENTATION_ROADMAP.md`. Milestone 4 has now supplied the governed-loop and implementation-return evidence required to begin a non-authoritative v0.2 draft. This plan authorizes consolidation work only; explicit owner acceptance is still required before v0.2 becomes authoritative.
 
 ## Current posture
 
-The original serial revision sequence was superseded by the accepted acceleration amendment. Decisions 0008 through 0012 and the first-slice implementation now provide evidence that did not exist when this plan was written. The consolidated v0.2 standard remains intentionally deferred until Milestone 4 and the Milestone 5 retrospective can reconcile proven behavior, friction, and remaining assumptions.
+The original serial revision sequence was superseded by the accepted acceleration amendment. Decisions 0008 through 0012, the implemented first slice, Result 062, and Result 063 now provide the evidence base for consolidation. The active work is to reconcile proven behavior, friction, compatibility requirements, and remaining assumptions into an auditable v0.2 draft.
 
 ## Baseline status
 
-The full original 591-line Kaizen Project Standard has now been imported exactly into:
+The full original 591-line Kaizen Project Standard is preserved exactly at:
 
 ```text
 01-project-standard/kaizen-project-standard.md
@@ -27,7 +27,7 @@ Its SHA-256 at import was:
 2ddfa929d4c9c59bba1c823876cb8729024418ef1f1bc98c2bd9f00b6f14572c
 ```
 
-The baseline remains historical source material. Accepted design decisions override conflicting baseline details.
+The baseline remains historical source material. Accepted decisions and reviewed implementation evidence override conflicting baseline details.
 
 The section-by-section reconciliation is documented in:
 
@@ -46,23 +46,25 @@ The following decisions are accepted inputs to v0.2:
 - `04-design-decisions/0005-api-only-structured-data-access.md`
 - `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
-
-## Proposed operating decision awaiting review
-
 - `04-design-decisions/0008-v0.2-operating-conventions.md`
+- `04-design-decisions/0009-operational-postgres-and-observatory-boundary.md`
+- `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md`
+- `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md`
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
 
-Decision 0008 proposes:
+Decision 0008 establishes:
 
-- final pipeline stages
-- exact project folder placement
-- portable root/path conventions
-- plugin install/defer policy
-- `.obsidian` version-control policy
-- source URL retention
-- initial raw/private-data validation thresholds
-- future Qdrant treatment of current-state notes
+- the six-stage project pipeline;
+- exact project folder placement;
+- portable root/path conventions;
+- plugin install/defer policy;
+- `.obsidian` version-control policy;
+- source URL retention;
+- initial raw/private-data validation posture;
+- implementation-return requirements;
+- future Qdrant treatment of current-state notes.
 
-It should remain proposed until human review and, ideally, Claude's independent document-contract report confirms no conflict.
+Decision 0008 was accepted on 2026-06-07 and proven through the Milestone 4 governed loop.
 
 ## Active v0.2 planning specs
 
@@ -74,104 +76,116 @@ It should remain proposed until human review and, ideally, Claude's independent 
 - `05-specs/kaizen-hammer-test-strategy.md`
 - `05-specs/staging-and-promotion-workflow.md`
 - `05-specs/promotion-event-schema.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 
-## Resolved foundation questions
+## Proven first-slice contracts
 
-The following are resolved for v0.2:
+The following are resolved and proven for v0.2:
 
 1. Lifecycle axes and enum values.
 2. One immutable prefixed ULID note ID; no second UUID.
 3. `project` required; `domain` optional; `subdomain` deferred.
 4. Stable IDs in frontmatter relationships and relative Markdown links in bodies.
 5. Sibling staging folder outside the canonical vault.
-6. Append-only JSONL promotion events.
+6. Append-only JSONL promotion and amendment events.
 7. Nine initial note types.
 8. Seven universal required frontmatter fields plus type-specific fields.
 9. Durable agent provenance and transient `validation_status`.
 10. Raw Markdown canonical, API-only structured-data access, and hammer gates.
-11. Initial note/event prefix registry direction.
-12. Initial promotion-event action vocabulary and event contract direction.
+11. ID and event-prefix registry direction.
+12. Six-stage project pipeline: `capture`, `research`, `spec`, `audit`, `handoff`, `build`.
+13. Exact canonical project folder placement and earned folders.
+14. Immutable plan, validation, candidate, diff, and approval evidence.
+15. Separate human approval for plan generation and execution.
+16. Intent-before-mutation and exactly one successful terminal event.
+17. Governed implementation return through task-packet and current-state amendments.
+18. Git as supplementary evidence rather than the operational event record.
+19. No plugin, database, retrieval layer, or live agent integration required for canonical operation.
 
-## Vision alignment dependency
+## Evidence base
 
-Before finalizing the document contracts or complete v0.2 standard, review and reconcile:
+The consolidation must use at least:
 
-```text
-01-project-standard/kaizen-vision-and-architecture-alignment.md
-```
+- `03-research-results/006-document-contract-standards-reconciliation.md`
+- `03-research-results/017-decision-0008-end-to-end-dry-run-simulation.md`
+- `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
+- `03-research-results/031-packet-006b-final-implementation-steward-audit.md`
+- `03-research-results/040-packet-008b-completion-steward-audit.md`
+- `03-research-results/057-governed-amendment-implementation-security-steward-audit.md`
+- `03-research-results/062-milestone-4-implementation-return-closure-audit.md`
+- `03-research-results/063-milestone-5-first-slice-retrospective.md`
+- `01-project-standard/kaizen-vision-and-architecture-alignment.md`
 
-The next external review should ask Claude to identify evidence gaps, contradictions, and missing research across the full intended Kaizen system. Claude's findings remain recommendations until reconciled through Kaizen decisions and specifications.
-## Document-contract research status
+The baseline itself remains historical evidence, not current doctrine.
 
-The major document-contract research pass is complete.
+## Remaining human and design decisions
 
-The Kaizen-specific adopt/modify/reject/defer disposition is recorded in:
+1. Accept, revise, or reject the consolidated v0.2 draft.
+2. Define the durable human actor-ID and authentication model beyond the trusted `owner.local` first-slice convention.
+3. Reconcile amendment event fields, recovery terminology, and backward compatibility into the accepted specs.
+4. Decide the owner-approved backup and remote posture for platform and vault repositories.
+5. Calibrate private/raw-data warning thresholds after broader sample-note testing.
+6. Decide whether `operate` earns a pipeline stage after a real operational project.
+7. Decide when connector mutation may be relied upon versus the local operator fallback.
+8. Choose the next implementation milestone only after v0.2 acceptance.
 
-```text
-03-research-results/006-document-contract-standards-reconciliation.md
-```
+## Required compatibility rules
 
-The original prompt remains historical provenance at:
-
-```text
-02-research-prompts/002-document-contract-standards.md
-```
-
-It is not live doctrine and should not be re-executed by default.
-
-## Remaining human/design decisions
-
-1. Accept, revise, or reject Decision 0008.
-2. Finalize the `pipeline_stage` enum after one real-project dry run.
-3. Confirm exact canonical folder placement after that dry run.
-4. Approve the promotion-event action vocabulary and JSON Schema direction.
-5. Choose implementation language/location for `kaizen-id` and validation tooling.
-6. Define exact human actor-ID format.
-7. Calibrate private/raw-data warning thresholds after sample-note testing.
-8. Decide whether `operate` remains a pipeline stage.
+1. Preserve all canonical note IDs and operation IDs.
+2. Preserve existing JSONL event lines exactly.
+3. Extend schemas backward-compatibly for existing `promote` events.
+4. Keep first-time promotion behavior unchanged while documenting amendment behavior.
+5. Do not mass-rewrite canonical notes solely for formatting consistency.
+6. Preserve the current canonical vault and sibling staging layout.
+7. Keep the vault without a remote until the owner makes the separate backup/visibility decision.
+8. Preserve historical baseline and audit evidence in Git history.
 
 ## Revision method
 
-1. Preserve the imported baseline unchanged as source material until v0.2 is accepted.
+1. Preserve the imported baseline unchanged as historical source material.
 2. Use `baseline-v0.2-reconciliation-map.md` to map old sections to accepted replacements.
-3. Complete the document-contract research.
-4. Resolve Decision 0008 and remaining human choices.
-5. Produce `01-project-standard/kaizen-project-standard-v0.2-draft.md`.
-6. Audit the draft against research summaries, Veda governance patterns, and Decisions 0001-0008.
-7. Correct contradictions, overengineering, and missing boundaries.
-8. Accept v0.2 only after explicit human review.
-9. Preserve the original baseline in Git history or archive when superseded.
+3. Use Result 063 as the retrospective change ledger.
+4. Draft `01-project-standard/kaizen-project-standard-v0.2-draft.md`.
+5. Reconcile amendment support, event vocabulary, validation layers, spec maturity, actor identity, and remote policy.
+6. Audit the draft against research summaries, Veda governance patterns, Decisions 0001 through 0012, and the implementation evidence listed above.
+7. Correct contradictions, overengineering, stale assumptions, and missing boundaries.
+8. Accept v0.2 only after explicit owner review.
+9. Preserve the original baseline in Git history when v0.2 is accepted.
+10. Select and authorize the next implementation milestone only after v0.2 acceptance.
 
 ## Non-goals
 
-The v0.2 standard revision does not implement:
+The v0.2 consolidation does not implement new runtime systems. It does not implement:
 
-- the production Obsidian vault
-- Qdrant
-- the Operational Postgres database and Observatory domain
-- Hermes write access
-- validation code
-- promotion tooling
-- source ingestion automation
+- Qdrant;
+- the Operational Postgres database or Observatory domain;
+- the Internet Marketing Intelligence database;
+- Hermes live integration;
+- paid-provider ingestion;
+- website automation;
+- multi-agent orchestration;
+- a general desktop application shell.
 
-The standard defines the governed plan. Implementation follows only after the plan is accepted and task-packeted.
+Existing validation, promotion, and amendment tooling is implementation evidence for the standard. New implementation follows only after the next roadmap and task packets are accepted.
 
-## Next recommended actions
+## Active consolidation sequence
 
-1. Complete the separate governance-bootstrap gate and first real canonical promotion.
-2. Run Milestone 4 as one complete governed project loop, including the implementation-return leg.
-3. Use the Milestone 5 retrospective to identify proven contracts, friction, superseded assumptions, and proportionality changes.
-4. Draft and audit the consolidated v0.2 standard from that evidence.
-5. Accept v0.2 only after explicit human review.
+1. Complete the Milestone 5 retrospective and change ledger.
+2. Update this revision plan and the reconciliation map with Milestone 4 evidence.
+3. Draft the non-authoritative v0.2 standard.
+4. Draft governed contract updates for amendment support and spec maturity.
+5. Audit the v0.2 draft against accepted decisions and implementation evidence.
+6. Obtain explicit owner acceptance before declaring v0.2 authoritative.
+7. Choose the next implementation milestone family.
+8. Create reviewed task packets before any new implementation begins.
 
 ## Related files
 
 - `ROADMAP.md`
-
+- `IMPLEMENTATION_ROADMAP.md`
 - `01-project-standard/kaizen-project-standard.md`
 - `01-project-standard/baseline-v0.2-reconciliation-map.md`
-- `00-entrypoint/LLM_START_HERE.md`
-- `02-research-prompts/002-document-contract-standards.md`
-- `03-research-results/`
+- `01-project-standard/kaizen-vision-and-architecture-alignment.md`
+- `03-research-results/063-milestone-5-first-slice-retrospective.md`
 - `04-design-decisions/`
 - `05-specs/`

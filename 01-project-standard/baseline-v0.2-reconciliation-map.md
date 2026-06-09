@@ -1,11 +1,11 @@
 # Kaizen Baseline to v0.2 Reconciliation Map
 
-Status: active draft
-Date: 2026-06-04
+Status: active evidence-backed reconciliation
+Date: 2026-06-09
 
 ## Purpose
 
-Map the original 591-line Kaizen Project Standard to the accepted v0.2 foundation.
+Map the original 591-line Kaizen Project Standard to the accepted and implemented v0.2 foundation.
 
 The original baseline is preserved at:
 
@@ -19,37 +19,37 @@ This map identifies what v0.2 should preserve, replace, defer, or reject. It pre
 
 The original baseline remains historical source material.
 
-Accepted Decisions 0001 through 0007 override conflicting baseline details.
+Accepted Decisions 0001 through 0012 and reviewed implementation evidence override conflicting baseline details.
 
-The v0.2 draft should preserve the baseline's goals and operating philosophy while replacing superseded schemas, permissions, plugin assumptions, and workflow mechanics.
+The v0.2 draft should preserve the baseline's goals and operating philosophy while replacing superseded schemas, permissions, plugin assumptions, workflow mechanics, and one-way handoff semantics.
 
 ## Section map
 
 | Baseline section | v0.2 direction | Reason |
 |---|---|---|
 | Purpose and reusable project system | Preserve | Still the core Kaizen goal |
-| Project intelligence pipeline | Preserve and refine | Core flow remains valid; exact stage enum needs final decision |
-| Two agent tiers | Preserve concept, replace authority details | Hermes remains clerk; accepted boundaries are stricter and tool-enforced |
-| Required Plugins | Replace | Research rejected plugin-first architecture |
-| Standard Project Folder Structure | Replace selectively | Preserve earned folders; align to nine initial note types |
-| Standard Frontmatter | Replace completely | Superseded by accepted field registry and lifecycle model |
+| Project intelligence pipeline | Preserve and close the loop | Six-stage enum is accepted; implementation return is required |
+| Two agent tiers | Preserve concept, replace authority details | Agent authority is narrower and tool-enforced |
+| Required Plugins | Replace | Canonical operation proved plugin-independent |
+| Standard Project Folder Structure | Replace selectively | Nine types and earned-folder placement were proven in Milestone 4 |
+| Standard Frontmatter | Replace completely | Superseded by field registry and lifecycle model |
 | Command Center - LLM Entry Point | Preserve and strengthen | Plain-text entry point remains foundational |
 | Command Center - Dataview status | Defer/optional | Human convenience only, never canonical |
 | Command Center - Templater/Commander actions | Defer | Must be earned after manual workflow proves need |
-| Canonical source links | Preserve concept, normalize paths | Keep source-of-truth references; avoid machine-specific absolute paths as canonical format |
+| Canonical source links | Preserve concept, normalize paths | Keep source references; avoid local paths as portable identity |
 | Vault-level dashboard | Defer | Useful only after enough canonical notes exist |
-| Templater templates | Replace with static note contracts | Templates may be built later from accepted registries |
-| Hermes configuration | Replace completely | Accepted permission matrix, staging root, typed tools, and promotion rules govern Hermes |
-| Build order | Replace | Foundation and validation now precede vault/plugin construction |
+| Templater templates | Replace with static note contracts | Templates may later generate accepted schemas |
+| Hermes configuration | Replace completely | Typed tools, staging, validation, approval, and operator controls govern agents |
+| Build order | Replace | Tools and hammer gates precede live agent or database systems |
 | Adding a new project | Preserve concept, rewrite details | Keep minimal project bootstrap and earned folders |
-| What Never Goes in Kaizen | Preserve and expand | Strongly confirmed by Postgres/Qdrant/source-of-truth research |
-| Source-of-Truth Rules | Preserve and expand | Add Postgres Observatory, Qdrant, staging, and agent boundaries |
+| What Never Goes in Kaizen | Preserve and expand | Confirmed by source-of-truth research and implementation |
+| Source-of-Truth Rules | Preserve and expand | Add operational databases, staging, agents, and event-log boundaries |
 
 ## Preserve unchanged in spirit
 
-### One pipeline for every project
+### One governed path for every project
 
-Every project should still move through a standard path from idea to implementation-ready handoff.
+Every project should move through a standard path from idea to implementation-ready handoff and back through implementation evidence.
 
 ### One command center per project
 
@@ -57,50 +57,33 @@ The command center remains the human and agent entry point. Important orientatio
 
 ### Earned structure
 
-Do not pre-create empty folders or speculative note types. Structure appears when real content and repeated friction justify it.
+Do not pre-create empty folders, note types, databases, dashboards, or integrations. Structure appears when real content and repeated friction justify it.
 
 ### Separation from source and operations repositories
 
-Kaizen owns project intelligence, synthesis, decisions, planning specs, audits, and handoffs.
+Kaizen owns project intelligence, synthesis, decisions, planning specs, audits, handoffs, and reviewed implementation-return evidence.
 
-Code, tests, implementation contracts, operational procedures, generated artifacts, and raw/private data remain in their proper systems.
+Code, tests, implementation details, operational procedures, generated artifacts, and raw/private data remain in their proper systems.
 
 ### Implementation-ready task packets
 
-The principal output remains a task packet a coding agent can execute without guessing.
+The principal implementation output remains a task packet a coding agent can execute without guessing. Completion evidence returns through governed amendment rather than unreviewed editing.
 
 ## Replace in v0.2
 
 ### Plugin-first setup
 
-The baseline says to install Dataview, Templater, and Commander first.
+Replace the baseline requirement to install Dataview, Templater, and Commander first with:
 
-Replace with:
-
-- no plugin is required for canonical Kaizen operation
-- raw Markdown and validated YAML work first
-- Dataview may be added as a human read model after enough notes exist
-- Templater and Commander are deferred until manual workflow repetition proves need
-- Canvas, Kanban, Tasks, Excalidraw, AI plugins, and broad Obsidian REST/MCP access are deferred or non-canonical
+- no plugin is required for canonical Kaizen operation;
+- raw Markdown and validated YAML work first;
+- Dataview may be added as a human read model after enough notes exist;
+- Templater and Commander are deferred until repeated manual work proves need;
+- Canvas, Kanban, Tasks, Excalidraw, AI plugins, and broad Obsidian REST/MCP access are deferred or non-canonical.
 
 ### Baseline frontmatter
 
-Replace the baseline schema:
-
-```yaml
-type:
-status:
-project:
-pipeline_stage:
-phase:
-summary:
-created:
-updated:
-source_repo:
-source_docs:
-```
-
-with the accepted universal core:
+Replace the baseline schema with the accepted universal core:
 
 ```yaml
 id:
@@ -119,7 +102,7 @@ and type-specific fields defined in:
 
 ### Baseline lifecycle
 
-Replace the mixed baseline status values with three orthogonal axes:
+Replace mixed status values with three orthogonal axes:
 
 ```yaml
 status: draft | active | blocked | complete | archived
@@ -131,38 +114,48 @@ authority: none | proposed | accepted
 
 Replace broad direct-vault actions with:
 
-- read/search access to approved roots
-- writes only inside the sibling staging root after boundary tests pass
-- deterministic validation
-- human-controlled promotion
-- no direct Postgres or Qdrant mutation
-- no commit/push, approval, authority transition, source-repo mutation, or external publication
+- read/search access to approved roots;
+- writes only inside sibling staging through constrained tools;
+- deterministic validation;
+- human-controlled immutable planning and execution approval;
+- no direct Postgres or Qdrant mutation;
+- no commit/push, authority transition, source-repo mutation, or external publication;
+- local human operator fallback when connector mutation is unavailable.
 
 ### Raw source notes
 
-The baseline stores pasted raw content inside Markdown.
+Replace pasted raw content in canonical Markdown with:
 
-Replace with:
-
-- raw/bulk content outside the canonical vault
-- source summaries in Markdown
-- direct URLs or stable source IDs for provenance
-- a `raw-source` note type only if future ingestion workflows prove it necessary
+- raw or bulk content outside the canonical vault;
+- source summaries in Markdown;
+- direct URLs or stable source IDs for provenance;
+- a `raw-source` note type only if future ingestion workflows prove it necessary.
 
 ### Machine-specific source paths
 
-The baseline embeds absolute Windows paths in command centers and task packets.
+Replace absolute Windows paths as canonical identity with:
 
-Replace canonical representation with:
+- repository URL or stable repository identifier;
+- repo-relative path;
+- optional commit/ref;
+- local path only as non-canonical environment guidance.
 
-- repository URL or stable repository identifier
-- repo-relative path
-- optional commit/ref
-- local path only as non-canonical environment guidance
+### One-way handoff pipeline
+
+Replace the baseline pipeline ending at coding-agent handoff with:
+
+```text
+task packet
+-> implementation
+-> tests and completion evidence
+-> governed completion-report amendment
+-> governed current-state update
+-> retrospective and contract improvement
+```
 
 ## Initial v0.2 note types
 
-The accepted initial set is:
+The accepted and proven set is:
 
 ```text
 command-center
@@ -186,9 +179,7 @@ source-import-map
 
 The concepts may still appear as sections or ordinary prose until separate types earn their existence.
 
-## Candidate project structure for v0.2
-
-This remains a draft until folder placement is accepted:
+## Accepted project structure for v0.2
 
 ```text
 projects/
@@ -204,81 +195,104 @@ projects/
     handoffs/            # earned
 ```
 
-No empty earned folder is created before its first real note.
+No earned folder exists before its first real note.
 
 ## Command center changes
 
 ### Preserve
 
-- short plain-text LLM entry point
-- current stage
-- blockers
-- next action
-- source-of-truth boundaries
-- read-first references
-- do-not-touch boundaries
+- short plain-text LLM entry point;
+- current stage;
+- blockers;
+- next action;
+- source-of-truth boundaries;
+- read-first references;
+- do-not-touch boundaries.
 
 ### Replace
 
-- plugin queries are optional derived views below canonical prose
-- quick-action buttons are deferred
-- hard-coded absolute local paths are not canonical
-- command-center metadata must follow the accepted field registry
+- plugin queries are optional derived views below canonical prose;
+- quick-action buttons are deferred;
+- hard-coded absolute local paths are not canonical identity;
+- command-center metadata follows the accepted field registry.
 
 ## Template changes
 
 Do not port baseline Templater syntax into v0.2.
 
-First define static Markdown contracts for the nine note types. Later templates may generate those contracts, but template execution is not part of canonical meaning.
+Static Markdown contracts for the nine note types are canonical. Later templates may generate those contracts, but template execution is not part of canonical meaning.
 
-## Build-order changes
+## Evidence-backed build order
 
-Recommended v0.2 planning order:
-
-1. Import and preserve the baseline.
+1. Preserve the baseline as historical source material.
 2. Accept foundation decisions and registries.
-3. Resolve remaining v0.2 design choices.
-4. Complete document-contract research for claims, decisions, specs, audits, and task packets.
-5. Draft and audit the complete v0.2 standard.
-6. Build static validation and ID tooling.
-7. Create canonical and staging roots.
-8. Run one full project pipeline manually.
-9. Add human convenience plugins only after measured friction.
-10. Consider constrained Hermes writes only after boundary tests pass.
+3. Build and hammer deterministic ID, parsing, validation, staging, promotion, and amendment tools.
+4. Create canonical and staging roots with clean Git boundaries.
+5. Run one complete governed project pipeline.
+6. Return implementation evidence through governed amendments.
+7. Retrospect and consolidate the standard from observed evidence.
+8. Improve operator ergonomics before adding new intelligence infrastructure.
+9. Add plugins, databases, retrieval, providers, and live agent integrations only after a concrete workload earns them.
 
-## Remaining research dependency
+## Research and implementation evidence status
 
-One major research pass still matters before finalizing v0.2 document contracts:
+Document-contract research and one complete governed implementation loop are complete.
 
-- claim/evidence records
-- decision records
-- implementation specs
-- audit and review gates
-- task packets and coding-agent handoffs
-- objective acceptance criteria
+No broad new research pass is required before drafting v0.2. Targeted research remains appropriate for:
 
-This can be completed tomorrow with Claude and independently reviewed by GPT.
+- durable actor identity and authentication;
+- backup and remote policy;
+- future operational databases;
+- Qdrant retrieval behavior;
+- provider and source-rights constraints;
+- live agent integration.
 
 ## Remaining design decisions
 
-The following can mostly be resolved without deep research:
+- durable human actor identity and authentication;
+- amendment and recovery event terminology and compatibility rules;
+- spec maturity labels after implementation;
+- backup and remote checkpoint policy;
+- connector mutation versus local operator expectations;
+- private/raw-data threshold calibration;
+- whether `operate` earns a future pipeline stage;
+- future Qdrant treatment of current-state notes.
 
-- final pipeline stage enum
-- exact folder placement
-- portable root/path convention
-- promotion JSONL event schema
-- ULID command and prefix registry
-- plugin install/defer policy
-- `.obsidian` Git policy
-- source URL retention rule
-- initial raw-data and private-data validation posture
-- future Qdrant treatment of current-state notes
+## Milestone 4 evidence reconciliation
+
+The following directions are now proven:
+
+- six-stage pipeline enum;
+- nine note types;
+- exact canonical folder placement;
+- sibling staging;
+- append-only promotion and amendment events;
+- immutable plan, validation, candidate, diff, and approval evidence;
+- separate human plan and execution gates;
+- governed task-packet completion and current-state amendments;
+- no plugin, database, retrieval layer, or live agent integration required for canonical operation.
+
+Remaining gaps are recorded in Result 063 and must be reconciled without rewriting historical event evidence or mass-editing canonical notes.
+
+## Compatibility rules
+
+1. Preserve existing canonical IDs and operation IDs.
+2. Preserve historical JSONL lines exactly.
+3. Extend schemas backward-compatibly.
+4. Keep first-time promotion behavior unchanged.
+5. Do not mass-rewrite canonical notes for formatting only.
+6. Preserve the current vault and sibling staging layout.
+7. Keep the vault without a remote until the owner makes a separate decision.
+8. Preserve the imported baseline in Git history after v0.2 acceptance.
 
 ## Related files
 
 - `01-project-standard/kaizen-project-standard.md`
 - `01-project-standard/standard-revision-plan.md`
+- `03-research-results/063-milestone-5-first-slice-retrospective.md`
 - `04-design-decisions/0001-two-zone-agent-write-model.md`
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `04-design-decisions/0008-v0.2-operating-conventions.md`
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
 - `05-specs/kaizen-field-registry.md`
 - `05-specs/kaizen-note-type-registry.md`
