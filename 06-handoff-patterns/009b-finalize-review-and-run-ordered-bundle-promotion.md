@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Finalize the staged audit verdict and govern ordered promotion of the six-note Milestone 4 planning bundle through explicit plan-hash gates.
 created: 2026-06-08T22:28:09Z
-updated: 2026-06-09T12:39:03Z
+updated: 2026-06-09T12:43:55Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-and-promotion-workflow.md
@@ -17,7 +17,7 @@ related_specs:
 
 # Task Packet 009B - Finalize Review and Run Ordered Bundle Promotion
 
-> Wave 4 status: immutable spec plan `83ab69dea044248f8e548662ee6772b7aa3c8817a487bc7358d64fee626628e2` is security-audited pass in Result 051. Wave 4 execution awaits exact owner approval; Wave 5 planning and Waves 5 through 6 execution remain prohibited.
+> Wave 4 status: complete at vault commit `46e96a0053bed759059eacb780fb37e895728bad`; Result 052 passed. Wave 5 audit plan generation awaits explicit owner approval; Wave 5 execution and Wave 6 remain prohibited.
 
 ## Objective
 
@@ -219,4 +219,4 @@ Wave 1 source-summary promotion completed at vault commit `999ccb065409e57a9420b
 
 Wave 2 claim promotion completed at vault commit `665d2a1155ead2c49ac9b024dfbc9f4ec464f557` and passed Result 048. The canonical claim SHA-256 is `7729c7935573262c97d90cd7487a1505f2d35736b3b935df17740ab7507ac539`; exactly one `intent` and one `committed` event exist.
 
-Wave 3 decision promotion completed at vault commit `8a64d86736da785eee5be051dc392e9c2f847202` and passed Result 050. The canonical decision SHA-256 is `4c230de54ab81e67aa76114c9305c212e5714bac360ff7e8a9df740b2ed5b3d2`; exactly one `intent` and one `committed` event exist. Wave 4 spec plan generation completed for operation `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP93`. The immutable plan payload SHA-256 is `83ab69dea044248f8e548662ee6772b7aa3c8817a487bc7358d64fee626628e2`, and Result 051 passed. Execution remains prohibited until exact owner approval; Wave 5 planning and Waves 5 through 6 execution remain prohibited.
+Wave 3 decision promotion completed at vault commit `8a64d86736da785eee5be051dc392e9c2f847202` and passed Result 050. The canonical decision SHA-256 is `4c230de54ab81e67aa76114c9305c212e5714bac360ff7e8a9df740b2ed5b3d2`; exactly one `intent` and one `committed` event exist. Wave 4 spec promotion completed at vault commit `46e96a0053bed759059eacb780fb37e895728bad` and passed Result 052. The canonical spec SHA-256 is `1fbf0e994f23320d15c72dba9f25018ff1dc33c21be54ba40c89e4398aae56b8`; exactly one `intent` and one `committed` event exist. Wave 5 audit plan generation is the next gate and requires explicit owner approval for operation `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP94`. Wave 5 execution and Wave 6 remain prohibited.
