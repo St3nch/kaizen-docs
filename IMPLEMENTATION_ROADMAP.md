@@ -267,12 +267,12 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 5 execution:
+Review and explicitly approve or reject Packet 009B Wave 6 task-packet plan generation:
 
 ```text
-operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP94
-plan: d691eafb0c215e0849bca0e99637b2737bde8177cc4caeb0b70235f671401c61
-review: 03-research-results/053-packet-009b-wave-5-plan-security-audit.md
+operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP95
+staged source: projects/kaizen-platform/handoffs/implement-governed-amendment-support.md
+source sha256: a140e5ceede4c681c3d8fdbaa84f0a3ab5f884ffd734ce0a37309d5e758bbcc3
 ```
 
 Current state:
@@ -291,11 +291,12 @@ Current state:
 12. The Wave 4 canonical spec hash is `1fbf0e994f23320d15c72dba9f25018ff1dc33c21be54ba40c89e4398aae56b8`.
 13. Exactly one `intent` and one `committed` event exist for Wave 4.
 14. The vault is clean and has no remote.
-15. The Wave 5 staged audit and canonical decision/spec dependencies exist at their reserved hashes and IDs.
-16. The immutable Wave 5 plan payload hash is `d691eafb0c215e0849bca0e99637b2737bde8177cc4caeb0b70235f671401c61`.
-17. Validation passed with zero errors and warnings; the candidate transition is `active/pending/none -> active/approved/none`, and `audit_verdict: pass` is preserved.
-18. No approval evidence, canonical destination, event, or vault mutation exists.
-19. Result 053 security-audits Wave 5 execution pass.
-20. Wave 6 planning and execution remain prohibited.
+15. Packet 009B Wave 5 is complete at vault commit `37a4bbd`; Result 054 passed.
+16. The Wave 5 canonical audit hash is `f0a617936fda65afb8060690e85571a441c3bf0b71dc4ffe2281e2a809371dd8`.
+17. Exactly one `intent` and one `committed` event exist for Wave 5.
+18. The vault is clean and has no remote.
+19. The Wave 6 staged task packet exists at SHA-256 `a140e5ceede4c681c3d8fdbaa84f0a3ab5f884ffd734ce0a37309d5e758bbcc3`.
+20. No Wave 6 operation directory exists.
+21. Wave 6 execution remains prohibited.
 
-Do not execute Wave 5 until the owner approval names the exact operation ID and plan hash.
+Do not generate the Wave 6 plan until the owner explicitly approves the named operation ID.
