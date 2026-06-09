@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 010B.1 is complete at platform commit `c56e1cc`; closure audit recorded at `03-research-results/079-packet-010b1-completion-security-steward-audit.md`; Packet 010C remains blocked pending separate revision and audit; no implementation, MCP, console, vault/staging, or remote work is authorized
+- Current phase: Packet 010B.1 is complete at platform commit `c56e1cc`; revised Packet 010C is audited in Result 080 at SHA-256 `fd09d15d0da3fc2c80d643aba47ce18ff77f9afeda9df6cfa4f9d5ed2225333d` and awaits exact owner approval; no implementation, MCP, console, vault/staging, remote, or Packet 010D through 010F work is authorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -178,6 +178,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 113. `06-handoff-patterns/010b1-implement-constrained-amendment-candidate-preparation.md` - complete at platform commit `c56e1cc`
 114. `03-research-results/078-packet-010b1-option-a-authorization-and-security-steward-audit.md` - Option A authorization and Packet 010B.1 pre-implementation audit
 115. `03-research-results/079-packet-010b1-completion-security-steward-audit.md` - Packet 010B.1 completion and security audit
+116. `03-research-results/080-packet-010c-revised-security-steward-audit.md` - revised Packet 010C security and steward audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
