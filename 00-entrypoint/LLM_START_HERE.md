@@ -26,14 +26,14 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 010B is complete in Result 076 at platform commit `1d3dabf`; Packet 010C is not drafted or approved; mutation-capable MCP, console, vault, and staging work remain unauthorized
+- Current phase: Packet 010B.1 is complete at platform commit `c56e1cc`; closure audit recorded at `03-research-results/079-packet-010b1-completion-security-steward-audit.md`; Packet 010C remains blocked pending separate revision and audit; no implementation, MCP, console, vault/staging, or remote work is authorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 - Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e5e4eec`; task-packet completion report and current-state return amendments are complete; no remote exists and no push is authorized
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
-- Platform repository: exists at `C:\dev\kaizen\platform`, commit `845d65f`; governed amendment support passes 230 full-suite tests and Result 057; no remote exists
+- Platform repository: exists at `C:\dev\kaizen\platform`, commit `c56e1cc`; Packet 010B.1 completed with 267 passing tests (15 new, no regression from the 252 baseline); no remote exists
 - Task Packet 005: complete and audited pass-with-notes
 - Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
 - Task Packet 006A: complete at platform commit `26271ce`; steward-audited in Result 028
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestones 4 and 5, Packet 010A, and Packet 010B: complete; Decision 0014 and the operator-surface specification are accepted; Packet 010C has not started
+- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, and Packet 010B.1: complete; Packet 010C remains blocked pending separate revision and audit
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -172,7 +172,12 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 107. `06-handoff-patterns/010b-implement-read-only-operation-status-and-evidence-integrity.md` - proposed read-only Packet 010B
 108. `03-research-results/074-packet-010b-security-steward-audit.md` - Packet 010B security and steward audit
 109. `03-research-results/075-packet-010b-owner-approval.md` - exact Packet 010B read-only implementation approval
-110. `03-research-results/076-packet-010b-completion-security-steward-audit.md` - Packet 010B implementation completion and security audit
+110. `03-research-results/076-packet-010b-completion-security-steward-audit.md` - Packet 010B completion and security audit
+111. `06-handoff-patterns/010c-implement-amendment-native-mcp-adapters.md` - blocked Packet 010C MCP adapter draft
+112. `03-research-results/077-packet-010c-prerequisite-gap-and-security-steward-audit.md` - Packet 010C prerequisite-gap audit
+113. `06-handoff-patterns/010b1-implement-constrained-amendment-candidate-preparation.md` - complete at platform commit `c56e1cc`
+114. `03-research-results/078-packet-010b1-option-a-authorization-and-security-steward-audit.md` - Option A authorization and Packet 010B.1 pre-implementation audit
+115. `03-research-results/079-packet-010b1-completion-security-steward-audit.md` - Packet 010B.1 completion and security audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
