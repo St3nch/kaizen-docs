@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: immutable live amendment plan for the canonical task-packet completion report is ready and security-audited pass in Result 058; exact owner execution approval is required
+- Current phase: task-packet completion-report amendment complete at vault commit `9c5dcdb` and steward-audited pass in Result 059; `current-state.md` amendment plan generation awaits separate owner approval
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `a306b2c`; Packet 009B all six waves are complete; no remote exists and no push is authorized
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `9c5dcdb`; task-packet completion report is amended; no remote exists and no push is authorized
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `845d65f`; governed amendment support passes 230 full-suite tests and Result 057; no remote exists
 - Task Packet 005: complete and audited pass-with-notes
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: complete; governed amendment implementation complete at `845d65f`; Result 057 passed; completion-report amendment plan `50f4d067...a7463` is ready and Result 058 passed; `current-state.md` planning remains prohibited
+- Task Packet 009B: complete; governed amendment implementation complete at `845d65f`; completion-report amendment complete at vault `9c5dcdb`; Result 059 passed; `current-state.md` plan generation awaits separate owner approval
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -147,6 +147,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 83. `03-research-results/056-packet-009b-wave-6-completion-steward-audit.md` - Wave 6 completion and Packet 009B closure audit
 84. `03-research-results/057-governed-amendment-implementation-security-steward-audit.md` - governed amendment implementation security and steward audit
 85. `03-research-results/058-task-packet-completion-amendment-plan-security-audit.md` - task-packet completion amendment plan security audit
+86. `03-research-results/059-task-packet-completion-amendment-steward-audit.md` - task-packet completion amendment steward audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

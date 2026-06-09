@@ -30,10 +30,10 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: exact owner approval to execute task-packet completion amendment operation `kz-prom-01KTP9CTDRDG6KH8R2GRNNHHN7` with plan `50f4d0676cf45d4f08cb0f6c1eb1b70a5b1ba0946120b0a2919e3233e97a7463`; `current-state.md` planning remains prohibited
+- Current gate: separate owner approval to prepare and generate the `current-state.md` amendment plan using reserved operation `kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK`; execution remains prohibited
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
-- Canonical vault: exists at `C:\dev\kaizen\vault`; Packet 009B all six waves are complete at vault `a306b2c`; the vault is clean and has no remote
+- Canonical vault: exists at `C:\dev\kaizen\vault`; completion-report amendment is complete at vault `9c5dcdb`; the vault is clean and has no remote
 - Platform implementation repository: exists at `C:\dev\kaizen\platform`
 - Live staging root: exists at `C:\dev\kaizen\staging`
 - Active execution roadmap: `IMPLEMENTATION_ROADMAP.md`

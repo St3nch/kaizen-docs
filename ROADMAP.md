@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: task-packet completion-report amendment execution owner gate active
-Current objective: execute the reviewed task-packet completion-report amendment only after exact owner approval
-Current implementation status: Milestone 3 complete; Packet 009A and Packet 009B complete; governed amendment implementation complete at platform `845d65f`; task-packet completion amendment plan ready with Result 058 pass; no live amendment executed
+Current phase: task-packet completion-report amendment complete; current-state amendment plan-generation owner gate active
+Current objective: generate the immutable current-state amendment plan only after separate owner approval
+Current implementation status: governed amendment implementation complete at platform `845d65f`; task-packet completion amendment complete at vault `9c5dcdb` with Result 059 pass; current-state amendment and Milestone 4 closure remain incomplete
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```

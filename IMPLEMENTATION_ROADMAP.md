@@ -267,16 +267,15 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject the first live amendment execution:
+Review and explicitly approve or reject `current-state.md` amendment candidate preparation and plan generation:
 
 ```text
-operation: kz-prom-01KTP9CTDRDG6KH8R2GRNNHHN7
-plan: 50f4d0676cf45d4f08cb0f6c1eb1b70a5b1ba0946120b0a2919e3233e97a7463
-destination: projects/kaizen-platform/handoffs/implement-governed-amendment-support.md
-review: 03-research-results/058-task-packet-completion-amendment-plan-security-audit.md
+operation: kz-prom-01KTP9Y3Q9KMFVPWVXHS7SQQGK
+destination: projects/kaizen-platform/current-state.md
+current sha256: b4de71f355fcd463d6bdb9173061d070c6289bbdba88cdad2d3403c3be1436a6
 ```
 
-Execution and all `current-state.md` amendment planning remain prohibited until exact owner approval.
+This approval would authorize staging-only candidate preparation and immutable plan generation. Execution remains separately prohibited.
 
 Current state:
 
@@ -305,9 +304,11 @@ Current state:
 23. The vault is clean and has no remote.
 24. Governed amendment implementation is complete at platform commit `845d65f356bd684c2f858f36aef54d0344791e43`; Result 057 passed.
 25. The full platform suite passes 230 tests, including focused amendment, recovery, contention, CLI, and first-time promotion regression coverage.
-26. Completion-report amendment operation `kz-prom-01KTP9CTDRDG6KH8R2GRNNHHN7` is planned at hash `50f4d0676cf45d4f08cb0f6c1eb1b70a5b1ba0946120b0a2919e3233e97a7463`; Result 058 passed.
-27. Approval evidence is absent, event count is zero, and canonical bytes remain unchanged at SHA-256 `f42549c6f4805c9d4da3cfe558c23596ec48fd159ddb9c2bcec84e5541a6380d`.
-28. The vault remains clean at `a306b2c` and has no remote.
-29. `current-state.md` amendment planning remains prohibited until this amendment is committed locally and the vault is clean.
+26. Completion-report amendment operation `kz-prom-01KTP9CTDRDG6KH8R2GRNNHHN7` completed at vault commit `9c5dcdb`; Result 059 passed.
+27. The amended task-packet SHA-256 is `4e8c6081b1cfa6442f4c777abdf4eb4b1e883e0e1e1eb5d3f4b8838be971ce84`.
+28. Exactly one `intent` and one `committed` event exist for the amendment.
+29. The vault is clean and has no remote.
+30. `current-state.md` remains unchanged at SHA-256 `b4de71f355fcd463d6bdb9173061d070c6289bbdba88cdad2d3403c3be1436a6`.
+31. No `current-state.md` amendment operation exists yet.
 
-Do not execute the completion-report amendment until the owner approval names the exact operation ID and plan hash.
+Do not prepare or generate the `current-state.md` amendment plan until the owner explicitly approves the reserved operation ID.
