@@ -76,5 +76,6 @@ Do not copy a research result directly into the Kaizen Project Standard. First p
 - `064-v0.2-draft-contradiction-audit.md`
 - `065-decision-0013-security-steward-audit.md`
 - `066-v0.2-post-reconciliation-acceptance-readiness-audit.md`
+- `067-kaizen-project-standard-v0.2-acceptance-and-milestone-5-closure-audit.md`
 
 Where a raw external report cannot be copied into the repository environment, preserve a faithful stewarded evidence summary and record the source and limitation explicitly.

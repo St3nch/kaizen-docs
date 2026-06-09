@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Decision 0013 accepted; first-slice specifications reconciled; Result 066 passed; Kaizen Project Standard v0.2 candidate awaits explicit owner acceptance
+- Current phase: Kaizen Project Standard v0.2 accepted and authoritative; Milestone 5 complete in Result 067; next-roadmap selection awaits explicit owner authorization
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B and Milestone 4: complete; Milestone 5 retrospective and contract reconciliation are complete; Result 066 passes the v0.2 candidate for owner acceptance
+- Task Packet 009B, Milestone 4, and Milestone 5: complete; Kaizen Project Standard v0.2 is authoritative; no next implementation milestone has started
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -157,6 +157,8 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 92. `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md` - proposed v0.2 reconciliation decision
 93. `03-research-results/065-decision-0013-security-steward-audit.md` - Decision 0013 security and steward audit
 94. `03-research-results/066-v0.2-post-reconciliation-acceptance-readiness-audit.md` - v0.2 post-reconciliation acceptance-readiness audit
+95. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
+96. `03-research-results/067-kaizen-project-standard-v0.2-acceptance-and-milestone-5-closure-audit.md` - v0.2 acceptance and Milestone 5 closure audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

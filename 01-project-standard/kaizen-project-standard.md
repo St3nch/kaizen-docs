@@ -1,3 +1,5 @@
+> **Historical baseline notice — superseded:** This v0.1-era standard is preserved as source material and audit history. The authoritative standard is `01-project-standard/kaizen-project-standard-v0.2.md`, accepted on 2026-06-09. Accepted decisions, specifications, and verified implementation evidence override conflicting details below.
+
 # Kaizen Project Standard
 
 **Vault:** Kaizen  

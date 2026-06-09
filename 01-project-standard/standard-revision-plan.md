@@ -1,6 +1,6 @@
 # Kaizen Project Standard Revision Plan
 
-Status: v0.2 owner-acceptance gate active
+Status: complete; v0.2 accepted and authoritative
 Date: 2026-06-09
 
 ## Purpose

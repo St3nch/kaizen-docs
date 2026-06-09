@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Decision 0013 and supporting spec reconciliation are complete; accept or reject the Kaizen Project Standard v0.2 candidate at SHA-256 `e5749b3a228dc2aaaed634395ed81edd0626511d30ce44ea6f6a4f80684fc95e`; no next implementation milestone is authorized
+- Current gate: Kaizen Project Standard v0.2 is authoritative and Milestone 5 is complete; select and authorize the next roadmap milestone family; no implementation is authorized yet
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
