@@ -267,12 +267,12 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 3 execution:
+Review and explicitly approve or reject Packet 009B Wave 4 spec plan generation:
 
 ```text
-operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP92
-plan: aa3c73e78651d95b925f5ed5bcbae433b4793dd8ca603a090327e4a073b51ccd
-review: 03-research-results/049-packet-009b-wave-3-plan-security-audit.md
+operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP93
+staged source: projects/kaizen-platform/specs/governed-amendment-support.md
+source sha256: d2886674d06b13a41e0c2c279ad935f8c63d0d304de73d8040ef719146ce9c15
 ```
 
 Current state:
@@ -283,11 +283,12 @@ Current state:
 4. The Wave 2 canonical claim hash is `7729c7935573262c97d90cd7487a1505f2d35736b3b935df17740ab7507ac539`.
 5. Exactly one `intent` and one `committed` event exist for Wave 2.
 6. The vault is clean and has no remote.
-7. The Wave 3 staged decision and both canonical dependencies exist with the reserved hashes and IDs.
-8. The immutable Wave 3 plan payload hash is `aa3c73e78651d95b925f5ed5bcbae433b4793dd8ca603a090327e4a073b51ccd`.
-9. Validation passed with zero errors and warnings; the candidate transition is `active/pending/proposed -> active/approved/accepted`.
-10. No approval evidence, canonical destination, event, or vault mutation exists.
-11. Result 049 security-audits Wave 3 execution pass.
-12. Wave 4 planning and Waves 4 through 6 execution remain prohibited.
+7. Packet 009B Wave 3 is complete at vault commit `8a64d86`; Result 050 passed.
+8. The Wave 3 canonical decision hash is `4c230de54ab81e67aa76114c9305c212e5714bac360ff7e8a9df740b2ed5b3d2`.
+9. Exactly one `intent` and one `committed` event exist for Wave 3.
+10. The vault is clean and has no remote.
+11. The Wave 4 staged spec exists at the reserved source hash.
+12. No Wave 4 operation directory exists.
+13. Wave 4 execution and Waves 5 through 6 remain prohibited.
 
-Do not execute Wave 3 until the owner approval names the exact operation ID and plan hash.
+Do not generate the Wave 4 plan until the owner explicitly approves the named operation ID.
