@@ -267,12 +267,12 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 6 task-packet plan generation:
+Review and explicitly approve or reject Packet 009B Wave 6 execution:
 
 ```text
 operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP95
-staged source: projects/kaizen-platform/handoffs/implement-governed-amendment-support.md
-source sha256: a140e5ceede4c681c3d8fdbaa84f0a3ab5f884ffd734ce0a37309d5e758bbcc3
+plan: 34e92cf3de4ac2f3de839f647b7c2b6ad0db0a5e62cadd0b69102dd87dfaec9c
+review: 03-research-results/055-packet-009b-wave-6-plan-security-audit.md
 ```
 
 Current state:
@@ -295,8 +295,11 @@ Current state:
 16. The Wave 5 canonical audit hash is `f0a617936fda65afb8060690e85571a441c3bf0b71dc4ffe2281e2a809371dd8`.
 17. Exactly one `intent` and one `committed` event exist for Wave 5.
 18. The vault is clean and has no remote.
-19. The Wave 6 staged task packet exists at SHA-256 `a140e5ceede4c681c3d8fdbaa84f0a3ab5f884ffd734ce0a37309d5e758bbcc3`.
-20. No Wave 6 operation directory exists.
-21. Wave 6 execution remains prohibited.
+19. The Wave 6 staged task packet and canonical decision/spec/audit dependencies exist at their reserved hashes and IDs.
+20. The immutable Wave 6 plan payload hash is `34e92cf3de4ac2f3de839f647b7c2b6ad0db0a5e62cadd0b69102dd87dfaec9c`.
+21. Validation passed with zero errors and warnings; the candidate transition is `active/pending/proposed -> active/approved/accepted`.
+22. No approval evidence, canonical destination, event, or vault mutation exists.
+23. Result 055 security-audits Wave 6 execution pass.
+24. Amendment implementation remains prohibited until Packet 009B completes and the canonical task packet is separately executed.
 
-Do not generate the Wave 6 plan until the owner explicitly approves the named operation ID.
+Do not execute Wave 6 until the owner approval names the exact operation ID and plan hash.
