@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Finalize the staged audit verdict and govern ordered promotion of the six-note Milestone 4 planning bundle through explicit plan-hash gates.
 created: 2026-06-08T22:28:09Z
-updated: 2026-06-09T13:00:28Z
+updated: 2026-06-09T13:31:57Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-and-promotion-workflow.md
@@ -17,7 +17,7 @@ related_specs:
 
 # Task Packet 009B - Finalize Review and Run Ordered Bundle Promotion
 
-> Packet 009B status: complete at vault commit `a306b2c077ef5aa0fcb9c7d39e155914c936ef39`; all six ordered waves are canonical and Result 056 passed. Governed amendment implementation has not started and requires separate owner instruction.
+> Packet 009B status: complete at vault commit `a306b2c077ef5aa0fcb9c7d39e155914c936ef39`; all six ordered waves are canonical and Result 056 passed. Governed amendment implementation is complete at platform commit `845d65f356bd684c2f858f36aef54d0344791e43` and Result 057 passed. No live amendment is authorized.
 
 ## Objective
 
@@ -219,4 +219,4 @@ Wave 1 source-summary promotion completed at vault commit `999ccb065409e57a9420b
 
 Wave 2 claim promotion completed at vault commit `665d2a1155ead2c49ac9b024dfbc9f4ec464f557` and passed Result 048. The canonical claim SHA-256 is `7729c7935573262c97d90cd7487a1505f2d35736b3b935df17740ab7507ac539`; exactly one `intent` and one `committed` event exist.
 
-Wave 3 decision promotion completed at vault commit `8a64d86736da785eee5be051dc392e9c2f847202` and passed Result 050. Wave 4 spec promotion completed at vault commit `46e96a0053bed759059eacb780fb37e895728bad` and passed Result 052. Wave 5 audit promotion completed at vault commit `37a4bbdb9938c526a61889b001a411b97c232b81` and passed Result 054. Wave 6 task-packet promotion completed at vault commit `a306b2c077ef5aa0fcb9c7d39e155914c936ef39` and passed Result 056. All six ordered Packet 009B notes are canonical. Packet 009B is complete; governed amendment implementation remains a separate, not-yet-started task.
+Wave 3 decision promotion completed at vault commit `8a64d86736da785eee5be051dc392e9c2f847202` and passed Result 050. Wave 4 spec promotion completed at vault commit `46e96a0053bed759059eacb780fb37e895728bad` and passed Result 052. Wave 5 audit promotion completed at vault commit `37a4bbdb9938c526a61889b001a411b97c232b81` and passed Result 054. Wave 6 task-packet promotion completed at vault commit `a306b2c077ef5aa0fcb9c7d39e155914c936ef39` and passed Result 056. All six ordered Packet 009B notes are canonical. Governed amendment implementation completed at platform commit `845d65f356bd684c2f858f36aef54d0344791e43` and passed Result 057. The live amendment return leg remains separately owner-gated.

@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 009B complete; governed amendment implementation not started
-Current objective: await separate owner instruction to execute the canonical governed amendment implementation task packet
-Current implementation status: Milestone 3 complete; Packet 009A complete; Packet 009B complete at vault `a306b2c` with Result 056 pass; amendment implementation remains incomplete
+Current phase: governed amendment implementation complete; live amendment return-leg planning not started
+Current objective: prepare the first separately approved live amendment plan for the canonical task-packet completion report
+Current implementation status: Milestone 3 complete; Packet 009A and Packet 009B complete; governed amendment implementation complete at platform `845d65f` with Result 057 pass; live amendment return leg and Milestone 4 closure remain incomplete
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```

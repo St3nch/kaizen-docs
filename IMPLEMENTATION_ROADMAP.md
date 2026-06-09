@@ -267,13 +267,13 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Await separate owner instruction to execute the canonical governed amendment implementation task packet:
+Prepare and separately approve the first live amendment plan for the canonical task-packet completion report:
 
 ```text
 projects/kaizen-platform/handoffs/implement-governed-amendment-support.md
 ```
 
-Packet 009B promotion is complete. No live amendment is authorized.
+Governed amendment implementation is complete at platform commit `845d65f`; Result 057 passed. No live amendment is authorized.
 
 Current state:
 
@@ -300,6 +300,10 @@ Current state:
 21. Exactly one `intent` and one `committed` event exist for Wave 6.
 22. All six ordered Packet 009B notes are canonical.
 23. The vault is clean and has no remote.
-24. Governed amendment implementation and all live amendment execution remain prohibited until separately authorized.
+24. Governed amendment implementation is complete at platform commit `845d65f356bd684c2f858f36aef54d0344791e43`; Result 057 passed.
+25. The full platform suite passes 230 tests, including focused amendment, recovery, contention, CLI, and first-time promotion regression coverage.
+26. No live amendment operation has been planned or executed.
+27. The vault remains clean at `a306b2c` and has no remote.
+28. The next return-leg order is mandatory: amend the canonical task-packet completion report first, commit locally, verify clean vault, then plan the `current-state.md` amendment.
 
-Packet 009B is complete. Do not infer authorization to implement or amend from promotion completion.
+Packet 009B and amendment implementation are complete. Do not infer authorization for a live amendment; each live plan and execution remains separately owner-gated.
