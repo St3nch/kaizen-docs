@@ -23,20 +23,21 @@ This repository is separate from both the running platform code and the canonica
 LLMs and humans should begin with:
 
 1. [`00-entrypoint/LLM_START_HERE.md`](00-entrypoint/LLM_START_HERE.md)
-2. [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md)
-3. [`ROADMAP.md`](ROADMAP.md) for historical planning provenance and the current planning gate
+2. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - proposed and audited; not yet accepted
+3. [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md) - completed historical v0.1 first-slice roadmap
+4. [`ROADMAP.md`](ROADMAP.md) for historical planning provenance and the current planning gate
 
 The entrypoint defines the authority hierarchy, current project posture, and task-dependent reading guidance.
 
 ## Current status
 
-- Current gate: Kaizen Project Standard v0.2 is authoritative and Milestone 5 is complete; select and authorize the next roadmap milestone family; no implementation is authorized yet
+- Current gate: proposed Implementation Roadmap v0.2 and formal Milestone 6 are audited in Result 068 and await exact owner acceptance; no implementation is authorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
 - Platform implementation repository: exists at `C:\dev\kaizen\platform`
 - Live staging root: exists at `C:\dev\kaizen\staging`
-- Active execution roadmap: `IMPLEMENTATION_ROADMAP.md`
+- Proposed next execution roadmap: `IMPLEMENTATION_ROADMAP_V0.2.md`; historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Historical planning roadmap: `ROADMAP.md`
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant retrieval layer: not implemented

@@ -26,9 +26,9 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Kaizen Project Standard v0.2 accepted and authoritative; Milestone 5 complete in Result 067; next-roadmap selection awaits explicit owner authorization
+- Current phase: Kaizen Project Standard v0.2 accepted and authoritative; Milestone 5 complete in Result 067; proposed Implementation Roadmap v0.2 and formal Milestone 6 await exact owner acceptance; implementation is not authorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
-- Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
+- Proposed next implementation roadmap: `IMPLEMENTATION_ROADMAP_V0.2.md` (audited in Result 068; not accepted); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 - Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e5e4eec`; task-packet completion report and current-state return amendments are complete; no remote exists and no push is authorized
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestone 4, and Milestone 5: complete; Kaizen Project Standard v0.2 is authoritative; no next implementation milestone has started
+- Task Packet 009B, Milestone 4, and Milestone 5: complete; Kaizen Project Standard v0.2 is authoritative; Milestone 6 is formally defined only as an audited proposal and has not started
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -61,7 +61,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Read-first sequence
 
-This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and `IMPLEMENTATION_ROADMAP.md`; then read only the decisions, specs, audits, and task packets relevant to the requested work unless the user explicitly requests a full-repository audit.
+This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint, the proposed `IMPLEMENTATION_ROADMAP_V0.2.md`, and the historical `IMPLEMENTATION_ROADMAP.md`; then read only the decisions, specs, audits, and task packets relevant to the requested work unless the user explicitly requests a full-repository audit.
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file
 2. `01-project-standard/kaizen-vision-and-architecture-alignment.md` - central intended system vision and missing capability alignment
@@ -82,83 +82,85 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - accepted; dedicated boundary and pre-schema design gate
 18. `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed; architecture direction only
 19. `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md` - accepted; first-slice code and repository boundary
-20. `IMPLEMENTATION_ROADMAP.md` - active first-slice implementation roadmap
-21. `05-specs/kaizen-field-registry.md`
-22. `05-specs/kaizen-note-type-registry.md`
-23. `05-specs/kaizen-id-and-prefix-registry.md`
-24. `05-specs/staging-and-promotion-workflow.md`
-25. `05-specs/promotion-event-schema.md`
-26. `05-specs/kaizen-validation-gate-spec.md`
-27. `05-specs/operational-postgres-authority.md`
-28. `05-specs/kaizen-hammer-test-strategy.md`
-29. `07-hermes/hermes-permission-matrix.md`
-30. `07-hermes/hermes-write-access-preconditions.md`
-31. `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
-32. `03-research-results/014-human-interface-technical-verification-and-amendment.md`
-33. `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
-34. `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` - deferred; execution not authorized
-35. `03-research-results/016-kaizen-planning-acceleration-audit.md`
-36. `03-research-results/017-decision-0008-end-to-end-dry-run-simulation.md`
-37. `03-research-results/018-milestone-1-tools-foundation-steward-audit.md`
-38. `03-research-results/019-deterministic-note-validation-steward-audit.md`
-39. `03-research-results/020-canonical-vault-bootstrap-steward-audit.md`
-40. `03-research-results/021-staging-path-confinement-steward-audit.md`
-41. `03-research-results/022-create-only-staging-write-wrapper-packet-audit.md`
-42. `03-research-results/023-create-only-staging-write-wrapper-steward-audit.md`
-43. `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
-44. `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-45. `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`
-46. `06-handoff-patterns/006-implement-human-operated-canonical-promotion.md` - retired combined draft; do not approve
-47. `06-handoff-patterns/006a-prove-windows-first-time-atomic-install.md` - complete; Result 028
-48. `06-handoff-patterns/006b-implement-human-operated-first-promotion.md` - complete at platform commit `703d532`; Result 031 pass-with-documented-limitations
-49. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
-50. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
-51. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
-52. `03-research-results/006-document-contract-standards-reconciliation.md`
-53. Other files in `03-research-results/` for supporting evidence
-54. `06-handoff-patterns/007-bootstrap-live-promotion-governance.md` - complete at vault commit `248b26a`
-55. `03-research-results/032-packet-007-security-audit.md` - Packet 007 security audit
-56. `03-research-results/033-packet-007-completion-steward-audit.md` - Packet 007 completion audit
-57. `06-handoff-patterns/008a-implement-owner-controlled-live-promotion-operator.md` - security-audited pass; awaiting explicit owner approval
-58. `03-research-results/034-packet-008a-security-audit.md` - Packet 008A security audit
-59. `03-research-results/035-packet-008a-completion-steward-audit.md` - Packet 008A completion audit
-60. `06-handoff-patterns/008b-first-real-promotion-two-gate-execution.md` - Gate A security-audited pass; Gate B prohibited
-61. `03-research-results/036-packet-008b-gate-a-security-audit.md` - Packet 008B Gate A security audit
-62. `03-research-results/037-packet-008b-gate-a-command-correction-audit.md` - Gate A command correction and zero-side-effect audit
-63. `03-research-results/038-packet-008b-gate-a-docs-binding-correction-audit.md` - Gate A docs-binding correction audit
-64. `03-research-results/039-packet-008b-gate-a-evidence-and-gate-b-security-audit.md` - Gate A evidence and Gate B security audit
-65. `03-research-results/040-packet-008b-completion-steward-audit.md` - Packet 008B completion audit
-66. `06-handoff-patterns/009a-generate-milestone-4-governed-planning-bundle.md` - staging-only Milestone 4 bundle packet
-67. `03-research-results/041-packet-009a-security-audit.md` - Packet 009A security audit
-68. `03-research-results/042-packet-009a-completion-steward-audit.md` - Packet 009A completion audit
-69. `06-handoff-patterns/009b-finalize-review-and-run-ordered-bundle-promotion.md` - ordered multi-gate bundle promotion packet
-70. `03-research-results/043-packet-009b-security-audit.md` - Packet 009B security audit
-71. `03-research-results/044-packet-009b-lifecycle-activation-correction-audit.md` - lifecycle activation correction audit
-72. `03-research-results/045-packet-009b-wave-1-plan-security-audit.md` - Wave 1 immutable plan audit
-73. `03-research-results/046-packet-009b-wave-1-completion-steward-audit.md` - Wave 1 completion audit
-74. `03-research-results/047-packet-009b-wave-2-plan-security-audit.md` - Wave 2 immutable plan security audit
-75. `03-research-results/048-packet-009b-wave-2-completion-steward-audit.md` - Wave 2 completion steward audit
-76. `03-research-results/049-packet-009b-wave-3-plan-security-audit.md` - Wave 3 immutable plan security audit
-77. `03-research-results/050-packet-009b-wave-3-completion-steward-audit.md` - Wave 3 completion steward audit
-78. `03-research-results/051-packet-009b-wave-4-plan-security-audit.md` - Wave 4 immutable plan security audit
-79. `03-research-results/052-packet-009b-wave-4-completion-steward-audit.md` - Wave 4 completion steward audit
-80. `03-research-results/053-packet-009b-wave-5-plan-security-audit.md` - Wave 5 immutable plan security audit
-81. `03-research-results/054-packet-009b-wave-5-completion-steward-audit.md` - Wave 5 completion steward audit
-82. `03-research-results/055-packet-009b-wave-6-plan-security-audit.md` - Wave 6 immutable plan security audit
-83. `03-research-results/056-packet-009b-wave-6-completion-steward-audit.md` - Wave 6 completion and Packet 009B closure audit
-84. `03-research-results/057-governed-amendment-implementation-security-steward-audit.md` - governed amendment implementation security and steward audit
-85. `03-research-results/058-task-packet-completion-amendment-plan-security-audit.md` - task-packet completion amendment plan security audit
-86. `03-research-results/059-task-packet-completion-amendment-steward-audit.md` - task-packet completion amendment steward audit
-87. `03-research-results/060-current-state-amendment-plan-security-audit.md` - current-state amendment plan security audit
-88. `03-research-results/061-current-state-amendment-completion-steward-audit.md` - current-state amendment completion steward audit
-89. `03-research-results/062-milestone-4-implementation-return-closure-audit.md` - Milestone 4 implementation-return closure audit
-90. `03-research-results/063-milestone-5-first-slice-retrospective.md` - Milestone 5 first-slice retrospective
-91. `03-research-results/064-v0.2-draft-contradiction-audit.md` - v0.2 draft contradiction audit
-92. `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md` - proposed v0.2 reconciliation decision
-93. `03-research-results/065-decision-0013-security-steward-audit.md` - Decision 0013 security and steward audit
-94. `03-research-results/066-v0.2-post-reconciliation-acceptance-readiness-audit.md` - v0.2 post-reconciliation acceptance-readiness audit
-95. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
-96. `03-research-results/067-kaizen-project-standard-v0.2-acceptance-and-milestone-5-closure-audit.md` - v0.2 acceptance and Milestone 5 closure audit
+20. `IMPLEMENTATION_ROADMAP_V0.2.md` - proposed, audited next implementation roadmap; not accepted and no implementation authorized
+21. `IMPLEMENTATION_ROADMAP.md` - completed historical v0.1 first-slice implementation roadmap
+22. `05-specs/kaizen-field-registry.md`
+23. `05-specs/kaizen-note-type-registry.md`
+24. `05-specs/kaizen-id-and-prefix-registry.md`
+25. `05-specs/staging-and-promotion-workflow.md`
+26. `05-specs/promotion-event-schema.md`
+27. `05-specs/kaizen-validation-gate-spec.md`
+28. `05-specs/operational-postgres-authority.md`
+29. `05-specs/kaizen-hammer-test-strategy.md`
+30. `07-hermes/hermes-permission-matrix.md`
+31. `07-hermes/hermes-write-access-preconditions.md`
+32. `03-research-results/013-kaizen-human-interface-architecture-claude-summary.md`
+33. `03-research-results/014-human-interface-technical-verification-and-amendment.md`
+34. `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`
+35. `05-specs/deferred-dataforseo-llm-ranking-capture-packet.md` - deferred; execution not authorized
+36. `03-research-results/016-kaizen-planning-acceleration-audit.md`
+37. `03-research-results/017-decision-0008-end-to-end-dry-run-simulation.md`
+38. `03-research-results/018-milestone-1-tools-foundation-steward-audit.md`
+39. `03-research-results/019-deterministic-note-validation-steward-audit.md`
+40. `03-research-results/020-canonical-vault-bootstrap-steward-audit.md`
+41. `03-research-results/021-staging-path-confinement-steward-audit.md`
+42. `03-research-results/022-create-only-staging-write-wrapper-packet-audit.md`
+43. `03-research-results/023-create-only-staging-write-wrapper-steward-audit.md`
+44. `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
+45. `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
+46. `06-handoff-patterns/005-implement-create-only-staging-write-wrapper.md`
+47. `06-handoff-patterns/006-implement-human-operated-canonical-promotion.md` - retired combined draft; do not approve
+48. `06-handoff-patterns/006a-prove-windows-first-time-atomic-install.md` - complete; Result 028
+49. `06-handoff-patterns/006b-implement-human-operated-first-promotion.md` - complete at platform commit `703d532`; Result 031 pass-with-documented-limitations
+50. `06-handoff-patterns/004-implement-staging-root-and-path-confinement-foundations.md`
+51. `06-handoff-patterns/003-bootstrap-canonical-kaizen-vault.md`
+52. `06-handoff-patterns/002-implement-deterministic-note-validation.md`
+53. `03-research-results/006-document-contract-standards-reconciliation.md`
+54. Other files in `03-research-results/` for supporting evidence
+55. `06-handoff-patterns/007-bootstrap-live-promotion-governance.md` - complete at vault commit `248b26a`
+56. `03-research-results/032-packet-007-security-audit.md` - Packet 007 security audit
+57. `03-research-results/033-packet-007-completion-steward-audit.md` - Packet 007 completion audit
+58. `06-handoff-patterns/008a-implement-owner-controlled-live-promotion-operator.md` - security-audited pass; awaiting explicit owner approval
+59. `03-research-results/034-packet-008a-security-audit.md` - Packet 008A security audit
+60. `03-research-results/035-packet-008a-completion-steward-audit.md` - Packet 008A completion audit
+61. `06-handoff-patterns/008b-first-real-promotion-two-gate-execution.md` - Gate A security-audited pass; Gate B prohibited
+62. `03-research-results/036-packet-008b-gate-a-security-audit.md` - Packet 008B Gate A security audit
+63. `03-research-results/037-packet-008b-gate-a-command-correction-audit.md` - Gate A command correction and zero-side-effect audit
+64. `03-research-results/038-packet-008b-gate-a-docs-binding-correction-audit.md` - Gate A docs-binding correction audit
+65. `03-research-results/039-packet-008b-gate-a-evidence-and-gate-b-security-audit.md` - Gate A evidence and Gate B security audit
+66. `03-research-results/040-packet-008b-completion-steward-audit.md` - Packet 008B completion audit
+67. `06-handoff-patterns/009a-generate-milestone-4-governed-planning-bundle.md` - staging-only Milestone 4 bundle packet
+68. `03-research-results/041-packet-009a-security-audit.md` - Packet 009A security audit
+69. `03-research-results/042-packet-009a-completion-steward-audit.md` - Packet 009A completion audit
+70. `06-handoff-patterns/009b-finalize-review-and-run-ordered-bundle-promotion.md` - ordered multi-gate bundle promotion packet
+71. `03-research-results/043-packet-009b-security-audit.md` - Packet 009B security audit
+72. `03-research-results/044-packet-009b-lifecycle-activation-correction-audit.md` - lifecycle activation correction audit
+73. `03-research-results/045-packet-009b-wave-1-plan-security-audit.md` - Wave 1 immutable plan audit
+74. `03-research-results/046-packet-009b-wave-1-completion-steward-audit.md` - Wave 1 completion audit
+75. `03-research-results/047-packet-009b-wave-2-plan-security-audit.md` - Wave 2 immutable plan security audit
+76. `03-research-results/048-packet-009b-wave-2-completion-steward-audit.md` - Wave 2 completion steward audit
+77. `03-research-results/049-packet-009b-wave-3-plan-security-audit.md` - Wave 3 immutable plan security audit
+78. `03-research-results/050-packet-009b-wave-3-completion-steward-audit.md` - Wave 3 completion steward audit
+79. `03-research-results/051-packet-009b-wave-4-plan-security-audit.md` - Wave 4 immutable plan security audit
+80. `03-research-results/052-packet-009b-wave-4-completion-steward-audit.md` - Wave 4 completion steward audit
+81. `03-research-results/053-packet-009b-wave-5-plan-security-audit.md` - Wave 5 immutable plan security audit
+82. `03-research-results/054-packet-009b-wave-5-completion-steward-audit.md` - Wave 5 completion steward audit
+83. `03-research-results/055-packet-009b-wave-6-plan-security-audit.md` - Wave 6 immutable plan security audit
+84. `03-research-results/056-packet-009b-wave-6-completion-steward-audit.md` - Wave 6 completion and Packet 009B closure audit
+85. `03-research-results/057-governed-amendment-implementation-security-steward-audit.md` - governed amendment implementation security and steward audit
+86. `03-research-results/058-task-packet-completion-amendment-plan-security-audit.md` - task-packet completion amendment plan security audit
+87. `03-research-results/059-task-packet-completion-amendment-steward-audit.md` - task-packet completion amendment steward audit
+88. `03-research-results/060-current-state-amendment-plan-security-audit.md` - current-state amendment plan security audit
+89. `03-research-results/061-current-state-amendment-completion-steward-audit.md` - current-state amendment completion steward audit
+90. `03-research-results/062-milestone-4-implementation-return-closure-audit.md` - Milestone 4 implementation-return closure audit
+91. `03-research-results/063-milestone-5-first-slice-retrospective.md` - Milestone 5 first-slice retrospective
+92. `03-research-results/064-v0.2-draft-contradiction-audit.md` - v0.2 draft contradiction audit
+93. `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md` - proposed v0.2 reconciliation decision
+94. `03-research-results/065-decision-0013-security-steward-audit.md` - Decision 0013 security and steward audit
+95. `03-research-results/066-v0.2-post-reconciliation-acceptance-readiness-audit.md` - v0.2 post-reconciliation acceptance-readiness audit
+96. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
+97. `03-research-results/067-kaizen-project-standard-v0.2-acceptance-and-milestone-5-closure-audit.md` - v0.2 acceptance and Milestone 5 closure audit
+98. `03-research-results/068-implementation-roadmap-v0.2-and-milestone-6-security-steward-audit.md` - audited roadmap proposal and formal Milestone 6 definition
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
