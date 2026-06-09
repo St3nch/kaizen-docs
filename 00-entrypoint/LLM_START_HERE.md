@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 010A complete in Result 072; proposed Decision 0014 and the Milestone 6 operator-surface specification await exact owner acceptance; Packet 010B is not drafted or approved; implementation is not authorized
+- Current phase: Decision 0014 and the Milestone 6 operator-surface specification are accepted in Result 073; Packet 010B is drafted and audited in Result 074 and awaits exact owner approval; implementation is not authorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestone 4, and Milestone 5: complete; Milestone 6 planning is authorized; Packet 010A is complete; Decision 0014 and the operator-surface specification remain proposed
+- Task Packet 009B, Milestone 4, and Milestone 5: complete; Packet 010A is complete; Decision 0014 and the operator-surface specification are accepted; Packet 010B remains an audited proposal
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -165,9 +165,12 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 100. `06-handoff-patterns/010a-define-milestone-6-contracts-and-repository-placement.md` - completed documentation-only Packet 010A
 101. `03-research-results/070-packet-010a-security-steward-audit.md` - Packet 010A pre-approval security and steward audit
 102. `03-research-results/071-packet-010a-owner-approval.md` - exact Packet 010A documentation-only approval
-103. `04-design-decisions/0014-milestone-6-governed-operator-surface-boundary.md` - proposed Milestone 6 operator-surface boundary
-104. `05-specs/milestone-6-governed-operator-surface.md` - proposed operation-status, tool, console, and evidence contract
+103. `04-design-decisions/0014-milestone-6-governed-operator-surface-boundary.md` - accepted Milestone 6 operator-surface boundary
+104. `05-specs/milestone-6-governed-operator-surface.md` - accepted operation-status, tool, console, and evidence contract
 105. `03-research-results/072-packet-010a-completion-and-contract-audit.md` - Packet 010A completion and contract audit
+106. `03-research-results/073-decision-0014-and-operator-surface-specification-owner-acceptance.md` - exact Decision 0014 and operator-surface specification acceptance
+107. `06-handoff-patterns/010b-implement-read-only-operation-status-and-evidence-integrity.md` - proposed read-only Packet 010B
+108. `03-research-results/074-packet-010b-security-steward-audit.md` - Packet 010B security and steward audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

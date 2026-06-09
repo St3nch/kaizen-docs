@@ -1,12 +1,12 @@
 ---
 id: kz-spec-01KTPJBRH0RQTCNRVQYTZJPVVG
 type: spec
-status: draft
+status: active
 project: kaizen-platform
 created: 2026-06-09T16:10:17Z
-updated: 2026-06-09T16:10:17Z
-review_status: pending
-authority: proposed
+updated: 2026-06-09T16:29:15Z
+review_status: approved
+authority: accepted
 summary: "Defines the proposed Milestone 6 operation-status contract, typed tool metadata, local console boundary, evidence checks, and follow-on packet contracts."
 ---
 
@@ -16,7 +16,7 @@ summary: "Defines the proposed Milestone 6 operation-status contract, typed tool
 
 Define the smallest client-neutral contract for inspecting and operating one governed amendment without widening Kaizen's accepted mutation model.
 
-This specification is proposed. It does not authorize implementation.
+This specification is accepted as the Milestone 6 contract baseline. It does not authorize implementation without separately approved task packets.
 
 ## Authority and dependencies
 
@@ -24,7 +24,7 @@ This specification is subordinate to:
 
 - Kaizen Project Standard v0.2;
 - accepted Decisions 0012 and 0013;
-- proposed Decision 0014;
+- accepted Decision 0014;
 - existing implemented-baseline validation, staging, promotion, recovery, event, and hammer specifications;
 - the accepted Implementation Roadmap v0.2.
 
@@ -419,7 +419,7 @@ Proposed update after implementation approval:
 
 ## Acceptance criteria
 
-This specification is ready for owner acceptance only when:
+This specification was accepted by the owner at the exact pre-transition SHA-256 recorded in Result 073. Implementation remains gated by these conditions:
 
 - Decision 0014 and this spec are hash-bound and audited;
 - the existing-spec amendment map is verified against current text;

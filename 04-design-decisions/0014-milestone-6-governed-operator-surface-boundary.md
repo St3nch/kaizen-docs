@@ -4,9 +4,9 @@ type: decision
 status: active
 project: kaizen-platform
 created: 2026-06-09T16:10:17Z
-updated: 2026-06-09T16:10:17Z
-review_status: pending
-authority: proposed
+updated: 2026-06-09T16:29:15Z
+review_status: approved
+authority: accepted
 summary: "Proposes the bounded Milestone 6 operator-surface, repository-placement, actor, connector, and backup posture."
 ---
 
@@ -20,7 +20,7 @@ Decision 0011 proposes a progressive hybrid interface direction but does not aut
 
 Milestone 6 therefore needs a smaller decision that applies those accepted principles to the next implementation slice without reopening first-slice contracts.
 
-## Proposed decision
+## Decision
 
 ### 1. Platform owns authoritative enforcement and the minimal console
 
@@ -229,11 +229,11 @@ This decision preserves:
 
 ## Acceptance gate
 
-This decision remains proposed until:
+This decision was accepted by the owner at the exact pre-transition SHA-256 recorded in Result 073. Before implementation begins:
 
 1. its exact SHA-256 is audited;
 2. the operator-surface specification is audited for consistency;
 3. any required amendments to implemented-baseline specs are identified exactly;
-4. the owner explicitly accepts the exact audited decision hash.
+4. every implementation task packet remains separately reviewed and accepted.
 
-No implementation authority is created by this proposal.
+Acceptance establishes the Milestone 6 contract boundary only. No implementation authority is created without a separately approved task packet.
