@@ -267,13 +267,16 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Prepare and separately approve the first live amendment plan for the canonical task-packet completion report:
+Review and explicitly approve or reject the first live amendment execution:
 
 ```text
-projects/kaizen-platform/handoffs/implement-governed-amendment-support.md
+operation: kz-prom-01KTP9CTDRDG6KH8R2GRNNHHN7
+plan: 50f4d0676cf45d4f08cb0f6c1eb1b70a5b1ba0946120b0a2919e3233e97a7463
+destination: projects/kaizen-platform/handoffs/implement-governed-amendment-support.md
+review: 03-research-results/058-task-packet-completion-amendment-plan-security-audit.md
 ```
 
-Governed amendment implementation is complete at platform commit `845d65f`; Result 057 passed. No live amendment is authorized.
+Execution and all `current-state.md` amendment planning remain prohibited until exact owner approval.
 
 Current state:
 
@@ -302,8 +305,9 @@ Current state:
 23. The vault is clean and has no remote.
 24. Governed amendment implementation is complete at platform commit `845d65f356bd684c2f858f36aef54d0344791e43`; Result 057 passed.
 25. The full platform suite passes 230 tests, including focused amendment, recovery, contention, CLI, and first-time promotion regression coverage.
-26. No live amendment operation has been planned or executed.
-27. The vault remains clean at `a306b2c` and has no remote.
-28. The next return-leg order is mandatory: amend the canonical task-packet completion report first, commit locally, verify clean vault, then plan the `current-state.md` amendment.
+26. Completion-report amendment operation `kz-prom-01KTP9CTDRDG6KH8R2GRNNHHN7` is planned at hash `50f4d0676cf45d4f08cb0f6c1eb1b70a5b1ba0946120b0a2919e3233e97a7463`; Result 058 passed.
+27. Approval evidence is absent, event count is zero, and canonical bytes remain unchanged at SHA-256 `f42549c6f4805c9d4da3cfe558c23596ec48fd159ddb9c2bcec84e5541a6380d`.
+28. The vault remains clean at `a306b2c` and has no remote.
+29. `current-state.md` amendment planning remains prohibited until this amendment is committed locally and the vault is clean.
 
-Packet 009B and amendment implementation are complete. Do not infer authorization for a live amendment; each live plan and execution remains separately owner-gated.
+Do not execute the completion-report amendment until the owner approval names the exact operation ID and plan hash.

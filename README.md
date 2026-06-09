@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: separate owner approval to generate the first live amendment plan for the canonical task-packet completion report; no live amendment is authorized
+- Current gate: exact owner approval to execute task-packet completion amendment operation `kz-prom-01KTP9CTDRDG6KH8R2GRNNHHN7` with plan `50f4d0676cf45d4f08cb0f6c1eb1b70a5b1ba0946120b0a2919e3233e97a7463`; `current-state.md` planning remains prohibited
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Packet 009B all six waves are complete at vault `a306b2c`; the vault is clean and has no remote

@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: governed amendment implementation complete at platform commit `845d65f` and security/steward-audited pass in Result 057; live amendment planning awaits separate owner approval
+- Current phase: immutable live amendment plan for the canonical task-packet completion report is ready and security-audited pass in Result 058; exact owner execution approval is required
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: complete; Result 056 pass; all six governed planning notes are canonical; governed amendment implementation is complete at `845d65f` and Result 057 passed; no live amendment is authorized
+- Task Packet 009B: complete; governed amendment implementation complete at `845d65f`; Result 057 passed; completion-report amendment plan `50f4d067...a7463` is ready and Result 058 passed; `current-state.md` planning remains prohibited
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -146,6 +146,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 82. `03-research-results/055-packet-009b-wave-6-plan-security-audit.md` - Wave 6 immutable plan security audit
 83. `03-research-results/056-packet-009b-wave-6-completion-steward-audit.md` - Wave 6 completion and Packet 009B closure audit
 84. `03-research-results/057-governed-amendment-implementation-security-steward-audit.md` - governed amendment implementation security and steward audit
+85. `03-research-results/058-task-packet-completion-amendment-plan-security-audit.md` - task-packet completion amendment plan security audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
