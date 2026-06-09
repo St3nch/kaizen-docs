@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Decision 0014 and the Milestone 6 operator-surface specification are accepted in Result 073; Packet 010B is drafted and audited in Result 074 and awaits exact owner approval; implementation is not authorized
+- Current phase: Packet 010B is complete in Result 076 at platform commit `1d3dabf`; Packet 010C is not drafted or approved; mutation-capable MCP, console, vault, and staging work remain unauthorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestone 4, and Milestone 5: complete; Packet 010A is complete; Decision 0014 and the operator-surface specification are accepted; Packet 010B remains an audited proposal
+- Task Packet 009B, Milestones 4 and 5, Packet 010A, and Packet 010B: complete; Decision 0014 and the operator-surface specification are accepted; Packet 010C has not started
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -171,6 +171,8 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 106. `03-research-results/073-decision-0014-and-operator-surface-specification-owner-acceptance.md` - exact Decision 0014 and operator-surface specification acceptance
 107. `06-handoff-patterns/010b-implement-read-only-operation-status-and-evidence-integrity.md` - proposed read-only Packet 010B
 108. `03-research-results/074-packet-010b-security-steward-audit.md` - Packet 010B security and steward audit
+109. `03-research-results/075-packet-010b-owner-approval.md` - exact Packet 010B read-only implementation approval
+110. `03-research-results/076-packet-010b-completion-security-steward-audit.md` - Packet 010B implementation completion and security audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
