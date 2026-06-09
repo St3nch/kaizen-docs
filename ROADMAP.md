@@ -38,8 +38,8 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 009B Wave 4 spec plan-generation owner gate active
-Current objective: generate the immutable Wave 4 spec plan only after exact owner approval
+Current phase: Packet 009B Wave 4 execution owner-approval gate active
+Current objective: execute the reviewed Wave 4 spec promotion only after exact owner approval
 Current implementation status: Milestone 3 complete; Packet 009A complete; Packet 009B Waves 1 through 3 complete at vault `8a64d86` with Result 050 pass; Waves 4 through 6 and amendment implementation remain incomplete
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
