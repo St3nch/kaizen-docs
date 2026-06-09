@@ -267,23 +267,23 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 2 claim plan generation:
+Review and explicitly approve or reject Packet 009B Wave 2 execution:
 
 ```text
-wave: 2
-note type: claim
 operation: kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH
-source: projects/kaizen-platform/claims/governed-amendment-required.md
+plan: 13fef2deec96f89f388a997cc91a89f41efa69fc9120b52684e4492f35f0f601
+review: 03-research-results/047-packet-009b-wave-2-plan-security-audit.md
 ```
 
 Current state:
 
 1. Packet 009A is complete; Result 042 passed.
-2. Packet 009B Phase 0 and six-note lifecycle activation are complete.
-3. Wave 1 source-summary promotion is complete at vault commit `999ccb0`; Result 046 passed.
-4. The canonical Wave 1 source-summary exists with SHA-256 `6750d278771d6e717ff97c1cde1530aa843809e054b346ead0637a018314ab32`.
-5. The vault is clean and has no remote; no push occurred.
-6. Wave 2 plan generation remains a separate owner-controlled gate.
-7. Wave 2 execution and Waves 3 through 6 remain prohibited.
+2. Packet 009B Wave 1 is complete at vault commit `999ccb0`; Result 046 passed.
+3. Wave 2 claim plan is immutable and verified.
+4. Validation passed with zero errors/warnings; duplicate, link, relationship, and canonical dependency checks are clear.
+5. Candidate transition is `active/pending/proposed -> active/approved/accepted`.
+6. No approval evidence, canonical destination, event, or vault mutation exists.
+7. Result 047 security-audits Wave 2 execution pass.
+8. Wave 3 planning and Waves 3 through 6 execution remain prohibited.
 
-Approval of Wave 2 plan generation may create immutable operation evidence in staging only. It does not authorize approval evidence, canonical mutation, events, or a vault commit.
+Do not execute Wave 2 until the owner approval names the exact operation ID and plan hash.
