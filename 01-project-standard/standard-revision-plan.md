@@ -1,6 +1,6 @@
 # Kaizen Project Standard Revision Plan
 
-Status: active Milestone 5 consolidation plan
+Status: v0.2 owner-acceptance gate active
 Date: 2026-06-09
 
 ## Purpose
@@ -173,9 +173,9 @@ Existing validation, promotion, and amendment tooling is implementation evidence
 1. Complete the Milestone 5 retrospective and change ledger.
 2. Update this revision plan and the reconciliation map with Milestone 4 evidence.
 3. Draft the non-authoritative v0.2 standard.
-4. Draft governed contract updates for amendment support and spec maturity.
-5. Audit the v0.2 draft against accepted decisions and implementation evidence.
-6. Obtain explicit owner acceptance before declaring v0.2 authoritative.
+4. Reconcile amendment support, event vocabulary, validation layers, spec maturity, actor identity, and remote posture through accepted Decision 0013.
+5. Audit the reconciled v0.2 candidate against accepted decisions and implementation evidence.
+6. Obtain explicit owner acceptance of candidate SHA-256 `e5749b3a228dc2aaaed634395ed81edd0626511d30ce44ea6f6a4f80684fc95e` before declaring v0.2 authoritative.
 7. Choose the next implementation milestone family.
 8. Create reviewed task packets before any new implementation begins.
 

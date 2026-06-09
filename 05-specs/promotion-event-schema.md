@@ -1,14 +1,18 @@
-# Spec - Promotion Event Schema
+# Spec - Governed Mutation Event Schema
 
-Status: draft
+Status: implemented baseline
 Date: 2026-06-04
-Related decision: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+Updated: 2026-06-09
+Related decisions:
+- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
+- `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 
 ## Purpose
 
-Define the append-only event contract used when staged Kaizen content is promoted into the canonical vault.
+Define the append-only event contract for governed canonical Markdown mutations.
 
-Promotion events are operational governance records. They do not replace the promoted Markdown note or Git history.
+Events are operational governance evidence. They do not replace canonical Markdown, immutable operation evidence, or Git history.
 
 ## Canonical log path
 
@@ -16,284 +20,193 @@ Promotion events are operational governance records. They do not replace the pro
 _governance/promotion-log.jsonl
 ```
 
-Each line contains exactly one JSON object.
+Each line contains exactly one immutable JSON object.
 
-## Event actions
-
-Initial action vocabulary:
+## Implemented actions
 
 ```text
 promote
 amend
+```
+
+- `promote` creates a canonical note for the first time.
+- `amend` changes one existing canonical Markdown note at the same destination through a reviewed bounded amendment.
+
+Reserved but unimplemented vocabulary:
+
+```text
 supersede
 correct
 rollback
 ```
 
-Definitions:
+Reserved actions are not executable capabilities and require separate accepted decisions, specifications, implementations, hammer evidence, and governed return audits.
 
-- `promote` - staged content becomes canonical for the first time
-- `amend` - an already canonical governed note is changed through an approved amendment
-- `supersede` - a new canonical note replaces the binding force of an earlier note while preserving history
-- `correct` - fixes a prior event record without deleting or editing it
-- `rollback` - records a governed reversal after a failed or invalid promotion/amendment
+## Event phases
 
-Agents may draft content or proposals associated with these actions. Only a human-controlled workflow may append an authority-bearing promotion event.
+New v0.2 events use:
 
-## Minimum event shape
-
-Each JSONL line is one event record. A promotion workflow uses multiple records with unique `event_id` values. The intent event ID also becomes the shared `operation_id` for the workflow.
-
-Intent example:
-
-```json
-{
-  "schema_version": "1.0",
-  "event_id": "kz-prom-01JXEVENT...",
-  "operation_id": "kz-prom-01JXEVENT...",
-  "event_phase": "intent",
-  "action": "promote",
-  "note_id": "kz-spec-01JX...",
-  "note_type": "spec",
-  "project": "kaizen",
-  "source_path": "C:/dev/kaizen-staging/specs/example.md",
-  "destination_path": "projects/kaizen/specs/example.md",
-  "content_sha256": "hex-sha256",
-  "prior_review_status": "pending",
-  "new_review_status": "approved",
-  "prior_authority": "proposed",
-  "new_authority": "accepted",
-  "approved_by": "human-actor-id",
-  "approved_at": "2026-06-04T23:30:00Z",
-  "validation_run_id": "kz-val-01JX...",
-  "basis": "Passed audit kz-aud-01JX..."
-}
+```text
+intent
+committed
+failed
+recovered
 ```
 
-Committed example:
+- `intent` is the durable pre-mutation record.
+- `committed` is the normal successful terminal record.
+- `failed` is a terminal record showing that the operation did not produce an accepted canonical result.
+- `recovered` is a terminal record showing that recovery reconciled an incomplete operation.
 
-```json
-{
-  "schema_version": "1.0",
-  "event_id": "kz-prom-01JXCOMMIT...",
-  "operation_id": "kz-prom-01JXEVENT...",
-  "event_phase": "committed",
-  "action": "promote",
-  "intent_event_id": "kz-prom-01JXEVENT...",
-  "note_id": "kz-spec-01JX...",
-  "note_type": "spec",
-  "project": "kaizen",
-  "destination_path": "projects/kaizen/specs/example.md",
-  "content_sha256": "hex-sha256",
-  "approved_by": "human-actor-id",
-  "approved_at": "2026-06-04T23:30:00Z",
-  "validation_run_id": "kz-val-01JX...",
-  "basis": "Passed audit kz-aud-01JX..."
-}
+An implementation response may use a result label such as `recovered_committed`; persisted new event phases remain those above.
+
+Historical event lines are never rewritten or renamed. Readers must remain backward-compatible with already persisted event shapes and result labels.
+
+Exactly one successful terminal event may exist for an operation:
+
+```text
+committed
+or
+recovered
 ```
-## Required fields for every event
 
-| Field | Type | Rule |
-|---|---|---|
-| `schema_version` | string | initial value `1.0` |
-| `event_id` | string | unique immutable ID for this JSONL line |
-| `operation_id` | string | equals the intent event ID; copied unchanged to all later records in the workflow |
-| `event_phase` | enum | `intent`, `committed`, `failed`, or `recovered` |
-| `action` | enum | one of the approved action values |
-| `note_id` | string | stable Kaizen note ID |
-| `note_type` | enum | registered note type |
-| `project` | string | lowercase kebab-case project slug |
-| `destination_path` | string | canonical vault-relative path; never an absolute canonical path in the stored event |
-| `content_sha256` | string | approved content hash for `intent`; verified canonical hash for terminal phases |
-| `approved_by` | string | human actor identifier |
-| `approved_at` | string | ISO-8601 UTC timestamp |
-| `validation_run_id` | string | successful validation run ID |
-| `basis` | string | concise approval basis and audit/decision references |
+## Universal required binding
 
-## Event-phase requirements
+Every new `promote` or `amend` event binds:
 
-### `event_phase: intent`
+| Field | Rule |
+|---|---|
+| `schema_version` | serialized event-contract version |
+| `event_id` | unique immutable ID for this line |
+| `operation_id` | shared immutable operation ID |
+| `event_phase` | one of the implemented phases |
+| `action` | `promote` or `amend` |
+| `note_id` | stable canonical note ID |
+| `note_type` | registered note type |
+| `project` | project slug |
+| `destination_path` | vault-relative forward-slash path |
+| `approved_by` | human actor string |
+| `approved_at` | ISO-8601 UTC timestamp |
+| `validation_run_id` | successful validation run ID |
+| `plan_sha256` | immutable plan payload hash |
+| `approval_sha256` | immutable approval payload hash |
+| `content_sha256` | approved candidate hash for intent; installed hash for success |
+| `basis` | concise reviewed basis |
 
-Required:
+Terminal records also include `intent_event_id` where the implemented schema requires it.
 
-- `source_path`
-- approved `destination_path`
-- approved `content_sha256`
-- approval and validation evidence
+## Promotion-specific binding
 
-### `event_phase: committed`
+A `promote` operation additionally binds:
 
-Required:
+- `source_path`;
+- source content SHA-256 where present in the implemented schema;
+- prior and new review status;
+- prior and new authority;
+- required dependency evidence where applicable.
 
-- `intent_event_id`
-- verified canonical `content_sha256`
-- the same `operation_id`, action, note, project, and destination as the intent
+First-time promotion must refuse an existing destination.
 
-### `event_phase: failed`
+## Amendment-specific binding
 
-Required:
+An `amend` operation additionally binds:
 
-- `intent_event_id`
-- `failure_code`
-- `failure_summary`
-- observed filesystem state
+- `prior_content_sha256`;
+- `new_content_sha256` or equivalent installed candidate binding;
+- `reviewed_diff_sha256`;
+- `change_summary`;
+- prior and new review status when changed;
+- prior and new authority when changed.
 
-### `event_phase: recovered`
+The first amendment slice preserves note ID, type, project, and created timestamp. General overwrite, delete, move, rename, multi-note mutation, supersedence, correction, and rollback execution remain prohibited.
 
-Required:
+## Phase requirements
 
-- `intent_event_id`
-- `recovery_action`
-- resulting filesystem state
-- human actor when recovery changes canonical or staged content
-## Conditional fields
+### Intent
 
-### `promote`
+The intent event is appended and durably flushed before canonical filesystem mutation.
 
-Required:
+It contains the approved operation identity, destination, exact content bindings, plan and approval hashes, validation evidence, actor, timestamp, and basis.
 
-- `source_path`
-- `prior_review_status`
-- `new_review_status`
-- `prior_authority`
-- `new_authority`
+### Committed
 
-### `amend`
+A committed event is appended only after the canonical destination has been installed and verified by identity, size, and SHA-256.
 
-Required:
+It matches the same operation, action, note, destination, plan, approval, and approved content as the intent.
 
-- `prior_content_sha256`
-- `content_sha256`
-- `change_summary`
-- prior and new review/authority values when changed
+### Failed
 
-### `supersede`
+A failed event records:
 
-Required:
+- the intent reference;
+- stable failure code;
+- concise failure summary;
+- observed filesystem state;
+- whether human review is required before any new attempt.
 
-- `supersedes_note_id`
-- `superseded_note_event_id`
-- `supersedence_rationale`
-- approval posture at least equal to the superseded record
+### Recovered
 
-### `correct`
+A recovered event records:
 
-Required:
+- the intent reference;
+- recovery action;
+- resulting filesystem state;
+- verified canonical hash when a canonical result exists;
+- human actor when recovery performs a consequential action.
 
-- `corrects_event_id`
-- `correction_reason`
-- `corrected_fields`
+## Append-only and compatibility rules
 
-A correction event does not mutate the earlier line.
-
-### `rollback`
-
-Required:
-
-- `rolls_back_event_id`
-- `rollback_reason`
-- `repository_state_before`
-- `repository_state_after`
-
-## Review-context rules
-
-`review_context` is required only when approval depends on repository or external implementation state. It may contain:
-
-- `governing_ids`
-- `repository`
-- `ref`
-- `reviewed_paths`
-- `reviewed_interfaces`
-- `dependency_versions`
-- `hammer_run_ids`
-
-The context must be scoped. Do not bind an approval to every unrelated repository commit.
+- Existing event lines are never edited or deleted.
+- Existing note IDs, operation IDs, event IDs, timestamps, and hashes remain unchanged.
+- Schema-version readers validate each line under its recorded version.
+- New fields must not invalidate historical `1.0` lines.
+- Machine-readable schema changes require regression tests against all existing log lines.
+- Git is supplementary evidence, not the event record itself.
 
 ## Path rules
 
-- `destination_path` is vault-relative and uses forward slashes.
-- `source_path` may be an absolute local staging path for early v0.2 operation, but it must not be treated as portable identity.
-- Stored canonical paths must never contain `..` traversal.
-- Paths must not point into `_governance/` except for governance artifacts explicitly allowed by policy.
+- `destination_path` is vault-relative and contains no traversal.
+- `source_path` may be an absolute local staging path but is not portable identity.
+- Canonical paths do not point into staging.
+- Governance paths are allowed only when explicitly governed.
 
-## Transition rules
+## Human actor limitation
 
-Initial legal authority-bearing promotion transition:
-
-```text
-review_status: pending -> approved
-authority: proposed -> accepted
-```
-
-Other allowed transitions depend on note type and action.
-
-The event validator must reject:
-
-- agent identifiers in `approved_by`
-- approval timestamps before the referenced validation run
-- `authority: accepted` with `review_status` other than `approved`
-- a note type that cannot carry accepted authority
-- changed content whose hash no longer matches the approved content
-- missing or failed validation run references
-- duplicate event IDs
-- duplicate initial promotion for the same note ID without an intervening governed rollback
-
-## Recoverability and event phases
-
-The canonical file write and promotion-event append are separate operations. They cannot be treated as one atomic transaction.
-
-The business `action` describes what is being governed, such as `promote`, `amend`, or `supersede`. The `event_phase` describes progress of one operation.
-
-At minimum:
-
-1. append and flush a unique `intent` event;
-2. write and flush a temporary file in the destination directory;
-3. verify the temporary file hash;
-4. install the canonical file using the approved same-volume replacement operation;
-5. append and flush a unique `committed` event using the same `operation_id` and referencing the intent;
-6. run recovery when an intent lacks a terminal event.
-
-Each JSONL line has a unique `event_id`. Multiple records for one workflow copy the intent event ID into `operation_id`; later records must still use new unique `event_id` values.
-
-Recovery appends a new `failed` or `recovered` record. Existing lines are never edited or deleted.
-
-Recovery rules are defined in `05-specs/staging-write-wrapper-and-promotion-recovery.md`.
-## Schema versioning
-
-Breaking changes to the event shape require a new major `schema_version`.
-
-Existing JSONL lines remain valid under the version recorded on each line.
-
-A future Postgres promotions table must preserve the original event IDs, timestamps, hashes, and schema versions during import.
-
-## Machine-readable schema
-
-Before implementation, create:
+The first slice accepts a trusted local actor string such as:
 
 ```text
-schemas/promotion-event.schema.json
+owner.local
 ```
 
-The JSON Schema should enforce:
+This is not authentication. Agents may not fabricate or select the owner actor. Shared or remote operation requires a later identity and authentication design.
 
-- required universal fields
-- action-specific conditional fields
-- string patterns for IDs and hashes
-- allowed enums
-- `additionalProperties: false` after early stabilization
+## Recovery and retry rules
+
+- An operation with a successful terminal event is idempotently complete.
+- Recovery evaluates immutable plan, approval, event, filesystem, and hash evidence.
+- Unknown canonical or temporary bytes fail closed.
+- A new reviewed plan is required when immutable evidence no longer matches.
+- Historical evidence is preserved even when recovery fails.
+
+## Acceptance evidence
+
+The implemented baseline is evidenced by:
+
+- six ordered Packet 009B promotions;
+- two governed amendments;
+- exactly `intent -> committed` for all eight operations;
+- Results 031, 040, 057, 059, 061, 062, and 065;
+- platform test suite passing 230 tests at Milestone 4 closure.
 
 ## Open questions
 
-- Exact human actor-ID format.
-- Whether `source_path` should be omitted after Postgres becomes canonical for operations.
-- Exact JSON Schema for scoped `review_context` and material-drift classification.
-- Exact Windows API and language binding used for same-volume replacement and durable flush behavior.
-- Whether amendment events require a reviewed diff artifact ID.
+- Durable multi-user actor identity and authentication.
+- Future Postgres event import and mirror behavior.
+- Machine-readable schema version increment policy after further action types exist.
 
 ## Related files
 
 - `05-specs/staging-and-promotion-workflow.md`
 - `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `05-specs/kaizen-validation-gate-spec.md`
-- `05-specs/kaizen-id-and-prefix-registry.md`
 - `05-specs/kaizen-hammer-test-strategy.md`

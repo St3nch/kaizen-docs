@@ -1,9 +1,10 @@
 # Kaizen Project Standard v0.2 Draft
 
-Status: non-authoritative Milestone 5 consolidation draft
+Status: owner-acceptance candidate; non-authoritative until explicit acceptance
 Date: 2026-06-09
 Owner: Kaizen project steward
 Acceptance: explicit owner review required
+Reconciliation decision: `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 
 ## Purpose
 

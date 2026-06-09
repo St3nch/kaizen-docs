@@ -1,8 +1,10 @@
 # Spec - Kaizen Note Type Registry
 
-Status: active draft aligned to accepted foundation
+Status: implemented baseline
 Date: 2026-06-04
+Updated: 2026-06-09
 Related decision: `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+Related decision: `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 
 ## Purpose
 
@@ -329,6 +331,10 @@ Adding a note type requires:
 - Whether audits need a structured verdict field later.
 - When `raw-source` becomes necessary.
 - Whether current-state notes should be indexed once Qdrant exists.
+
+## Implemented-baseline evidence
+
+This contract was exercised by the Milestones 1 through 4 platform and canonical-vault work, including deterministic validation, six ordered promotions, two governed amendments, hammer tests, and Result 062 closure. Remaining open questions are future refinements rather than blockers to the implemented first-slice baseline.
 
 ## Related files
 

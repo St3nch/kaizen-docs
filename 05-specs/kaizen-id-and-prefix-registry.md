@@ -1,9 +1,10 @@
 # Spec - Kaizen ID and Type-Prefix Registry
 
-Status: implementation baseline accepted by Decision 0012
+Status: implemented baseline
 Date: 2026-06-04
-Updated: 2026-06-07
+Updated: 2026-06-09
 Related decisions:
+- `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
 
@@ -176,6 +177,10 @@ kaizen-id <registered-type-or-event>
 - Whether normal output includes a trailing newline only.
 - Whether a batch-generation mode is ever needed.
 - Whether archived/deleted ID reservation is tracked by Git scan, registry file, or future Postgres service.
+
+## Implemented-baseline evidence
+
+This contract was exercised by the Milestones 1 through 4 platform and canonical-vault work, including deterministic validation, six ordered promotions, two governed amendments, hammer tests, and Result 062 closure. Remaining open questions are future refinements rather than blockers to the implemented first-slice baseline.
 
 ## Related files
 

@@ -1,13 +1,16 @@
-# Spec - Staging-Write Wrapper and Promotion Recovery
+# Spec - Staging-Write Wrapper and Governed Mutation Recovery
 
-Status: active draft
+Status: implemented baseline
 Date: 2026-06-05
+Updated: 2026-06-09
 Related decisions:
 - `04-design-decisions/0001-two-zone-agent-write-model.md`
 - `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
 - `04-design-decisions/0005-api-only-structured-data-access.md`
 - `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
+- `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 Related evidence:
 - `03-research-results/008-agent-access-and-write-safety-claude-summary.md`
 Related specifications:
@@ -18,9 +21,9 @@ Related specifications:
 
 ## Goal
 
-Define the smallest safe write surface for agent-created Markdown drafts and a recoverable human-operated promotion protocol.
+Define the implemented create-only staging surface and recoverable human-operated promotion and bounded amendment protocols.
 
-This specification does not authorize Hermes writes, select an MCP server, select an implementation language, or approve canonical promotion tooling.
+This specification does not authorize Hermes live writes, a production MCP, arbitrary filesystem access, generalized overwrite, or any mutation outside the implemented fixed-root platform workflows.
 
 ## Scope
 
@@ -30,7 +33,8 @@ This specification covers:
 - Windows path confinement requirements;
 - required request, response, validation, provenance, and audit behavior;
 - prohibited filesystem capabilities;
-- promotion state and recovery behavior for one validated staged Markdown file;
+- first-time promotion state and recovery for one validated staged Markdown file;
+- bounded same-note amendment state and recovery for one existing canonical Markdown file;
 - implementation and hammer-test prerequisites.
 
 ## Non-Goals
@@ -41,7 +45,7 @@ This specification does not define:
 - direct canonical writes by Hermes or another agent;
 - file deletion, move, rename, or overwrite tools;
 - terminal or arbitrary code execution;
-- exact implementation language or framework;
+- replacement of the implemented Python 3.11 platform with another language or framework;
 - final MCP server selection;
 - cross-volume promotion support;
 - validator or ULID-generator implementation details;
@@ -61,8 +65,8 @@ This specification does not define:
 Intended roots:
 
 ```text
-C:\dev\kaizen-vault
-C:\dev\kaizen-staging
+C:\dev\kaizen\vault
+C:\dev\kaizen\staging
 ```
 
 The staging root and canonical root are siblings.
@@ -284,9 +288,9 @@ The implementation may refine names before acceptance, but failures must remain 
 - Create-new filesystem semantics prevent two requests from silently racing to overwrite the same target.
 - Duplicate ID, title, filename, and summary checks are performed by deterministic validation.
 
-## Promotion principle
+## Governed mutation principle
 
-Promotion moves one reviewed, validated staged Markdown artifact into canonical storage under human control.
+First-time promotion creates one reviewed canonical note. Bounded amendment replaces one existing canonical note at the same destination under exact prior-byte, candidate, diff, plan, approval, event, Git, and filesystem controls.
 
 The canonical file write and append-only promotion evidence are separate operations. The system must be recoverable across partial failure and must not claim they are one atomic transaction.
 
@@ -415,6 +419,29 @@ recovery-required
 
 These are operational workflow states, not universal Markdown frontmatter fields unless a later decision adopts them there.
 
+## Bounded amendment recovery
+
+The amendment operation preserves exact prior canonical bytes, original staged bytes, normalized canonical candidate bytes, reviewed diff, validation, plan, and approval evidence.
+
+Recovery accepts only two canonical content states:
+
+```text
+exact approved prior bytes
+exact approved candidate bytes
+```
+
+Classification:
+
+- exact prior bytes with no successful terminal event: remove only operation-owned temporary evidence when safe and append a terminal recovery/failure record as defined by the reviewed state;
+- exact candidate bytes with missing terminal evidence: verify installed identity and hash, then append one `recovered` terminal event;
+- unknown canonical bytes: fail closed and require human review;
+- unknown temporary bytes: preserve evidence, fail closed, and require human review;
+- existing successful terminal event: return the prior idempotent outcome without mutation.
+
+An implementation response may label a recovered successful result `recovered_committed`; persisted new event phase is `recovered`. Historical evidence is never renamed.
+
+The amendment workflow never deletes, moves, renames, supersedes, corrects, rolls back, or mutates multiple canonical notes.
+
 ## Security and permission requirements
 
 - Hermes has no canonical write permission.
@@ -497,6 +524,21 @@ canonical read/search integration
 ```
 
 The read-only test is not a prerequisite for current planning documents. It is a prerequisite for later live Hermes integration.
+
+## Implemented-baseline evidence
+
+The platform implementation in `C:\dev\kaizen\platform` proves:
+
+- handle-relative staging confinement and create-new writes;
+- same-volume first-time no-replacement installation;
+- exact-prior-byte bounded same-path amendment replacement;
+- append-only intent and terminal event sequencing;
+- deterministic recovery and idempotency;
+- contention, interruption, stale-byte, reparse, path-escape, audit-failure, and file-lock hammer coverage;
+- fixed-root local human operators;
+- 230 passing tests at Milestone 4 closure.
+
+Hermes live integration and production MCP selection remain deferred.
 
 ## Acceptance criteria
 

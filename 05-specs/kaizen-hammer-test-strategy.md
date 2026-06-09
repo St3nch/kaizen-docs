@@ -1,8 +1,10 @@
 # Spec - Kaizen Hammer-Test Strategy
 
-Status: draft
+Status: implemented baseline
 Date: 2026-06-04
+Updated: 2026-06-09
 Related decision: `04-design-decisions/0006-hammer-tests-are-a-hard-gate.md`
+Related decision: `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 
 ## Purpose
 
@@ -126,6 +128,10 @@ The staging wrapper rejects traversal, absolute, drive-relative, UNC, device, ex
 - Exact private-data scanning posture and false-positive handling.
 - What minimum environment qualifies as real execution.
 - How hammer results are stored and reviewed.
+
+## Implemented-baseline evidence
+
+This contract was exercised by the Milestones 1 through 4 platform and canonical-vault work, including deterministic validation, six ordered promotions, two governed amendments, hammer tests, and Result 062 closure. Remaining open questions are future refinements rather than blockers to the implemented first-slice baseline.
 
 ## Related files
 

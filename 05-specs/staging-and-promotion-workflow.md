@@ -1,264 +1,274 @@
-# Spec - Staging and Promotion Workflow
+# Spec - Staging and Governed Canonical Mutation Workflow
 
-Status: active draft aligned to accepted foundation
+Status: implemented baseline
 Date: 2026-06-04
-Updated: 2026-06-07
+Updated: 2026-06-09
 Related decisions:
 - `04-design-decisions/0001-two-zone-agent-write-model.md`
+- `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `04-design-decisions/0008-v0.2-operating-conventions.md`
+- `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
+- `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 
 ## Purpose
 
-Define the safe path from agent-created drafts to canonical Kaizen notes.
+Define the safe path from staged Markdown candidates to canonical Kaizen notes through human-controlled first-time promotion or bounded amendment.
 
-The design goal is structural separation: agents may draft in staging, but only a human-controlled promotion operation may write canonical content.
+Prompt instructions are not access control. Canonical mutation is enforced by fixed roots, deterministic validation, immutable evidence, explicit owner gates, filesystem controls, event evidence, and scoped Git review.
 
-Hermes is the designated Kaizen agent clerk and a required vault consumer. Kaizen therefore provides reliable canonical read/search access from the beginning while keeping Hermes writes staging-only until the boundary controls and tests pass.
-
-## Folder boundary
-
-Recommended initial layout:
+## Roots
 
 ```text
-C:\dev\kaizen-vault
-C:\dev\kaizen-staging
+C:\dev\kaizen\vault
+C:\dev\kaizen\staging
 ```
 
 Rules:
 
-- `kaizen-vault` is the canonical Markdown repository.
-- `kaizen-staging` is disposable, non-canonical agent workspace.
-- Staging is a sibling folder, not a nested vault folder.
-- Staging does not need its own Git repository initially.
-- Canonical notes must never link to files in staging.
-- Qdrant indexing must read canonical content only.
-
-## Permission boundary
-
-Hermes write access remains unapproved until hands-on tests verify:
-
-1. write operations are rooted to `C:\dev\kaizen-staging`
-2. absolute paths outside staging are rejected
-3. `..` path traversal is rejected
-4. symlink/junction escape is rejected or impossible in the deployed wrapper
-5. the canonical vault is read-only to Hermes
-6. failed escape attempts are logged
-
-If Hermes cannot enforce root-scoped writes directly, Kaizen must wrap all file tools in a service that enforces the boundary.
-
-Prompt instructions are not an access-control mechanism.
+- the vault is canonical Markdown and governance evidence;
+- staging is sibling, non-canonical preparation and immutable operation evidence;
+- canonical notes never link into staging;
+- callers do not select arbitrary roots;
+- Qdrant, Postgres, Hermes, and plugins are not required for this workflow.
 
 ## Staged note requirements
 
-Agent-created staged notes must include:
+Staged agent-created notes use the accepted field and note-type registries and include durable provenance:
 
 ```yaml
-id:
-type:
-status: draft
-project:
-summary:
-created:
-updated:
-review_status:
-validation_status: pending
 agent:
 model:
 session:
+validation_status: pending | passed | failed
 ```
 
-Additional type-specific fields remain required.
+`validation_status` is staging-only and is removed from the canonical candidate. Agents may not set human-only approval, rejection, accepted authority, or audit verdicts.
 
-Hermes may use:
+## Validation layers
 
-```yaml
-review_status: not-required
+### Intrinsic note validation
+
+Checks note syntax, fields, enums, IDs, sections, lifecycle, provenance, and prohibited content.
+
+### Operation-context validation
+
+Checks fixed roots, destination placement, canonical dependencies, relationship and local-link resolution, exact hashes, packet and operation binding, Git state, governance-log state, approval freshness, and filesystem safety.
+
+Intrinsic canonical validation alone does not authorize mutation.
+
+## Governed operation evidence
+
+Every planned mutation has an immutable directory:
+
+```text
+staging/_promotion/operations/{operation-id}/
 ```
 
-only for note types explicitly allowed by the note-type registry. All governed types begin with:
+A reviewed plan contains or binds:
 
-```yaml
-review_status: pending
+- `plan.json`;
+- `validation.json`;
+- normalized `canonical-candidate.md`;
+- exact source or original staged candidate evidence;
+- prior canonical bytes for amendment;
+- reviewed diff for amendment;
+- plan SHA-256;
+- operation-context Git and governance-log bindings.
+
+Plan generation creates no `approval.json`, canonical file, event, or Git commit.
+
+## Human gates
+
+### Gate 1 - plan generation
+
+The owner explicitly approves one operation ID and destination for immutable plan generation.
+
+### Gate 2 - execution
+
+The owner explicitly approves:
+
+- exact operation ID;
+- exact plan SHA-256;
+- exact destination and action.
+
+Execution requires:
+
+```text
+PROMOTE-LIVE-EXACTLY-ONCE
 ```
 
-Hermes may use `authority: none` or `authority: proposed` only where the registry permits it.
+Approval for one operation or plan does not authorize another.
 
-## Completion reports and follow-up artifacts
+## First-time promotion
 
-A task packet's `## Completion Report` is implementation evidence, not governing authority.
+Promotion creates one canonical note at a destination that does not already exist.
 
-When a task packet is managed through staging and promotion, completion-report content is added through a governed amendment using the `amend` action defined by `05-specs/promotion-event-schema.md`.
+The plan binds:
 
-The completion report should record:
+- exact staged source;
+- normalized canonical candidate;
+- validation evidence;
+- destination;
+- note identity and type;
+- review and authority transition;
+- canonical dependencies;
+- Git and governance-log state.
 
-- deliverables produced;
-- validation and tests executed;
-- deviations from the packet;
+Execution:
+
+1. revalidates all immutable evidence and live bindings;
+2. appends and flushes one `action: promote` intent;
+3. writes and flushes an owned sibling temporary file;
+4. verifies its hash;
+5. installs the destination using the proven same-volume no-replacement primitive;
+6. verifies installed identity, size, and SHA-256;
+7. appends exactly one successful terminal event;
+8. leaves staged and operation evidence preserved;
+9. allows a separately reviewed two-path local Git commit.
+
+Existing destinations fail closed.
+
+## Bounded amendment
+
+Amendment changes one existing canonical Markdown note at the same destination.
+
+The plan additionally preserves and binds:
+
+- exact prior canonical bytes;
+- original staged candidate bytes;
+- normalized canonical candidate bytes;
+- reviewed unified diff;
+- prior, candidate, diff, validation, plan, and approval hashes;
+- concise change summary;
+- continuity fields.
+
+The first amendment slice preserves:
+
+```text
+id
+type
+project
+created
+```
+
+Review status and authority remain unchanged unless a separately accepted transition is explicitly supported and reviewed.
+
+Execution:
+
+1. revalidates immutable evidence and live state;
+2. appends and flushes one `action: amend` intent;
+3. creates and verifies one owned sibling temporary file;
+4. opens and verifies the prior canonical destination through the proven handle-relative delete-sharing path;
+5. performs native same-directory same-path replacement;
+6. verifies installed identity, size, and SHA-256;
+7. appends exactly one successful terminal event;
+8. preserves all operation evidence;
+9. allows a separately reviewed two-path local Git commit.
+
+Amendment does not authorize delete, move, rename, generalized overwrite, supersedence, correction, rollback execution, or multi-note transactions.
+
+## Completion reports and current-state return
+
+Task-packet completion evidence returns through a governed amendment.
+
+The completion report records:
+
+- deliverables;
+- tests and validation;
+- deviations;
 - failures and unresolved issues;
 - discoveries;
-- recommended follow-up work.
+- follow-up recommendations.
 
-Findings that change project intelligence must become separate governed notes or governed amendments, such as:
+After the completion-report amendment is committed and the vault is clean, a separate current-state amendment may record the resulting project position.
 
-- a new or revised claim;
-- a decision proposal or amendment;
-- a revised specification;
-- a new audit;
-- a follow-up task packet;
-- an amendment to `current-state.md`.
+Each amendment requires its own plan-generation and execution approvals.
 
-Those artifacts follow the normal validation, review, and promotion workflow. The completion report itself does not grant authority or silently change accepted doctrine.
+## Event evidence
 
-Humans may edit canonical Markdown directly when authorized. Agent-created or staged candidate artifacts require deterministic validation and human-controlled promotion. Authority transitions and governed staged promotions remain auditable.
-
-## Promotion preconditions
-
-A staged note may be promoted only when all conditions are satisfied:
-
-1. Search-before-create evidence exists.
-2. The note passes static validation.
-3. Required body sections exist.
-4. All stable-ID relationships resolve.
-5. All canonical Markdown links resolve.
-6. No canonical note links back into staging.
-7. No prohibited private/customer data is detected.
-8. `validation_status: passed` is set by the validator, not the drafting agent.
-9. Required human review is complete.
-10. Authority transition, when applicable, is human-approved.
-11. A recoverable promotion intent event is ready, and the recovery protocol is available if the file write and event sequence is interrupted.
-
-## Promotion operation
-
-Promotion is a human-controlled operation that performs these steps as one governed workflow:
-
-1. Re-run validation against the exact staged file content.
-2. Confirm destination path and verify it does not overwrite an unrelated note.
-3. Confirm the note ID is globally unique and immutable.
-4. Normalize canonical link syntax.
-5. Remove `validation_status`.
-6. Preserve durable agent provenance (`agent`, `model`, `session`).
-7. Apply the approved `review_status` and `authority` transition.
-8. Append and flush a unique `intent` event with a shared promotion `operation_id`.
-9. Write and flush a uniquely named temporary file in the canonical destination directory.
-10. Verify the temporary file hash against the approved content.
-11. Install the canonical file using the approved same-volume replacement operation.
-12. Append and flush a unique `committed` event using the same `operation_id` and referencing the intent event.
-13. Verify the canonical file and terminal event are both present.
-14. Remove or archive the staged copy only after successful verification.
-
-If any step fails, the promotion is incomplete rather than silently successful. Partial state must remain visible and be reconciled through the recovery protocol in `05-specs/staging-write-wrapper-and-promotion-recovery.md`. The file write and JSONL append are separate operations and must not be described as one atomic transaction.
-
-## Promotion log
-
-Canonical repository path:
+Events are appended to:
 
 ```text
 _governance/promotion-log.jsonl
 ```
 
-Each line is one JSON object.
+Each governed mutation has:
 
-Minimum event shape and phase requirements are defined in `05-specs/promotion-event-schema.md`. One promotion operation produces at least an `intent` record and a terminal `committed`, `failed`, or `recovered` record.
+```text
+intent -> committed
+```
 
+or, after deterministic recovery, one allowed recovered terminal record under the accepted event specification.
 
-Required event fields:
+The file write and event append are separate operations and are never described as one atomic transaction.
 
-- `event_id`
-- `note_id`
-- `action`
-- `source_path`
-- `destination_path`
-- `prior_review_status`
-- `new_review_status`
-- `prior_authority`
-- `new_authority`
-- `approved_by`
-- `approved_at`
-- `validation_run_id`
-- `basis`
+## Recovery
 
-## Append-only rule
+Recovery uses immutable operation evidence to classify exact states.
 
-Existing promotion events must never be edited or deleted.
+For amendment, only exact approved prior bytes or exact approved candidate bytes are accepted canonical states. Unknown bytes fail closed.
 
-Corrections are new events containing:
+For first-time promotion, destination absence, exact approved candidate presence, temporary evidence, and event state are reconciled under the recovery specification.
 
-- a new `event_id`
-- `action: correct`
-- `corrects_event_id`
-- correction reason
-- corrected fields
-- human approver and timestamp
+Recovery appends evidence; it never edits prior JSONL lines.
 
-Git history is supplementary evidence, not the promotion record itself.
+## Git boundary
 
-## Rejection workflow
+Before mutation:
 
-A rejected staged note remains outside the canonical vault.
+- platform and vault branches and HEADs match the plan;
+- required trees are clean except for approved recovery-owned paths;
+- the governance-log hash matches.
 
-The human reviewer may:
+After mutation:
 
-- return it for revision
-- archive it in staging
-- delete it through a reviewed cleanup action
+- verify exact changed paths;
+- stage only the canonical destination and governance log;
+- commit locally with a reviewed message;
+- do not push or create a vault remote without separate approval.
 
-Rejection does not create canonical content. A rejection event may be logged later when an operational governance service exists; it is not required for the v0.2 promotion log.
+## Connector and local operator boundary
 
-## Supersedence workflow
+Typed connector tools are preferred when accepted by the upstream platform.
 
-Superseding an accepted claim, decision, or spec requires:
+Connector mutation is not guaranteed. After one upstream block:
 
-1. a proposed replacement note
-2. `supersedes` on the replacement
-3. `superseded_by` on the prior note
-4. a `## Supersedence rationale` section in the replacement
-5. human approval at the same authority level as the prior note
-6. promotion events for the replacement and prior-note metadata change
-7. preservation of the prior note in canonical history
+1. verify no approval, event, or canonical mutation occurred;
+2. do not repeatedly retry equivalent routes;
+3. use the fixed-root local human operator;
+4. inspect and verify resulting evidence afterward.
 
-Hermes may propose supersedence but may not execute it.
+The local operator uses the same platform enforcement code and is not a bypass of Kaizen controls.
 
-## Failure handling
+## Human actor limitation
 
-Promotion must fail closed.
+The first slice accepts a trusted local actor string such as `owner.local`. This is not authentication. Agents may not select the owner actor. Multi-user or remote operation requires later identity design.
 
-Examples:
+## Implemented acceptance evidence
 
-- log append succeeds but canonical write fails: append a corrective failure event and restore consistency
-- canonical write succeeds but log append fails: revert the canonical write or mark the repository blocked until repaired
-- destination collision: stop; never overwrite silently
-- unresolved link or ID: stop
-- stale approval after content changes: stop and require review again
+- create-only staging and path confinement implemented and hammered;
+- deterministic validation implemented;
+- first-time promotion implemented and hammered;
+- six ordered live promotions completed;
+- bounded amendment implemented and hammered;
+- task-packet and current-state return amendments completed;
+- 230 platform tests passed at Milestone 4 closure;
+- Results 023, 031, 040, 057, 059, 061, 062, and 065 passed.
 
-Any material content change after human review makes the approval stale unless the reviewer explicitly approves the changed diff. Exact hashes detect change; scoped review determines whether a change is material, clerical, or unrelated.
+## Deferred capabilities
 
-## Future Postgres migration
-
-When Postgres operational governance exists:
-
-- the Postgres promotions table may become canonical for promotion events
-- existing JSONL events are imported and retained
-- the JSONL log may continue as a generated portable mirror
-- Markdown note authority remains canonical in the note frontmatter; Postgres records the operational event that changed it
-
-## Acceptance criteria
-
-This workflow is implementation-ready when:
-
-- [ ] root-scoped staging writes are proven
-- [ ] promotion event JSON Schema is defined
-- [ ] atomic or recoverable file-plus-log behavior is specified
-- [ ] destination placement rules exist
-- [ ] validator supports the accepted v0.2 registry
-- [ ] a human-operated promotion command can be task-packeted
-- [ ] staging escape and unauthorized promotion hammer tests are defined
+- Hermes live write integration;
+- production MCP;
+- generalized edit/delete/move tools;
+- supersedence, correction, and rollback execution;
+- multi-note transactions;
+- Postgres and Qdrant integration;
+- remote or multi-user actor authentication.
 
 ## Related files
 
-- `04-design-decisions/0001-two-zone-agent-write-model.md`
-- `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
-- `05-specs/kaizen-field-registry.md`
-- `05-specs/kaizen-note-type-registry.md`
+- `05-specs/promotion-event-schema.md`
+- `05-specs/staging-write-wrapper-and-promotion-recovery.md`
 - `05-specs/kaizen-validation-gate-spec.md`
-- `07-hermes/hermes-write-access-preconditions.md`
+- `05-specs/kaizen-hammer-test-strategy.md`

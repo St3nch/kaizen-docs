@@ -9,7 +9,7 @@ A decision becomes doctrine only when its status is `accepted`.
 - Decisions 0001 through 0010: accepted
 - Decision 0011: proposed
 - Decision 0012: accepted
-- Decision 0013: proposed; security/steward audit Result 065 passed; explicit owner acceptance required
+- Decision 0013: accepted on 2026-06-09; supporting first-slice contracts reconciled
 
 ## Suggested decision format
 

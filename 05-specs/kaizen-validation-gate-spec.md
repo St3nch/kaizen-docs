@@ -1,8 +1,8 @@
 # Spec - Kaizen Validation Gate
 
-Status: implementation baseline accepted by Decision 0012
+Status: implemented baseline
 Date: 2026-06-04
-Updated: 2026-06-07
+Updated: 2026-06-09
 Related decisions:
 - `04-design-decisions/0001-two-zone-agent-write-model.md`
 - `04-design-decisions/0002-search-before-create-and-diff-before-write.md`
@@ -10,10 +10,11 @@ Related decisions:
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `04-design-decisions/0008-v0.2-operating-conventions.md`
 - `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md`
+- `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 
 ## Purpose
 
-Define the deterministic validation gate that checks staged or modified Kaizen notes before canonical promotion.
+Define the deterministic validation layers that check Kaizen notes intrinsically and check proposed promotion or amendment operations in context.
 
 The gate validates structure, identity, references, policy compliance, and authority transitions. It does not decide whether an argument is wise or a design is correct.
 
@@ -22,7 +23,7 @@ The gate validates structure, identity, references, policy compliance, and autho
 The validator answers:
 
 ```text
-Can this exact note content be promoted into canonical Kaizen content under the accepted v0.2 rules?
+Is this exact note intrinsically valid, and does the proposed governed mutation satisfy the accepted v0.2 operation-context rules?
 ```
 
 It returns:
@@ -37,6 +38,20 @@ It returns:
 
 A failed validation returns a nonzero exit code.
 
+## Validation layers
+
+### Intrinsic note validation
+
+Checks UTF-8 Markdown, flat YAML, required fields, enums, identity, body sections, lifecycle and authority combinations, provenance, links encoded in the note, and prohibited content.
+
+Intrinsic validation does not prove destination safety, canonical dependency existence, Git state, approval freshness, or mutation authorization.
+
+### Operation-context validation
+
+Checks fixed roots, destination placement, canonical relationship and local-link resolution, exact source/prior/candidate/diff/validation hashes, packet and operation binding, Git branch and HEAD, clean-state scope, governance-log binding, approval freshness, and filesystem safety.
+
+Only the full governed operation may authorize canonical mutation.
+
 ## Validation modes
 
 ### Staging validation
@@ -47,9 +62,9 @@ Checks a file in the sibling staging root. Allows agent provenance and `validati
 
 Checks existing canonical content. Rejects staging-only fields and non-canonical syntax.
 
-### Promotion validation
+### Governed-operation validation
 
-Runs against the exact staged content and proposed destination. Includes all staging and canonical checks plus transition and promotion-event checks.
+Runs against exact immutable operation evidence and the proposed canonical destination. Includes intrinsic checks plus promotion- or amendment-specific transition, dependency, event, Git, hash, and filesystem checks.
 
 ## Required checks
 
@@ -210,9 +225,9 @@ session:
 
 Canonical promoted content must not contain `validation_status`.
 
-### 13. Promotion event validation
+### 13. Governed mutation event validation
 
-A promotion that changes review or authority state requires one append-only JSONL event conforming to `05-specs/staging-and-promotion-workflow.md`.
+Every governed promotion or amendment requires append-only event evidence conforming to `05-specs/promotion-event-schema.md` and the governed mutation workflow.
 
 The event must:
 
@@ -220,7 +235,9 @@ The event must:
 - reference the exact validation run ID
 - identify a human approver
 - record prior and new review/authority values
-- record source and destination paths
+- record source and destination paths where applicable
+- bind the exact plan and approval SHA-256 values
+- bind prior/new content and reviewed diff hashes for amendment
 - include an approval basis
 - use a unique immutable event ID
 
@@ -251,7 +268,7 @@ Semantic duplicate detection through Qdrant is deferred until Qdrant exists. It 
 
 ### 16. Folder placement
 
-The future vault must define allowed canonical destinations per note type.
+The canonical vault uses the accepted destinations per note type.
 
 Initial direction:
 
@@ -353,18 +370,18 @@ kaizen-check-references <root>
 kaizen-validate-promotion <staged-path> <destination-path> <event-json>
 ```
 
-## Acceptance criteria
+## Implemented-baseline evidence
 
-This spec becomes implementation-ready when:
+- final `pipeline_stage` enum accepted;
+- machine-readable note and event prefix registries implemented;
+- staging, canonical, and governed-operation validation implemented;
+- canonical folder placement implemented;
+- staging and canonical roots fixed and configurable through the approved platform configuration;
+- duplicate, relationship, local-link, lifecycle, authority, path, Git, event, and hash checks implemented;
+- first-time promotion and bounded amendment task packets implemented and audited;
+- full platform suite passed 230 tests at Milestone 4 closure.
 
-- [x] final `pipeline_stage` enum is accepted
-- [ ] ULID type-prefix map is machine-readable
-- [ ] JSON Schema or equivalent schemas exist for frontmatter and promotion events
-- [x] canonical folder placement is accepted
-- [ ] staging and canonical roots are configurable in implementation
-- [x] initial private-data scanning policy is defined
-- [x] exact duplicate-detection checks are defined
-- [ ] a first implementation task packet is written
+Machine-readable schema refinements must remain backward-compatible with existing canonical notes and event lines.
 
 ## Implementation location
 
@@ -385,8 +402,7 @@ Machine-readable validator contracts belong under the platform repository's `sch
 ## Open questions
 
 - Exact file-size and raw-data thresholds.
-- How immutable IDs and `created` values are checked before the vault has long Git history.
-- Whether validation reports are ephemeral, JSONL, or stored in Postgres later.
+- Whether validation reports become durable Postgres records later.
 - When unknown fields move from warning to error.
 
 ## Related files

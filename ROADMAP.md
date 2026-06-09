@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Milestone 4 complete; Milestone 5 retrospective owner gate active
-Current objective: await separate owner instruction to begin the Milestone 5 retrospective and v0.2 consolidation
-Current implementation status: Milestone 4 complete at platform `845d65f`, vault `e5e4eec`, and Result 062 pass; Milestone 5 has not started
+Current phase: Milestone 5 v0.2 owner-acceptance gate active
+Current objective: obtain explicit owner acceptance or rejection of the exact Kaizen Project Standard v0.2 candidate
+Current implementation status: Milestone 4 complete; Decision 0013 accepted; first-slice specifications reconciled; Result 066 passes candidate `e5749b3a228dc2aaaed634395ed81edd0626511d30ce44ea6f6a4f80684fc95e`; next implementation milestone not authorized
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```

@@ -232,7 +232,7 @@ current-state amendment
 
 # Milestone 5 - Slice retrospective and v0.2 consolidation
 
-Status: retrospective complete; v0.2 consolidation active; Decision 0013 owner gate active
+Status: contract reconciliation complete; v0.2 owner-acceptance gate active; next implementation milestone not authorized
 
 ## Objective
 
@@ -267,7 +267,7 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly accept or reject proposed Decision 0013 before reconciling the supporting specifications or accepting v0.2.
+Review and explicitly accept or reject the Kaizen Project Standard v0.2 candidate at SHA-256 `e5749b3a228dc2aaaed634395ed81edd0626511d30ce44ea6f6a4f80684fc95e`.
 
 Milestone 4 closure evidence:
 
@@ -278,7 +278,7 @@ current-state amendment: e5e4eec1adc4ef26f9e735333dbb229b7bb59368
 closure audit: 03-research-results/062-milestone-4-implementation-return-closure-audit.md
 ```
 
-Milestone 5 retrospective and non-authoritative v0.2 draft are complete. Decision 0013 remains proposed.
+Milestone 5 retrospective, Decision 0013 acceptance, and first-slice specification reconciliation are complete. The v0.2 candidate remains non-authoritative until explicit owner acceptance.
 
 Current state:
 
@@ -325,8 +325,10 @@ Current state:
 41. Milestone 5 retrospective Result 063 passed.
 42. The non-authoritative v0.2 draft exists at `01-project-standard/kaizen-project-standard-v0.2-draft.md`.
 43. Result 064 passes the draft for governed review but blocks authoritative acceptance.
-44. Proposed Decision 0013 closes the six blockers at the decision level; Result 065 passed.
-45. Supporting specification edits remain prohibited until explicit owner acceptance of Decision 0013.
-46. No next implementation milestone is authorized.
+44. Decision 0013 was explicitly accepted on 2026-06-09.
+45. The event, workflow, recovery, validation, registry, ID, hammer, and spec-index contracts are reconciled as implemented baselines.
+46. Result 066 passes the v0.2 candidate for explicit owner acceptance.
+47. The v0.2 candidate SHA-256 is `e5749b3a228dc2aaaed634395ed81edd0626511d30ce44ea6f6a4f80684fc95e`.
+48. No next implementation milestone is authorized.
 
-Do not mark Decision 0013 accepted or reconcile the supporting specifications until the owner explicitly accepts it.
+Do not declare v0.2 authoritative or start the next implementation milestone until the owner explicitly accepts the exact candidate hash.

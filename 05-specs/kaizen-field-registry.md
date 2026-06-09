@@ -1,8 +1,10 @@
 # Spec - Kaizen Field Registry
 
-Status: active draft aligned to accepted foundation
+Status: implemented baseline
 Date: 2026-06-04
+Updated: 2026-06-09
 Related decisions:
+- `04-design-decisions/0013-v0.2-first-slice-contract-reconciliation.md`
 - `04-design-decisions/0007-foundation-resolution-for-v0.2.md`
 - `04-design-decisions/0008-v0.2-operating-conventions.md`
 
@@ -185,6 +187,10 @@ validation_status: pending | passed | failed
 - Whether `confidence` needs an `unknown` value.
 - When unknown fields should switch from warning to error.
 - Whether optional readable aliases become necessary after real authoring.
+
+## Implemented-baseline evidence
+
+This contract was exercised by the Milestones 1 through 4 platform and canonical-vault work, including deterministic validation, six ordered promotions, two governed amendments, hammer tests, and Result 062 closure. Remaining open questions are future refinements rather than blockers to the implemented first-slice baseline.
 
 ## Related files
 
