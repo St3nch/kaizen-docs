@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Finalize the staged audit verdict and govern ordered promotion of the six-note Milestone 4 planning bundle through explicit plan-hash gates.
 created: 2026-06-08T22:28:09Z
-updated: 2026-06-09T12:56:22Z
+updated: 2026-06-09T13:00:28Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-and-promotion-workflow.md
@@ -17,7 +17,7 @@ related_specs:
 
 # Task Packet 009B - Finalize Review and Run Ordered Bundle Promotion
 
-> Wave 6 status: immutable task-packet plan `34e92cf3de4ac2f3de839f647b7c2b6ad0db0a5e62cadd0b69102dd87dfaec9c` is security-audited pass in Result 055. Wave 6 execution awaits exact owner approval.
+> Packet 009B status: complete at vault commit `a306b2c077ef5aa0fcb9c7d39e155914c936ef39`; all six ordered waves are canonical and Result 056 passed. Governed amendment implementation has not started and requires separate owner instruction.
 
 ## Objective
 
@@ -219,4 +219,4 @@ Wave 1 source-summary promotion completed at vault commit `999ccb065409e57a9420b
 
 Wave 2 claim promotion completed at vault commit `665d2a1155ead2c49ac9b024dfbc9f4ec464f557` and passed Result 048. The canonical claim SHA-256 is `7729c7935573262c97d90cd7487a1505f2d35736b3b935df17740ab7507ac539`; exactly one `intent` and one `committed` event exist.
 
-Wave 3 decision promotion completed at vault commit `8a64d86736da785eee5be051dc392e9c2f847202` and passed Result 050. The canonical decision SHA-256 is `4c230de54ab81e67aa76114c9305c212e5714bac360ff7e8a9df740b2ed5b3d2`; exactly one `intent` and one `committed` event exist. Wave 4 spec promotion completed at vault commit `46e96a0053bed759059eacb780fb37e895728bad` and passed Result 052. The canonical spec SHA-256 is `1fbf0e994f23320d15c72dba9f25018ff1dc33c21be54ba40c89e4398aae56b8`; exactly one `intent` and one `committed` event exist. Wave 5 audit promotion completed at vault commit `37a4bbdb9938c526a61889b001a411b97c232b81` and passed Result 054. The canonical audit SHA-256 is `f0a617936fda65afb8060690e85571a441c3bf0b71dc4ffe2281e2a809371dd8`; exactly one `intent` and one `committed` event exist. Wave 6 task-packet plan generation completed for operation `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP95`. The immutable plan payload SHA-256 is `34e92cf3de4ac2f3de839f647b7c2b6ad0db0a5e62cadd0b69102dd87dfaec9c`, and Result 055 passed. Execution remains prohibited until exact owner approval.
+Wave 3 decision promotion completed at vault commit `8a64d86736da785eee5be051dc392e9c2f847202` and passed Result 050. Wave 4 spec promotion completed at vault commit `46e96a0053bed759059eacb780fb37e895728bad` and passed Result 052. Wave 5 audit promotion completed at vault commit `37a4bbdb9938c526a61889b001a411b97c232b81` and passed Result 054. Wave 6 task-packet promotion completed at vault commit `a306b2c077ef5aa0fcb9c7d39e155914c936ef39` and passed Result 056. All six ordered Packet 009B notes are canonical. Packet 009B is complete; governed amendment implementation remains a separate, not-yet-started task.

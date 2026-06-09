@@ -267,13 +267,13 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 6 execution:
+Await separate owner instruction to execute the canonical governed amendment implementation task packet:
 
 ```text
-operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP95
-plan: 34e92cf3de4ac2f3de839f647b7c2b6ad0db0a5e62cadd0b69102dd87dfaec9c
-review: 03-research-results/055-packet-009b-wave-6-plan-security-audit.md
+projects/kaizen-platform/handoffs/implement-governed-amendment-support.md
 ```
+
+Packet 009B promotion is complete. No live amendment is authorized.
 
 Current state:
 
@@ -295,11 +295,11 @@ Current state:
 16. The Wave 5 canonical audit hash is `f0a617936fda65afb8060690e85571a441c3bf0b71dc4ffe2281e2a809371dd8`.
 17. Exactly one `intent` and one `committed` event exist for Wave 5.
 18. The vault is clean and has no remote.
-19. The Wave 6 staged task packet and canonical decision/spec/audit dependencies exist at their reserved hashes and IDs.
-20. The immutable Wave 6 plan payload hash is `34e92cf3de4ac2f3de839f647b7c2b6ad0db0a5e62cadd0b69102dd87dfaec9c`.
-21. Validation passed with zero errors and warnings; the candidate transition is `active/pending/proposed -> active/approved/accepted`.
-22. No approval evidence, canonical destination, event, or vault mutation exists.
-23. Result 055 security-audits Wave 6 execution pass.
-24. Amendment implementation remains prohibited until Packet 009B completes and the canonical task packet is separately executed.
+19. Packet 009B Wave 6 is complete at vault commit `a306b2c`; Result 056 passed.
+20. The Wave 6 canonical task-packet hash is `f42549c6f4805c9d4da3cfe558c23596ec48fd159ddb9c2bcec84e5541a6380d`.
+21. Exactly one `intent` and one `committed` event exist for Wave 6.
+22. All six ordered Packet 009B notes are canonical.
+23. The vault is clean and has no remote.
+24. Governed amendment implementation and all live amendment execution remain prohibited until separately authorized.
 
-Do not execute Wave 6 until the owner approval names the exact operation ID and plan hash.
+Packet 009B is complete. Do not infer authorization to implement or amend from promotion completion.

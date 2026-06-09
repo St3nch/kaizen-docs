@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 009B Wave 6 immutable task-packet plan is ready and security-audited pass in Result 055; exact owner approval is required before execution
+- Current phase: Packet 009B complete at vault commit `a306b2c` and steward-audited pass in Result 056; governed amendment implementation has not started and requires separate owner instruction
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `37a4bbd`; Packet 009B Waves 1 through 5 are complete; no remote exists and no push is authorized
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `a306b2c`; Packet 009B all six waves are complete; no remote exists and no push is authorized
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `703d532`; Packet 006B passes 45 focused tests, 40 repeated process races, and 190 full-suite tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: Waves 1 through 5 complete; Wave 6 task-packet plan ready; Result 055 pass; exact execution approval required
+- Task Packet 009B: complete; Result 056 pass; all six governed planning notes are canonical; implementation remains not started
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -144,6 +144,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 80. `03-research-results/053-packet-009b-wave-5-plan-security-audit.md` - Wave 5 immutable plan security audit
 81. `03-research-results/054-packet-009b-wave-5-completion-steward-audit.md` - Wave 5 completion steward audit
 82. `03-research-results/055-packet-009b-wave-6-plan-security-audit.md` - Wave 6 immutable plan security audit
+83. `03-research-results/056-packet-009b-wave-6-completion-steward-audit.md` - Wave 6 completion and Packet 009B closure audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
