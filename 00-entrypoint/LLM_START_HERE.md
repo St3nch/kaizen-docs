@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 009B Wave 2 immutable claim plan is ready and security-audited pass in Result 047; exact owner approval is required before execution
+- Current phase: Packet 009B Wave 2 claim promotion is complete at vault commit `665d2a1` and steward-audited pass in Result 048; Wave 3 decision plan generation awaits explicit owner approval
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `999ccb0`; Packet 009B Wave 1 source-summary promotion is complete; remote creation remains owner-deferred until the working-project checkpoint
+- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `665d2a1`; Packet 009B Waves 1 and 2 are complete; no remote exists and no push is authorized
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, commit `703d532`; Packet 006B passes 45 focused tests, 40 repeated process races, and 190 full-suite tests; remote creation is owner-deferred until the working-project checkpoint
 - Task Packet 005: complete and audited pass-with-notes
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: Wave 1 complete; Wave 2 claim plan ready; Result 047 pass; exact execution approval required
+- Task Packet 009B: Waves 1 and 2 complete; Result 048 pass; Wave 3 decision plan generation awaits explicit owner approval; Wave 3 execution and Waves 4 through 6 remain prohibited
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -136,6 +136,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 72. `03-research-results/045-packet-009b-wave-1-plan-security-audit.md` - Wave 1 immutable plan audit
 73. `03-research-results/046-packet-009b-wave-1-completion-steward-audit.md` - Wave 1 completion audit
 74. `03-research-results/047-packet-009b-wave-2-plan-security-audit.md` - Wave 2 immutable plan security audit
+75. `03-research-results/048-packet-009b-wave-2-completion-steward-audit.md` - Wave 2 completion steward audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

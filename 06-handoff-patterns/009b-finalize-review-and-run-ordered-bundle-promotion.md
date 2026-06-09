@@ -5,7 +5,7 @@ status: active
 project: kaizen-platform
 summary: Finalize the staged audit verdict and govern ordered promotion of the six-note Milestone 4 planning bundle through explicit plan-hash gates.
 created: 2026-06-08T22:28:09Z
-updated: 2026-06-09T11:34:34Z
+updated: 2026-06-09T12:19:02Z
 review_status: pending
 authority: proposed
 primary_spec: 05-specs/staging-and-promotion-workflow.md
@@ -17,7 +17,7 @@ related_specs:
 
 # Task Packet 009B - Finalize Review and Run Ordered Bundle Promotion
 
-> Wave 2 status: immutable claim plan `13fef2deec96f89f388a997cc91a89f41efa69fc9120b52684e4492f35f0f601` is security-audited pass in Result 047. Wave 2 execution awaits exact owner approval; Wave 3 planning and Waves 3 through 6 execution remain prohibited.
+> Wave 2 status: complete at vault commit `665d2a1155ead2c49ac9b024dfbc9f4ec464f557`; Result 048 passed. Wave 3 decision plan generation awaits explicit owner approval; Wave 3 execution and Waves 4 through 6 remain prohibited.
 
 ## Objective
 
@@ -215,4 +215,8 @@ Packet 009B completes only when:
 
 ## Completion Report
 
-Pending multi-wave execution.
+Wave 1 source-summary promotion completed at vault commit `999ccb065409e57a9420b28c9e3dbca5021bcae5` and passed Result 046.
+
+Wave 2 claim promotion completed at vault commit `665d2a1155ead2c49ac9b024dfbc9f4ec464f557` and passed Result 048. The canonical claim SHA-256 is `7729c7935573262c97d90cd7487a1505f2d35736b3b935df17740ab7507ac539`; exactly one `intent` and one `committed` event exist.
+
+Wave 3 decision plan generation is the next gate and requires explicit owner approval for operation `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP92`. No Wave 3 plan or operation directory exists. Wave 3 execution and Waves 4 through 6 remain prohibited.

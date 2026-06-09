@@ -267,23 +267,24 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 2 execution:
+Review and explicitly approve or reject Packet 009B Wave 3 decision plan generation:
 
 ```text
-operation: kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH
-plan: 13fef2deec96f89f388a997cc91a89f41efa69fc9120b52684e4492f35f0f601
-review: 03-research-results/047-packet-009b-wave-2-plan-security-audit.md
+operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP92
+staged source: projects/kaizen-platform/decisions/governed-amendment-slice.md
+source sha256: c368ea6bede4cf42e549c50d128ac7bf2ab3767e991684eb7e59704e927670ef
 ```
 
 Current state:
 
 1. Packet 009A is complete; Result 042 passed.
 2. Packet 009B Wave 1 is complete at vault commit `999ccb0`; Result 046 passed.
-3. Wave 2 claim plan is immutable and verified.
-4. Validation passed with zero errors/warnings; duplicate, link, relationship, and canonical dependency checks are clear.
-5. Candidate transition is `active/pending/proposed -> active/approved/accepted`.
-6. No approval evidence, canonical destination, event, or vault mutation exists.
-7. Result 047 security-audits Wave 2 execution pass.
-8. Wave 3 planning and Waves 3 through 6 execution remain prohibited.
+3. Packet 009B Wave 2 is complete at vault commit `665d2a1`; Result 048 passed.
+4. The Wave 2 canonical claim hash is `7729c7935573262c97d90cd7487a1505f2d35736b3b935df17740ab7507ac539`.
+5. Exactly one `intent` and one `committed` event exist for Wave 2.
+6. The vault is clean and has no remote.
+7. The Wave 3 staged decision and both canonical dependencies exist with the reserved hashes and IDs.
+8. No Wave 3 operation directory exists.
+9. Wave 3 execution and Waves 4 through 6 remain prohibited.
 
-Do not execute Wave 2 until the owner approval names the exact operation ID and plan hash.
+Do not generate the Wave 3 plan until the owner explicitly approves the named operation ID.
