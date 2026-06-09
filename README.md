@@ -23,7 +23,7 @@ This repository is separate from both the running platform code and the canonica
 LLMs and humans should begin with:
 
 1. [`00-entrypoint/LLM_START_HERE.md`](00-entrypoint/LLM_START_HERE.md)
-2. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - proposed and audited; not yet accepted
+2. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - accepted implementation roadmap snapshot; preserve the exact accepted bytes
 3. [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md) - completed historical v0.1 first-slice roadmap
 4. [`ROADMAP.md`](ROADMAP.md) for historical planning provenance and the current planning gate
 
@@ -31,11 +31,11 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Packet 010B is complete in Result 076 at platform commit `1d3dabf`; Packet 010C is not drafted or approved; mutation-capable MCP, console, vault, staging, and remote work remain unauthorized
+- Current gate: Packet 010B is complete in Result 076; Packet 010C is a blocked draft audited in Result 077 because no accepted platform amendment-candidate preparation API exists; Packet 010C implementation, MCP changes, console work, vault/staging mutation, and remote work remain unauthorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
-- Platform implementation repository: exists at `C:\dev\kaizen\platform`
+- Platform implementation repository: exists at `C:\dev\kaizen\platform`, clean at `1d3dabf`; Packet 010B completed with 252 passing tests and no remote
 - Live staging root: exists at `C:\dev\kaizen\staging`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (preserve accepted bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Historical planning roadmap: `ROADMAP.md`
