@@ -30,7 +30,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: explicit owner approval for Packet 009B Wave 5 audit plan generation using operation `kz-prom-01KTMNHB6P6QKSHJWG6ANZEP94`
+- Current gate: exact owner review of Packet 009B Wave 5 execution plan `d691eafb0c215e0849bca0e99637b2737bde8177cc4caeb0b70235f671401c61`
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Packet 009B Waves 1 through 4 are complete at vault `46e96a0`; the vault is clean and has no remote

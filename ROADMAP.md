@@ -38,8 +38,8 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Packet 009B Wave 5 audit plan-generation owner gate active
-Current objective: generate the immutable Wave 5 audit plan only after exact owner approval
+Current phase: Packet 009B Wave 5 execution owner-approval gate active
+Current objective: execute the reviewed Wave 5 audit promotion only after exact owner approval
 Current implementation status: Milestone 3 complete; Packet 009A complete; Packet 009B Waves 1 through 4 complete at vault `46e96a0` with Result 052 pass; Waves 5 through 6 and amendment implementation remain incomplete
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited

@@ -267,12 +267,12 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Review and explicitly approve or reject Packet 009B Wave 5 audit plan generation:
+Review and explicitly approve or reject Packet 009B Wave 5 execution:
 
 ```text
 operation: kz-prom-01KTMNHB6P6QKSHJWG6ANZEP94
-staged source: projects/kaizen-platform/audits/governed-amendment-support-audit.md
-source sha256: 204982aaa28a0404e6bade93df3ce72a22aa2923fd2a763b9a7af1ad5ad5c4f6
+plan: d691eafb0c215e0849bca0e99637b2737bde8177cc4caeb0b70235f671401c61
+review: 03-research-results/053-packet-009b-wave-5-plan-security-audit.md
 ```
 
 Current state:
@@ -291,8 +291,11 @@ Current state:
 12. The Wave 4 canonical spec hash is `1fbf0e994f23320d15c72dba9f25018ff1dc33c21be54ba40c89e4398aae56b8`.
 13. Exactly one `intent` and one `committed` event exist for Wave 4.
 14. The vault is clean and has no remote.
-15. The Wave 5 staged audit exists at the reserved source hash.
-16. No Wave 5 operation directory exists.
-17. Wave 5 execution and Wave 6 remain prohibited.
+15. The Wave 5 staged audit and canonical decision/spec dependencies exist at their reserved hashes and IDs.
+16. The immutable Wave 5 plan payload hash is `d691eafb0c215e0849bca0e99637b2737bde8177cc4caeb0b70235f671401c61`.
+17. Validation passed with zero errors and warnings; the candidate transition is `active/pending/none -> active/approved/none`, and `audit_verdict: pass` is preserved.
+18. No approval evidence, canonical destination, event, or vault mutation exists.
+19. Result 053 security-audits Wave 5 execution pass.
+20. Wave 6 planning and execution remain prohibited.
 
-Do not generate the Wave 5 plan until the owner explicitly approves the named operation ID.
+Do not execute Wave 5 until the owner approval names the exact operation ID and plan hash.
