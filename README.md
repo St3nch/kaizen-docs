@@ -30,10 +30,10 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: complete the Milestone 4 implementation-return closure audit; Milestone 5 work remains prohibited until closure is documented
+- Current gate: Milestone 4 is complete; Milestone 5 retrospective and v0.2 consolidation require separate owner instruction
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
-- Canonical vault: exists at `C:\dev\kaizen\vault`; completion-report and current-state amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
+- Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
 - Platform implementation repository: exists at `C:\dev\kaizen\platform`
 - Live staging root: exists at `C:\dev\kaizen\staging`
 - Active execution roadmap: `IMPLEMENTATION_ROADMAP.md`

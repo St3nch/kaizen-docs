@@ -199,7 +199,7 @@ Implement the human-operated promotion path from a sibling staging root into the
 
 # Milestone 4 - One governed project loop
 
-Status: implementation-return closure audit active
+Status: complete
 
 ## Objective
 
@@ -232,7 +232,7 @@ current-state amendment
 
 # Milestone 5 - Slice retrospective and v0.2 consolidation
 
-Status: planned
+Status: ready; not started; separate owner instruction required
 
 ## Objective
 
@@ -267,16 +267,18 @@ Packets may be combined only when scope remains reviewable and acceptance criter
 
 # Immediate next action
 
-Audit the full Milestone 4 implementation-return loop and document explicit closure:
+Await separate owner instruction to begin the Milestone 5 retrospective and v0.2 consolidation.
+
+Milestone 4 closure evidence:
 
 ```text
 platform implementation: 845d65f356bd684c2f858f36aef54d0344791e43
 task-packet completion amendment: 9c5dcdb6a5c25fa0e17248df7a7a66e4f6c36305
 current-state amendment: e5e4eec1adc4ef26f9e735333dbb229b7bb59368
-latest evidence: 03-research-results/061-current-state-amendment-completion-steward-audit.md
+closure audit: 03-research-results/062-milestone-4-implementation-return-closure-audit.md
 ```
 
-Milestone 5 work remains prohibited until Milestone 4 closure is explicitly documented and committed.
+Milestone 5 has not started.
 
 Current state:
 
@@ -314,6 +316,11 @@ Current state:
 32. Exactly one `intent` and one `committed` event exist for the amendment.
 33. The vault is clean at `e5e4eec`; no push occurred and no remote was created.
 34. The governed implementation-return path is complete through canonical task-packet and current-state updates.
-35. Milestone 4 remains open only for the final implementation-return closure audit and explicit closure record.
+35. Milestone 4 closure audit Result 062 passed.
+36. All nine required canonical chain artifacts validate with zero errors and zero warnings.
+37. All six promotion operations and both amendment operations have exactly `intent -> committed`.
+38. The full platform suite passes 230 tests at closure.
+39. Platform, docs, and vault repositories are clean; the vault has no remote.
+40. Milestone 4 is complete. Milestone 5 is ready but not started.
 
-Do not begin Milestone 5 consolidation until Milestone 4 closure is documented and committed.
+Do not begin Milestone 5 retrospective or v0.2 consolidation until the owner gives separate instruction.

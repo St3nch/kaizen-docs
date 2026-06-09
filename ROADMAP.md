@@ -38,9 +38,9 @@ The original planning outcome was:
 ## Current position
 
 ```text
-Current phase: Milestone 4 implementation-return closure audit gate active
-Current objective: audit the full implementation-return loop and close Milestone 4
-Current implementation status: governed amendment implementation and both canonical return amendments are complete; current-state amendment committed at vault `e5e4eec` with Result 061 pass; Milestone 4 closure remains incomplete
+Current phase: Milestone 4 complete; Milestone 5 retrospective owner gate active
+Current objective: await separate owner instruction to begin the Milestone 5 retrospective and v0.2 consolidation
+Current implementation status: Milestone 4 complete at platform `845d65f`, vault `e5e4eec`, and Result 062 pass; Milestone 5 has not started
 Active execution roadmap: IMPLEMENTATION_ROADMAP.md
 Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
 ```

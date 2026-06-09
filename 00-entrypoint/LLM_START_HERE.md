@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: `current-state.md` amendment complete at vault commit `e5e4eec` and steward-audited pass in Result 061; Milestone 4 implementation-return closure audit is next
+- Current phase: Milestone 4 complete and closure-audited pass in Result 062; Milestone 5 retrospective and v0.2 consolidation await separate owner instruction
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Active implementation roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B: complete; governed amendment implementation, completion-report amendment, and current-state amendment are complete; Result 061 passed; Milestone 4 closure audit remains incomplete
+- Task Packet 009B and Milestone 4: complete; governed amendment implementation and both canonical return amendments passed; Result 062 closes the governed project loop; Milestone 5 has not started
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -150,6 +150,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 86. `03-research-results/059-task-packet-completion-amendment-steward-audit.md` - task-packet completion amendment steward audit
 87. `03-research-results/060-current-state-amendment-plan-security-audit.md` - current-state amendment plan security audit
 88. `03-research-results/061-current-state-amendment-completion-steward-audit.md` - current-state amendment completion steward audit
+89. `03-research-results/062-milestone-4-implementation-return-closure-audit.md` - Milestone 4 implementation-return closure audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
