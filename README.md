@@ -31,7 +31,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Implementation Roadmap v0.2 is accepted by exact SHA-256 in Result 069; Milestone 6 planning is authorized; proposed Packet 010A is audited in Result 070 and awaits separate owner approval; no implementation is authorized
+- Current gate: Packet 010A is complete in Result 072; proposed Decision 0014 and the Milestone 6 operator-surface specification await exact owner acceptance; Packet 010B is not drafted or approved; no implementation is authorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
