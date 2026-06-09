@@ -31,13 +31,13 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: proposed Implementation Roadmap v0.2 and formal Milestone 6 are audited in Result 068 and await exact owner acceptance; no implementation is authorized
+- Current gate: Implementation Roadmap v0.2 is accepted by exact SHA-256 in Result 069; Milestone 6 planning is authorized; proposed Packet 010A is audited in Result 070 and awaits separate owner approval; no implementation is authorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
 - Platform implementation repository: exists at `C:\dev\kaizen\platform`
 - Live staging root: exists at `C:\dev\kaizen\staging`
-- Proposed next execution roadmap: `IMPLEMENTATION_ROADMAP_V0.2.md`; historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
+- Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (preserve accepted bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Historical planning roadmap: `ROADMAP.md`
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant retrieval layer: not implemented

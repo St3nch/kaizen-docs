@@ -26,9 +26,9 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Kaizen Project Standard v0.2 accepted and authoritative; Milestone 5 complete in Result 067; proposed Implementation Roadmap v0.2 and formal Milestone 6 await exact owner acceptance; implementation is not authorized
+- Current phase: Implementation Roadmap v0.2 accepted at exact SHA-256 in Result 069; Milestone 6 planning authorized; proposed Packet 010A is audited in Result 070 and awaits separate owner approval; implementation is not authorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
-- Proposed next implementation roadmap: `IMPLEMENTATION_ROADMAP_V0.2.md` (audited in Result 068; not accepted); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
+- Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 - Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e5e4eec`; task-packet completion report and current-state return amendments are complete; no remote exists and no push is authorized
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestone 4, and Milestone 5: complete; Kaizen Project Standard v0.2 is authoritative; Milestone 6 is formally defined only as an audited proposal and has not started
+- Task Packet 009B, Milestone 4, and Milestone 5: complete; Milestone 6 planning is authorized; Packet 010A is an audited proposal and has not been approved or executed
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -82,7 +82,7 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 17. `04-design-decisions/0010-dedicated-internet-marketing-intelligence-database.md` - accepted; dedicated boundary and pre-schema design gate
 18. `04-design-decisions/0011-progressive-hybrid-human-interface-direction.md` - proposed; architecture direction only
 19. `04-design-decisions/0012-first-slice-contract-and-implementation-boundary.md` - accepted; first-slice code and repository boundary
-20. `IMPLEMENTATION_ROADMAP_V0.2.md` - proposed, audited next implementation roadmap; not accepted and no implementation authorized
+20. `IMPLEMENTATION_ROADMAP_V0.2.md` - accepted implementation roadmap snapshot; preserve the exact accepted SHA-256 and bytes
 21. `IMPLEMENTATION_ROADMAP.md` - completed historical v0.1 first-slice implementation roadmap
 22. `05-specs/kaizen-field-registry.md`
 23. `05-specs/kaizen-note-type-registry.md`
@@ -160,7 +160,10 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 95. `03-research-results/066-v0.2-post-reconciliation-acceptance-readiness-audit.md` - v0.2 post-reconciliation acceptance-readiness audit
 96. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
 97. `03-research-results/067-kaizen-project-standard-v0.2-acceptance-and-milestone-5-closure-audit.md` - v0.2 acceptance and Milestone 5 closure audit
-98. `03-research-results/068-implementation-roadmap-v0.2-and-milestone-6-security-steward-audit.md` - audited roadmap proposal and formal Milestone 6 definition
+98.  3-research-results/068-implementation-roadmap-v0.2-and-milestone-6-security-steward-audit.md - audited roadmap proposal and formal Milestone 6 definition
+99.  3-research-results/069-implementation-roadmap-v0.2-owner-acceptance-and-milestone-6-planning-authorization.md - exact roadmap acceptance and planning-only authorization
+100.  6-handoff-patterns/010a-define-milestone-6-contracts-and-repository-placement.md - proposed documentation-only Packet 010A
+101.  3-research-results/070-packet-010a-security-steward-audit.md - Packet 010A security and steward audit
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
