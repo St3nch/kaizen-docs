@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 010D is complete at platform commit `1b8be1d`; Result 084 records exact owner authorization and Result 085 records completion; Packet 010E remains separately gated and unauthorized
+- Current phase: Packet 010E is complete; Result 087 records exact owner authorization and Result 088 records completion with a documented live-connector HTTP 404 limitation; Packet 010F remains separately gated and unauthorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, Packet 010B.1, Packet 010C, and Packet 010D: complete; Packet 010E is the next separately gated work
+- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, Packet 010B.1, Packet 010C, Packet 010D, and Packet 010E: complete; Packet 010F is the next separately gated work
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
