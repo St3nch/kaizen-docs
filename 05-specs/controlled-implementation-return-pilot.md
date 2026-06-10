@@ -26,6 +26,10 @@ The pilot is designed to reveal:
 - which future records may justify Postgres;
 - which apparent database needs disappear when the workflow is observed directly.
 
+The workload-observation ledger is the pilot's primary new evidence. Functional success confirms machinery already believed to work; the ledger supplies the workload evidence needed for later system-of-record decisions.
+
+This pilot produces strong back-half evidence about implementation runs, attempts, failures, approvals, completion evidence, returns, and changes. Its source-ingestion, provenance, and freshness evidence is intentionally weak and synthetic. Later schema scope must not exceed what the pilot actually proves.
+
 This document defines the pilot. It does not authorize execution.
 
 ## Mock project
@@ -171,7 +175,22 @@ It will not initially answer:
 
 The pilot must prove that Kaizen converts ambiguity into explicit claims, decisions, and testable specifications before implementation.
 
-The answer key above is authoritative for evaluating whether those decisions converge correctly.
+## Sealed oracle and implementer brief
+
+Before implementation, split the pilot inputs into two separately hashed artifacts:
+
+```text
+implementer brief
+sealed oracle
+```
+
+The implementer brief contains the ambiguous request, synthetic source material, accepted Kaizen decisions once produced, audited task packet, and implementation requirements. It must not contain the accepted business-rule answers, golden outputs, expected hashes, or failure-injection schedule.
+
+The sealed oracle contains the authoritative business-rule answers, baseline and amended golden files, expected totals, expected failure points, expected Kaizen artifact manifest, and evaluator instructions. The owner holds it outside the implementer's accessible reading path.
+
+Both artifacts must be frozen by SHA-256 before implementation. Any oracle change after freezing is a pilot failure unless a separately governed pilot amendment is approved.
+
+The answer key above defines the owner oracle for planning. It must not be supplied to the implementation lane.
 
 ## Injected failures and changes
 
@@ -235,19 +254,55 @@ Expected behavior:
 - Kaizen identifies the missing evidence;
 - no current-state promotion occurs until repaired.
 
-### Injection 5 - Controlled change request
+### Injection 5 - Rule-modifying change request
 
 After the baseline slice passes, add:
 
-> Exclude reorder rows whose estimated cost is below $25, but still count them in a new `suppressed_low_value` summary field.
+> Amend stale-price handling so that an item with stale pricing and an inactive supplier is suppressed from the reorder report and counted as `supplier_review_required`. Active suppliers with stale pricing continue to produce `price_review_required` reorder rows.
 
 Expected behavior:
 
 - existing accepted requirements remain unchanged until an amendment is approved;
-- impact analysis identifies affected rules, outputs, tests, and examples;
+- impact analysis identifies the interaction among supplier activity, stale pricing, reorder eligibility, output status, summary counts, tests, and examples;
+- the accepted stale-price rule and affected decision record are amended rather than silently replaced;
 - a separately governed implementation packet is created;
 - baseline history is preserved;
 - new golden outputs are versioned rather than overwriting prior evidence silently.
+
+### Injection 6 - Silent golden-file edit attempt
+
+The implementation lane attempts to make a failing result pass by editing a frozen golden file.
+
+Expected behavior:
+
+- oracle hash verification fails;
+- the edit is recorded as a caught pilot failure;
+- the expected output is restored from owner-held oracle bytes;
+- the implementation must be corrected instead of moving the goalposts.
+
+### Injection 7 - Dirty-repository governed return
+
+After Milestone 8 has fixed and tested read-only scope behavior, attempt the governed return with an applicable repository intentionally dirty.
+
+Expected behavior:
+
+- mutation is blocked by scoped Git cleanliness requirements;
+- read-only inspection still returns structured status rather than failing through a mutation-grade guard;
+- no cleanup, reset, stash, or evidence destruction occurs;
+- the repository is restored through an explicit reviewed action before the return resumes.
+
+This is Milestone 9 field validation of Milestone 8 behavior, not a venue for debugging the stale loader defect.
+
+### Injection 8 - Wrong-but-green test
+
+A test is introduced that agrees with the incorrect availability rule, causing the suite to pass while violating the accepted specification.
+
+Expected behavior:
+
+- the independent audit compares tests and implementation against the accepted decision and specification;
+- the audit identifies the wrong-but-green test;
+- completion is blocked despite a green test suite;
+- corrected tests and implementation receive new evidence while the failed audit remains preserved.
 
 ## Required Kaizen loop
 
@@ -330,58 +385,96 @@ Recommended:
 
 The pilot evaluates Kaizen, not framework selection. Keep the software deliberately boring.
 
+## Mandatory role separation
+
+The pilot uses the following information and authority lanes:
+
+```text
+owner: sealed-oracle holder and final evaluator
+GPT implementation lane: write, test, commit, and return evidence without oracle access
+Claude audit lane: independent read/audit review against accepted records
+fresh-context agent: resumption proof without chat history or oracle access
+```
+
+The implementation lane must not grade its own golden match or audit. The owner may also act as pilot designer and steward; inventing additional ceremonial roles is unnecessary. The control is the sealed information boundary, exact hashes, and independent review.
+
+## Resumption tests
+
+### R1 - Baseline complete, before change request
+
+A fresh agent with access only to the disposable implementation repository and canonical Kaizen records must:
+
+1. state the current project stage and status;
+2. identify the last accepted decision by Kaizen ID and explain what it resolved;
+3. list unresolved work;
+4. state the single next valid action;
+5. regenerate the baseline outputs from canonical records without access to the oracle.
+
+The owner/audit lane compares the regenerated output hashes to the sealed oracle after the agent finishes.
+
+Before R1, withhold one required completion-evidence value from the resumption context. The agent must identify the missing evidence and refuse to invent it.
+
+### R2 - Change approved, before amended implementation
+
+A different fresh context must:
+
+1. identify the approved change and governing decision or packet ID;
+2. list affected rules, outputs, tests, examples, and golden files;
+3. state that baseline history remains immutable and amended golden files require a new version;
+4. prepare, but not execute, the amendment-packet outline;
+5. identify any missing evidence.
+
+Any dependence on prior chat history, oracle access, or fabricated evidence fails the pilot.
+
 ## Workload-observation ledger
 
-During every stage, record candidate operational data without prematurely designing tables.
+The ledger is the pilot's primary new evidence. The independent audit lane records entries at each gate transition using concrete evidence pointers, not implementation preferences.
 
 For each observed record, capture:
 
 ```text
 record name
 why it exists
+evidence pointer
 producer
 consumer
 write frequency
+recurrence count
 read pattern
 lifecycle
 immutability
-retention need
-privacy level
 project scope
-transaction boundary
 canonical or operational
-Markdown friction
-query/aggregation need
+concrete Markdown/file friction
+retention: observed or unknown
+privacy: observed or unknown
+transaction boundary: observed or unknown
+query/aggregation need: observed or unknown
 ```
 
-Expected candidate records may include:
+Expected candidate records may include implementation runs, test runs, failed attempts, review findings, approvals, task-packet state, completion evidence, change requests, artifact hashes, durations, tool invocations, and retries.
 
-- implementation run;
-- test run;
-- failed attempt;
-- review finding;
-- approval;
-- task-packet state;
-- completion evidence;
-- change request;
-- artifact hash;
-- elapsed time;
-- tool invocation;
-- retry;
-- cost placeholder.
+A record family may be nominated for later Postgres consideration only when all three are true:
 
-Their appearance does not authorize Postgres. The pilot determines whether they are real, repeated workloads or merely hypothetical fields.
+```text
+1. recurrence_count >= 3, or it appears in both baseline and amendment slices
+2. a concrete Markdown or file-evidence friction example exists
+3. a real query or aggregation need exists that files cannot reasonably serve
+```
+
+Other observations remain on a ranked watchlist. The expected healthy outcome may be few or zero immediate Postgres nominations.
 
 ## Oracle and scoring
 
 ### Functional score
 
-- baseline golden report: exact match;
+- baseline golden report: exact match verified independently by the owner/audit lane;
 - baseline summary: exact match;
 - invalid fixture behavior: exact expected failures;
 - deterministic repeat: byte-identical;
 - amended golden report: exact match;
-- full test suite: pass.
+- full test suite: pass;
+- green tests alone never substitute for oracle comparison or specification audit.
 
 ### Governance score
 
@@ -405,28 +498,35 @@ Their appearance does not authorize Postgres. The pilot determines whether they 
 
 The pilot succeeds only when:
 
-1. both baseline and amended outputs match frozen golden files;
-2. all injected failures are detected at the expected gate;
-3. the failed implementation is not falsely accepted;
-4. the full implementation-return loop completes twice: baseline and controlled amendment;
-5. canonical history remains intact;
-6. no new note type or infrastructure is added without proven need;
-7. a workload-evidence report identifies actual operational record families;
-8. the report distinguishes repeated needs from one-off pilot artifacts;
-9. no Postgres schema or production MCP surface is designed early;
-10. a closure audit determines whether a real-project pilot should follow.
+1. both baseline and amended outputs match frozen golden files under independent evaluation;
+2. the sealed-oracle and implementer-brief boundary remains intact;
+3. all eight injected failures are detected at the expected gate;
+4. the wrong-but-green test is caught by audit rather than unit tests;
+5. the failed implementation is not falsely accepted;
+6. the full implementation-return loop completes twice: baseline and controlled amendment;
+7. both fresh-context resumption checkpoints pass, including the missing-evidence trap;
+8. canonical history remains intact;
+9. no new note type or infrastructure is added without proven need;
+10. a workload-evidence report identifies actual operational record families with recurrence counts and evidence pointers;
+11. the report distinguishes repeated needs from one-off pilot artifacts and applies the nomination bar;
+12. no Postgres schema or production MCP surface is designed early;
+13. a closure audit decides whether a real-project pilot, a controlled research/report pilot, or direct Milestone 10 reconciliation should follow.
 
 ## Failure criteria
 
 The pilot fails when:
 
+- the implementation lane gains access to the sealed oracle or expected hashes;
 - expected answers are changed to match the implementation;
 - ambiguity is resolved silently;
 - injected failed evidence is discarded;
+- the wrong-but-green test passes audit;
 - a completion report is accepted without exact evidence;
 - baseline history is overwritten by the change request;
+- resumption requires chat history or fabricates missing evidence;
+- a Postgres candidate is nominated without meeting the recurrence, friction, and query-need bar;
 - the mock project begins driving new infrastructure before workload evidence exists;
-- Kaizen cannot resume the project from canonical records without chat history;
+- Kaizen cannot resume the project from canonical records;
 - the pilot proves only software correctness and not the implementation-return loop.
 
 ## Outputs required before later schema work

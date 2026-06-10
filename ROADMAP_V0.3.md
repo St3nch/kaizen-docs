@@ -53,7 +53,9 @@ Detailed rationale:
 
 ### Milestone 9 - Controlled implementation-return pilot
 
-Run Kaizen's complete governed loop on a purpose-built mock project with frozen inputs, known correct outputs, injected failures, a controlled change request, and measurable acceptance criteria.
+Run Kaizen's complete governed loop on a purpose-built mock project with a sealed owner oracle, oracle-blind implementation lane, independent audit, eight injected failures, two fresh-context resumption checks, a rule-modifying change request, and a workload ledger as the primary new evidence.
+
+Milestone 9 runs only after Milestone 8 proves the read-only loader and dirty-repository behavior; the pilot then field-validates those controls rather than debugging them.
 
 Detailed pilot specification:
 
@@ -76,6 +78,8 @@ Detailed rationale:
 ### Milestone 11 - Operational data foundation
 
 Only after workload reconciliation, design and prove the smallest justified Postgres schemas, migrations, constraints, roles, backup, restore, and typed operational APIs.
+
+Scope is limited to record families actually evidenced by Milestone 9 and accepted in Milestone 10. Ingestion or Observatory schema work requires additional front-half evidence from a later controlled research/report pilot or real project if Northstar does not produce it.
 
 Detailed milestone definition: deferred until Milestone 10 evidence exists.
 
