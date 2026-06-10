@@ -140,7 +140,7 @@ Record exactly:
 - no regression in first-time promotion or governed amendments;
 - no production MCP migration, canonical mutation outside this governed return, new dependency, remote, or push;
 - remaining deferred systems and boundaries;
-- exact vault amendment operation, plan, event, and commit evidence after execution.
+- a durable reference to the Packet 010F governed return, with exact amendment operation, plan, event, result, and vault commit evidence recorded in the immutable governance evidence and closure audit after execution. The canonical task-packet candidate must not embed values that are unknowable until after its own plan or commit exists.
 
 ### Current-state amendment
 
