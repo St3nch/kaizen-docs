@@ -39,7 +39,11 @@ Full reconciliation:
 
 Create privacy-aware off-machine backups of the vault, platform, and immutable staging evidence, then prove restoration with exact hash and Git verification.
 
-Detailed milestone definition: not yet drafted.
+Detailed milestone definition:
+
+```text
+05-specs/milestone-7-durable-recoverability.md
+```
 
 ### Milestone 8 - Reliability and known-defect closure
 
