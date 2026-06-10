@@ -31,11 +31,11 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Packet 010C is complete in the temporary non-Git `kaizen-mcp` proving ground; Result 081 records owner authorization and Result 082 records completion at the exact eight-file manifest; runtime activation, connector evidence, production MCP migration, console work, vault/staging mutation, remote creation, and Packet 010D through 010F remain unauthorized
+- Current gate: Packet 010D is complete at platform commit `1b8be1d`; Result 084 records owner authorization and Result 085 records completion; Packet 010E remains separately gated and unauthorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
-- Platform implementation repository: exists at `C:\dev\kaizen\platform`, clean at `1d3dabf`; Packet 010B completed with 252 passing tests and no remote
+- Platform implementation repository: exists at `C:\dev\kaizen\platform`, clean at `1b8be1d`; Packet 010D completed with 276 passing tests and no remote
 - Live staging root: exists at `C:\dev\kaizen\staging`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (preserve accepted bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Historical planning roadmap: `ROADMAP.md`

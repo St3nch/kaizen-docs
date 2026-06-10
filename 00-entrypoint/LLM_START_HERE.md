@@ -26,14 +26,14 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 010C is complete in the temporary non-Git `kaizen-mcp` proving ground; Result 081 records exact owner authorization and Result 082 records completion at the exact eight-file manifest; the live MCP process has not been restarted; runtime activation, connector evidence, production MCP migration, console work, vault/staging mutation, remote creation, and Packet 010D through 010F remain unauthorized
+- Current phase: Packet 010D is complete at platform commit `1b8be1d`; Result 084 records exact owner authorization and Result 085 records completion; Packet 010E remains separately gated and unauthorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 - Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e5e4eec`; task-packet completion report and current-state return amendments are complete; no remote exists and no push is authorized
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
-- Platform repository: exists at `C:\dev\kaizen\platform`, commit `c56e1cc`; Packet 010B.1 completed with 267 passing tests (15 new, no regression from the 252 baseline); no remote exists
+- Platform repository: exists at `C:\dev\kaizen\platform`, clean at commit `1b8be1d`; Packet 010D completed with 276 passing tests and no remote
 - Task Packet 005: complete and audited pass-with-notes
 - Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
 - Task Packet 006A: complete at platform commit `26271ce`; steward-audited in Result 028
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, Packet 010B.1, and Packet 010C: complete; Packet 010D planning is the next separately gated work
+- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, Packet 010B.1, Packet 010C, and Packet 010D: complete; Packet 010E is the next separately gated work
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
