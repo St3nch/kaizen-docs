@@ -23,26 +23,27 @@ This repository is separate from both the running platform code and the canonica
 LLMs and humans should begin with:
 
 1. [`00-entrypoint/LLM_START_HERE.md`](00-entrypoint/LLM_START_HERE.md)
-2. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - accepted implementation roadmap snapshot; preserve the exact accepted bytes
-3. [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md) - completed historical v0.1 first-slice roadmap
-4. [`ROADMAP.md`](ROADMAP.md) for historical planning provenance and the current planning gate
+2. [`ROADMAP_V0.3.md`](ROADMAP_V0.3.md) - accepted post-Milestone 6 planning direction
+3. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - accepted completed Milestone 6 implementation roadmap snapshot; preserve exact bytes
+4. [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md) - completed historical v0.1 first-slice roadmap
+5. [`ROADMAP.md`](ROADMAP.md) - historical planning provenance
 
 The entrypoint defines the authority hierarchy, current project posture, and task-dependent reading guidance.
 
 ## Current status
 
-- Current gate: Milestone 6 is closed; Result 094 records the passing closure audit and Result 095 records exact owner acceptance; Packet 010F is complete; Milestone 7 remains unauthorized
+- Current gate: Milestone 6 is closed; Result 099 accepts Roadmap v0.3 and the controlled implementation-return pilot as the post-Milestone 6 planning direction; Milestone 7 implementation remains unauthorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
-- Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
+- Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 6 governed return amendments are complete at vault `fc4b033`; the vault is clean and has no remote
 - Platform implementation repository: exists at `C:\dev\kaizen\platform`, clean at `1b8be1d`; Packet 010D completed with 276 passing tests and no remote
 - Live staging root: exists at `C:\dev\kaizen\staging`
-- Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (preserve accepted bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
-- Historical planning roadmap: `ROADMAP.md`
+- Accepted post-Milestone 6 planning roadmap: `ROADMAP_V0.3.md` (accepted by exact SHA-256 in Result 099)
+- Accepted completed implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (preserve accepted bytes); historical first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`; historical planning provenance: `ROADMAP.md`
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant retrieval layer: not implemented
 - Hermes integration: deferred beyond the first slice; no canonical write authority
-- Live `_governance`: complete at vault commit `248b26a`; live operator complete at platform commit `1a890dd`; Packet 008B Gate A may only generate a plan after approval, and Gate B remains prohibited
+- Next authorized work: define and audit Milestone 7 durable recoverability; no backup implementation, mock-project execution, physical Postgres schema work, or production MCP migration is authorized yet
 
 ## Stewardship rule
 

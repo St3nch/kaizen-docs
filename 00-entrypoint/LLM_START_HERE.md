@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestone 6 is closed; Result 094 records the passing closure audit and Result 095 records exact owner acceptance; Packet 010F is complete; Milestone 7 remains unauthorized
-- Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
+- Current phase: Milestone 6 is closed; Result 099 accepts Roadmap v0.3 and the controlled implementation-return pilot as the post-Milestone 6 planning direction; Milestone 7 implementation remains unauthorized
+- Accepted post-Milestone 6 planning roadmap: `ROADMAP_V0.3.md` (accepted by exact SHA-256 in Result 099); historical planning provenance remains at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, commit `e5e4eec`; task-packet completion report and current-state return amendments are complete; no remote exists and no push is authorized
+- Canonical vault: exists at `C:\dev\kaizen\vault`, clean at commit `fc4b033`; Milestone 6 task-packet and current-state return amendments are complete; no remote exists and no push is authorized
 - Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
 - Platform repository: exists at `C:\dev\kaizen\platform`, clean at commit `1b8be1d`; Packet 010D completed with 276 passing tests and no remote
 - Task Packet 005: complete and audited pass-with-notes
@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, Packet 010B.1, Packet 010C, Packet 010D, and Packet 010E: complete; Packet 010F is the next separately gated work
+- Task Packet 009B, Milestones 4 through 6, and Packets 010A through 010F: complete; the next accepted planning direction is Roadmap v0.3, beginning with Milestone 7 durable-recoverability planning only
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
@@ -61,12 +61,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Read-first sequence
 
-This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint, the accepted `IMPLEMENTATION_ROADMAP_V0.2.md`, and the historical `IMPLEMENTATION_ROADMAP.md`; then read only the decisions, specs, audits, and task packets relevant to the requested work unless the user explicitly requests a full-repository audit.
+This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and accepted `ROADMAP_V0.3.md`; read `IMPLEMENTATION_ROADMAP_V0.2.md` and `IMPLEMENTATION_ROADMAP.md` for completed implementation history, then load only the decisions, specs, audits, and task packets relevant to the requested work unless the user explicitly requests a full-repository audit.
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file
 2. `01-project-standard/kaizen-vision-and-architecture-alignment.md` - central intended system vision and missing capability alignment
 3. `01-project-standard/internet-marketing-intelligence-vision.md` - portfolio-wide longitudinal marketing intelligence vision
-4. `ROADMAP.md` - historical planning provenance with a maintained current-gate summary
+4. `ROADMAP_V0.3.md` - accepted post-Milestone 6 planning direction; `ROADMAP.md` is historical planning provenance
 5. `01-project-standard/kaizen-project-standard.md` - imported original baseline
 6. `01-project-standard/baseline-v0.2-reconciliation-map.md` - preserve/replace/defer map
 7. `01-project-standard/standard-revision-plan.md` - deferred v0.2 consolidation path; resume after Milestone 4 evidence
