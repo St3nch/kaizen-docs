@@ -42,7 +42,7 @@ Humans = authority-bearing review, approval, and promotion
 - Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
 - Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
 - Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, and Packet 010B.1: complete; Packet 010C remains blocked pending separate revision and audit
+- Task Packet 009B, Milestones 4 and 5, Packet 010A, Packet 010B, Packet 010B.1, and Packet 010C: complete; Packet 010D planning is the next separately gated work
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
