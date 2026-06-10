@@ -26,8 +26,8 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestone 6 is closed; Result 099 accepts Roadmap v0.3 and the controlled implementation-return pilot as the post-Milestone 6 planning direction; Milestone 7 implementation remains unauthorized
-- Accepted post-Milestone 6 planning roadmap: `ROADMAP_V0.3.md` (accepted by exact SHA-256 in Result 099); historical planning provenance remains at `ROADMAP.md`
+- Current phase: Milestone 6 is closed; Result 102 accepts the revised Roadmap v0.3 and revised controlled implementation-return pilot as the post-Milestone 6 planning direction; Milestone 7 implementation remains unauthorized
+- Accepted post-Milestone 6 planning roadmap: `ROADMAP_V0.3.md` (revised bytes accepted by exact SHA-256 in Result 102); historical planning provenance remains at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
 - Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
