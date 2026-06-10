@@ -26,7 +26,7 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Packet 010E is complete; Result 087 records exact owner authorization and Result 088 records completion with a documented live-connector HTTP 404 limitation; Packet 010F remains separately gated and unauthorized
+- Current phase: Milestone 6 is closed; Result 094 records the passing closure audit and Result 095 records exact owner acceptance; Packet 010F is complete; Milestone 7 remains unauthorized
 - Planning roadmap: historical planning source plus current live-operator implementation gate at `ROADMAP.md`
 - Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
 - Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`

@@ -31,7 +31,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Packet 010E is complete; Result 087 records owner authorization and Result 088 records completion with a documented live-connector HTTP 404 limitation; Packet 010F remains separately gated and unauthorized
+- Current gate: Milestone 6 is closed; Result 094 records the passing closure audit and Result 095 records exact owner acceptance; Packet 010F is complete; Milestone 7 remains unauthorized
 - Packet 006A: complete and steward-audited
 - Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
 - Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 4 governed return amendments are complete at vault `e5e4eec`; the vault is clean and has no remote
