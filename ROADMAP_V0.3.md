@@ -1,7 +1,7 @@
 # Kaizen Roadmap v0.3
 
-Status: revised draft for owner review
-Date: 2026-06-10
+Status: accepted and active
+Date: 2026-06-11
 Owner: Kaizen project steward
 
 ## Purpose
@@ -16,16 +16,16 @@ This roadmap does not authorize implementation.
 
 ```text
 Kaizen Project Standard v0.2: authoritative
-Milestones 1-6: closed
-Packet 010F: complete
+Milestones 1-7: closed
+Packet 011E: complete
 Platform HEAD: 1b8be1d6d42d768587dddb2be8415fa24b670561
-Vault HEAD: fc4b03397d770f9b4a8a2f5e7f71e33981bcd181
-Milestone 7: not defined or authorized
+Vault HEAD: 37e756a8e85157bd83c22e832af285e1992f8d8e
+Milestone 8: accepted for planning only
 ```
 
-Milestone 6 proved the governed Markdown pipeline, exact human approval gates, fixed-root promotion and amendment controls, recovery, hammer testing, constrained operator surfaces, and canonical implementation return.
+Milestone 7 proved encrypted off-machine recovery, two retained generations, independent Google Drive and USB restoration, fresh platform reconstruction, bounded failure proof, repeatability, and governed canonical return.
 
-The main remaining evidence gap is that the complete implementation-return loop has only been exercised on Kaizen itself.
+The next evidence gap is reliability and known-defect closure before the controlled implementation-return pilot.
 
 Full reconciliation:
 
@@ -47,12 +47,12 @@ Detailed milestone definition:
 
 ### Milestone 8 - Reliability and known-defect closure
 
-Correct the stale prepared-candidate loader guard and stabilize MCP lifecycle, health, version, tool-registry, connector, and tooling behavior without declaring the temporary proving ground production or widening authority.
+Correct or retire the evidence-bounded reliability defects in prepared-candidate loading, amendment concurrency, MCP lifecycle, health/version/tool-registry reporting, connector behavior, runbooks, tests, and lint policy without declaring the temporary proving grounds production or widening authority.
 
-Detailed rationale:
+Detailed milestone definition:
 
 ```text
-03-research-results/097-post-milestone-6-forward-roadmap-audit-reconciliation.md
+05-specs/milestone-8-reliability-and-known-defect-closure.md
 ```
 
 ### Milestone 9 - Controlled implementation-return pilot
@@ -125,11 +125,12 @@ Expected behavior, injected failures, golden outputs, and scoring are defined at
 
 Until each milestone receives its own accepted definition and task packet:
 
-- no Milestone 7 implementation;
+- no Milestone 8 implementation beyond separately approved packets;
 - no production MCP migration or packaging;
 - no physical Postgres schema;
+- no mock-project execution before Milestone 8 closes;
 - no Qdrant, Hermes, broad UI, or Internet Marketing Intelligence implementation;
-- no vault push or remote creation without an accepted backup posture;
+- no vault push or remote creation;
 - no generalized correction, delete, move, rollback, or multi-note mutation semantics;
 - no inferred owner approval.
 
@@ -151,11 +152,11 @@ evidence
 ## Immediate next planning work
 
 ```text
-define Milestone 7 durable recoverability
--> audit exact scope
--> obtain owner acceptance
--> draft first task packet
--> stop at separate implementation gate
+draft and audit Packet 012A defect register and contract freeze
+-> obtain separate implementation approval for read-only inspection only
+-> classify every initial defect candidate
+-> freeze the accepted reliability contracts and later packet split
+-> stop before Packet 012B implementation
 ```
 
-The controlled mock pilot is planned now so later work does not drift, but its execution remains behind Milestones 7 and 8 unless a separately reviewed roadmap amendment changes the sequence.
+The controlled mock pilot remains planned but unexecuted. It stays behind Milestone 8 closure so its controls are field-validated rather than debugged during the pilot.
