@@ -123,10 +123,14 @@ mismatches:
 - `incomplete`: evidence exists but the immutable plan or required supporting evidence is incomplete.
 - `ready`: complete immutable plan and reviewed evidence exist; no approval exists.
 - `approved`: exact-plan approval exists and all execution preconditions still match.
-- `committed`: exactly one successful committed terminal event exists and the installed canonical/result hash verifies.
-- `recovered`: exactly one recovered terminal event exists and recovery evidence verifies.
-- `failed`: a failed terminal event exists and no accepted successful terminal result exists.
-- `invalid`: contradictory, replayed, drifted, hash-mismatched, root-mismatched, Git-mismatched, or otherwise non-actionable evidence exists.
+- `committed`: exactly one trustworthy successful committed terminal event exists and the installed canonical/result hash verifies. Later current-world findings remain visible in `mismatches` but do not erase the committed lifecycle fact.
+- `recovered`: exactly one trustworthy recovered terminal event exists and recovery evidence verifies. Later current-world findings remain visible in `mismatches` but do not erase the recovered lifecycle fact.
+- `failed`: a trustworthy failed terminal event exists and no accepted successful terminal result exists. Later current-world findings remain visible in `mismatches` but do not erase the failed lifecycle fact.
+- `invalid`: nonterminal evidence is contradictory or non-actionable, or terminal history itself cannot be trusted because of contradictory events, duplicate successful terminal events, terminal binding corruption, installed/result hash mismatch, missing destination for a claimed successful result, malformed terminal evidence, or equivalent integrity failure.
+
+State selection must preserve the strongest trustworthy lifecycle fact. Current Git cleanliness, later branch/HEAD drift, and unrelated later repository changes are reported through `git` and `mismatches`; they do not automatically rewrite a verified terminal state to `invalid`. Findings that disprove the claimed terminal operation or installed result still require `invalid`.
+
+For `committed`, `recovered`, and `failed`, both eligibility flags remain false even when no mismatches exist. Terminal-with-findings output remains non-actionable and may use a nonzero status-command exit to require human attention. Before terminal completion, all existing Git, plan, approval, packet, candidate, prior, diff, destination, validation, and root mismatches remain fail-closed and execution-blocking.
 
 The status reader must remain backward-compatible with already persisted historical event shapes. It must not rewrite evidence.
 
