@@ -23,27 +23,28 @@ This repository is separate from both the running platform code and the canonica
 LLMs and humans should begin with:
 
 1. [`00-entrypoint/LLM_START_HERE.md`](00-entrypoint/LLM_START_HERE.md)
-2. [`ROADMAP_V0.3.md`](ROADMAP_V0.3.md) - accepted post-Milestone 6 planning direction
-3. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - accepted completed Milestone 6 implementation roadmap snapshot; preserve exact bytes
-4. [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md) - completed historical v0.1 first-slice roadmap
-5. [`ROADMAP.md`](ROADMAP.md) - historical planning provenance
+2. [`ROADMAP_V0.3.md`](ROADMAP_V0.3.md) - active planning roadmap through Milestone 8 closure, corrective pre-Milestone-9 work, and the parallel Observatory research track
+3. [`03-research-results/162-milestone-8-owner-closure-acceptance.md`](03-research-results/162-milestone-8-owner-closure-acceptance.md) - exact Milestone 8 closure authority
+4. [`03-research-results/167-roadmap-lineage-and-corrective-sequence-reconciliation.md`](03-research-results/167-roadmap-lineage-and-corrective-sequence-reconciliation.md) - current corrective planning sequence
+5. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - accepted completed Milestone 6 implementation roadmap snapshot; preserve exact bytes
+6. [`ROADMAP.md`](ROADMAP.md) - historical planning provenance
 
 The entrypoint defines the authority hierarchy, current project posture, and task-dependent reading guidance.
 
 ## Current status
 
-- Current gate: Milestone 6 is closed; Result 102 accepts the revised Roadmap v0.3 and revised controlled implementation-return pilot as the post-Milestone 6 planning direction; Milestone 7 implementation remains unauthorized
-- Packet 006A: complete and steward-audited
-- Packet 006B: complete at platform commit `703d532`; final steward audit Result 031 passed with documented limitations
-- Canonical vault: exists at `C:\dev\kaizen\vault`; Milestone 6 governed return amendments are complete at vault `fc4b033`; the vault is clean and has no remote
-- Platform implementation repository: exists at `C:\dev\kaizen\platform`, clean at `1b8be1d`; Packet 010D completed with 276 passing tests and no remote
-- Live staging root: exists at `C:\dev\kaizen\staging`
-- Accepted post-Milestone 6 planning roadmap: `ROADMAP_V0.3.md` (revised bytes accepted by exact SHA-256 in Result 102)
-- Accepted completed implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (preserve accepted bytes); historical first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`; historical planning provenance: `ROADMAP.md`
-- Operational Postgres database and Observatory domain: not implemented
-- Qdrant retrieval layer: not implemented
-- Hermes integration: deferred beyond the first slice; no canonical write authority
-- Next authorized work: define and audit Milestone 7 durable recoverability; no backup implementation, mock-project execution, physical Postgres schema work, or production MCP migration is authorized yet
+- Current gate: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
+- Active corrective sequence: Packet 013A documentation and authority repair, followed by Milestone 9 readiness verification and separately gated corrective packets defined in Result 167
+- Controlled implementation-return pilot: accepted planning direction in Result 102; Milestone 9 implementation, oracle creation, fixtures, golden outputs, and disposable repository creation remain unauthorized
+- Canonical vault: local-only at `12d4ff849b6ca1f015b748cc23201b7f992139f6`; no remote exists and no push is authorized
+- Platform implementation repository: local-only at `75a269834b27ac016e7b5a973ae514d39cd8a1b8`; no remote exists
+- Go8 repository checkpoint: `312704a8b8505bdb64f28cc557171c10de8bd5bc`
+- Kaizen MCP: temporary non-Git proving ground; not production infrastructure
+- Live staging root: exists at `C:\dev\kaizen\staging`; no live staging mutation is authorized by the current packet
+- Active planning roadmap: `ROADMAP_V0.3.md`; historical roadmap and implementation snapshots remain preserved
+- Observatory research: parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
+- Hermes integration: deferred; no canonical write authority
+- Next authorized work: complete Packet 013A documentation repair only, then stop for owner completion acceptance before Packet 013B planning or implementation
 
 ## Stewardship rule
 

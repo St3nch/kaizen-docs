@@ -26,37 +26,22 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestone 6 is closed; Result 102 accepts the revised Roadmap v0.3 and revised controlled implementation-return pilot as the post-Milestone 6 planning direction; Milestone 7 implementation remains unauthorized
-- Accepted post-Milestone 6 planning roadmap: `ROADMAP_V0.3.md` (revised bytes accepted by exact SHA-256 in Result 102); historical planning provenance remains at `ROADMAP.md`
-- Accepted implementation roadmap snapshot: `IMPLEMENTATION_ROADMAP_V0.2.md` (accepted by exact SHA-256 in Result 069; preserve bytes); historical completed first-slice roadmap: `IMPLEMENTATION_ROADMAP.md`
-- Checkpoint audit evidence: `03-research-results/024-implementation-checkpoint-red-team-audit-claude-summary.md`
-- Governing remediation ledger: `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
-- Canonical vault: exists at `C:\dev\kaizen\vault`, clean at commit `fc4b033`; Milestone 6 task-packet and current-state return amendments are complete; no remote exists and no push is authorized
-- Sibling staging root: exists at `C:\dev\kaizen\staging`; create-only staging write implemented and audited
-- Platform repository: exists at `C:\dev\kaizen\platform`, clean at commit `1b8be1d`; Packet 010D completed with 276 passing tests and no remote
-- Task Packet 005: complete and audited pass-with-notes
-- Task Packet 006: retired combined draft preserved as source material for the required 006A/006B split; not eligible for approval
-- Task Packet 006A: complete at platform commit `26271ce`; steward-audited in Result 028
-- Task Packet 006B: complete at `703d532`; final steward audit Result 031 pass-with-documented-limitations; no live promotion authority
-- Task Packet 007: complete at vault commit `248b26a`; Result 033 pass; no promotion occurred
-- Task Packet 008A: complete at platform commit `1a890dd`; Result 035 pass; no live plan or promotion occurred
-- Task Packet 008B: complete at vault commit `80bc093`; Result 040 pass; first real promotion committed
-- Task Packet 009A: complete; Result 042 pass; six staged notes validate with all relationships resolved; no canonical or platform mutation occurred
-- Task Packet 009B, Milestones 4 through 6, and Packets 010A through 010F: complete; the next accepted planning direction is Roadmap v0.3, beginning with Milestone 7 durable-recoverability planning only
+- Current phase: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
+- Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
+- Current corrective planning evidence: `03-research-results/166-independent-milestones-6-8-audit-owner-acceptance.md` and `03-research-results/167-roadmap-lineage-and-corrective-sequence-reconciliation.md`
+- Current task packet: `06-handoff-patterns/013a-documentation-and-authority-repair.md`; Packet 013A is documentation-only and separately approval-gated
+- Milestone 9 controlled implementation-return pilot: accepted planning direction at `05-specs/controlled-implementation-return-pilot.md`; implementation remains unauthorized
+- Canonical vault: local-only at commit `12d4ff849b6ca1f015b748cc23201b7f992139f6`; no remote exists and no push is authorized
+- Platform repository: local-only at commit `75a269834b27ac016e7b5a973ae514d39cd8a1b8`; no remote exists
+- Go8 repository checkpoint: `312704a8b8505bdb64f28cc557171c10de8bd5bc`
+- Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure
+- Packet 012E and Packet 012E.1 are complete; the reliability and known-defect milestone is closed
+- Immediate work is corrective planning and documentation repair before Milestone 9 readiness verification
+- Observatory research is a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
-- Hermes Desktop / Hermes Agent: deferred beyond the first slice; no write access or live integration is authorized at the live-operator gate
-- Decisions 0001 through 0007: accepted
-- Decision 0008 operating conventions: accepted after end-to-end dry-run simulation
-- Decision 0009 Operational Postgres/Observatory boundary: accepted
-- Decision 0010 dedicated Internet Marketing Intelligence database boundary: accepted; no schema work authorized
-- Decision 0011 progressive hybrid human interface direction: proposed; architecture only, no UI implementation authorized
-- Decision 0012 first-slice contract and implementation boundary: accepted
-- Decision 0013 v0.2 first-slice contract reconciliation: accepted on 2026-06-09; supporting specifications reconciled
-- Field, note-type, ID, validation, hammer, Observatory, promotion, and staging specs: active drafts
-- Document-contract research: completed externally and reconciled in `03-research-results/006-document-contract-standards-reconciliation.md`
-- Historical research prompt: `02-research-prompts/002-document-contract-standards.md`; provenance only, do not execute as live doctrine
-- Research Batch B: completed and reconciled in `03-research-results/015-internet-marketing-intelligence-providers-source-rights-claude-summary.md`; paid provider capture remains deferred and separately governed
+- Hermes Desktop / Hermes Agent: deferred; no canonical write authority or live integration is authorized
+- Decisions 0001 through 0014 retain their recorded authority states; accepted decisions remain governing inputs
 - Stewardship principle: structure and automation must earn their existence
 
 ## Read-first sequence
@@ -320,33 +305,35 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 13. When uncertain, record an open question or propose a decision rather than inventing policy.
 14. Never treat a mutable frontmatter field as an access-control mechanism.
 
-## Remaining v0.2 work
+## Current next gate
 
-### Current next gate
+The active corrective sequence is:
 
-- Packet 006A and Packet 006B are complete and steward-audited;
-- Packet 007 is complete and steward-audited pass in Result 033;
-- a clean low-risk source-summary candidate is staged at SHA-256 `119788565b83876d833917e6b7c7fdd4f35e9620c0c468202e7628825ad58f1a`;
-- Packet 008A is complete and steward-audited pass in Result 035;
-- Packet 008B is complete and Result 040 verifies the first real promotion;
-- Packet 009A is complete and Result 042 verifies all six staged notes;
-- Packet 009B Wave 1 is complete;
-- Wave 2 plan `13fef2deec96f89f388a997cc91a89f41efa69fc9120b52684e4492f35f0f601` is security-audited pass in Result 047;
-- require exact owner approval naming Wave 2, operation `kz-prom-01KTMNHB6NZ5YBJACWZM92HGJH`, and the plan hash before execution;
-- Wave 3 planning and Waves 3 through 6 execution remain prohibited;
-- keep Postgres, Qdrant, Hermes, providers, UI, websites, and other deferred systems out of scope until earned;
-- use the first real promotion and Milestone 4 governed loop as evidence for the later v0.2 consolidation;
-- preserve the owner-deferred platform and vault remote gap until the working-project checkpoint.
+```text
+Packet 013A documentation and authority repair
+-> Packet 013B Milestone 9 readiness verification
+-> Packet 013C operation-status terminal-semantics correction, if confirmed
+-> Packet 013D operator fallback runbook correction
+-> Packet 013E post-Milestone-8 backup Generation 3
+-> separate Milestone 9 implementation packet and owner gate
+```
 
-### Non-blocking future work
+Current authority:
 
-- marketplace-ranking coverage before the Internet Marketing Intelligence database-design session;
-- provider-rights completion before permanent retention or external-use policy;
-- Postgres and Qdrant storage/recovery work in their implementation phases;
-- knowledge-quality and context-assembly research after real promoted notes exist;
-- Hermes, desktop-shell, bridge-plugin, and provider-adapter implementation through later roadmap gates.
+- Result 162 closes Milestone 8;
+- Result 166 records the owner's bounded acceptance of the independent Milestones 6-8 audit;
+- Result 167 defines the proposed corrective sequence;
+- Packet 013A is the current approved documentation-only task packet;
+- Milestone 9 fixture creation, oracle creation, disposable-repository creation, and execution remain unauthorized;
+- Observatory work remains research-only under the OBR-01 through OBR-15 track;
+- Postgres, Qdrant, LangGraph, Hermes, UI, provider purchase, raw capture, and production MCP work remain deferred and separately gated.
 
-Decision 0008 is accepted. The broad research lanes above do not block the first vertical slice.
+## Non-blocking future work
+
+- governance-compression Decision 0015 reconciliation;
+- Observatory rights, retention, measurement, reuse, and hammer research;
+- Postgres and Qdrant storage/recovery work only after accepted workload evidence;
+- Hermes, interface, provider-adapter, and production MCP work through later roadmap gates.
 ## Required output shape for future docs
 
 Prefer:

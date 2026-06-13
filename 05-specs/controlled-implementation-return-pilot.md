@@ -1,12 +1,12 @@
 ---
 id: kz-spec-01KTV7B4N6Q8S0W2Y4Z6ABCDEF
 type: spec
-status: draft
+status: active
 project: kaizen-platform
 created: 2026-06-10T14:08:00-04:00
-updated: 2026-06-10T14:08:00-04:00
-review_status: pending-review
-authority: proposed
+updated: 2026-06-13T23:00:00-04:00
+review_status: approved
+authority: accepted
 summary: "Controlled mock-project pilot for exercising Kaizen's full governed implementation-return loop against predefined expected outcomes."
 ---
 
@@ -555,7 +555,7 @@ The pilot fails when:
 
 ## Authorization boundary
 
-This specification is proposed planning input. Execution requires:
+This specification is accepted planning direction under Result 102. It does not authorize execution. Execution requires:
 
 - milestone definition;
 - security/steward audit;
