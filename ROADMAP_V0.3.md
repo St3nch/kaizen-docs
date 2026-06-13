@@ -16,16 +16,19 @@ This roadmap does not authorize implementation.
 
 ```text
 Kaizen Project Standard v0.2: authoritative
-Milestones 1-7: closed
-Packet 011E: complete
-Platform HEAD: 1b8be1d6d42d768587dddb2be8415fa24b670561
-Vault HEAD: 37e756a8e85157bd83c22e832af285e1992f8d8e
-Milestone 8: accepted for planning only
+Roadmap v0.3: accepted and active; amended planning state pending owner review
+Milestones 1-8: closed
+Packet 012E: complete
+Packet 012E.1 correction: complete
+Platform HEAD: 75a269834b27ac016e7b5a973ae514d39cd8a1b8
+Vault HEAD: 12d4ff849b6ca1f015b748cc23201b7f992139f6
+Go8 HEAD: 312704a8b8505bdb64f28cc557171c10de8bd5bc
+Milestone 9: planned but not authorized for implementation
 ```
 
-Milestone 7 proved encrypted off-machine recovery, two retained generations, independent Google Drive and USB restoration, fresh platform reconstruction, bounded failure proof, repeatability, and governed canonical return.
+Milestone 8 closed the accepted reliability and known-defect register, proved the integrated platform, Kaizen MCP, Go8, lifecycle, tunnel, connector, and governed-return boundaries, and recorded the owner closure acceptance in Research Result 162.
 
-The next evidence gap is reliability and known-defect closure before the controlled implementation-return pilot.
+Before Milestone 9 implementation, the next planning work is corrective-roadmap reconciliation, documentation and authority repair, readiness verification, operation-status semantics correction, operator fallback updates, and post-Milestone-8 backup Generation 3 planning.
 
 Full reconciliation:
 
@@ -101,6 +104,43 @@ typed operational APIs
 
 No sequence below Milestone 11 is accepted yet.
 
+## Parallel Observatory research track
+
+The planned Observatory is Kaizen's future governed search, marketplace, GEO, competitor, and outcome-intelligence capability. Its complete architectural envelope is preserved now; implementation order will be decided later from evidence.
+
+Current evidence is recorded in:
+
+```text
+03-research-results/163-observatory-existing-evidence-reconciliation.md
+03-research-results/164-observatory-current-market-reconnaissance-and-gap-register.md
+```
+
+The research track must complete or proportionately disposition these workstreams before Observatory implementation planning:
+
+```text
+OBR-01 DataForSEO written rights clarification
+OBR-02 Fiverr operational observability
+OBR-03 Upwork operational observability
+OBR-04 Etsy authorized evidence routes
+OBR-05 Amazon and Shopify rights verification
+OBR-06 first-party web retention and export proof
+OBR-07 AI and GEO observability methods
+OBR-08 local, directory, review, and knowledge-source landscape
+OBR-09 alternative provider rights and continuity
+OBR-10 client data reuse and deletion doctrine research
+OBR-11 measurement doctrine
+OBR-12 perishable-data decision memo
+OBR-13 rights-aware data and learning taxonomy
+OBR-14 Observatory hammer research map
+OBR-15 workload and business decision map
+```
+
+This research may proceed in parallel with corrective planning and Milestone 9 readiness work because it is evidence gathering, not Observatory implementation.
+
+The track does not authorize provider purchase, paid sampling, raw capture, crawling, logged-in collection, client-data reuse, physical database schema, Postgres, Qdrant, LangGraph, MCP tools, or hammer execution.
+
+SearchClarity and Neon Ronin are workload evidence for future Kaizen-governed projects. They do not define or limit the Observatory's complete architecture.
+
 ## Controlled pilot rule
 
 The mock project is an evidence instrument, not a toy demo.
@@ -123,13 +163,14 @@ Expected behavior, injected failures, golden outputs, and scoring are defined at
 
 ## Standing boundaries
 
-Until each milestone receives its own accepted definition and task packet:
+Until each milestone or research track receives its own accepted definition and task packet:
 
-- no Milestone 8 implementation beyond separately approved packets;
+- no Milestone 9 implementation;
+- no corrective implementation from the independent Milestones 6-8 audit until exact packets are approved;
 - no production MCP migration or packaging;
-- no physical Postgres schema;
-- no mock-project execution before Milestone 8 closes;
-- no Qdrant, Hermes, broad UI, or Internet Marketing Intelligence implementation;
+- no physical Postgres or Observatory schema;
+- no Observatory data collection, provider purchase, crawling, logged-in marketplace collection, or client-data reuse;
+- no Qdrant, LangGraph, Hermes, broad UI, or Internet Marketing Intelligence implementation;
 - no vault push or remote creation;
 - no generalized correction, delete, move, rollback, or multi-note mutation semantics;
 - no inferred owner approval.
@@ -152,11 +193,15 @@ evidence
 ## Immediate next planning work
 
 ```text
-draft and audit Packet 012A defect register and contract freeze
--> obtain separate implementation approval for read-only inspection only
--> classify every initial defect candidate
--> freeze the accepted reliability contracts and later packet split
--> stop before Packet 012B implementation
+record and reconcile the accepted independent Milestones 6-8 audit
+-> verify Roadmap v0.3 acceptance lineage
+-> draft the corrective roadmap amendment and proportionate packet sequence
+-> verify Milestone 9 readiness without executing the pilot
+-> plan documentation/authority repair, operation-status semantics, operator fallback updates, and backup Generation 3
+-> continue bounded Observatory evidence research under OBR-01 through OBR-15
+-> stop before corrective implementation, Milestone 9 execution, or Observatory implementation
 ```
 
-The controlled mock pilot remains planned but unexecuted. It stays behind Milestone 8 closure so its controls are field-validated rather than debugged during the pilot.
+The controlled mock pilot remains planned but unexecuted. Milestone 8 is closed, but the independent audit preconditions and readiness verification must be proportionately reconciled before an exact Milestone 9 implementation packet is proposed.
+
+Observatory research is a parallel evidence track. It preserves the full architecture and resolves rights, access, retention, measurement, and reuse questions before any physical database or collection program is proposed.
