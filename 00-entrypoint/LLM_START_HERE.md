@@ -28,15 +28,15 @@ Humans = authority-bearing review, approval, and promotion
 
 - Current phase: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
 - Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
-- Current corrective planning evidence: `03-research-results/166-independent-milestones-6-8-audit-owner-acceptance.md` and `03-research-results/167-roadmap-lineage-and-corrective-sequence-reconciliation.md`
-- Current task packet: `06-handoff-patterns/013a-documentation-and-authority-repair.md`; Packet 013A is documentation-only and separately approval-gated
+- Current corrective planning evidence: `03-research-results/174-packet-013b-milestone-9-readiness-result.md`, `03-research-results/183-packet-013c-owner-completion-acceptance.md`, and `03-research-results/184-canonical-current-state-alignment-amendment-proposal-v2.md`
+- Current gate: the regenerated canonical current-state alignment proposal is accepted in docs, but candidate preparation remains separately owner-gated
 - Milestone 9 controlled implementation-return pilot: accepted planning direction at `05-specs/controlled-implementation-return-pilot.md`; implementation remains unauthorized
-- Canonical vault: local-only at commit `12d4ff849b6ca1f015b748cc23201b7f992139f6`; no remote exists and no push is authorized
-- Platform repository: local-only at commit `75a269834b27ac016e7b5a973ae514d39cd8a1b8`; no remote exists
+- Canonical vault: local-only at commit `12d4ff849b6ca1f015b748cc23201b7f992139f6`; current-state SHA-256 remains `89999ba0d0ecd0aee32a8f760474f25d0281503ac6676ee1eb68a4c1fd98cc17`; no remote exists and no push is authorized
+- Platform repository: local-only at commit `8bda60fe4f4f4949bebe375e05b086fd75771cec`; no remote exists
 - Go8 repository checkpoint: `312704a8b8505bdb64f28cc557171c10de8bd5bc`
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure
 - Packet 012E and Packet 012E.1 are complete; the reliability and known-defect milestone is closed
-- Immediate work is corrective planning and documentation repair before Milestone 9 readiness verification
+- Immediate work is the separately gated canonical current-state alignment sequence, followed by Packet 013D and Packet 013E planning at their accepted boundaries; Milestone 9 implementation remains unauthorized
 - Observatory research is a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
@@ -310,20 +310,21 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 The active corrective sequence is:
 
 ```text
-Packet 013A documentation and authority repair
--> Packet 013B Milestone 9 readiness verification
--> Packet 013C operation-status terminal-semantics correction, if confirmed
--> Packet 013D operator fallback runbook correction
--> Packet 013E post-Milestone-8 backup Generation 3
+Packets 013A, 013B, and 013C: complete
+-> canonical current-state alignment through separate prepare / plan / approve / execute / vault-commit gates
+-> Packet 013D operator fallback runbook correction before governed pilot return
+-> Packet 013E post-Milestone-8 backup Generation 3 before the first canonical Northstar mutation
 -> separate Milestone 9 implementation packet and owner gate
 ```
 
 Current authority:
 
 - Result 162 closes Milestone 8;
-- Result 166 records the owner's bounded acceptance of the independent Milestones 6-8 audit;
-- Result 167 defines the proposed corrective sequence;
-- Packet 013A is the current approved documentation-only task packet;
+- Result 174 records the evidence-backed Milestone 9 readiness result;
+- Result 183 records owner acceptance of Packet 013C completion;
+- Result 184 contains the accepted final current-state replacement proposal, audited by Result 185;
+- the proposal package is committed at docs HEAD `33af7a91ce9a1d4bb3939cfcdb381593b9638c5d`;
+- amendment candidate preparation remains separately owner-gated and has not occurred;
 - Milestone 9 fixture creation, oracle creation, disposable-repository creation, and execution remain unauthorized;
 - Observatory work remains research-only under the OBR-01 through OBR-15 track;
 - Postgres, Qdrant, LangGraph, Hermes, UI, provider purchase, raw capture, and production MCP work remain deferred and separately gated.

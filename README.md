@@ -34,17 +34,17 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 ## Current status
 
 - Current gate: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
-- Active corrective sequence: Packet 013A documentation and authority repair, followed by Milestone 9 readiness verification and separately gated corrective packets defined in Result 167
+- Corrective status: Packets 013A, 013B, and 013C are complete; the next gate is the separately authorized canonical current-state amendment sequence, followed by Packet 013D and Packet 013E at their accepted boundaries
 - Controlled implementation-return pilot: accepted planning direction in Result 102; Milestone 9 implementation, oracle creation, fixtures, golden outputs, and disposable repository creation remain unauthorized
-- Canonical vault: local-only at `12d4ff849b6ca1f015b748cc23201b7f992139f6`; no remote exists and no push is authorized
-- Platform implementation repository: local-only at `75a269834b27ac016e7b5a973ae514d39cd8a1b8`; no remote exists
+- Canonical vault: local-only at `12d4ff849b6ca1f015b748cc23201b7f992139f6`; current-state SHA-256 remains `89999ba0d0ecd0aee32a8f760474f25d0281503ac6676ee1eb68a4c1fd98cc17`; no remote exists and no push is authorized
+- Platform implementation repository: local-only at `8bda60fe4f4f4949bebe375e05b086fd75771cec`; no remote exists
 - Go8 repository checkpoint: `312704a8b8505bdb64f28cc557171c10de8bd5bc`
 - Kaizen MCP: temporary non-Git proving ground; not production infrastructure
 - Live staging root: exists at `C:\dev\kaizen\staging`; no live staging mutation is authorized by the current packet
 - Active planning roadmap: `ROADMAP_V0.3.md`; historical roadmap and implementation snapshots remain preserved
 - Observatory research: parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Hermes integration: deferred; no canonical write authority
-- Next authorized work: complete Packet 013A documentation repair only, then stop for owner completion acceptance before Packet 013B planning or implementation
+- Next valid gate: separate owner authorization for candidate preparation from Result 184's exact replacement bytes; no canonical mutation or Milestone 9 implementation is implied by this documentation update
 
 ## Stewardship rule
 
