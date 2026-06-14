@@ -18,12 +18,13 @@ This roadmap does not authorize implementation.
 Kaizen Project Standard v0.2: authoritative
 Roadmap v0.3: accepted and active
 Milestones 1-8: closed
-Packets 013A, 013B, and 013C: complete
-Current-state proposal: Result 187 corrected and Result 188 audit PASS
-Candidate preparation: separately owner-gated and not yet performed
-Platform HEAD: 8bda60fe4f4f4949bebe375e05b086fd75771cec
-Vault HEAD: 12d4ff849b6ca1f015b748cc23201b7f992139f6
+Packets 013A through 013D: complete
+Canonical current-state alignment: complete
+Platform HEAD: ba3b5feca90e4fb5cb02e34981dc7ed86942962f
+Vault HEAD: 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
+Canonical current-state SHA-256: e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7
 Go8 HEAD: 312704a8b8505bdb64f28cc557171c10de8bd5bc
+Next gate: Packet 013E Generation 3
 Milestone 9: planned but not authorized for implementation
 ```
 
@@ -194,17 +195,14 @@ evidence
 ## Immediate next planning work
 
 ```text
-separately authorize and prepare the Result 187 current-state candidate using fresh IDs
--> inspect candidate, validation, diff, bindings, and hashes
--> stop before immutable plan creation unless separately authorized
--> complete the remaining current-state plan / approve / execute / verify / local vault-commit gates
--> complete Packet 013D fallback runbook correction
--> complete Packet 013E Generation 3 backup and restore proof before the first canonical Northstar mutation
+complete Packet 013E Generation 3 backup and restore proof before the first canonical Northstar mutation
 -> draft and audit the exact Milestone 9 implementation packet
+-> obtain separate owner approval for artifact inventory, information lanes, roots, hashes, and injection controls
+-> only then create Northstar artifacts and the disposable repository
 -> continue bounded Observatory evidence research under OBR-01 through OBR-15
 -> stop before Milestone 9 execution or Observatory implementation without separate authority
 ```
 
-The controlled mock pilot remains planned but unexecuted. Milestone 8 and Packets 013A through 013C are complete. Result 187 is ready only for separately authorized preparation; current-state alignment, Packet 013D, and Packet 013E remain the exact preconditions before an executable Milestone 9 packet may be approved.
+The controlled mock pilot remains planned but unexecuted. Milestone 8, Packets 013A through 013D, and canonical current-state alignment are complete. Packet 013E Generation 3 is the remaining precondition before an executable Milestone 9 packet may be approved.
 
 Observatory research is a parallel evidence track. It preserves the full architecture and resolves rights, access, retention, measurement, and reuse questions before any physical database or collection program is proposed.

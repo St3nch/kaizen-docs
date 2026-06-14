@@ -29,15 +29,15 @@ Humans = authority-bearing review, approval, and promotion
 - Current phase: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
 - Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
 - Current corrective planning evidence: `03-research-results/174-packet-013b-milestone-9-readiness-result.md`, `03-research-results/183-packet-013c-owner-completion-acceptance.md`, `03-research-results/186-current-state-proposal-preparation-failure-reconciliation.md`, `03-research-results/187-canonical-current-state-alignment-amendment-proposal-v3.md`, and `03-research-results/188-canonical-current-state-alignment-proposal-v3-audit.md`
-- Current gate: Result 187 is the only valid current-state candidate source; Result 188 passed; candidate preparation remains separately owner-gated and must use fresh IDs
-- Results 179 and 184 are retired as preparation sources; the failed packet and operation IDs recorded in Result 186 must not be reused
+- Current gate: canonical current-state alignment is complete; Packet 013D is complete; Packet 013E Generation 3 is next before the first canonical Northstar mutation
+- Results 179 and 184 remain retired as preparation sources; Result 187 and Result 188 remain the proposal and audit evidence for the completed amendment
 - Milestone 9 controlled implementation-return pilot: accepted planning direction at `05-specs/controlled-implementation-return-pilot.md`; implementation remains unauthorized
-- Canonical vault: local-only at commit `12d4ff849b6ca1f015b748cc23201b7f992139f6`; current-state SHA-256 remains `89999ba0d0ecd0aee32a8f760474f25d0281503ac6676ee1eb68a4c1fd98cc17`; no remote exists and no push is authorized
-- Platform repository: local-only at commit `8bda60fe4f4f4949bebe375e05b086fd75771cec`; no remote exists
+- Canonical vault: local-only at commit `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
+- Platform repository: local-only at commit `ba3b5feca90e4fb5cb02e34981dc7ed86942962f`; no remote exists
 - Go8 repository checkpoint: `312704a8b8505bdb64f28cc557171c10de8bd5bc`
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure
 - Packet 012E and Packet 012E.1 are complete; the reliability and known-defect milestone is closed
-- Immediate work is the separately gated canonical current-state alignment sequence, followed by Packet 013D and Packet 013E at their accepted boundaries; Milestone 9 implementation remains unauthorized
+- Canonical current-state alignment and Packet 013D are complete; immediate work is Packet 013E Generation 3 before the first canonical Northstar mutation, followed by the exact Milestone 9 implementation packet; Milestone 9 implementation remains unauthorized
 - Observatory research is a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
@@ -312,9 +312,8 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 The active corrective sequence is:
 
 ```text
-Packets 013A, 013B, and 013C: complete
--> canonical current-state alignment through separate prepare / plan / approve / execute / vault-commit gates
--> Packet 013D operator fallback runbook correction before governed pilot return
+Packets 013A, 013B, 013C, and 013D: complete
+-> canonical current-state alignment: complete at vault commit 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
 -> Packet 013E post-Milestone-8 backup Generation 3 before the first canonical Northstar mutation
 -> separate Milestone 9 implementation packet and owner gate
 ```

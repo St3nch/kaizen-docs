@@ -34,10 +34,10 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 ## Current status
 
 - Current gate: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
-- Corrective status: Packets 013A, 013B, and 013C are complete; the next gate is the separately authorized canonical current-state amendment sequence, followed by Packet 013D and Packet 013E at their accepted boundaries
+- Corrective status: Packets 013A through 013D and the canonical current-state alignment are complete; the next gate is Packet 013E Generation 3 before the first canonical Northstar mutation, followed by the exact Milestone 9 implementation packet
 - Controlled implementation-return pilot: accepted planning direction in Result 102; Milestone 9 implementation, oracle creation, fixtures, golden outputs, and disposable repository creation remain unauthorized
-- Canonical vault: local-only at `12d4ff849b6ca1f015b748cc23201b7f992139f6`; current-state SHA-256 remains `89999ba0d0ecd0aee32a8f760474f25d0281503ac6676ee1eb68a4c1fd98cc17`; no remote exists and no push is authorized
-- Platform implementation repository: local-only at `8bda60fe4f4f4949bebe375e05b086fd75771cec`; no remote exists
+- Canonical vault: local-only at `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
+- Platform implementation repository: local-only at `ba3b5feca90e4fb5cb02e34981dc7ed86942962f`; no remote exists
 - Go8 repository checkpoint: `312704a8b8505bdb64f28cc557171c10de8bd5bc`
 - Kaizen MCP: temporary non-Git proving ground; not production infrastructure
 - Live staging root: exists at `C:\dev\kaizen\staging`; no live staging mutation is authorized by the current packet
