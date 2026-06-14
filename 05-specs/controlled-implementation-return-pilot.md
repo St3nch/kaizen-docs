@@ -4,7 +4,7 @@ type: spec
 status: active
 project: kaizen-platform
 created: 2026-06-10T14:08:00-04:00
-updated: 2026-06-13T23:00:00-04:00
+updated: 2026-06-14T18:00:00-04:00
 review_status: approved
 authority: accepted
 summary: "Controlled mock-project pilot for exercising Kaizen's full governed implementation-return loop against predefined expected outcomes."
@@ -137,7 +137,7 @@ For the approved baseline fixture, the correct `reorder-report.csv` must contain
 sku,name,available,reorder_point,recommended_quantity,supplier_id,unit_cost,estimated_cost,status
 BRK-100,Brake Pad Set,3,5,10,SUP-01,24.50,245.00,reorder
 FLT-220,Oil Filter,8,8,24,SUP-02,6.25,150.00,price_review_required
-WPR-310,Wiper Blade,0,2,12,SUP-01,9.00,108.00,reorder
+WPR-310,Wiper Blade,0,2,12,SUP-03,9.00,108.00,reorder
 ```
 
 The expected total estimated cost is:
