@@ -24,7 +24,7 @@ Platform HEAD: ba3b5feca90e4fb5cb02e34981dc7ed86942962f
 Vault HEAD: 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
 Canonical current-state SHA-256: e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7
 Go8 HEAD: 312704a8b8505bdb64f28cc557171c10de8bd5bc
-Next gate: Packet 013E Generation 3
+Next gate: exact Milestone 9 implementation packet
 Milestone 9: planned but not authorized for implementation
 ```
 
@@ -195,7 +195,7 @@ evidence
 ## Immediate next planning work
 
 ```text
-complete Packet 013E Generation 3 backup and restore proof before the first canonical Northstar mutation
+Packet 013E Generation 3 backup and restore proof: complete
 -> draft and audit the exact Milestone 9 implementation packet
 -> obtain separate owner approval for artifact inventory, information lanes, roots, hashes, and injection controls
 -> only then create Northstar artifacts and the disposable repository
@@ -203,6 +203,6 @@ complete Packet 013E Generation 3 backup and restore proof before the first cano
 -> stop before Milestone 9 execution or Observatory implementation without separate authority
 ```
 
-The controlled mock pilot remains planned but unexecuted. Milestone 8, Packets 013A through 013D, and canonical current-state alignment are complete. Packet 013E Generation 3 is the remaining precondition before an executable Milestone 9 packet may be approved.
+The controlled mock pilot remains planned but unexecuted. Milestone 8, Packets 013A through 013E, and canonical current-state alignment are complete. The exact Milestone 9 implementation packet is now the next gate; implementation remains unauthorized.
 
 Observatory research is a parallel evidence track. It preserves the full architecture and resolves rights, access, retention, measurement, and reuse questions before any physical database or collection program is proposed.

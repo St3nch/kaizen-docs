@@ -29,7 +29,7 @@ Humans = authority-bearing review, approval, and promotion
 - Current phase: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
 - Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
 - Current corrective planning evidence: `03-research-results/174-packet-013b-milestone-9-readiness-result.md`, `03-research-results/183-packet-013c-owner-completion-acceptance.md`, `03-research-results/186-current-state-proposal-preparation-failure-reconciliation.md`, `03-research-results/187-canonical-current-state-alignment-amendment-proposal-v3.md`, and `03-research-results/188-canonical-current-state-alignment-proposal-v3-audit.md`
-- Current gate: canonical current-state alignment is complete; Packet 013D is complete; Packet 013E Generation 3 is next before the first canonical Northstar mutation
+- Current gate: canonical current-state alignment, Packet 013D, and Packet 013E Generation 3 are complete; the next gate is the exact Milestone 9 implementation packet
 - Results 179 and 184 remain retired as preparation sources; Result 187 and Result 188 remain the proposal and audit evidence for the completed amendment
 - Milestone 9 controlled implementation-return pilot: accepted planning direction at `05-specs/controlled-implementation-return-pilot.md`; implementation remains unauthorized
 - Canonical vault: local-only at commit `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
@@ -37,7 +37,7 @@ Humans = authority-bearing review, approval, and promotion
 - Go8 repository checkpoint: `312704a8b8505bdb64f28cc557171c10de8bd5bc`
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure
 - Packet 012E and Packet 012E.1 are complete; the reliability and known-defect milestone is closed
-- Canonical current-state alignment and Packet 013D are complete; immediate work is Packet 013E Generation 3 before the first canonical Northstar mutation, followed by the exact Milestone 9 implementation packet; Milestone 9 implementation remains unauthorized
+- Canonical current-state alignment, Packet 013D, and Packet 013E Generation 3 are complete; immediate work is the exact Milestone 9 implementation packet; Milestone 9 implementation remains unauthorized
 - Observatory research is a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
@@ -314,8 +314,8 @@ The active corrective sequence is:
 ```text
 Packets 013A, 013B, 013C, and 013D: complete
 -> canonical current-state alignment: complete at vault commit 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
--> Packet 013E post-Milestone-8 backup Generation 3 before the first canonical Northstar mutation
--> separate Milestone 9 implementation packet and owner gate
+-> Packet 013E post-Milestone-8 backup Generation 3: complete
+-> exact Milestone 9 implementation packet and separate owner gate
 ```
 
 Current authority:

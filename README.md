@@ -34,7 +34,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 ## Current status
 
 - Current gate: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
-- Corrective status: Packets 013A through 013D and the canonical current-state alignment are complete; the next gate is Packet 013E Generation 3 before the first canonical Northstar mutation, followed by the exact Milestone 9 implementation packet
+- Corrective status: Packets 013A through 013E and the canonical current-state alignment are complete; the next gate is the exact Milestone 9 implementation packet
 - Controlled implementation-return pilot: accepted planning direction in Result 102; Milestone 9 implementation, oracle creation, fixtures, golden outputs, and disposable repository creation remain unauthorized
 - Canonical vault: local-only at `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
 - Platform implementation repository: local-only at `ba3b5feca90e4fb5cb02e34981dc7ed86942962f`; no remote exists
