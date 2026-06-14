@@ -23,8 +23,8 @@ Canonical current-state alignment: complete
 Platform HEAD: ba3b5feca90e4fb5cb02e34981dc7ed86942962f
 Vault HEAD: 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
 Canonical current-state SHA-256: e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7
-Go8 HEAD: 312704a8b8505bdb64f28cc557171c10de8bd5bc
-Next gate: exact Milestone 9 implementation packet
+Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
+Next gate: separate owner approval for Packet 014A Phase 2
 Milestone 9: planned but not authorized for implementation
 ```
 
@@ -196,13 +196,14 @@ evidence
 
 ```text
 Packet 013E Generation 3 backup and restore proof: complete
--> draft and audit the exact Milestone 9 implementation packet
--> obtain separate owner approval for artifact inventory, information lanes, roots, hashes, and injection controls
--> only then create Northstar artifacts and the disposable repository
+-> Packet 014A Phase 1: complete
+-> obtain separate owner approval for Packet 014A Phase 2
+-> preserve contradictory source claims and require explicit owner resolution
+-> draft and audit the baseline Northstar decisions, specification, and implementation packet
+-> stop before implementation coding, canonical mutation, or injection release without later phase authority
 -> continue bounded Observatory evidence research under OBR-01 through OBR-15
--> stop before Milestone 9 execution or Observatory implementation without separate authority
 ```
 
-The controlled mock pilot remains planned but unexecuted. Milestone 8, Packets 013A through 013E, and canonical current-state alignment are complete. The exact Milestone 9 implementation packet is now the next gate; implementation remains unauthorized.
+The controlled mock pilot has entered execution under Packet 014A. Phase 1 is complete; Phase 2 is the next separately approved gate. Implementation coding, canonical Northstar mutation, and injection release remain unauthorized.
 
 Observatory research is a parallel evidence track. It preserves the full architecture and resolves rights, access, retention, measurement, and reuse questions before any physical database or collection program is proposed.
