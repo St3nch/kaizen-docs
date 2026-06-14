@@ -28,7 +28,7 @@ Roadmap v0.3 before this packet:
 4a452f261e24957140f1324801202e0bcf1660742c87a951667070659f0bde59
 
 Controlled pilot specification:
-a38ab9139c09466b386c2c97afecd4476a63bbc1dd9094672e1ec7b055908854
+4830060301f8110884e5aae430849148592fab717bc1e6fcc0be0b76633373e3
 
 Milestone 9 readiness result:
 3d409697de50f7176d962daf52331c0c7781a96d615c9a697b7c8d727f3006ca
@@ -176,6 +176,9 @@ The workload ledger is append-only operational evidence. It is not a new canonic
 language: Python 3.11
 runtime dependencies: standard library only
 allowed development dependency: pytest
+required deterministic argument: --as-of YYYY-MM-DD
+frozen pilot value: --as-of 2026-06-14
+system-clock business-rule use: prohibited
 network: prohibited
 database: prohibited
 external API: prohibited

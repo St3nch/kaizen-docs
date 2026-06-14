@@ -4,7 +4,7 @@ type: spec
 status: active
 project: kaizen-platform
 created: 2026-06-10T14:08:00-04:00
-updated: 2026-06-14T18:00:00-04:00
+updated: 2026-06-14T18:20:00-04:00
 review_status: approved
 authority: accepted
 summary: "Controlled mock-project pilot for exercising Kaizen's full governed implementation-return loop against predefined expected outcomes."
@@ -82,6 +82,20 @@ reorder-report.csv
 reorder-summary.md
 ```
 
+The CLI must also require:
+
+```text
+--as-of YYYY-MM-DD
+```
+
+The baseline and amended pilot oracle are frozen at:
+
+```text
+--as-of 2026-06-14
+```
+
+The CLI must reject malformed or impossible dates and must not use the system clock for business-rule evaluation.
+
 The CLI must not use a network connection, database, external API, GUI, or background service.
 
 ## Fixed input model
@@ -124,10 +138,10 @@ active
 6. An active inventory item must reference exactly one active supplier.
 7. Duplicate SKUs or supplier IDs are invalid.
 8. Negative numeric values are invalid.
-9. Supplier pricing older than 90 days is stale.
+9. Supplier pricing is stale when `(as_of_date - price_updated_at).days > 90`.
 10. Stale pricing does not suppress the reorder, but the report must mark the row `price_review_required`.
 11. Output rows are sorted by SKU.
-12. Identical inputs must produce byte-identical outputs.
+12. Identical input files plus identical CLI arguments must produce byte-identical outputs.
 
 ## Expected primary output
 
