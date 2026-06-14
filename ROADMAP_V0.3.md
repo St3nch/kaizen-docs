@@ -20,12 +20,13 @@ Roadmap v0.3: accepted and active
 Milestones 1-8: closed
 Packets 013A through 013D: complete
 Canonical current-state alignment: complete
-Platform HEAD: ba3b5feca90e4fb5cb02e34981dc7ed86942962f
+Platform HEAD: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
 Vault HEAD: 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
 Canonical current-state SHA-256: e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7
 Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
-Next gate: separate owner approval for Packet 014A Phase 4
-Milestone 9: planned but not authorized for implementation
+Northstar HEAD: bf9abb513d6f22fc5ed800301a8b3ba0b75c5189
+Next gate: owner acceptance of the atomic project-bootstrap doctrine decision
+Milestone 9: active; Phases 1-3 complete, Phase 4 partially complete
 ```
 
 Milestone 8 closed the accepted reliability and known-defect register, proved the integrated platform, Kaizen MCP, Go8, lifecycle, tunnel, connector, and governed-return boundaries, and recorded the owner closure acceptance in Research Result 162.
@@ -167,7 +168,7 @@ Expected behavior, injected failures, golden outputs, and scoring are defined at
 
 Until each milestone or research track receives its own accepted definition and task packet:
 
-- no Milestone 9 implementation;
+- no further Milestone 9 project-bootstrap implementation before accepted doctrine, an audited replacement packet, and separate owner approval;
 - no corrective implementation from the independent Milestones 6-8 audit until exact packets are approved;
 - no production MCP migration or packaging;
 - no physical Postgres or Observatory schema;
@@ -199,12 +200,19 @@ Packet 013E Generation 3 backup and restore proof: complete
 -> Packet 014A Phase 1: complete
 -> Packet 014A Phase 2: complete
 -> Packet 014A Phase 3 and Packet 014B implementation: complete
--> obtain separate owner approval for Packet 014A Phase 4
--> run the governed baseline return, Injection 7 dirty-return proof, local vault commit, and fresh-context R1
+-> Packet 014A Phase 4: active and partially complete
+-> Injection 7 dirty-repository proof: complete
+-> Packet 014C review-status normalization correction: complete
+-> Packet 014D: retired unimplemented after independent audit
+-> draft and audit atomic three-note project-bootstrap doctrine
+-> obtain explicit owner acceptance of the doctrine
+-> reconcile Packet 014A Phase 4 and add the Northstar command-center candidate
+-> draft, independently audit, implement, and hammer-test the governed bootstrap-project operation
+-> execute one approved three-note bootstrap, commit the vault locally, and run fresh-context R1
 -> stop before Phase 5 amendment work without separate authority
 -> continue bounded Observatory evidence research under OBR-01 through OBR-15
 ```
 
-The controlled mock pilot has entered execution under Packet 014A. Phases 1 through 3 are complete; Phase 4 is the next separately approved gate. Phase 5 amendment work and later closure work remain unauthorized.
+The controlled mock pilot has entered execution under Packet 014A. Phases 1 through 3 are complete and Phase 4 is partially complete. Independent audit retired Packet 014D and exposed the missing governed project-bootstrap abstraction. Phase 4 now resumes at doctrine definition and owner acceptance before any replacement implementation packet. Phase 5 amendment work and later closure work remain unauthorized.
 
 Observatory research is a parallel evidence track. It preserves the full architecture and resolves rights, access, retention, measurement, and reuse questions before any physical database or collection program is proposed.

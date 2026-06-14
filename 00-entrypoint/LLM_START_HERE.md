@@ -29,15 +29,15 @@ Humans = authority-bearing review, approval, and promotion
 - Current phase: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
 - Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
 - Current corrective planning evidence: `03-research-results/174-packet-013b-milestone-9-readiness-result.md`, `03-research-results/183-packet-013c-owner-completion-acceptance.md`, `03-research-results/186-current-state-proposal-preparation-failure-reconciliation.md`, `03-research-results/187-canonical-current-state-alignment-amendment-proposal-v3.md`, and `03-research-results/188-canonical-current-state-alignment-proposal-v3-audit.md`
-- Current gate: Packet 014A Phase 3 is complete; the next gate is separate owner approval for Packet 014A Phase 4
+- Current gate: Packet 014A Phase 4 is active but blocked on accepted atomic project-bootstrap doctrine; Packet 014D is retired unimplemented
 - Results 179 and 184 remain retired as preparation sources; Result 187 and Result 188 remain the proposal and audit evidence for the completed amendment
-- Milestone 9 controlled implementation-return pilot: accepted planning direction at `05-specs/controlled-implementation-return-pilot.md`; implementation remains unauthorized
+- Milestone 9 controlled implementation-return pilot: active; Phases 1 through 3 are complete and Phase 4 is partially complete
 - Canonical vault: local-only at commit `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
-- Platform repository: local-only at commit `ba3b5feca90e4fb5cb02e34981dc7ed86942962f`; no remote exists
+- Platform repository: local-only at commit `7cbc132a508071c94e68fcd5bd206b19ac8bd61a`; no remote exists
 - Go8 repository checkpoint: `5830962ba34e62bbfb65508307ee0c706ed31e14`
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure
 - Packet 012E and Packet 012E.1 are complete; the reliability and known-defect milestone is closed
-- Packet 014A Phase 3 is complete; immediate work is separate owner approval for Phase 4; canonical Northstar promotion and R1 remain unauthorized
+- Packet 014A Phase 4 is partially complete; immediate work is draft and audit of the atomic three-note project-bootstrap doctrine, followed by explicit owner acceptance
 - Observatory research is a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Operational Postgres database and Observatory domain: not implemented
 - Qdrant index: not implemented
@@ -318,7 +318,9 @@ Packets 013A, 013B, 013C, and 013D: complete
 -> Packet 014A Phase 1: complete
 -> Packet 014A Phase 2: complete
 -> Packet 014A Phase 3 and Packet 014B implementation: complete
--> Packet 014A Phase 4: separate owner gate
+-> Packet 014A Phase 4: active and partially complete
+-> Packet 014D: retired unimplemented
+-> next gate: atomic three-note project-bootstrap doctrine decision and explicit owner acceptance
 ```
 
 Current authority:
@@ -331,7 +333,7 @@ Current authority:
 - Result 188 audits Result 187 with a PASS verdict for later separately authorized preparation;
 - the corrected proposal package is committed at docs HEAD `a50c67f7378aeb101b75934cbc7f968f252c57b9`;
 - amendment candidate preparation remains separately owner-gated, has not occurred, and must use fresh packet and operation IDs;
-- Milestone 9 fixture creation, oracle creation, disposable-repository creation, and execution remain unauthorized;
+- Result 211 retires Packet 014D and records the required atomic three-note project-bootstrap reconciliation; no replacement bootstrap implementation is authorized;
 - Observatory work remains research-only under the OBR-01 through OBR-15 track;
 - Postgres, Qdrant, LangGraph, Hermes, UI, provider purchase, raw capture, and production MCP work remain deferred and separately gated.
 

@@ -1,16 +1,25 @@
 ---
 id: kz-tp-01KX4D7PROJECTDIR0000000000
 type: task-packet
-status: proposed
+status: retired-unimplemented
 project: kaizen-platform
 created: 2026-06-14T21:05:00Z
 updated: 2026-06-14T21:05:00Z
 review_status: pending
 authority: proposed
-summary: "Allow one approved first promotion to create its exact missing canonical project directory without generic mkdir authority."
+summary: "Retired single-note parent-creation design; superseded by governed atomic project-bootstrap planning."
 ---
 
 # Task Packet 014D - Governed First-Project Directory Creation
+
+## Disposition
+
+```text
+RETIRED UNIMPLEMENTED
+SUPERSEDED BY RESULT 211 PROJECT-BOOTSTRAP RECONCILIATION
+```
+
+Independent audit found that creating a canonical project root as a side effect of one root-note promotion could leave a partial project without the required command-center, overview, and current-state set. Preserve this packet as rejected-design evidence. Do not approve or implement it.
 
 ## Objective
 
