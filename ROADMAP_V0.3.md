@@ -24,7 +24,7 @@ Platform HEAD: ba3b5feca90e4fb5cb02e34981dc7ed86942962f
 Vault HEAD: 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
 Canonical current-state SHA-256: e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7
 Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
-Next gate: separate owner approval for Packet 014A Phase 3 and Packet 014B implementation
+Next gate: separate owner approval for Packet 014A Phase 4
 Milestone 9: planned but not authorized for implementation
 ```
 
@@ -198,12 +198,13 @@ evidence
 Packet 013E Generation 3 backup and restore proof: complete
 -> Packet 014A Phase 1: complete
 -> Packet 014A Phase 2: complete
--> obtain separate owner approval for Packet 014A Phase 3 and Packet 014B implementation
--> run only the controlled baseline implementation and failed-return sequence released for Phase 3
--> stop before canonical promotion, later-phase injections, fresh-context trials, or amendment work without separate authority
+-> Packet 014A Phase 3 and Packet 014B implementation: complete
+-> obtain separate owner approval for Packet 014A Phase 4
+-> run the governed baseline return, Injection 7 dirty-return proof, local vault commit, and fresh-context R1
+-> stop before Phase 5 amendment work without separate authority
 -> continue bounded Observatory evidence research under OBR-01 through OBR-15
 ```
 
-The controlled mock pilot has entered execution under Packet 014A. Phases 1 and 2 are complete; Phase 3 and Packet 014B implementation are the next separately approved gate. Canonical promotion, later-phase injections, fresh-context trials, and amendment work remain unauthorized.
+The controlled mock pilot has entered execution under Packet 014A. Phases 1 through 3 are complete; Phase 4 is the next separately approved gate. Phase 5 amendment work and later closure work remain unauthorized.
 
 Observatory research is a parallel evidence track. It preserves the full architecture and resolves rights, access, retention, measurement, and reuse questions before any physical database or collection program is proposed.
