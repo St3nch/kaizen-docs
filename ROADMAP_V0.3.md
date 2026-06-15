@@ -17,15 +17,15 @@ This roadmap does not authorize implementation.
 ```text
 Kaizen Project Standard v0.2: authoritative
 Roadmap v0.3: accepted and active
-Milestones 1-8: closed
+Milestones 1-9: closed
 Packets 013A through 013D: complete
 Canonical current-state alignment: complete
 Platform HEAD: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
-Vault HEAD: 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
-Canonical current-state SHA-256: 730ca58c4c1e24f1fcd7a4e97661214001326f13656b6eed9f0e0ddc432978b5
+Vault HEAD: 2bbb2f081458a0fc277943a91b6ab530ab6b82e0
+Canonical current-state SHA-256: cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6
 Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
-Northstar HEAD: bf9abb513d6f22fc5ed800301a8b3ba0b75c5189
-Next gate: Milestone 10 workload and system-of-record reconciliation planning only; no physical schema or production implementation
+Northstar HEAD: 0d181e70f0246776b8ab3948da181a9f41cfcd0e
+Next gate: owner acceptance of the Milestone 10 specification and Packet 015A at exact hashes; no physical schema or production implementation
 Milestone 9: closed under Result 244; Milestone 10 planning authorized
 ```
 

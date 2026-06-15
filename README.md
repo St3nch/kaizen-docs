@@ -33,10 +33,10 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
+- Current gate: Milestones 1 through 9 are closed; Result 244 records exact owner acceptance of Packet 014A and Milestone 9 closure
 - Corrective status: Decision 0017 atomic project-bootstrap doctrine is accepted through Result 213; Packet 014D remains retired unimplemented
-- Controlled implementation-return pilot: Phases 1 through 3 are complete and Phase 4 is partially complete; Result 211 records the project-bootstrap reconciliation; approximately 45 percent of Milestone 9 work remains
-- Canonical vault: local-only at `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
+- Controlled implementation-return pilot: Packet 014A and Milestone 9 are closed under Result 244; Milestone 10 reconciliation planning is next
+- Canonical vault: local-only at `2bbb2f081458a0fc277943a91b6ab530ab6b82e0`; Northstar current-state SHA-256 is `cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6`; no remote exists and no push is authorized
 - Platform implementation repository: local-only at `286b8273498e04a77730d6bdbeaadb2b1c7d2d6b`; no remote exists
 - Go8 repository checkpoint: `5830962ba34e62bbfb65508307ee0c706ed31e14`
 - Kaizen MCP: temporary non-Git proving ground; not production infrastructure
