@@ -25,8 +25,8 @@ Vault HEAD: 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
 Canonical current-state SHA-256: 730ca58c4c1e24f1fcd7a4e97661214001326f13656b6eed9f0e0ddc432978b5
 Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
 Northstar HEAD: bf9abb513d6f22fc5ed800301a8b3ba0b75c5189
-Next gate: explicit owner acceptance of Results 241-243 to close Packet 014A and Milestone 9
-Milestone 9: closure package complete; explicit owner closure acceptance pending
+Next gate: Milestone 10 workload and system-of-record reconciliation planning only; no physical schema or production implementation
+Milestone 9: closed under Result 244; Milestone 10 planning authorized
 ```
 
 Milestone 8 closed the accepted reliability and known-defect register, proved the integrated platform, Kaizen MCP, Go8, lifecycle, tunnel, connector, and governed-return boundaries, and recorded the owner closure acceptance in Research Result 162.
