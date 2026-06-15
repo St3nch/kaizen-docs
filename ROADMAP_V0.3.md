@@ -25,7 +25,7 @@ Vault HEAD: 2bbb2f081458a0fc277943a91b6ab530ab6b82e0
 Canonical current-state SHA-256: cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6
 Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
 Northstar HEAD: 0d181e70f0246776b8ab3948da181a9f41cfcd0e
-Next gate: exact-hash owner acceptance of the Packet 016B physical-design package and Packet 016C implementation approval
+Next gate: live PostgreSQL 18 and secret-injection preflight evidence, then exact-hash Packet 016C implementation approval
 Milestone 9: closed under Result 244; Milestone 10 closed under Result 250; Milestone 11 planning authorized
 ```
 
