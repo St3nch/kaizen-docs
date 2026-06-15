@@ -33,6 +33,11 @@ Prompts are inputs, not conclusions.
 
 - `008-implementation-checkpoint-red-team-audit.md` - completed; preserved in Research Result 024 and reconciled through Research Result 025
 
+### Active and planned architecture audits
+
+- `009-post-milestone-11-full-project-roadmap-audit.md` - deferred until Milestone 11 implementation and closure; full-project frontier-model red-team and next-roadmap audit
+- `010-kaizen-postgresql-foundation-deep-research.md` - pre-Packet-016C Claude Opus deep research on PostgreSQL version, capabilities, topology, security, recovery, extensions, and full Kaizen database architecture
+
 ### Planned after Batch B
 
 - storage, retrieval, backup, and recovery constraints
