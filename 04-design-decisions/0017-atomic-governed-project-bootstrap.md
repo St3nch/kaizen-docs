@@ -1,12 +1,15 @@
 ---
 id: kz-dec-01KXPROJECTBOOTSTRAP0017
 type: decision
-status: proposed
+status: active
 project: kaizen-platform
 created: 2026-06-15T10:45:00-04:00
-updated: 2026-06-15T10:45:00-04:00
-review_status: pending
-authority: proposed
+updated: 2026-06-15T11:10:00-04:00
+accepted: 2026-06-15T11:10:00-04:00
+accepted_by: owner.local
+accepted_source_sha256: 0aa6a2799bee035eccb758a4fc3d6676c7dcc73547331d692295c05389898abf
+review_status: approved
+authority: accepted
 summary: "Define a canonical project as an atomically published three-note governed bootstrap rather than a side effect of single-note promotion."
 ---
 
@@ -276,7 +279,7 @@ After owner acceptance:
 12. commit the vault locally;
 13. run R1.
 
-No replacement implementation work is authorized by this proposed decision alone.
+No replacement implementation work is authorized by this accepted decision alone.
 
 ## Related evidence
 
