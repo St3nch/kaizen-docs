@@ -26,7 +26,7 @@ Canonical current-state SHA-256: e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a84
 Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
 Northstar HEAD: bf9abb513d6f22fc5ed800301a8b3ba0b75c5189
 Next gate: restart Kaizen MCP, verify the live 19-tool registry, and stop before any Northstar bootstrap plan or canonical mutation
-Milestone 9: active; Phases 1-3 complete, Phase 4 partially complete
+Milestone 9: active; Phases 1-5 complete, Phase 6 closure work not yet authorized
 ```
 
 Milestone 8 closed the accepted reliability and known-defect register, proved the integrated platform, Kaizen MCP, Go8, lifecycle, tunnel, connector, and governed-return boundaries, and recorded the owner closure acceptance in Research Result 162.
