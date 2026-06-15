@@ -1,17 +1,21 @@
 ---
 id: kz-tp-01KXPROJECTBOOTSTRAP014E000000
 type: task-packet
-status: revised-pending-approval
+status: approved
 project: kaizen-platform
 created: 2026-06-15T09:40:00-04:00
-updated: 2026-06-15T10:35:00-04:00
+updated: 2026-06-15T11:05:00-04:00
 previously_approved: 2026-06-15T10:20:00-04:00
 previously_approved_by: owner.local
 previously_approved_source_sha256: a5b89ddef8c33ed94a5af7c95efacea8ee8283dab56ddd2a6e70bc35e1fc114b
 previously_approved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
 revision_reason: "Implementation preflight proved that governance-log event routing requires promotion_events.py, which was omitted from the approved path scope. No source change occurred."
-review_status: pending
-authority: proposed
+reapproved: 2026-06-15T11:05:00-04:00
+reapproved_by: owner.local
+reapproved_source_sha256: e50f4ee29b1b5ea289c3176af78ebdfb7d0a10cd336ccf0b0b443c25d3e5406c
+reapproved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
+review_status: approved
+authority: accepted
 primary_spec: kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
 related_specs:
   - kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
