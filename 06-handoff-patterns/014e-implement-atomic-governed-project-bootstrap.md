@@ -1,12 +1,16 @@
 ---
 id: kz-tp-01KXPROJECTBOOTSTRAP014E000000
 type: task-packet
-status: proposed
+status: approved
 project: kaizen-platform
 created: 2026-06-15T09:40:00-04:00
-updated: 2026-06-15T09:40:00-04:00
-review_status: pending
-authority: proposed
+updated: 2026-06-15T10:20:00-04:00
+approved: 2026-06-15T10:20:00-04:00
+approved_by: owner.local
+approved_source_sha256: a5b89ddef8c33ed94a5af7c95efacea8ee8283dab56ddd2a6e70bc35e1fc114b
+approved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
+review_status: approved
+authority: accepted
 primary_spec: kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
 related_specs:
   - kz-spec-01KXPROJECTBOOTSTRAPSPEC0001

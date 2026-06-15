@@ -1,12 +1,15 @@
 ---
 id: kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
 type: spec
-status: proposed
+status: active
 project: kaizen-platform
 created: 2026-06-15T09:25:00-04:00
-updated: 2026-06-15T09:25:00-04:00
-review_status: pending
-authority: proposed
+updated: 2026-06-15T10:20:00-04:00
+accepted: 2026-06-15T10:20:00-04:00
+accepted_by: owner.local
+accepted_source_sha256: bfbfed7301361edc712b37dbd59ebc3575c1904f34490d3ca28e5734d548bfae
+review_status: approved
+authority: accepted
 related_decisions:
   - kz-dec-01KXPROJECTBOOTSTRAP0017
 summary: "Specify immutable planning, atomic Windows publication, evidence, status, recovery, and concurrency for governed three-note project bootstrap."
