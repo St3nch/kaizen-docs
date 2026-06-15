@@ -1,7 +1,7 @@
 ---
 id: kz-tp-01KXPROJECTBOOTSTRAP014E000000
 type: task-packet
-status: revised-pending-approval
+status: approved
 project: kaizen-platform
 created: 2026-06-15T09:40:00-04:00
 updated: 2026-06-15T12:50:00-04:00
@@ -20,8 +20,12 @@ second_reapproved_by: owner.local
 second_reapproved_source_sha256: fa1b0f4798f0cf799a392dfc2d1ce862f962d29de683f105fa1692228a9b13b1
 second_reapproved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
 third_revision_reason: "The pre-existing platform registry contract test hard-codes the event-prefix set and must include project-bootstrap-event: boot. No edit to tests/test_registry.py occurred before this revision."
-review_status: pending
-authority: proposed
+third_reapproved: 2026-06-15T13:30:00-04:00
+third_reapproved_by: owner.local
+third_reapproved_source_sha256: 65334f975cf5844942b6fd69921792371dbaa47c3949217f934371a009ad4002
+third_reapproved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
+review_status: approved
+authority: accepted
 primary_spec: kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
 related_specs:
   - kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
