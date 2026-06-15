@@ -1,7 +1,7 @@
 ---
 id: kz-tp-01KXPROJECTBOOTSTRAP014E000000
 type: task-packet
-status: revised-pending-approval
+status: approved
 project: kaizen-platform
 created: 2026-06-15T09:40:00-04:00
 updated: 2026-06-15T12:50:00-04:00
@@ -15,8 +15,12 @@ reapproved_by: owner.local
 reapproved_source_sha256: e50f4ee29b1b5ea289c3176af78ebdfb7d0a10cd336ccf0b0b443c25d3e5406c
 reapproved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
 second_revision_reason: "Kaizen MCP contract tests proved that tests/test_server_tools.py hard-codes the pre-bootstrap 14-tool registry count and must be updated to 19. No edit to that unapproved path occurred."
-review_status: pending
-authority: proposed
+second_reapproved: 2026-06-15T13:05:00-04:00
+second_reapproved_by: owner.local
+second_reapproved_source_sha256: fa1b0f4798f0cf799a392dfc2d1ce862f962d29de683f105fa1692228a9b13b1
+second_reapproved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
+review_status: approved
+authority: accepted
 primary_spec: kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
 related_specs:
   - kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
