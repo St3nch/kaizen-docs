@@ -1,12 +1,14 @@
 ---
 id: kz-tp-01KV6A2FQ7M4N8R3C5Y1P9T6BW
 type: task-packet
-status: draft
+status: approved
 project: kaizen-platform
 created: 2026-06-15T16:05:00-04:00
-updated: 2026-06-15T16:05:00-04:00
-review_status: pending
-authority: proposed
+updated: 2026-06-15T16:25:00-04:00
+review_status: approved
+authority: accepted
+approved_by: owner.local
+approved_source_sha256: dd38dc3d31615c050d6754d4fcc27fb0171e8cb33fab49485b40e09f952b9133
 summary: "Implement and verify Northstar amendment v1 supplier-review behavior without altering baseline history."
 ---
 

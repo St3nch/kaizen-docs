@@ -1,11 +1,14 @@
 ---
 id: kz-spec-01KV69V2Q8M4N7R3C5Y1P6FA9B
 type: specification
-status: proposed
+status: accepted
 project: kaizen-platform
 created: 2026-06-15T15:55:00-04:00
-updated: 2026-06-15T15:55:00-04:00
-review_status: pending
+updated: 2026-06-15T16:25:00-04:00
+review_status: approved
+authority: accepted
+accepted_by: owner.local
+accepted_source_sha256: d1dfc7289980a958df0b01d81973d07a833f6614866d0b930b902a10552ee914
 baseline_spec: 05-specs/northstar-stockroom-baseline-implementation-spec.md
 governing_decision: 04-design-decisions/0018-northstar-supplier-review-amendment.md
 summary: "Proposed amendment-v1 specification for inactive-supplier review handling and stale-price status precedence."

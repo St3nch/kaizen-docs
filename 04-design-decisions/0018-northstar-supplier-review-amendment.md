@@ -1,11 +1,14 @@
 ---
 id: kz-dec-01KV69T8Q4M7N2R5C3Y6P1FA9B
 type: decision
-status: proposed
+status: active
 project: kaizen-platform
 created: 2026-06-15T15:50:00-04:00
-updated: 2026-06-15T15:50:00-04:00
-review_status: pending
+updated: 2026-06-15T16:25:00-04:00
+review_status: approved
+authority: accepted
+accepted_by: owner.local
+accepted_source_sha256: 5c742cd6fdb530ac75e3d19cd48acdec063d7eef16c82dddcf0bca0fea2ba995
 previous_decision: 04-design-decisions/0016-northstar-baseline-business-rules.md
 summary: "Propose the Phase 5 Northstar supplier-review amendment while preserving the accepted baseline decision."
 ---
