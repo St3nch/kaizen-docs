@@ -1,16 +1,17 @@
 ---
 id: kz-tp-01KXPROJECTBOOTSTRAP014E000000
 type: task-packet
-status: approved
+status: revised-pending-approval
 project: kaizen-platform
 created: 2026-06-15T09:40:00-04:00
-updated: 2026-06-15T10:20:00-04:00
-approved: 2026-06-15T10:20:00-04:00
-approved_by: owner.local
-approved_source_sha256: a5b89ddef8c33ed94a5af7c95efacea8ee8283dab56ddd2a6e70bc35e1fc114b
-approved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
-review_status: approved
-authority: accepted
+updated: 2026-06-15T10:35:00-04:00
+previously_approved: 2026-06-15T10:20:00-04:00
+previously_approved_by: owner.local
+previously_approved_source_sha256: a5b89ddef8c33ed94a5af7c95efacea8ee8283dab56ddd2a6e70bc35e1fc114b
+previously_approved_platform_starting_commit: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
+revision_reason: "Implementation preflight proved that governance-log event routing requires promotion_events.py, which was omitted from the approved path scope. No source change occurred."
+review_status: pending
+authority: proposed
 primary_spec: kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
 related_specs:
   - kz-spec-01KXPROJECTBOOTSTRAPSPEC0001
@@ -107,6 +108,7 @@ src/kaizen/project_bootstrap_workflow.py
 src/kaizen/project_bootstrap_recovery.py
 src/kaizen/project_bootstrap_status.py
 src/kaizen/project_bootstrap_scope.py
+src/kaizen/promotion_events.py
 src/kaizen/windows_fs.py
 src/kaizen/ids.py
 schemas/event-type-prefixes.json
@@ -117,6 +119,7 @@ tests/test_project_bootstrap_recovery.py
 tests/test_project_bootstrap_status.py
 tests/test_live_project_bootstrap.py
 tests/test_project_bootstrap_hammer.py
+tests/test_promotion_events.py
 ```
 
 ### Kaizen MCP allowed changed paths
@@ -159,9 +162,11 @@ _bootstrap/operations/<operation-id>/
 
 Do not overload `_promotion/operations` unless concrete compatibility evidence proves that doing so is safer. Packet 014E prefers a dedicated root.
 
-### 2. Dedicated event schema and ID prefix
+### 2. Dedicated event schema, routing, and ID prefix
 
 Add a dedicated project-bootstrap event schema and event ID prefix.
+
+Update `promotion_events.py` only to route `action: bootstrap-project` records to the dedicated bootstrap validator while preserving the existing `promote` and `amend` validation path unchanged. The shared governance log must remain readable when historical promotion/amendment events and new bootstrap events coexist.
 
 The existing promotion-event schema and historical promotion events must remain byte-compatible and valid.
 
