@@ -29,9 +29,9 @@ Humans = authority-bearing review, approval, and promotion
 - Current phase: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
 - Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
 - Current corrective planning evidence: `03-research-results/174-packet-013b-milestone-9-readiness-result.md`, `03-research-results/183-packet-013c-owner-completion-acceptance.md`, `03-research-results/186-current-state-proposal-preparation-failure-reconciliation.md`, `03-research-results/187-canonical-current-state-alignment-amendment-proposal-v3.md`, and `03-research-results/188-canonical-current-state-alignment-proposal-v3-audit.md`
-- Current gate: Packet 014E implementation is complete at platform commit `286b8273498e04a77730d6bdbeaadb2b1c7d2d6b`; next gate is Kaizen MCP restart and live 19-tool registry verification before any Northstar bootstrap plan
+- Current gate: Packet 014A Phase 6 closure package is complete; Results 241-243 await explicit owner closure acceptance before Milestone 9 may close
 - Results 179 and 184 remain retired as preparation sources; Result 187 and Result 188 remain the proposal and audit evidence for the completed amendment
-- Milestone 9 controlled implementation-return pilot: active; Phases 1 through 3 are complete and Phase 4 is partially complete
+- Milestone 9 controlled implementation-return pilot: closure package complete; explicit owner closure acceptance pending
 - Canonical vault: local-only at commit `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
 - Platform repository: local-only at commit `286b8273498e04a77730d6bdbeaadb2b1c7d2d6b`; no remote exists
 - Go8 repository checkpoint: `5830962ba34e62bbfb65508307ee0c706ed31e14`

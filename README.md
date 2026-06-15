@@ -44,7 +44,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 - Active planning roadmap: `ROADMAP_V0.3.md`; historical roadmap and implementation snapshots remain preserved
 - Observatory research: parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Hermes integration: deferred; no canonical write authority
-- Next valid gate: restart Kaizen MCP, verify the live 19-tool registry, and stop before creating any Northstar bootstrap plan
+- Next valid gate: explicit owner acceptance of Results 241-243 to close Packet 014A and Milestone 9
 
 ## Stewardship rule
 
