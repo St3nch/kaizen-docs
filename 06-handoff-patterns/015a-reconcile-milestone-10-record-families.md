@@ -1,12 +1,14 @@
 ---
 id: kz-tp-01KV6J2Q8M2N7R5C3Y9P4T6BB
 type: task-packet
-status: draft
+status: approved
 project: kaizen-platform
 created: 2026-06-15T21:15:00Z
-updated: 2026-06-15T21:15:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-15T21:30:00Z
+review_status: approved
+authority: accepted
+approved_by: owner.local
+approved_source_sha256: b4ae859e606abb1f5631785bf9c990230721932ec08c2b7829f7a0a1bbc8c4ff
 summary: "Reconcile the four Milestone 10 operational-data candidates without physical schema or implementation work."
 ---
 

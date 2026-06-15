@@ -1,12 +1,14 @@
 ---
 id: kz-spec-01KV6J1Q8M2N7R5C3Y9P4T6BA
 type: specification
-status: proposed
+status: accepted
 project: kaizen-platform
 created: 2026-06-15T21:10:00Z
-updated: 2026-06-15T21:10:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-15T21:30:00Z
+review_status: approved
+authority: accepted
+accepted_by: owner.local
+accepted_source_sha256: 51f8787d044b8566f0793178b9305577e90bf0918207522b1bc125bbc4127775
 summary: "Define Milestone 10 workload and system-of-record reconciliation without authorizing physical schemas or implementation."
 ---
 

@@ -44,7 +44,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 - Active planning roadmap: `ROADMAP_V0.3.md`; historical roadmap and implementation snapshots remain preserved
 - Observatory research: parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Hermes integration: deferred; no canonical write authority
-- Next valid gate: Milestone 10 workload and system-of-record reconciliation planning only; no physical schema or production implementation
+- Next valid gate: exact-hash owner acceptance of Results 247-249 and Decision 0019; no physical schema or production implementation
 
 ## Stewardship rule
 
