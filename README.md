@@ -34,7 +34,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 ## Current status
 
 - Current gate: Milestones 1 through 8 are closed; Result 162 records exact owner acceptance of Milestone 8 closure
-- Corrective status: Packet 014A Phase 4 is active but blocked on accepted atomic project-bootstrap doctrine; Packet 014D is retired unimplemented
+- Corrective status: proposed Decision 0017 atomic project-bootstrap doctrine is audited and awaiting exact owner acceptance; Packet 014D remains retired unimplemented
 - Controlled implementation-return pilot: Phases 1 through 3 are complete and Phase 4 is partially complete; Result 211 records the project-bootstrap reconciliation; approximately 45 percent of Milestone 9 work remains
 - Canonical vault: local-only at `2487de669bc44ed50e54fd5dbbfdd128ce659dbb`; current-state SHA-256 is `e50fc7d1d88257ecf6a818a47673775a9f8960e999a6a843872306227dd2b8c7`; no remote exists and no push is authorized
 - Platform implementation repository: local-only at `7cbc132a508071c94e68fcd5bd206b19ac8bd61a`; no remote exists
@@ -44,7 +44,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 - Active planning roadmap: `ROADMAP_V0.3.md`; historical roadmap and implementation snapshots remain preserved
 - Observatory research: parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Hermes integration: deferred; no canonical write authority
-- Next valid gate: draft and audit the atomic three-note project-bootstrap doctrine, then obtain explicit owner acceptance before any replacement implementation packet
+- Next valid gate: exact owner acceptance of proposed Decision 0017 at its frozen SHA-256; no replacement bootstrap packet or implementation is authorized before acceptance
 
 ## Stewardship rule
 
