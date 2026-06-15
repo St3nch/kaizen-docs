@@ -139,7 +139,34 @@ research-backed but undecided
 speculative or premature
 ```
 
-### 6. Next milestone recommendation
+### 6. Error, gap, and improvement hunt
+
+Actively search for errors, missing proof, weak assumptions, security gaps, privacy and retention problems, recovery weaknesses, test blind spots, stale doctrine, dual-authority risks, unnecessary bureaucracy, operational friction, and opportunities to simplify without weakening evidence or human control.
+
+For every finding, provide a finding ID, severity, confidence, exact evidence, why it matters, classification, smallest safe correction, and whether it blocks the next milestone.
+
+Audit at minimum:
+
+- malformed IDs, stale hashes, broken links, invalid metadata, contradictory authority claims, and repository/document drift;
+- race conditions, partial-failure windows, idempotency and recovery gaps, migration hazards, backup/restore mismatches, and illegal state transitions;
+- tests that prove less than their names imply, overmocking, missing negative tests, weak concurrency proof, and untested upgrades;
+- privilege creep, unsafe defaults, path traversal, project leakage, secret exposure, telemetry overcollection, denial-of-service risks, and weak trust boundaries;
+- privacy, deletion, provenance, licensing, data-rights, and customer-data gaps;
+- accidental dual authority among Markdown, Git, Postgres, governance JSONL, staging evidence, and derived read models;
+- connector blocking, manual evidence joins, sequential-plan churn, brittle runbooks, and other friction being normalized instead of fixed;
+- duplicate documents, over-governance, premature abstraction, and maintenance costs that exceed risk reduction;
+- Windows-local packaging, dependency, upgrade, portability, and disaster-recovery risks;
+- architecture choices that could obstruct the Context and Tool Gateway, Observatory, IMI, marketplace services, model-agnostic operation, or multi-agent work.
+
+Also identify at least five areas that are sound and should not be rewritten merely for novelty.
+
+### 7. Independent architecture challenge
+
+Challenge the current design from first principles using the same evidence. Explicitly assess whether Postgres remains the right first structured foundation, whether the six record families are correctly split and owned, whether governance and audit should remain separate, whether the derived governance read model and connector telemetry are worth building, whether the packet/milestone process earns its operating cost, and where Kaizen risks becoming elaborate project management instead of a useful evidence engine.
+
+Do not recommend fashionable technology without a demonstrated Kaizen problem.
+
+### 8. Next milestone recommendation
 
 Recommend the next milestone sequence after 11. Consider at least:
 
@@ -180,7 +207,13 @@ Produce:
 9. exact recommended next milestone sequence;
 10. smallest immediate next packet;
 11. explicit do-not-build-yet list;
-12. source and limitation register.
+12. source and limitation register;
+13. error, gap, and improvement register with blocking classification;
+14. test-coverage and missing-proof matrix;
+15. security, privacy, retention, and recovery findings;
+16. simplification and bureaucracy-reduction recommendations;
+17. independent architecture challenge and alternative design analysis;
+18. strengths-to-preserve register.
 
 ## Restrictions
 
