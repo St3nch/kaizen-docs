@@ -33,9 +33,9 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 
 ## Current status
 
-- Current gate: Milestones 1 through 9 are closed; Result 244 records exact owner acceptance of Packet 014A and Milestone 9 closure
+- Current gate: Milestones 1 through 10 are closed; Result 250 records exact owner acceptance of Packet 015A and Milestone 10 closure
 - Corrective status: Decision 0017 atomic project-bootstrap doctrine is accepted through Result 213; Packet 014D remains retired unimplemented
-- Controlled implementation-return pilot: Packet 014A and Milestone 9 are closed under Result 244; Milestone 10 reconciliation planning is next
+- Controlled implementation-return pilot: Packet 014A and Milestone 9 are closed under Result 244; Milestone 10 is closed under Result 250; Milestone 11 planning is next
 - Canonical vault: local-only at `2bbb2f081458a0fc277943a91b6ab530ab6b82e0`; Northstar current-state SHA-256 is `cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6`; no remote exists and no push is authorized
 - Platform implementation repository: local-only at `286b8273498e04a77730d6bdbeaadb2b1c7d2d6b`; no remote exists
 - Go8 repository checkpoint: `5830962ba34e62bbfb65508307ee0c706ed31e14`
@@ -44,7 +44,7 @@ The entrypoint defines the authority hierarchy, current project posture, and tas
 - Active planning roadmap: `ROADMAP_V0.3.md`; historical roadmap and implementation snapshots remain preserved
 - Observatory research: parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Hermes integration: deferred; no canonical write authority
-- Next valid gate: exact-hash owner acceptance of Results 247-249 and Decision 0019; no physical schema or production implementation
+- Next valid gate: Milestone 11 operational-data-foundation planning only; no physical database design or implementation
 
 ## Stewardship rule
 

@@ -1,12 +1,14 @@
 ---
 id: kz-dec-01KV6J7Q8M2N7R5C3Y9P4T6BG
 type: decision
-status: proposed
+status: active
 project: kaizen-platform
 created: 2026-06-15T22:10:00Z
-updated: 2026-06-15T22:10:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-15T22:35:00Z
+review_status: approved
+authority: accepted
+accepted_by: owner.local
+accepted_source_sha256: 0fcaf6dae338c8498ccbcddeecaa2f45ddd4afdad0c3b66a6ddd00159a0ebbf5
 summary: "Propose the accepted operational record-family boundaries resulting from Milestone 10 reconciliation."
 ---
 

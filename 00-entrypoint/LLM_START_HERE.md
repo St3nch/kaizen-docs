@@ -26,12 +26,12 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestones 1 through 9 are closed; Result 244 records exact owner acceptance of Packet 014A and Milestone 9 closure
+- Current phase: Milestones 1 through 10 are closed; Result 250 records exact owner acceptance of Packet 015A and Milestone 10 closure
 - Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
 - Current corrective planning evidence: `03-research-results/174-packet-013b-milestone-9-readiness-result.md`, `03-research-results/183-packet-013c-owner-completion-acceptance.md`, `03-research-results/186-current-state-proposal-preparation-failure-reconciliation.md`, `03-research-results/187-canonical-current-state-alignment-amendment-proposal-v3.md`, and `03-research-results/188-canonical-current-state-alignment-proposal-v3-audit.md`
-- Current gate: Milestone 10 reconciliation package and Decision 0019 are audit-complete; exact-hash owner acceptance is required before closure or Milestone 11 planning
+- Current gate: Milestone 11 operational-data-foundation planning only; physical database design and implementation remain unauthorized
 - Results 179 and 184 remain retired as preparation sources; Result 187 and Result 188 remain the proposal and audit evidence for the completed amendment
-- Milestone 9 controlled implementation-return pilot: closed under Result 244; Milestone 10 planning is the next authorized work
+- Milestone 9 controlled implementation-return pilot: closed under Result 244; Milestone 10 reconciliation is closed under Result 250; Milestone 11 planning is next
 - Canonical vault: local-only at commit `2bbb2f081458a0fc277943a91b6ab530ab6b82e0`; Northstar current-state SHA-256 is `cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6`; no remote exists and no push is authorized
 - Platform repository: local-only at commit `286b8273498e04a77730d6bdbeaadb2b1c7d2d6b`; no remote exists
 - Go8 repository checkpoint: `5830962ba34e62bbfb65508307ee0c706ed31e14`
