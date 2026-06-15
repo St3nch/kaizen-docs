@@ -1,12 +1,14 @@
 ---
 id: kz-tp-01KV6LAQ8M2N7R5C3Y9P4T6BK0
 type: task-packet
-status: draft
+status: approved
 project: kaizen-platform
 created: 2026-06-16T00:40:00Z
-updated: 2026-06-16T00:40:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-16T01:00:00Z
+review_status: approved
+authority: accepted
+approved_by: owner.local
+approved_source_sha256: ba342ab981f119e2ed6398c51d30781e31580f25a4ba5871bc7756c6f95af2dc
 summary: "Design the minimum physical operational-data foundation for the four-family first slice without implementing it."
 ---
 

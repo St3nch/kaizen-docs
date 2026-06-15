@@ -1,12 +1,14 @@
 ---
 id: kz-spec-01KV6L9Q8M2N7R5C3Y9P4T6BJ0
 type: specification
-status: proposed
+status: accepted
 project: kaizen-platform
 created: 2026-06-16T00:30:00Z
-updated: 2026-06-16T00:30:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-16T01:00:00Z
+review_status: approved
+authority: accepted
+accepted_by: owner.local
+accepted_source_sha256: 65328cddccc43f133971b4f5547c10354b431d1af119c9bdc071558211e30182
 summary: "Define conceptual identity, lifecycle, transaction, idempotency, correction, recovery, retention, and trust contracts for the Milestone 11 first slice."
 ---
 

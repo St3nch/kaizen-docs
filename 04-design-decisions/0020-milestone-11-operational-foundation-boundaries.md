@@ -1,12 +1,14 @@
 ---
 id: kz-dec-01KV6L8Q8M2N7R5C3Y9P4T6BH0
 type: decision
-status: proposed
+status: active
 project: kaizen-platform
 created: 2026-06-16T00:20:00Z
-updated: 2026-06-16T00:20:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-16T01:00:00Z
+review_status: approved
+authority: accepted
+accepted_by: owner.local
+accepted_source_sha256: fda7c08f70ed216ecc14f315cb161aedef394a4bd5c581fbf41799ac16617b94
 summary: "Propose the first-slice, retention, deletion, path, trust, and deferred-family boundaries for Milestone 11."
 ---
 
