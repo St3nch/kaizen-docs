@@ -1,12 +1,14 @@
 ---
 id: kz-spec-01KV6L1Q8M2N7R5C3Y9P4T6BA0
 type: specification
-status: proposed
+status: accepted
 project: kaizen-platform
 created: 2026-06-15T23:15:00Z
-updated: 2026-06-15T23:15:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-15T23:50:00Z
+review_status: approved
+authority: accepted
+accepted_by: owner.local
+accepted_source_sha256: f798c16f56721670381b77e27f8dd548985e4c4f3d19fece3b157319038e8f82
 summary: "Define Milestone 11 planning for the smallest evidence-backed operational data foundation without authorizing implementation."
 ---
 

@@ -1,12 +1,14 @@
 ---
 id: kz-tp-01KV6L2Q8M2N7R5C3Y9P4T6BB0
 type: task-packet
-status: draft
+status: approved
 project: kaizen-platform
 created: 2026-06-15T23:20:00Z
-updated: 2026-06-15T23:20:00Z
-review_status: pending
-authority: proposed
+updated: 2026-06-15T23:50:00Z
+review_status: approved
+authority: accepted
+approved_by: owner.local
+approved_source_sha256: 5fbbafefc2eb3d67b80345d50efd3a4a9aa9d14e66eb81a4445ea6b1d63efb31
 summary: "Plan the smallest justified Milestone 11 operational-data foundation without physical design or implementation."
 ---
 
