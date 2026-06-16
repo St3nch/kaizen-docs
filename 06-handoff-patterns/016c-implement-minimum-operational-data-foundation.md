@@ -55,6 +55,9 @@ PostgreSQL 18, subject to live binary and service verification before approval
 database:
 kaizen_ops
 
+operational authority domain:
+Kaizen Core Operational
+
 schemas:
 platform_meta
 operations
@@ -64,6 +67,12 @@ UTF8
 
 timezone:
 UTC
+
+data checksums:
+required on
+
+password encryption for newly created credentials:
+scram-sha-256
 ```
 
 If PostgreSQL 18 cannot be verified locally, stop and revise the packet rather than silently falling back.

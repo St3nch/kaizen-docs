@@ -88,7 +88,7 @@ if ([string]::IsNullOrWhiteSpace($env:KAIZEN_OPS_DSN)) {
     --set ON_ERROR_STOP=1 `
     --tuples-only `
     --no-align `
-    --command "select current_setting('server_version'), current_setting('server_version_num'), current_database(), current_setting('TimeZone'), current_setting('server_encoding');"
+    --command "select current_setting('server_version'), current_setting('server_version_num'), current_database(), current_setting('TimeZone'), current_setting('server_encoding'), current_setting('data_checksums'), current_setting('password_encryption');"
 ```
 
 Required result:
@@ -98,6 +98,8 @@ server major version: 18
 expected proving-ground database: owner-selected disposable preflight database, not kaizen_ops unless separately created later
 TimeZone: UTC or explicitly identified for later session override
 server_encoding: UTF8
+data_checksums: on
+password_encryption: scram-sha-256
 ```
 
 The preflight may use an existing disposable database. It must not create `kaizen_ops` under readiness-only authority.
@@ -216,6 +218,8 @@ server version and version number
 server address and port
 preflight database name
 server timezone and encoding
+data-checksum state
+password-encryption setting
 preflight role privilege flags
 extension inventory
 Python version and executable
@@ -233,6 +237,8 @@ Stop Packet 016C approval if:
 
 - PostgreSQL 18 service or client cannot be verified;
 - server major version is not 18;
+- data checksums are not enabled;
+- password encryption is not `scram-sha-256`;
 - Python is not 3.11;
 - secret injection requires a repository file;
 - platform working tree becomes dirty;
