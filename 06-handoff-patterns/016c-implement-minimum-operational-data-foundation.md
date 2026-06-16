@@ -1,11 +1,11 @@
 ---
 id: kz-tp-01KV6LHQ8M2N7R5C3Y9P4T6BS0
 type: task-packet
-status: draft
+status: ready-for-approval
 project: kaizen-platform
 created: 2026-06-16T01:50:00Z
-updated: 2026-06-16T02:20:00Z
-review_status: pending
+updated: 2026-06-16T16:25:00Z
+review_status: passed
 authority: proposed
 summary: "Implement the database and immutable-migration proving ground for the Milestone 11 first slice."
 ---
@@ -14,7 +14,34 @@ summary: "Implement the database and immutable-migration proving ground for the 
 
 ## Authority
 
-Draft only. This packet is not approved and may not be executed.
+Ready for exact-hash owner approval. This packet is not yet approved and may not be executed.
+
+Live preflight binding:
+
+```text
+result:
+03-research-results/265-packet-016c-live-postgresql-preflight.md
+
+result SHA-256:
+1591d8d2ee5c903ab9d695c3a3d0ace24ede264686b153639ae6a2a0e9dd145d
+
+PostgreSQL service:
+postgresql-x64-18
+
+PostgreSQL server:
+18.4
+
+psql.exe SHA-256:
+1116C77F820606F52CD3D0F676012470D494092CBA321A6CBD898F4701EB944E
+
+platform starting commit:
+286b8273498e04a77730d6bdbeaadb2b1c7d2d6b
+
+secret source:
+Windows Credential Manager via owner-run short-lived process injection
+```
+
+Implementation remains prohibited until the owner approves this exact packet source hash.
 
 ## Objective
 
