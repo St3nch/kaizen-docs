@@ -4,7 +4,7 @@ type: task-packet
 status: ready-for-approval
 project: kaizen-platform
 created: 2026-06-17T15:31:00Z
-updated: 2026-06-17T15:31:00Z
+updated: 2026-06-17T15:52:00Z
 review_status: passed
 authority: proposed
 summary: "Implement the bounded execution-attempt and verification-run typed service over the accepted Milestone 11 PostgreSQL foundation."
@@ -353,6 +353,8 @@ pyproject.toml
 src/kaizen/ops_db/__init__.py
 src/kaizen/ops_db/migrations/manifest.json
 docs/OPERATIONS_DATABASE_PROVING_GROUND.md
+tests/test_ops_db_migration_runner.py
+tests/test_ops_db_migration_hammer.py
 ```
 
 New source paths allowed:
