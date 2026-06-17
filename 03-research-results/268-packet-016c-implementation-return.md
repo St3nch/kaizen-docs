@@ -250,7 +250,7 @@ owner: kaizen_ops_test_migrator
 Live PostgreSQL hammer result:
 
 ```text
-3 passed in 4.58s
+3 passed
 ```
 
 The live test proved:
