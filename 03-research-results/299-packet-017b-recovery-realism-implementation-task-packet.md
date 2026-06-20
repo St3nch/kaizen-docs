@@ -32,6 +32,13 @@ Accepted Packet 017A source SHA-256:
 083bcca6ed295d903c36b351813475cfc7a8ebbc40f6c728e9d659b10d4a54b8
 ```
 
+Decision relevance hooks:
+
+```text
+Decision 0019: preserves system-of-record boundaries; recovery proof must not move canonical Markdown, artifact bytes, Git authority, governance JSONL, or immutable evidence into the operational database.
+Decision 0020: requires database-and-file consistency verification, backup/restore posture, restore ordering, and recovery hammer posture before recovery is treated as credible.
+```
+
 ## 3. Starting checkpoints
 
 Required starting checkpoints for later implementation approval:
@@ -90,17 +97,31 @@ Packet 017B should reuse and extend existing recovery integration structure wher
 
 ## 6. Required changed-path allowlist
 
-Later implementation may modify only these platform paths unless Packet 017B is revised and re-approved:
+Later implementation may modify only these platform paths unless Packet 017B is revised and re-approved. Source edits are proof-enabling only. They must not redesign recovery logic, retention logic, consistency semantics, schema authority, or migration behavior.
+
+Platform source paths are allowed only with these justifications:
 
 ```text
-src/kaizen/ops_recovery/backup.py
-src/kaizen/ops_recovery/restore.py
-src/kaizen/ops_recovery/consistency.py
-src/kaizen/ops_recovery/contracts.py
-src/kaizen/ops_recovery/generation.py
-src/kaizen/ops_recovery/retention.py
-src/kaizen/ops_db/schema_contract.py
-src/kaizen/ops_db/migrations/manifest.json
+src/kaizen/ops_recovery/backup.py — only if a proof hook or metadata exposure is required for nonzero-file generation evidence; no consistency or status logic redesign.
+src/kaizen/ops_recovery/restore.py — only if a proof hook or bounded restore-result exposure is required; no restore contract redesign.
+src/kaizen/ops_recovery/consistency.py — only if post-restore consistency reporting needs proof-only exposure; no consistency rule redesign.
+src/kaizen/ops_recovery/contracts.py — only if typed configuration/result contracts need a proof-only field; no authority-boundary change.
+src/kaizen/ops_recovery/generation.py — only if generation identity/proof reporting needs bounded exposure; no ID policy change.
+src/kaizen/ops_recovery/retention.py — only if negative-probe tests require an existing helper exposure; no retention-basis or deletion-policy change.
+src/kaizen/ops_db/schema_contract.py — only if schema-contract expectations must be pinned or reported for the proof; no new operational family.
+```
+
+Migration manifest and migration files:
+
+```text
+src/kaizen/ops_db/migrations/manifest.json — read/hash verification only unless Packet 017B is revised; no new migration is expected.
+```
+
+No existing migration files 0001 through 0005 may be edited. A new migration is not expected for Packet 017B. If a migration becomes necessary, stop and revise the packet before implementation.
+
+Test paths allowed:
+
+```text
 tests/test_ops_recovery_integration.py
 tests/test_ops_recovery_restore.py
 tests/test_ops_recovery_hammer.py
@@ -112,12 +133,12 @@ tests/test_ops_service_integration.py
 tests/test_ops_service_file_integration.py
 ```
 
-Optional new platform files if needed:
+Optional new platform test files may be created only if the corresponding step is implemented rather than explicitly deferred:
 
 ```text
-tests/test_ops_recovery_realism.py
-tests/test_ops_recovery_negative_probes.py
-tests/test_ops_recovery_smoke.py
+tests/test_ops_recovery_realism.py — nonzero-file recovery/restore realism proof
+tests/test_ops_recovery_negative_probes.py — disposable-DB negative-probe proof
+tests/test_ops_recovery_smoke.py — post-restore typed-service smoke proof
 ```
 
 Docs paths allowed:
@@ -126,18 +147,15 @@ Docs paths allowed:
 03-research-results/299-packet-017b-recovery-realism-implementation-task-packet.md
 03-research-results/<next-id>-packet-017b-implementation-return.md
 03-research-results/<next-id>-packet-017b-completion-audit.md
-05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md
 ```
 
-Runbook/spec path allowed only if Packet 017B implementation actually updates operator guidance:
+Runbook/spec path allowed only if Packet 017B implementation updates operator guidance or clarifies recovery posture:
 
 ```text
 05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md
 ```
 
 No vault paths are authorized.
-
-No existing migration files 0001 through 0005 may be edited. A new migration is not expected for Packet 017B. If a migration becomes necessary, stop and revise the packet before implementation.
 
 ## 7. Required implementation steps
 
@@ -151,6 +169,20 @@ kaizen_ops schema_version has 0001 through 0005
 existing retained recovery generations are present
 platform repo is clean
 no secrets are emitted
+```
+
+Load-bearing source hashes at Packet 017B preparation time:
+
+```text
+src/kaizen/ops_recovery/backup.py 1869ed35ca0560a663dc898482f2a87bed4b64498ba163a02b3c28ece6abe80e
+src/kaizen/ops_recovery/restore.py 13abc7923d7c9d5eaac420ebc1deea4c7eb26e49cb0eea03c769321be24b8bbf
+src/kaizen/ops_recovery/consistency.py 5f4e13a75225a9e478eb39c7123f62823be725d4fd93e06e93c3b92ac52769f9
+src/kaizen/ops_recovery/contracts.py 503b194c70ec58986e4377611e68a5c56137248a4314a2c02fdebdef78f770d7
+src/kaizen/ops_recovery/generation.py 780c4a128b1ad5780fc6b9712fa44206e581371628bccd3e5c661676709fd64b
+src/kaizen/ops_recovery/retention.py 2635b4876035e0763089d171a729853ada8223118a7afb1654b38685ba5f0dbb
+src/kaizen/ops_db/schema_contract.py f1c5847b0791ae893a52e586fc1d4110c415329c29affdf2525aecb9c0112c5b
+tests/test_ops_recovery_integration.py fb38e0d355bc5c89088e3048e2552e905c9b47657eed1a32855cd8efbb5b26f5
+tests/test_ops_db_migration_hammer.py ee11188a5e0ee3391875059185e4a6058fc38a263fd88fb58ea257fddad1021e
 ```
 
 ### Step 2 — Nonzero-file recovery generation proof
@@ -254,7 +286,7 @@ terminal recovery_generation rewrite rejected
 released retention_hold rewrite rejected
 ```
 
-This must not use arbitrary ad hoc SQL against live `kaizen_ops` unless a bounded test-only profile is explicitly approved. Prefer disposable test DB or existing migration hammer patterns.
+These checks must run against a disposable restore/test database. For this packet, live `kaizen_ops` is read-only inventory evidence only.
 
 ### Step 8 — Tooling/lint disposition
 
@@ -348,11 +380,12 @@ Packet 017B implementation is acceptable only if:
 7. typed-service smoke check is proven or explicitly deferred with owner-visible rationale;
 8. restore-forward is proven, explicitly unsupported, or explicitly deferred;
 9. operational role-ready restore is proven, explicitly unsupported, or explicitly deferred;
-10. recovery/retention negative probes are proven through bounded tests/profile or explicitly blocked by missing approved tool surface;
+10. recovery/retention immutability rejection checks are proven through disposable restore/test DB checks or explicitly blocked by missing approved tool surface;
 11. ruff/tooling posture is resolved or explicitly deferred;
 12. no secrets, passwords, raw DSNs, or private payloads appear in docs or outputs;
-13. full platform tests pass or failures are bounded and owner-reviewed;
-14. completion audit records exact hashes, evidence rows, test results, and residual limitations.
+13. existing retained recovery generations are not rewritten or replaced;
+14. full platform tests pass with zero unexplained failures; any skip or non-run must be explained as credential-gated, tool-gated, or explicitly owner-reviewed;
+15. completion audit records exact hashes, evidence rows, test results, and residual limitations.
 
 ## 11. Implementation return requirements
 
@@ -401,11 +434,13 @@ Return:
 
 ## 13. Owner implementation approval template
 
-Only after independent review or owner review, implementation may be approved with exact language like:
+Only after independent review or owner review, implementation may be approved with exact language like the following. The docs starting commit and revised packet SHA must be pinned to exact values after this revised packet is committed; the template must not be used with placeholders.
 
 ```text
-I approve Packet 017B implementation using platform starting commit `00d86943ca54aaff89c4c8428b7bb529994f846c` and docs starting commit `<current docs commit after task-packet acceptance>`, with the changed-path allowlist and acceptance criteria in `03-research-results/299-packet-017b-recovery-realism-implementation-task-packet.md`. I authorize implementation only within that scope. I do not authorize production deployment, retention deletion, physical evidence deletion, new operational record families, governed-operation read model implementation, connector telemetry implementation, direct agent SQL, arbitrary SQL APIs, Observatory, Qdrant, Hermes/UI, provider work, customer data work, multi-user identity, production MCP packaging, vault mutation, or broad schema redesign.
+I approve Packet 017B implementation using platform starting commit `00d86943ca54aaff89c4c8428b7bb529994f846c` and docs starting commit `<PIN_EXACT_DOCS_COMMIT_AFTER_REVISED_PACKET_ACCEPTANCE>`, with the changed-path allowlist and acceptance criteria in `03-research-results/299-packet-017b-recovery-realism-implementation-task-packet.md` at SHA-256 `<PIN_REVISED_PACKET_SHA256>`. I authorize implementation only within that scope. I do not authorize production deployment, retention deletion, physical evidence deletion, new operational record families, governed-operation read model implementation, connector telemetry implementation, direct agent SQL, arbitrary SQL APIs, Observatory, Qdrant, Hermes/UI, provider work, customer data work, multi-user identity, production MCP packaging, vault mutation, or broad schema redesign.
 ```
+
+Before approval, replace both placeholders with exact committed values.
 
 ## 14. Current status
 
