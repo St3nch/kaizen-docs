@@ -26,23 +26,19 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestones 1 through 10 are closed; Result 250 records exact owner acceptance of Packet 015A and Milestone 10 closure
-- Active planning roadmap: `ROADMAP_V0.3.md`; its current accepted planning state includes the corrective pre-Milestone-9 sequence and the parallel Observatory research track
-- Current corrective planning evidence: `03-research-results/174-packet-013b-milestone-9-readiness-result.md`, `03-research-results/183-packet-013c-owner-completion-acceptance.md`, `03-research-results/186-current-state-proposal-preparation-failure-reconciliation.md`, `03-research-results/187-canonical-current-state-alignment-amendment-proposal-v3.md`, and `03-research-results/188-canonical-current-state-alignment-proposal-v3-audit.md`
-- Current gate: Packet 016C implementation-readiness planning is complete; live PostgreSQL 18 and secret-injection preflight evidence is required before implementation approval
-- Results 179 and 184 remain retired as preparation sources; Result 187 and Result 188 remain the proposal and audit evidence for the completed amendment
-- Milestone 9 controlled implementation-return pilot: closed under Result 244; Milestone 10 reconciliation is closed under Result 250; Milestone 11 planning is next
-- Canonical vault: local-only at commit `2bbb2f081458a0fc277943a91b6ab530ab6b82e0`; Northstar current-state SHA-256 is `cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6`; no remote exists and no push is authorized
-- Platform repository: local-only at commit `286b8273498e04a77730d6bdbeaadb2b1c7d2d6b`; no remote exists
-- Go8 repository checkpoint: `5830962ba34e62bbfb65508307ee0c706ed31e14`
+- Current phase: Milestones 1 through 11 are closed; Result 288 records Milestone 11 closure and Result 293 records bounded Packet 016G post-closure correction completion
+- Active planning roadmap: `ROADMAP_V0.3.md`; it remains accepted and active, but now needs a post-Milestone-11 roadmap revision before any next milestone is authorized
+- Current gate: owner decision for post-Milestone-11 roadmap revision and next milestone definition
+- Platform repository: local-only at commit `00d86943ca54aaff89c4c8428b7bb529994f846c`; no remote exists
+- Docs repository: commit `402dcb900321a59555ad4d4e43b05e3196267e4d` records Packet 016G completion audit and is pushed to `origin/main`
+- Canonical vault: local-only at commit `c898f261c0b341eb8419125247c8bd53ef567d6c`; no remote exists
+- Live operational database: `kaizen_ops` is migrated through `0005_recovery_retention_integrity`
+- Go8 repository: operational local tool server; version 0.5.0 during 016G closure
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure
-- Packet 012E and Packet 012E.1 are complete; the reliability and known-defect milestone is closed
-- Packet 014A Phase 4 remains partially complete; Packet 014E implementation is complete and audited; no live Northstar bootstrap plan or canonical mutation has occurred
-- Observatory research is a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
-- Operational Postgres database and Observatory domain: not implemented
+- Observatory research remains a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
 - Qdrant index: not implemented
 - Hermes Desktop / Hermes Agent: deferred; no canonical write authority or live integration is authorized
-- Decisions 0001 through 0014 retain their recorded authority states; accepted decisions remain governing inputs
+- Decisions 0001 through 0020 retain their recorded authority states; accepted decisions remain governing inputs
 - Active workflow posture: run deterministic contract, hash, path, schema, and clean-state checks before prose review; use compact records for low-risk work; preserve full gates for consequential mutation
 - Stewardship principle: structure and automation must earn their existence
 
@@ -309,39 +305,33 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Current next gate
 
-The active corrective sequence is:
+The active sequence is now at a post-Milestone-11 decision point:
 
 ```text
-Packets 013A, 013B, 013C, and 013D: complete
--> canonical current-state alignment: complete at vault commit 2487de669bc44ed50e54fd5dbbfdd128ce659dbb
--> Packet 013E post-Milestone-8 backup Generation 3: complete
--> Packet 014A Phase 1: complete
--> Packet 014A Phase 2: complete
--> Packet 014A Phase 3 and Packet 014B implementation: complete
--> Packet 014A Phase 4: active and partially complete
--> Packet 014D: retired unimplemented
--> next gate: atomic three-note project-bootstrap doctrine decision and explicit owner acceptance
+Milestones 1-8: closed
+-> Milestone 9 controlled implementation-return pilot: closed under Result 244
+-> Milestone 10 workload/system-of-record reconciliation: closed under Result 250
+-> Milestone 11 operational data foundation: closed under Result 288
+-> Packet 016G post-closure attestation-integrity correction: complete under Result 293
+-> next gate: post-Milestone-11 roadmap revision and next milestone definition
 ```
 
 Current authority:
 
-- Result 162 closes Milestone 8;
-- Result 174 records the evidence-backed Milestone 9 readiness result;
-- Result 183 records owner acceptance of Packet 013C completion;
-- Result 186 reconciles the failed Result 184 preparation attempt and confirms that it created no preparation evidence or mutation;
-- Result 187 contains the corrected deterministic current-state replacement proposal and supersedes Results 179 and 184 as preparation sources;
-- Result 188 audits Result 187 with a PASS verdict for later separately authorized preparation;
-- the corrected proposal package is committed at docs HEAD `a50c67f7378aeb101b75934cbc7f968f252c57b9`;
-- amendment candidate preparation remains separately owner-gated, has not occurred, and must use fresh packet and operation IDs;
-- Result 211 retires Packet 014D and records the required atomic three-note project-bootstrap reconciliation; no replacement bootstrap implementation is authorized;
+- Result 244 closes Milestone 9;
+- Result 250 closes Milestone 10;
+- Decision 0019 records Milestone 10 system-of-record reconciliation;
+- Decision 0020 records Milestone 11 operational foundation boundaries;
+- Result 288 closes Milestone 11;
+- Results 291 through 293 record Packet 016G planning approval, implementation return, and completion audit;
 - Observatory work remains research-only under the OBR-01 through OBR-15 track;
-- Postgres, Qdrant, LangGraph, Hermes, UI, provider purchase, raw capture, and production MCP work remain deferred and separately gated.
+- Qdrant, LangGraph, Hermes, UI, provider purchase, raw capture, and production MCP work remain deferred and separately gated.
 
 ## Non-blocking future work
 
 - governance-compression Decision 0015 reconciliation;
 - Observatory rights, retention, measurement, reuse, and hammer research;
-- Postgres and Qdrant storage/recovery work only after accepted workload evidence;
+- post-Milestone-11 roadmap revision and next milestone definition;
 - Hermes, interface, provider-adapter, and production MCP work through later roadmap gates.
 ## Required output shape for future docs
 

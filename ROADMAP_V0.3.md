@@ -16,17 +16,17 @@ This roadmap does not authorize implementation.
 
 ```text
 Kaizen Project Standard v0.2: authoritative
-Roadmap v0.3: accepted and active
-Milestones 1-10: closed
-Packets 013A through 013D: complete
-Canonical current-state alignment: complete
-Platform HEAD: 7cbc132a508071c94e68fcd5bd206b19ac8bd61a
-Vault HEAD: 2bbb2f081458a0fc277943a91b6ab530ab6b82e0
-Canonical current-state SHA-256: cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6
-Go8 HEAD: 5830962ba34e62bbfb65508307ee0c706ed31e14
-Northstar HEAD: 0d181e70f0246776b8ab3948da181a9f41cfcd0e
-Next gate: live PostgreSQL 18 and secret-injection preflight evidence, then exact-hash Packet 016C implementation approval
-Milestone 9: closed under Result 244; Milestone 10 closed under Result 250; Milestone 11 planning authorized
+Roadmap v0.3: accepted and active, pending next-roadmap revision
+Milestones 1-11: closed
+Milestone 11 closure: Result 288
+Packet 016G post-closure correction: complete under Result 293
+Platform HEAD: 00d86943ca54aaff89c4c8428b7bb529994f846c
+Docs HEAD: 402dcb900321a59555ad4d4e43b05e3196267e4d
+Vault HEAD: c898f261c0b341eb8419125247c8bd53ef567d6c
+Go8: operational local tool server, version 0.5.0 during 016G closure
+Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
+Next gate: owner decision for post-Milestone-11 roadmap revision and next milestone definition
+No sequence after Milestone 11 is accepted yet
 ```
 
 Milestone 8 closed the accepted reliability and known-defect register, proved the integrated platform, Kaizen MCP, Go8, lifecycle, tunnel, connector, and governed-return boundaries, and recorded the owner closure acceptance in Research Result 162.
@@ -91,7 +91,13 @@ Only after workload reconciliation, design and prove the smallest justified Post
 
 Scope is limited to record families actually evidenced by Milestone 9 and accepted in Milestone 10. Ingestion or Observatory schema work requires additional front-half evidence from a later controlled research/report pilot or real project if Northstar does not produce it.
 
-Detailed milestone definition: deferred until Milestone 10 evidence exists.
+Detailed milestone definition:
+
+```text
+05-specs/milestone-11-operational-data-foundation-planning.md
+```
+
+Milestone 11 is closed under Result 288. The bounded post-closure correction Packet 016G is complete under Result 293.
 
 ### Later milestone families
 
