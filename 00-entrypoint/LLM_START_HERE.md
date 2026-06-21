@@ -29,9 +29,10 @@ Humans = authority-bearing review, approval, and promotion
 - Current phase: Milestones 1 through 12 are closed.
 - Latest closed milestone: Milestone 12, accepted by owner in `03-research-results/307-milestone-12-owner-acceptance.md`.
 - Current gate: post-Milestone-12 reading-path cleanup and roadmap decision work only. No Milestone 13, implementation, platform, vault, database, production, deletion, or evidence mutation work is authorized by this entrypoint.
-- Active planning roadmap: `ROADMAP_V0.3.md`, refreshed/superseded by Packet 018A as the active roadmap surface after the post-M12 audit program.
+- Active accepted planning roadmap: `ROADMAP_V0.3.md`, refreshed/superseded by Packet 018A as the active roadmap surface after the post-M12 audit program.
+- Proposed end-to-end roadmap: `ROADMAP_V0.4.md`; it defines proposed Kaizen v1 and full-project completion boundaries but is not accepted doctrine until audited and owner-accepted.
 - Post-M12 audit program: Passes 1 through 3 are complete and dispositioned in Results 310 through 316.
-- Documentation cleanup packet: Packet 018A is defined in `03-research-results/317-post-m12-reading-path-cleanup-task-packet.md`.
+- Documentation cleanup packet: Packet 018A is defined in `03-research-results/317-post-m12-reading-path-cleanup-task-packet.md` and accepted in `03-research-results/321-packet-018a-owner-acceptance.md`.
 - Platform repository: local-only at commit `b7593c5ee90fd32c1e2a86572cc570d307de2be6`; no remote exists.
 - Docs repository: Packet 018A approval started from `376908dab2e52c899978c48d618cbafda0d20480`; implementation-return records the final cleanup commit.
 - Canonical vault: local-only at commit `c898f261c0b341eb8419125247c8bd53ef567d6c`; no remote exists.
@@ -47,32 +48,34 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Read-first sequence
 
-This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and the active `ROADMAP_V0.3.md`. Then load only the decisions, specs, audits, task packets, and implementation returns relevant to the requested work unless the user explicitly requests a full-repository audit.
+This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and the active accepted `ROADMAP_V0.3.md`; read proposed `ROADMAP_V0.4.md` for end-to-end roadmap work. Then load only the decisions, specs, audits, task packets, and implementation returns relevant to the requested work unless the user explicitly requests a full-repository audit.
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file; authoritative current-state pointer
-2. `ROADMAP_V0.3.md` - active roadmap surface after Packet 018A cleanup
-3. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
-4. `03-research-results/307-milestone-12-owner-acceptance.md` - latest milestone closure authority
-5. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
-6. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
-7. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
-8. `03-research-results/313-post-m12-audit-pass-1-steward-disposition.md` - Pass 1 disposition
-9. `03-research-results/314-post-m12-audit-pass-2-steward-disposition.md` - Pass 2 disposition
-10. `03-research-results/315-post-m12-historical-disposition-audit.md` - post-M12 audit Pass 3
-11. `03-research-results/316-post-m12-audit-pass-3-steward-disposition.md` - Pass 3 disposition and tracked P3 repair register
-12. `03-research-results/317-post-m12-reading-path-cleanup-task-packet.md` - Packet 018A cleanup packet
-13. `04-design-decisions/README.md` - decisions index and Decision 0015 gap note
-14. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
-15. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
-16. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md`
-17. `05-specs/milestone-11-operational-data-foundation-planning.md`
-18. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md`
-19. `05-specs/controlled-implementation-return-pilot.md` - Milestone 9 definition/spec despite non-numbered filename
-20. `05-specs/milestone-8-reliability-and-known-defect-closure.md`
-21. `05-specs/milestone-7-durable-recoverability.md`
-22. `IMPLEMENTATION_ROADMAP.md` - historical completed first-slice roadmap for Milestones 1 through 5
-23. `IMPLEMENTATION_ROADMAP_V0.2.md` - historical accepted Milestone 6 implementation-roadmap snapshot; preserve bytes unless separately approved
-24. `ROADMAP.md` - historical planning provenance only; not a current-gate source
+2. `ROADMAP_V0.3.md` - active accepted roadmap surface after Packet 018A cleanup
+3. `ROADMAP_V0.4.md` - proposed end-to-end roadmap for Kaizen v1 and full-project completion; not accepted until audited and owner-accepted
+4. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
+5. `03-research-results/307-milestone-12-owner-acceptance.md` - latest milestone closure authority
+6. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
+7. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
+8. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
+9. `03-research-results/313-post-m12-audit-pass-1-steward-disposition.md` - Pass 1 disposition
+10. `03-research-results/314-post-m12-audit-pass-2-steward-disposition.md` - Pass 2 disposition
+11. `03-research-results/315-post-m12-historical-disposition-audit.md` - post-M12 audit Pass 3
+12. `03-research-results/316-post-m12-audit-pass-3-steward-disposition.md` - Pass 3 disposition and tracked P3 repair register
+13. `03-research-results/317-post-m12-reading-path-cleanup-task-packet.md` - Packet 018A cleanup packet
+14. `03-research-results/321-packet-018a-owner-acceptance.md` - Packet 018A owner acceptance
+15. `04-design-decisions/README.md` - decisions index and Decision 0015 gap note
+16. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
+17. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
+18. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md`
+19. `05-specs/milestone-11-operational-data-foundation-planning.md`
+20. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md`
+21. `05-specs/controlled-implementation-return-pilot.md` - Milestone 9 definition/spec despite non-numbered filename
+22. `05-specs/milestone-8-reliability-and-known-defect-closure.md`
+23. `05-specs/milestone-7-durable-recoverability.md`
+24. `IMPLEMENTATION_ROADMAP.md` - historical completed first-slice roadmap for Milestones 1 through 5
+25. `IMPLEMENTATION_ROADMAP_V0.2.md` - historical accepted Milestone 6 implementation-roadmap snapshot; preserve bytes unless separately approved
+26. `ROADMAP.md` - historical planning provenance only; not a current-gate source
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
