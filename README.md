@@ -25,8 +25,8 @@ Do not use this README as the live project-status ledger.
 For current posture, latest closed milestone, repository checkpoints, active gate, deferred boundaries, and read-first guidance, start here:
 
 1. [`00-entrypoint/LLM_START_HERE.md`](00-entrypoint/LLM_START_HERE.md)
-2. [`ROADMAP_V0.3.md`](ROADMAP_V0.3.md) - active accepted roadmap
-3. [`ROADMAP_V0.4.md`](ROADMAP_V0.4.md) - proposed end-to-end roadmap for Kaizen v1 and full-project completion; not accepted until audited and owner-accepted
+2. [`ROADMAP_V0.4.md`](ROADMAP_V0.4.md) - active accepted roadmap for Kaizen v1 and full-project completion
+3. [`ROADMAP_V0.3.md`](ROADMAP_V0.3.md) - prior accepted roadmap after Packet 018A
 
 Historical roadmap files remain preserved for provenance:
 

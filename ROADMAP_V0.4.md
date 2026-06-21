@@ -1,6 +1,6 @@
 # Kaizen Roadmap v0.4
 
-Status: proposed; pending audit and owner acceptance
+Status: accepted and active; owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md`
 Date: 2026-06-21
 Owner: Kaizen project steward
 
@@ -15,15 +15,15 @@ Full Kaizen project completion
 
 It exists to prevent roadmap drift after Milestone 12 and Packet 018A. It does not authorize implementation, Milestone 13, platform mutation, vault mutation, database mutation, production work, provider work, customer-data work, deletion, or new doctrine.
 
-`ROADMAP_V0.3.md` remains the accepted active roadmap until this file is audited and owner-accepted.
+`ROADMAP_V0.4.md` supersedes `ROADMAP_V0.3.md` as the accepted active roadmap after owner acceptance in `03-research-results/322-roadmap-v0.4-owner-acceptance.md`.
 
 ## Current checkpoint
 
 ```text
 Kaizen Project Standard v0.2: authoritative
 Active current-state pointer: 00-entrypoint/LLM_START_HERE.md
-Last accepted active roadmap: ROADMAP_V0.3.md
-This file: proposed ROADMAP_V0.4.md
+Active accepted roadmap: ROADMAP_V0.4.md
+Previous accepted roadmap: ROADMAP_V0.3.md; superseded by Result 322
 Milestones 1-12: closed
 Latest milestone closure: Milestone 12, accepted in Result 307
 Post-M12 audit program: Passes 1-3 complete and dispositioned in Results 313, 314, and 316
@@ -819,7 +819,7 @@ owner explicitly accepts full Kaizen completion
 
 ## Roadmap change rule
 
-This roadmap is proposed until audited and owner-accepted. After acceptance, any change to the milestone sequence, v1 definition, full-completion definition, project boundaries, or standing prohibitions requires a governed roadmap amendment.
+This roadmap is accepted and active after owner acceptance in Result 322. Any change to the milestone sequence, v1 definition, full-completion definition, project boundaries, or standing prohibitions requires a governed roadmap amendment.
 
 ## Immediate next planning work
 

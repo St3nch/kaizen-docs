@@ -29,8 +29,8 @@ Humans = authority-bearing review, approval, and promotion
 - Current phase: Milestones 1 through 12 are closed.
 - Latest closed milestone: Milestone 12, accepted by owner in `03-research-results/307-milestone-12-owner-acceptance.md`.
 - Current gate: post-Milestone-12 reading-path cleanup and roadmap decision work only. No Milestone 13, implementation, platform, vault, database, production, deletion, or evidence mutation work is authorized by this entrypoint.
-- Active accepted planning roadmap: `ROADMAP_V0.3.md`, refreshed/superseded by Packet 018A as the active roadmap surface after the post-M12 audit program.
-- Proposed end-to-end roadmap: `ROADMAP_V0.4.md`; it defines proposed Kaizen v1 and full-project completion boundaries but is not accepted doctrine until audited and owner-accepted.
+- Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md`.
+- Prior roadmap: `ROADMAP_V0.3.md`, preserved as the accepted Packet 018A roadmap surface before ROADMAP_V0.4.
 - Post-M12 audit program: Passes 1 through 3 are complete and dispositioned in Results 310 through 316.
 - Documentation cleanup packet: Packet 018A is defined in `03-research-results/317-post-m12-reading-path-cleanup-task-packet.md` and accepted in `03-research-results/321-packet-018a-owner-acceptance.md`.
 - Platform repository: local-only at commit `b7593c5ee90fd32c1e2a86572cc570d307de2be6`; no remote exists.
@@ -48,11 +48,11 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Read-first sequence
 
-This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and the active accepted `ROADMAP_V0.3.md`; read proposed `ROADMAP_V0.4.md` for end-to-end roadmap work. Then load only the decisions, specs, audits, task packets, and implementation returns relevant to the requested work unless the user explicitly requests a full-repository audit.
+This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and active accepted `ROADMAP_V0.4.md` for roadmap work. Then load only the decisions, specs, audits, task packets, and implementation returns relevant to the requested work unless the user explicitly requests a full-repository audit.
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file; authoritative current-state pointer
-2. `ROADMAP_V0.3.md` - active accepted roadmap surface after Packet 018A cleanup
-3. `ROADMAP_V0.4.md` - proposed end-to-end roadmap for Kaizen v1 and full-project completion; not accepted until audited and owner-accepted
+2. `ROADMAP_V0.4.md` - current accepted roadmap for Kaizen v1 and full-project completion
+3. `ROADMAP_V0.3.md` - previous Packet 018A roadmap surface
 4. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
 5. `03-research-results/307-milestone-12-owner-acceptance.md` - latest milestone closure authority
 6. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
