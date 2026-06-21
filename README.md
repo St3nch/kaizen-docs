@@ -16,35 +16,22 @@ idea or migrated project material
 -> reviewed updates to Kaizen project intelligence
 ```
 
-This repository is separate from both the running platform code and the canonical Obsidian vault. It preserves the vision, accepted decisions, specifications, audits, task packets, research evidence, and implementation roadmap.
+This repository is separate from both the running platform code and the canonical Obsidian vault. It preserves the vision, accepted decisions, specifications, audits, task packets, research evidence, and implementation roadmaps.
 
-## Start here
+## Current state pointer
 
-LLMs and humans should begin with:
+Do not use this README as the live project-status ledger.
+
+For current posture, latest closed milestone, repository checkpoints, active gate, deferred boundaries, and read-first guidance, start here:
 
 1. [`00-entrypoint/LLM_START_HERE.md`](00-entrypoint/LLM_START_HERE.md)
-2. [`ROADMAP_V0.3.md`](ROADMAP_V0.3.md) - active planning roadmap through Milestone 8 closure, corrective pre-Milestone-9 work, and the parallel Observatory research track
-3. [`03-research-results/162-milestone-8-owner-closure-acceptance.md`](03-research-results/162-milestone-8-owner-closure-acceptance.md) - exact Milestone 8 closure authority
-4. [`03-research-results/167-roadmap-lineage-and-corrective-sequence-reconciliation.md`](03-research-results/167-roadmap-lineage-and-corrective-sequence-reconciliation.md) - current corrective planning sequence
-5. [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) - accepted completed Milestone 6 implementation roadmap snapshot; preserve exact bytes
-6. [`ROADMAP.md`](ROADMAP.md) - historical planning provenance
+2. [`ROADMAP_V0.3.md`](ROADMAP_V0.3.md)
 
-The entrypoint defines the authority hierarchy, current project posture, and task-dependent reading guidance.
+Historical roadmap files remain preserved for provenance:
 
-## Current status
-
-- Current gate: Milestones 1 through 10 are closed; Result 250 records exact owner acceptance of Packet 015A and Milestone 10 closure
-- Corrective status: Decision 0017 atomic project-bootstrap doctrine is accepted through Result 213; Packet 014D remains retired unimplemented
-- Controlled implementation-return pilot: Packet 014A and Milestone 9 are closed under Result 244; Milestone 10 is closed under Result 250; Milestone 11 planning is next
-- Canonical vault: local-only at `2bbb2f081458a0fc277943a91b6ab530ab6b82e0`; Northstar current-state SHA-256 is `cf18f19aed840527e3bdb520c59de312310c989d079aff02907fe4ca85ec72b6`; no remote exists and no push is authorized
-- Platform implementation repository: local-only at `286b8273498e04a77730d6bdbeaadb2b1c7d2d6b`; no remote exists
-- Go8 repository checkpoint: `5830962ba34e62bbfb65508307ee0c706ed31e14`
-- Kaizen MCP: temporary non-Git proving ground; not production infrastructure
-- Live staging root: exists at `C:\dev\kaizen\staging`; no live staging mutation is authorized by the current packet
-- Active planning roadmap: `ROADMAP_V0.3.md`; historical roadmap and implementation snapshots remain preserved
-- Observatory research: parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Postgres, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized
-- Hermes integration: deferred; no canonical write authority
-- Next valid gate: run and freeze the local PostgreSQL 18 and secret-injection preflight, then obtain exact-hash Packet 016C implementation approval
+- [`ROADMAP.md`](ROADMAP.md) — historical planning provenance only; not a current-gate source
+- [`IMPLEMENTATION_ROADMAP.md`](IMPLEMENTATION_ROADMAP.md) — historical completed first-slice roadmap for Milestones 1 through 5
+- [`IMPLEMENTATION_ROADMAP_V0.2.md`](IMPLEMENTATION_ROADMAP_V0.2.md) — historical accepted Milestone 6 roadmap snapshot; preserve bytes unless separately approved
 
 ## Stewardship rule
 
@@ -90,3 +77,7 @@ C:\dev\kaizen\platform  implementation code and tests
 C:\dev\kaizen\vault     canonical project intelligence
 C:\dev\kaizen\staging   governed staging evidence and candidates
 ```
+
+## Standing caution
+
+This repository records evidence and authority. It does not itself authorize implementation, deployment, database mutation, vault mutation, provider work, or customer-data work. Those require an accepted gate and owner-approved task packet.

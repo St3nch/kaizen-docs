@@ -1,6 +1,6 @@
 # Kaizen Implementation Roadmap v0.1
 
-Status: active planning artifact; implementation begins only through approved task packets
+Status: historical completed first-slice roadmap for Milestones 1 through 5; not a current execution source
 Date: 2026-06-07
 Owner: Kaizen project steward
 Governing decision:
@@ -10,7 +10,7 @@ Governing decision:
 
 Define the shortest governed path from the accepted Kaizen planning foundation to one working vertical slice.
 
-This roadmap covers only the first implementation slice and the retrospective needed to decide what comes next.
+This roadmap covers only the first implementation slice and the retrospective that decided what came next. It is preserved for provenance only. Current posture and next-gate guidance live in `00-entrypoint/LLM_START_HERE.md` and `ROADMAP_V0.3.md`.
 
 ## Repository boundaries
 
@@ -265,9 +265,11 @@ Use implementation evidence to improve the contracts and determine the next impl
 
 Packets may be combined only when scope remains reviewable and acceptance criteria stay independently testable.
 
-# Immediate next action
+# Historical next action when this roadmap was active
 
-Select and explicitly authorize the next roadmap milestone family. The evidence-backed recommendation is governed operator surface and evidence ergonomics.
+This section is retained as historical provenance only. It is not the current next action.
+
+At the time, the next action was to select and explicitly authorize the next roadmap milestone family. That historical recommendation was governed operator surface and evidence ergonomics.
 
 Milestone 4 closure evidence:
 

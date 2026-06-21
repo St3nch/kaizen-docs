@@ -1,6 +1,6 @@
 # Kaizen Planning Roadmap
 
-Status: historical planning provenance with a maintained current-gate summary
+Status: historical planning provenance only; not a current-gate source
 Date: 2026-06-05
 Owner: Kaizen project steward
 
@@ -8,7 +8,7 @@ Owner: Kaizen project steward
 
 This roadmap preserves the planning history that led to Kaizen's current implementation direction.
 
-The maintained `Current position` section below records the present planning gate. Active execution priorities and milestone status live in `IMPLEMENTATION_ROADMAP.md`. The phase bodies that follow are historical provenance and must not be interpreted as the current execution queue.
+This file is historical planning provenance. It no longer records the present planning gate. Current posture and next-gate guidance live in `00-entrypoint/LLM_START_HERE.md` and `ROADMAP_V0.3.md`. The phase bodies that follow are historical provenance and must not be interpreted as the current execution queue.
 
 This document does not authorize coding, live vault mutation, database schema work, Hermes write access, MCP deployment, or Qdrant implementation.
 
@@ -18,8 +18,8 @@ The original planning outcome was:
 
 ## How to use this roadmap
 
-- Read `Current position` for the maintained planning gate.
-- Use `IMPLEMENTATION_ROADMAP.md` for active execution status and next actions.
+- Do not use this file for the maintained planning gate.
+- Use `00-entrypoint/LLM_START_HERE.md` and `ROADMAP_V0.3.md` for current status and next-gate guidance.
 - Consult the historical phases below only for provenance, rationale, and deferred inputs.
 - Do not treat historical `active`, `ready`, or `planned` labels as current authorization.
 - Proposed decisions remain proposed until explicitly accepted.
@@ -35,17 +35,17 @@ The original planning outcome was:
 | `ready` | Prerequisites are satisfied but work has not started |
 | `planned` | Phase is expected but prerequisites are not yet complete |
 
-## Current position
+## Historical position when this roadmap was active
 
 ```text
-Current phase: Milestone 5 complete; next-roadmap selection gate active
-Current objective: select and authorize the next implementation milestone family under the authoritative v0.2 standard
-Current implementation status: Milestones 1 through 5 complete; Kaizen Project Standard v0.2 authoritative; next implementation milestone not started
-Active execution roadmap: IMPLEMENTATION_ROADMAP.md
-Hermes posture: deferred beyond the first slice; agent-triggered canonical writes remain prohibited
+Historical phase recorded here: Milestone 5 complete; next-roadmap selection gate active
+Historical objective: select and authorize the next implementation milestone family under the authoritative v0.2 standard
+Historical implementation status: Milestones 1 through 5 complete; Kaizen Project Standard v0.2 authoritative; next implementation milestone not started
+Historical execution roadmap: IMPLEMENTATION_ROADMAP.md
+Hermes posture at that time: deferred beyond the first slice; agent-triggered canonical writes remained prohibited
 ```
 
-The planning roadmap has handed active first-slice execution to `IMPLEMENTATION_ROADMAP.md`. Historical phase detail remains below for provenance. The current completed implementation authority and next-gate references are:
+This section is preserved for provenance only. Current posture lives in `00-entrypoint/LLM_START_HERE.md` and `ROADMAP_V0.3.md`. The historical completed implementation authority and next-gate references at that time were:
 
 - `03-research-results/025-implementation-checkpoint-audit-steward-reconciliation.md`
 - `03-research-results/031-packet-006b-final-implementation-steward-audit.md`
