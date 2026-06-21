@@ -277,12 +277,12 @@ M14 readiness gaps
 
 No implementation.
 
-### Packet 019B — service-boundary hardening
+### Packet 019B — service-boundary proof and bounded hardening
 
 Purpose:
 
 ```text
-Harden operational service behavior needed for real internal project evidence.
+Prove operational service behavior needed for real internal project evidence, then harden only where proof exposes a real gap.
 ```
 
 Possible scope:
@@ -295,12 +295,12 @@ error taxonomy
 safe DSN/secret handling
 ```
 
-### Packet 019C — local tool-surface hardening
+### Packet 019C — local tool-surface approval
 
 Purpose:
 
 ```text
-Harden or document the safe local tool surface used by ChatGPT / steward workflows.
+Document and approve the safe local tool surface used by ChatGPT / steward workflows, then harden only if the approval pass exposes a real gap.
 ```
 
 Possible scope:

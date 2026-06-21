@@ -18,19 +18,23 @@ Packet 019D closes the Milestone 13 hardening lane by proving the approved servi
 ```text
 M13 definition:
 05-specs/milestone-13-operational-service-and-safe-local-tool-surface-hardening.md
-SHA-256: 861b1251fb09906e31ccf783d5f6945add7b2c2f378edb3dd48ee8b3df55b4e8
+SHA-256: b35feb8fef1f92a128bdacf71b7aff7f6caafc69dd2123e1f2e737ae7cab4d1c
 
 019A inventory:
 03-research-results/329-packet-019a-m13-inventory-and-readiness-audit.md
 SHA-256: 8cc6e5286f934f21640dae1ae3e6849f57108257d2c6a0830c9c827c6d314b73
 
+019A inventory-completion addendum:
+03-research-results/334-packet-019a-inventory-completion-addendum.md
+SHA-256: 1cd370ce4740a2b3628b00cb8901999bd5e9b3a288bd34d6ef7e937ca0fd0368
+
 019B task packet:
 03-research-results/330-packet-019b-service-boundary-proof-task-packet.md
-SHA-256: f4c8c7a35f0c3f10b4b9f7f85e47ec4708725ec6c0ed9e39fd2928dd125b7a69
+SHA-256: afdba8ab5242ef72a8ec778c2bf3477a0674504891800229499baf5358b93262
 
 019C task packet:
 03-research-results/331-packet-019c-local-tool-surface-approval-task-packet.md
-SHA-256: f305f89da7cb1509ad4d463fa24fcabbdaf84cccb749a083d8c9733dc63ce05c
+SHA-256: 56cc184ea20c40bbd55763fe42220143fb31e72f547a443f0aa280526126b9d0
 ```
 
 ## 3. Starting checkpoint
@@ -219,20 +223,20 @@ whether the package is safe for M13 implementation and eventual M14 start.
 
 ## 13. Deliverables
 
-019D implementation should create:
+019D implementation should create the next available result file for:
 
 ```text
-03-research-results/334-packet-019d-synthetic-proof-and-m14-readiness-contract.md
+packet-019d-synthetic-proof-and-m14-readiness-contract
 ```
 
-It may also create:
+It may also create next available result files for:
 
 ```text
-03-research-results/335-milestone-13-claude-review-intake.md
-03-research-results/336-milestone-13-claude-review-steward-disposition.md
+milestone-13-claude-review-intake
+milestone-13-claude-review-steward-disposition
 ```
 
-Exact numbering may shift if intervening result files are created.
+Exact numbering must follow the current `03-research-results/` sequence at implementation time.
 
 ## 14. Acceptance criteria
 

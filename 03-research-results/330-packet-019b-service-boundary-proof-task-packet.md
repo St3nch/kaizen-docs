@@ -42,6 +42,10 @@ SHA-256: fea2dfe78458882e339d2646273b3086743ab5fcc2ca05bd70858f4310578210
 03-research-results/329-packet-019a-m13-inventory-and-readiness-audit.md
 SHA-256: 8cc6e5286f934f21640dae1ae3e6849f57108257d2c6a0830c9c827c6d314b73
 
+019A inventory-completion addendum:
+03-research-results/334-packet-019a-inventory-completion-addendum.md
+SHA-256: 1cd370ce4740a2b3628b00cb8901999bd5e9b3a288bd34d6ef7e937ca0fd0368
+
 Decision 0019:
 04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md
 SHA-256: c8509d575df11816de4d7dc48cb9b0fb84ac523d4defb5919ccd384eb491731a
@@ -51,17 +55,35 @@ Decision 0020:
 SHA-256: 8a5b915ba3db9b558f551caa34d191c1ee212af70f088c896b9169cfa593f845
 ```
 
-Platform source bindings from 019A:
+Platform source bindings from 019A plus addendum:
 
 ```text
+src/kaizen/ops_service/__init__.py
+SHA-256: 81f52fbe0b2dd85a71e6994f3e04fd22dc905b0266cf1e383797aeefa218f959
+
 src/kaizen/ops_service/contracts.py
 SHA-256: d741e93a0de51868764310d4535ff50a781b7be99414a266f61b8532b3fa26bf
+
+src/kaizen/ops_service/errors.py
+SHA-256: 83f282cad6f2c55a058688114127320dd2ffec21d1105fb328b9efd9649ff181
+
+src/kaizen/ops_service/hashing.py
+SHA-256: 5b4d3d1012cb71dc1bcb9a98959f82086d6ea6f04052df875c7d341e7d47e472
+
+src/kaizen/ops_service/manifest.py
+SHA-256: f8c0f67817df3e1e5f29accabfb4a75834ff6249728180359fccab0da89081df
+
+src/kaizen/ops_service/repository.py
+SHA-256: 781f493b4f1ac9f4e7d9da059186f9825d2a8ef5924b19be43cc94e8ffc44394
+
+src/kaizen/ops_service/serialization.py
+SHA-256: 04338b097c210853e23d18b4169dcc5dbe1e78075c72870a1f2604c28ab29fb6
 
 src/kaizen/ops_service/service.py
 SHA-256: bc35554303ac29510fdc78310df5992b187dde96c668039baffbb5806067843e
 
-src/kaizen/ops_service/repository.py
-SHA-256: 781f493b4f1ac9f4e7d9da059186f9825d2a8ef5924b19be43cc94e8ffc44394
+src/kaizen/ops_service/storage.py
+SHA-256: ef19a69553251b2d0f8aba5e64a5b9f74facd0e08e075d8b83398f20861acaa4
 ```
 
 ## 3. Starting checkpoint
@@ -220,39 +242,44 @@ validation failure maps to rejected;
 conflict maps to conflict;
 missing reference maps to not_found;
 serialization/deadlock/lock conflicts map to retryable conflict;
-unexpected database or service failure maps to recovery_required or service_unavailable;
+unexpected database failure maps to recovery_required, and service_unavailable is treated as a bounded retryable error code under a rejected response;
 responses do not expose DSNs, secrets, raw SQL, or private file contents.
 ```
 
-## 6. Recommended implementation posture
+## 6. Required implementation posture
 
-Start with tests/proof before code changes.
+Start with existing-test mapping and proof before any code changes.
 
-Recommended order:
+Required order:
 
 ```text
-1. Inventory current tests covering ops_service.
-2. Run existing relevant tests.
-3. Map existing tests to proof areas above.
-4. Add focused missing tests only where gaps exist.
-5. Apply minimal hardening only if tests expose a real gap.
-6. Run focused test profile.
-7. Run broader platform test profile if reasonable and bounded.
-8. Record implementation return with proof matrix.
+1. Use the 019A addendum's existing ops_service test inventory as the starting map.
+2. Map each existing ops_service test file to the proof areas above.
+3. Identify proof rows already covered, partially covered, and uncovered.
+4. Re-rate R13-004 after the mapping.
+5. Run existing relevant tests.
+6. Add focused missing tests only where gaps exist.
+7. Apply minimal hardening only if tests expose a real gap.
+8. Run focused test profile.
+9. Run broader platform test profile if reasonable and bounded.
+10. Record implementation return with proof matrix.
 ```
 
 ## 7. Candidate files authorized for modification after approval
 
-Implementation may modify only files needed for service-boundary proof/hardening, likely within:
+Implementation may modify only files needed for service-boundary proof/hardening, limited to the hash-bound service module and relevant ops_service tests unless owner re-approves a wider path scope:
 
 ```text
-tests/
+src/kaizen/ops_service/__init__.py
 src/kaizen/ops_service/contracts.py
-src/kaizen/ops_service/service.py
-src/kaizen/ops_service/repository.py
-src/kaizen/ops_service/manifest.py
-src/kaizen/ops_service/storage.py
 src/kaizen/ops_service/errors.py
+src/kaizen/ops_service/hashing.py
+src/kaizen/ops_service/manifest.py
+src/kaizen/ops_service/repository.py
+src/kaizen/ops_service/serialization.py
+src/kaizen/ops_service/service.py
+src/kaizen/ops_service/storage.py
+tests/test_ops_service*.py
 ```
 
 Documentation return files may be created under:

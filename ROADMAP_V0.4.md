@@ -823,18 +823,15 @@ This roadmap is accepted and active after owner acceptance in Result 322. Any ch
 
 ## Immediate next planning work
 
-ROADMAP_V0.4 is accepted and active under Result 322.
+ROADMAP_V0.4 is accepted and active under Result 322. SP-1 is closed under Result 326. Milestone 13 definition is accepted under Result 328.
 
-Recommended next sequence after roadmap acceptance:
+Current active planning lane:
 
 ```text
-SP-1 P3 governance-backlog closure register side packet
--> SP-1 owner acceptance or explicit owner deferral
--> Milestone 13 definition
--> Milestone 13 audit
--> owner acceptance
--> task packet
--> separate implementation approval
+Claude-review remediation for M13 planning
+-> 019A inventory-completion addendum
+-> revised 019B / 019C / 019D packet readiness
+-> owner decision on first implementation-bearing M13 packet
 ```
 
-No implementation is authorized by this roadmap. Future implementation requires a separately accepted milestone definition, task packet, and implementation approval.
+Milestone 13 implementation remains unauthorized. Future implementation requires exact owner approval for the relevant task packet, starting commits, path scope, tests, and non-authorization boundaries.

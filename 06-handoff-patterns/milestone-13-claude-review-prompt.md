@@ -16,8 +16,13 @@ Read these files in order:
 5. `03-research-results/327-milestone-13-definition-readiness-audit.md`
 6. `03-research-results/328-milestone-13-definition-owner-acceptance.md`
 7. `03-research-results/329-packet-019a-m13-inventory-and-readiness-audit.md`
-8. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
-9. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
+8. `03-research-results/333-milestone-13-claude-review-steward-disposition.md`
+9. `03-research-results/334-packet-019a-inventory-completion-addendum.md`
+10. `03-research-results/330-packet-019b-service-boundary-proof-task-packet.md`
+11. `03-research-results/331-packet-019c-local-tool-surface-approval-task-packet.md`
+12. `03-research-results/332-packet-019d-synthetic-proof-and-m14-readiness-contract-task-packet.md`
+13. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
+14. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
 
 Then inspect platform files as needed:
 

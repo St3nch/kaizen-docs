@@ -196,8 +196,10 @@ Conditions:
 
 ```text
 Read-only inspection is allowed under planning/inventory scope.
+These tools may connect to the live kaizen_ops database migrated through 0005_recovery_retention_integrity.
 Do not expose DSNs or passwords.
-Do not run arbitrary SQL.
+Do not copy sensitive evidence rows or private payloads into chat or reports.
+Do not run broad SQL outside the approved fixed inspection tools.
 Do not mutate live kaizen_ops unless exact owner-approved packet scope requires it.
 ```
 
