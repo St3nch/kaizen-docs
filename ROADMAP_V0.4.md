@@ -823,12 +823,13 @@ This roadmap is accepted and active after owner acceptance in Result 322. Any ch
 
 ## Immediate next planning work
 
-Recommended next sequence:
+ROADMAP_V0.4 is accepted and active under Result 322.
+
+Recommended next sequence after roadmap acceptance:
 
 ```text
-ROADMAP_V0.4 audit
--> owner acceptance or correction
--> SP-1 side packet if owner chooses
+SP-1 P3 governance-backlog closure register side packet
+-> SP-1 owner acceptance or explicit owner deferral
 -> Milestone 13 definition
 -> Milestone 13 audit
 -> owner acceptance
@@ -836,4 +837,4 @@ ROADMAP_V0.4 audit
 -> separate implementation approval
 ```
 
-No implementation is authorized by this roadmap draft.
+No implementation is authorized by this roadmap. Future implementation requires a separately accepted milestone definition, task packet, and implementation approval.
