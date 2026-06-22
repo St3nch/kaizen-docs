@@ -24,10 +24,10 @@ ROADMAP_V0.4.md
 Milestone 13 closed: yes
 M13 live DB proof complete: yes
 M14 readiness contract recorded: yes
-real internal project selected: not yet
-project-specific boundaries documented: not yet
+real internal project selected: yes, Packet 020A selected Neon Ronin parent idea-to-implementation-docs proof with SearchClarity child-project dependency and repo reconciliation
+project-specific boundaries documented: partially, Packet 020B pre-registered boundary/collision scoring but Claude required fixes before Stage A
 backup / restore plan ready: not yet
-fresh-context resumption test plan ready: not yet
+fresh-context resumption test plan ready: planned but not yet executable
 ```
 
 ## Objective
@@ -148,14 +148,17 @@ owner accepts Kaizen v1.
 ## Recommended packet sequence
 
 ```text
-020A — Real Internal Project Selection and Boundary Definition
-020B — Selected Project Bootstrap / Onboarding into Kaizen
-020C — Research and Source Intake for Selected Project Slice
-020D — Spec / Audit / Task Packet for Selected Project Slice
-020E — Implementation / Implementation-Return Proof for Selected Project Slice
-020F — Fresh-Context Resumption Proof
-020G — Backup / Restore Proof for Selected Project Data
-020H — Kaizen v1 Completion Audit and Owner Acceptance
+020A — M14 Workload Selection and Boundary Registration
+020B — Phase 0 Boundary and Collision Pre-Registration
+020C — Claude Review Disposition, Repo-State Pinning, and Idea-Only Firewall
+020D — Stage A Idea-Only Intake and Generated-Docs Protocol
+020E — Stage A Repo Reconciliation Protocol for Neon Ronin and SearchClarity
+020F — Parent/Child Dependency Map and Observatory / IMI Boundary Candidate
+020G — Implementation-Ready Doc Quality Audit and Stage B Candidate Recommendation
+020H — Fresh-Context Resumption Proof
+020I — Backup / Restore Proof for Selected Project Data
+020J — Separately Approved Stage B Implementation-Return Cycle, if a packet meets the bar
+020K — Kaizen v1 Completion Audit and Owner Acceptance
 ```
 
 ## Stop conditions
