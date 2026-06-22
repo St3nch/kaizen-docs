@@ -24,14 +24,17 @@ Kaizen Project Standard v0.2: authoritative
 Active current-state pointer: 00-entrypoint/LLM_START_HERE.md
 Active accepted roadmap: ROADMAP_V0.4.md
 Previous accepted roadmap: ROADMAP_V0.3.md; superseded by Result 322
-Milestones 1-12: closed
-Latest milestone closure: Milestone 12, accepted in Result 307
+Milestones 1-14: closed
+Latest milestone closure: Milestone 14 / Kaizen v1, owner-accepted in Result 368
 Post-M12 audit program: Passes 1-3 complete and dispositioned in Results 313, 314, and 316
 Packet 018A reading-path cleanup: implemented, audited, corrected, and owner-accepted in Results 318-321
+SP-1: closed under Result 326
+Milestone 13: closed and owner-accepted in Result 342
+Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD at Packet 018A approval: b7593c5ee90fd32c1e2a86572cc570d307de2be6
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-No Milestone 13 implementation is authorized
+Current active lane: post-v1 hardening and reading-path refresh, not new implementation
 ```
 
 ## Project boundary definitions
@@ -823,15 +826,16 @@ This roadmap is accepted and active after owner acceptance in Result 322. Any ch
 
 ## Immediate next planning work
 
-ROADMAP_V0.4 is accepted and active under Result 322. SP-1 is closed under Result 326. Milestone 13 definition is accepted under Result 328.
+ROADMAP_V0.4 is accepted and active under Result 322. SP-1 is closed under Result 326. Milestone 13 is closed under Result 342. Milestone 14 / Kaizen v1 is owner-accepted under Result 368.
 
 Current active planning lane:
 
 ```text
-Claude-review remediation for M13 planning
--> 019A inventory-completion addendum
--> revised 019B / 019C / 019D packet readiness
--> owner decision on first implementation-bearing M13 packet
+post-v1 reading-path refresh for Claude RF-01 / RF-02 / RF-03
+-> post-v1 adversarial-audit disposition
+-> docs repo and Neon Ronin sync posture decision
+-> canonical Obsidian vault promotion-flow design
+-> post-v1 hardening backlog packetization
 ```
 
-Milestone 13 implementation remains unauthorized. Future implementation requires exact owner approval for the relevant task packet, starting commits, path scope, tests, and non-authorization boundaries.
+Kaizen v1 is accepted. Post-v1 work remains governed: future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, starting commits, path scope, tests, and non-authorization boundaries.

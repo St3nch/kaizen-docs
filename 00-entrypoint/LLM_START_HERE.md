@@ -26,16 +26,20 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestones 1 through 13 are closed; Milestone 14 is active.
-- Latest closed milestone: Milestone 13, accepted by owner in `03-research-results/342-milestone-13-owner-closure-acceptance.md`.
-- Current gate: Packet 020H fresh-context resumption proof disposition for M14. Packets 020A through 020G are complete; `03-research-results/357-packet-020h-fresh-context-resumption-pack.md` is recorded; Claude returned a PASS WITH FIXES fresh-context report that must be dispositioned.
-- Selected M14 workload: Neon Ronin parent project idea-to-implementation-docs proof with SearchClarity child workspace/business-lane dependency, repo reconciliation, and Observatory / IMI shared-capability boundary clarification.
-- Current M14 finding: no implementation-ready Stage B packet exists yet. Stage B execution is not authorized.
-- Current next direction after 020H disposition: read-only Stage B candidate discovery, preferably in Neon Ronin, then a concrete owner-approved Stage B task packet before any coding-agent execution.
-- Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md` and corrected through SP-1 / M13 / M14 planning updates.
+- Current phase: Kaizen v1 is owner-accepted for Milestone 14.
+- Latest closed milestone: Milestone 14, accepted by owner in `03-research-results/368-milestone-14-kaizen-v1-owner-acceptance.md`.
+- Accepted v1 checkpoint: docs commit `2a76363d3257cd3230746dc4c5901965291591d8`, with recorded caveats and post-v1 hardening deferred.
+- Current post-acceptance docs checkpoint: verify current HEAD before work; post-v1 audit preparation and reading-path refresh records may exist after the accepted checkpoint.
+- Current gate: post-v1 reading-path refresh and adversarial-audit disposition. Kaizen v1 remains accepted unless a later accepted audit records an acceptance-invalidating defect.
+- Completed M14 workload: Neon Ronin parent project idea-to-implementation-docs proof with SearchClarity child workspace/business-lane dependency, repo reconciliation, Stage B docs-only implementation return, fresh-context proof, and backup/restore proof.
+- Core M14 boundary: SearchClarity captures the signal. Neon Ronin scores the signal. Kaizen governs the project-intelligence and implementation-doc chain.
+- Kaizen docs repository role: this repo is Kaizen's construction, governance, proof, and audit workbench. It is not the long-term home of downstream project truth.
+- Kaizen Obsidian Vault role: the intended canonical living project-intelligence layer for governed projects. Post-v1 work must define the project-to-vault promotion flow.
+- Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md` and corrected through SP-1 / M13 / M14 / post-v1 updates.
 - Platform repository: local-only at commit `b7593c5ee90fd32c1e2a86572cc570d307de2be6`; no remote exists.
-- Docs repository: active M14 work is ahead of `origin/main`; verify current HEAD before work.
+- Docs repository: local work is ahead of `origin/main`; verify current HEAD and sync posture before push or handoff work.
 - Canonical vault: local-only at commit `c898f261c0b341eb8419125247c8bd53ef567d6c`; no remote exists.
+- Neon Ronin repository: Stage B M14 proof commits are local and ahead of origin; no push is authorized by this file.
 - Live operational database: `kaizen_ops` is migrated through `0005_recovery_retention_integrity`.
 - Go8 repository: operational local tool server.
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure.
@@ -43,7 +47,7 @@ Humans = authority-bearing review, approval, and promotion
 - Hermes Desktop / Hermes Agent: deferred; no canonical write authority or live integration is authorized.
 - Observatory / IMI remains a shared capability / ownership-boundary candidate. No Observatory / IMI implementation is authorized.
 - Accepted decisions remain governing inputs. Decision 0015 is a known reserved / unauthored / owner-deferred governance-compression gap; do not present it as accepted doctrine and do not fabricate it.
-- Active workflow posture: move efficiently on low-risk planning and review fixes; preserve full gates for consequential mutation and implementation.
+- Active workflow posture: post-v1 hardening, reading-path refresh, vault-promotion design, sync posture decisions, and adversarial audit disposition; preserve full gates for consequential mutation and implementation.
 - Stewardship principle: structure and automation must earn their existence.
 
 ## Read-first sequence
@@ -51,21 +55,21 @@ Humans = authority-bearing review, approval, and promotion
 This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and active accepted `ROADMAP_V0.4.md` for roadmap work. Then load only the decisions, specs, audits, task packets, and implementation returns relevant to the requested work unless the user explicitly requests a full-repository audit.
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file; authoritative current-state pointer
-2. `ROADMAP_V0.4.md` - current accepted roadmap for Kaizen v1 and full-project completion
-3. `05-specs/milestone-14-first-real-internal-project-governed-run.md` - active M14 definition and packet sequence
-4. `03-research-results/342-milestone-13-owner-closure-acceptance.md` - Milestone 13 closure authority
-5. `03-research-results/345-packet-020a-m14-workload-selection-and-boundary-registration.md` - M14 selected workload
-6. `03-research-results/346-packet-020b-phase-0-boundary-and-collision-pre-registration.md` - M14 boundary/scoring pre-registration
-7. `03-research-results/348-packet-020b-claude-review-disposition.md` - Packet 020B Claude review disposition
-8. `03-research-results/349-packet-020c-repo-state-pinning-and-idea-only-firewall.md` - downstream repo pins and idea-only firewall
-9. `03-research-results/350-packet-020d-stage-a-idea-only-generation-protocol.md` - Stage A idea-only protocol
-10. `03-research-results/351-packet-020d-stage-a-idea-only-generation-output.md` - Stage A unreconciled candidate output
-11. `03-research-results/352-packet-020d-stage-a-idea-only-output-review.md` - Stage A output review
-12. `03-research-results/353-packet-020e-stage-a-repo-reconciliation-protocol.md` - Stage A reconciliation protocol
-13. `03-research-results/354-packet-020e-stage-a-repo-reconciliation-report.md` - Stage A reconciliation report
-14. `03-research-results/355-packet-020f-parent-child-and-observatory-boundary-candidate.md` - parent/child and Observatory boundary candidate
-15. `03-research-results/356-packet-020g-implementation-ready-doc-quality-audit.md` - no-ready-packet finding and Stage B candidate-discovery recommendation
-16. `03-research-results/357-packet-020h-fresh-context-resumption-pack.md` - fresh-context resumption pack
+2. `ROADMAP_V0.4.md` - accepted roadmap; current post-v1 lane should be read with later acceptance and reading-path refresh records
+3. `03-research-results/368-milestone-14-kaizen-v1-owner-acceptance.md` - Kaizen v1 / Milestone 14 owner acceptance
+4. `03-research-results/367-packet-020l-kaizen-v1-completion-audit-and-owner-acceptance-readiness.md` - v1 completion audit and caveats
+5. `03-research-results/366-packet-020k-backup-restore-proof-result.md` - M14 backup/restore proof result
+6. `03-research-results/364-packet-020j-stage-b-closure-audit-and-sequence-reconciliation.md` - Stage B closure and sequence reconciliation
+7. `03-research-results/363-packet-020j-stage-b-implementation-return.md` - Stage B implementation return
+8. `05-specs/milestone-14-first-real-internal-project-governed-run.md` - M14 definition, now completed/accepted by Result 368
+9. `03-research-results/369-kaizen-v1-post-acceptance-claude-adversarial-audit-prompt.md` - post-v1 adversarial audit prompt
+10. `03-research-results/370-kaizen-v1-post-acceptance-claude-mcp-tool-requirements.md` - Claude audit MCP tool requirements
+11. `03-research-results/371-claude-mcp-build-and-audit-quickstart.md` - Claude MCP build/audit quickstart
+12. `03-research-results/372-claude-post-v1-audit-start-prompt.md` - one-paste Claude audit start prompt
+13. `03-research-results/342-milestone-13-owner-closure-acceptance.md` - Milestone 13 closure authority
+14. `03-research-results/345-packet-020a-m14-workload-selection-and-boundary-registration.md` - M14 selected workload
+15. `03-research-results/346-packet-020b-phase-0-boundary-and-collision-pre-registration.md` - M14 boundary/scoring pre-registration
+16. `03-research-results/355-packet-020f-parent-child-and-observatory-boundary-candidate.md` - parent/child and Observatory boundary candidate
 17. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
 18. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
 19. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
@@ -226,29 +230,27 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Current next gate
 
-The active sequence is Milestone 14 fresh-context resumption proof disposition:
+The active sequence is post-v1 reading-path refresh and adversarial-audit disposition:
 
 ```text
 Milestones 1-13: closed
--> Milestone 14: active
--> 020A workload selection / boundary registration: complete
--> 020B Phase 0 pre-registration: complete
--> 020C repo-state pinning and idea-only firewall: complete
--> 020D idea-only generation and review: complete
--> 020E repo reconciliation protocol and report: complete
--> 020F parent/child and Observatory / IMI boundary candidate: complete
--> 020G implementation-ready doc quality audit: complete; no Stage B packet ready yet
--> current gate: 020H fresh-context resumption proof disposition
+-> Milestone 14 / Kaizen v1: owner-accepted in Result 368
+-> 020K backup / restore proof: accepted
+-> 020L v1 completion audit: pass, owner-acceptance ready
+-> owner acceptance: recorded
+-> post-acceptance adversarial audit: PASS WITH REQUIRED FIXES
+-> current gate: bounded reading-path refresh for RF-01, RF-02, and RF-03
 ```
 
 Current authority:
 
-- Result 342 closes Milestone 13;
-- ROADMAP_V0.4 is the active accepted roadmap;
-- the M14 spec records the active packet sequence;
-- Packets 020A through 020G record the selected workload, boundaries, idea-only proof, reconciliation, dependency map, and no-ready-packet finding;
-- Packet 020H resumption pack is recorded in `03-research-results/357-packet-020h-fresh-context-resumption-pack.md`;
-- Stage B execution remains unauthorized until a separate concrete owner-approved packet exists;
+- Result 368 accepts Kaizen v1 completion for Milestone 14;
+- Result 367 records the v1 completion audit and caveats;
+- Result 366 records accepted backup/restore proof with a restore worktree normalization note;
+- Result 364 closes the Stage B implementation-return cycle;
+- ROADMAP_V0.4 remains the accepted roadmap, but its active-lane text must be read with later M13/M14/post-v1 records;
+- Stage B execution is complete for the bounded M14 Neon Ronin reference-example docs change;
+- no Git push, further downstream mutation, platform/vault/staging/database mutation, or Observatory / IMI implementation is authorized by this file;
 - Observatory / IMI remains a shared capability / ownership-boundary candidate and is not implemented.
 
 ## Active deferred boundaries and tracked repair backlog

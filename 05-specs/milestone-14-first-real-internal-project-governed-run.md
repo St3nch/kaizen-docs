@@ -1,6 +1,6 @@
 # Milestone 14 — First Real Internal Project Governed Run
 
-Status: draft for owner review
+Status: complete — owner accepted in `03-research-results/368-milestone-14-kaizen-v1-owner-acceptance.md`
 Date: 2026-06-22
 Milestone: 14
 
@@ -18,16 +18,19 @@ ROADMAP_V0.4.md
 03-research-results/342-milestone-13-owner-closure-acceptance.md
 ```
 
-## Current entry status
+## Completion status
 
 ```text
 Milestone 13 closed: yes
 M13 live DB proof complete: yes
 M14 readiness contract recorded: yes
 real internal project selected: yes, Packet 020A selected Neon Ronin parent idea-to-implementation-docs proof with SearchClarity child-project dependency and repo reconciliation
-project-specific boundaries documented: partially, Packet 020B pre-registered boundary/collision scoring but Claude required fixes before Stage A
-backup / restore plan ready: not yet
-fresh-context resumption test plan ready: planned but not yet executable
+project-specific boundaries accepted: yes
+fresh-context resumption demonstrated: yes, Packet 020H
+Stage B implementation-return cycle completed: yes, Packet 020J
+backup / restore proof completed: yes, Packet 020K
+Kaizen v1 completion audit completed: yes, Packet 020L
+owner accepted Kaizen v1: yes, Result 368
 ```
 
 ## Objective
