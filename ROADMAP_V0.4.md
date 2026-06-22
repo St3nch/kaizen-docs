@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD at Packet 018A approval: b7593c5ee90fd32c1e2a86572cc570d307de2be6
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: 021B current-state vault amendment is executed/returned; 021C command-center vault amendment candidate is prepared for owner review
+Current active lane: 021C command-center vault amendment plan is generated; next gate is exact owner approval / execution or revision
 ```
 
 ## Project boundary definitions
@@ -833,7 +833,8 @@ Current active planning lane:
 ```text
 021B current-state vault amendment: executed, verified, committed locally, and returned in Result 378
 -> 021C command-center vault amendment candidate: prepared in Result 379
--> next gate: owner decision to approve 021C exact prepare/plan generation, or request revision
+-> 021C immutable amendment plan: generated in Result 380
+-> next gate: owner decision to approve and execute exact plan SHA 220685d8d489c69042d82c56510dc7ee313e0e448fb634d0139a0097ce82e9b7, or request revision
 -> after 021C execution: record implementation return and inspect overview.md for possible 021D
 -> later: docs repo / Neon Ronin sync posture and broader post-v1 hardening backlog
 ```
