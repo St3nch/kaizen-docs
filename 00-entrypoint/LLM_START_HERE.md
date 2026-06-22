@@ -26,9 +26,9 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestones 1 through 12 are closed; Milestone 13 definition is accepted and active for planning.
-- Latest closed milestone: Milestone 12, accepted by owner in `03-research-results/307-milestone-12-owner-acceptance.md`.
-- Current gate: Milestone 13 planning and Claude-review remediation only. No Milestone 13 implementation, platform mutation, vault mutation, database mutation, production, deletion, provider/customer-data, Qdrant, Hermes, Tauri, Observatory, Neon Ronin, or SearchClarity work is authorized by this entrypoint.
+- Current phase: Milestones 1 through 13 are closed; Milestone 14 planning is active.
+- Latest closed milestone: Milestone 13, accepted by owner in `03-research-results/342-milestone-13-owner-closure-acceptance.md`.
+- Current gate: Milestone 14 workload selection and boundary definition. No M14 implementation, platform mutation, vault mutation, staging mutation, database mutation, production, deletion, provider/customer-data, Qdrant, Hermes, Tauri, Observatory, full Neon Ronin implementation, or SearchClarity implementation is authorized by this entrypoint.
 - Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md` and corrected through SP-1 / M13 planning updates.
 - Prior roadmap: `ROADMAP_V0.3.md`, preserved as the accepted Packet 018A roadmap surface before ROADMAP_V0.4.
 - Post-M12 audit program: Passes 1 through 3 are complete and dispositioned in Results 310 through 316.
