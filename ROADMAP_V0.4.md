@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD at Packet 018A approval: b7593c5ee90fd32c1e2a86572cc570d307de2be6
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: 021B Kaizen platform current-state vault amendment plan is generated; next gate is exact owner approval / execution or revision
+Current active lane: 021B current-state vault amendment is executed/returned; 021C command-center vault amendment candidate is prepared for owner review
 ```
 
 ## Project boundary definitions
@@ -831,11 +831,11 @@ ROADMAP_V0.4 is accepted and active under Result 322. SP-1 is closed under Resul
 Current active planning lane:
 
 ```text
-021B current-state vault amendment candidate: prepared
--> 021B immutable amendment plan: generated
--> next gate: owner decision to approve and execute exact plan SHA 9faf2efe6b25a92f3cc6467891e127a564a9ac3fe84add220651c67ce1b94d7a, or request revision
--> after execution: record implementation return and plan command-center vault amendment
+021B current-state vault amendment: executed, verified, committed locally, and returned in Result 378
+-> 021C command-center vault amendment candidate: prepared in Result 379
+-> next gate: owner decision to approve 021C exact prepare/plan generation, or request revision
+-> after 021C execution: record implementation return and inspect overview.md for possible 021D
 -> later: docs repo / Neon Ronin sync posture and broader post-v1 hardening backlog
 ```
 
-Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
+Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.

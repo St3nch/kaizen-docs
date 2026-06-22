@@ -30,7 +30,7 @@ Humans = authority-bearing review, approval, and promotion
 - Latest closed milestone: Milestone 14, accepted by owner in `03-research-results/368-milestone-14-kaizen-v1-owner-acceptance.md`.
 - Accepted v1 checkpoint: docs commit `2a76363d3257cd3230746dc4c5901965291591d8`, with recorded caveats and post-v1 hardening deferred.
 - Current post-acceptance docs checkpoint: verify current HEAD before work; post-v1 audit preparation and reading-path refresh records may exist after the accepted checkpoint.
-- Current gate: 021B generated an immutable amendment plan for `projects/kaizen-platform/current-state.md`; next decision is exact owner approval/execution of plan SHA `9faf2efe6b25a92f3cc6467891e127a564a9ac3fe84add220651c67ce1b94d7a`, or revision. Kaizen v1 remains accepted unless a later accepted audit records an acceptance-invalidating defect.
+- Current gate: 021B current-state vault amendment is executed and returned; 021C command-center vault amendment candidate is prepared for owner review. Kaizen v1 remains accepted unless a later accepted audit records an acceptance-invalidating defect.
 - Completed M14 workload: Neon Ronin parent project idea-to-implementation-docs proof with SearchClarity child workspace/business-lane dependency, repo reconciliation, Stage B docs-only implementation return, fresh-context proof, and backup/restore proof.
 - Core M14 boundary: SearchClarity captures the signal. Neon Ronin scores the signal. Kaizen governs the project-intelligence and implementation-doc chain.
 - Kaizen docs repository role: this repo is Kaizen's construction, governance, proof, and audit workbench. It is not the long-term home of downstream project truth.
@@ -47,7 +47,7 @@ Humans = authority-bearing review, approval, and promotion
 - Hermes Desktop / Hermes Agent: deferred; no canonical write authority or live integration is authorized.
 - Observatory / IMI remains a shared capability / ownership-boundary candidate. No Observatory / IMI implementation is authorized.
 - Accepted decisions remain governing inputs. Decision 0015 is a known reserved / unauthored / owner-deferred governance-compression gap; do not present it as accepted doctrine and do not fabricate it.
-- Active workflow posture: decide whether to approve and execute the generated 021B vault amendment plan, then record the return and continue command-center/overview vault alignment, sync posture decisions, and post-v1 hardening; preserve full gates for consequential mutation and implementation.
+- Active workflow posture: 021B current-state vault amendment is returned; decide whether to approve 021C command-center exact prepare/plan generation, then continue overview inspection, sync posture decisions, and post-v1 hardening; preserve full gates for consequential mutation and implementation.
 - Stewardship principle: structure and automation must earn their existence.
 
 ## Read-first sequence
@@ -62,37 +62,39 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 6. `03-research-results/364-packet-020j-stage-b-closure-audit-and-sequence-reconciliation.md` - Stage B closure and sequence reconciliation
 7. `03-research-results/363-packet-020j-stage-b-implementation-return.md` - Stage B implementation return
 8. `05-specs/milestone-14-first-real-internal-project-governed-run.md` - M14 definition, now completed/accepted by Result 368
-9. `03-research-results/376-packet-021b-kaizen-platform-post-v1-current-state-vault-amendment-candidate.md` - 021B current-state vault amendment candidate
-10. `03-research-results/377-packet-021b-vault-amendment-plan-generation-result.md` - generated immutable 021B amendment plan result
-11. `03-research-results/375-post-v1-vault-planning-doc-reconciliation-audit.md` - vault planning-doc reconciliation
-12. `03-research-results/374-post-v1-vault-promotion-flow-planning-packet.md` - post-v1 vault alignment planning context
-13. `03-research-results/369-kaizen-v1-post-acceptance-claude-adversarial-audit-prompt.md` - post-v1 adversarial audit prompt
-14. `03-research-results/370-kaizen-v1-post-acceptance-claude-mcp-tool-requirements.md` - Claude audit MCP tool requirements
-15. `03-research-results/371-claude-mcp-build-and-audit-quickstart.md` - Claude MCP build/audit quickstart
-16. `03-research-results/372-claude-post-v1-audit-start-prompt.md` - one-paste Claude audit start prompt
-17. `03-research-results/342-milestone-13-owner-closure-acceptance.md` - Milestone 13 closure authority
-18. `03-research-results/345-packet-020a-m14-workload-selection-and-boundary-registration.md` - M14 selected workload
-19. `03-research-results/346-packet-020b-phase-0-boundary-and-collision-pre-registration.md` - M14 boundary/scoring pre-registration
-20. `03-research-results/355-packet-020f-parent-child-and-observatory-boundary-candidate.md` - parent/child and Observatory boundary candidate
-21. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
-22. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
-23. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
-24. `03-research-results/313-post-m12-audit-pass-1-steward-disposition.md` - Pass 1 disposition
-25. `03-research-results/314-post-m12-audit-pass-2-steward-disposition.md` - Pass 2 disposition
-26. `03-research-results/315-post-m12-historical-disposition-audit.md` - post-M12 audit Pass 3
-27. `03-research-results/316-post-m12-audit-pass-3-steward-disposition.md` - Pass 3 disposition and tracked P3 repair register
-28. `04-design-decisions/README.md` - decisions index and Decision 0015 gap note
-29. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
-30. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
-31. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md`
-32. `05-specs/milestone-11-operational-data-foundation-planning.md`
-33. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md`
-34. `05-specs/controlled-implementation-return-pilot.md` - Milestone 9 definition/spec despite non-numbered filename
-35. `05-specs/milestone-8-reliability-and-known-defect-closure.md`
-36. `05-specs/milestone-7-durable-recoverability.md`
-37. `IMPLEMENTATION_ROADMAP.md` - historical completed first-slice roadmap for Milestones 1 through 5
-38. `IMPLEMENTATION_ROADMAP_V0.2.md` - historical accepted Milestone 6 implementation-roadmap snapshot; preserve bytes unless separately approved
-39. `ROADMAP.md` - historical planning provenance only; not a current-gate source
+9. `03-research-results/378-packet-021b-vault-amendment-implementation-return.md` - 021B executed current-state vault amendment return
+10. `03-research-results/379-packet-021c-kaizen-platform-command-center-vault-amendment-candidate.md` - 021C command-center vault amendment candidate
+11. `03-research-results/376-packet-021b-kaizen-platform-post-v1-current-state-vault-amendment-candidate.md` - 021B current-state vault amendment candidate
+12. `03-research-results/377-packet-021b-vault-amendment-plan-generation-result.md` - generated immutable 021B amendment plan result
+13. `03-research-results/375-post-v1-vault-planning-doc-reconciliation-audit.md` - vault planning-doc reconciliation
+14. `03-research-results/374-post-v1-vault-promotion-flow-planning-packet.md` - post-v1 vault alignment planning context
+15. `03-research-results/369-kaizen-v1-post-acceptance-claude-adversarial-audit-prompt.md` - post-v1 adversarial audit prompt
+16. `03-research-results/370-kaizen-v1-post-acceptance-claude-mcp-tool-requirements.md` - Claude audit MCP tool requirements
+17. `03-research-results/371-claude-mcp-build-and-audit-quickstart.md` - Claude MCP build/audit quickstart
+18. `03-research-results/372-claude-post-v1-audit-start-prompt.md` - one-paste Claude audit start prompt
+19. `03-research-results/342-milestone-13-owner-closure-acceptance.md` - Milestone 13 closure authority
+20. `03-research-results/345-packet-020a-m14-workload-selection-and-boundary-registration.md` - M14 selected workload
+21. `03-research-results/346-packet-020b-phase-0-boundary-and-collision-pre-registration.md` - M14 boundary/scoring pre-registration
+22. `03-research-results/355-packet-020f-parent-child-and-observatory-boundary-candidate.md` - parent/child and Observatory boundary candidate
+23. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
+24. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
+25. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
+26. `03-research-results/313-post-m12-audit-pass-1-steward-disposition.md` - Pass 1 disposition
+27. `03-research-results/314-post-m12-audit-pass-2-steward-disposition.md` - Pass 2 disposition
+28. `03-research-results/315-post-m12-historical-disposition-audit.md` - post-M12 audit Pass 3
+29. `03-research-results/316-post-m12-audit-pass-3-steward-disposition.md` - Pass 3 disposition and tracked P3 repair register
+30. `04-design-decisions/README.md` - decisions index and Decision 0015 gap note
+31. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
+32. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
+33. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md`
+34. `05-specs/milestone-11-operational-data-foundation-planning.md`
+35. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md`
+36. `05-specs/controlled-implementation-return-pilot.md` - Milestone 9 definition/spec despite non-numbered filename
+37. `05-specs/milestone-8-reliability-and-known-defect-closure.md`
+38. `05-specs/milestone-7-durable-recoverability.md`
+39. `IMPLEMENTATION_ROADMAP.md` - historical completed first-slice roadmap for Milestones 1 through 5
+40. `IMPLEMENTATION_ROADMAP_V0.2.md` - historical accepted Milestone 6 implementation-roadmap snapshot; preserve bytes unless separately approved
+41. `ROADMAP.md` - historical planning provenance only; not a current-gate source
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -234,16 +236,16 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Current next gate
 
-The active sequence is 021B post-v1 canonical-vault alignment:
+The active sequence is 021C post-v1 canonical-vault alignment:
 
 ```text
 Milestones 1-14: closed
 -> Kaizen v1 owner acceptance: recorded in Result 368
 -> Claude audit required fixes: closed
 -> vault planning reconciliation: recorded in Result 375
--> 021B current-state vault amendment candidate: prepared
--> 021B immutable amendment plan: generated
--> current gate: owner decision to approve and execute plan SHA 9faf2efe6b25a92f3cc6467891e127a564a9ac3fe84add220651c67ce1b94d7a, or request revision
+-> 021B current-state vault amendment: executed, returned, and committed locally
+-> 021C command-center vault amendment candidate: prepared
+-> current gate: owner decision to approve 021C exact prepare/plan generation, or request revision
 ```
 
 Current authority:
@@ -253,6 +255,8 @@ Current authority:
 - Result 375 reconciles older vault planning docs and confirms the first vault update should use bounded amendment semantics;
 - Result 376 records the 021B current-state vault amendment candidate;
 - Result 377 records the generated immutable 021B amendment plan;
+- Result 378 records the executed 021B implementation return;
+- Result 379 records the 021C command-center vault amendment candidate;
 - ROADMAP_V0.4 remains the accepted roadmap, but its active-lane text must be read with later M13/M14/post-v1 records;
 - Stage B execution is complete for the bounded M14 Neon Ronin reference-example docs change;
 - no Git push, further downstream mutation, platform/vault/staging/database mutation, or Observatory / IMI implementation is authorized by this file without exact owner approval;
