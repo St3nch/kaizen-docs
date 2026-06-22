@@ -836,7 +836,9 @@ Current active planning lane:
 -> 021C immutable amendment plan: generated in Result 380
 -> next gate: owner decision to approve and execute exact plan SHA 220685d8d489c69042d82c56510dc7ee313e0e448fb634d0139a0097ce82e9b7, or request revision
 -> after 021C execution: record implementation return and inspect overview.md for possible 021D
--> later: docs repo / Neon Ronin sync posture and broader post-v1 hardening backlog
+-> later: docs repo / Neon Ronin sync posture, lean-record cleanup, and broader post-v1 hardening backlog
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
+
+Lean-record cleanup is now an explicit post-v1 hardening item. Kaizen must optimize for LLM readability and operational follow-through, not accumulate a junk drawer of development recordings. Cleanup should preserve decision-critical, audit-critical, recovery-critical, and source-of-truth boundary details, while deleting, consolidating, or marking historical any redundant implementation chatter that no longer helps Kaizen operate.
