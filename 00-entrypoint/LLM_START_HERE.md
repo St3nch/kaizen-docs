@@ -26,26 +26,22 @@ Humans = authority-bearing review, approval, and promotion
 
 ## Current project posture
 
-- Current phase: Milestones 1 through 13 are closed; Milestone 14 planning is active.
+- Current phase: Milestones 1 through 13 are closed; Milestone 14 is active.
 - Latest closed milestone: Milestone 13, accepted by owner in `03-research-results/342-milestone-13-owner-closure-acceptance.md`.
-- Current gate: Milestone 14 workload selection and boundary definition. No M14 implementation, platform mutation, vault mutation, staging mutation, database mutation, production, deletion, provider/customer-data, Qdrant, Hermes, Tauri, Observatory, full Neon Ronin implementation, or SearchClarity implementation is authorized by this entrypoint.
-- Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md` and corrected through SP-1 / M13 planning updates.
-- Prior roadmap: `ROADMAP_V0.3.md`, preserved as the accepted Packet 018A roadmap surface before ROADMAP_V0.4.
-- Post-M12 audit program: Passes 1 through 3 are complete and dispositioned in Results 310 through 316.
-- Packet 018A reading-path cleanup is accepted in `03-research-results/321-packet-018a-owner-acceptance.md`.
-- SP-1 P3 backlog register is accepted in `03-research-results/326-sp-1-owner-acceptance.md`; the M13 entry precondition is satisfied.
-- Milestone 13 definition is accepted in `03-research-results/328-milestone-13-definition-owner-acceptance.md`.
-- Packet 019A inventory is recorded in `03-research-results/329-packet-019a-m13-inventory-and-readiness-audit.md`; Claude review required an inventory-completion addendum and reading-path refresh.
-- Active M13 packet drafts: 019B service-boundary proof, 019C local tool-surface approval, and 019D synthetic proof / M14 readiness contract.
+- Current gate: Packet 020H fresh-context resumption proof disposition for M14. Packets 020A through 020G are complete; `03-research-results/357-packet-020h-fresh-context-resumption-pack.md` is recorded; Claude returned a PASS WITH FIXES fresh-context report that must be dispositioned.
+- Selected M14 workload: Neon Ronin parent project idea-to-implementation-docs proof with SearchClarity child workspace/business-lane dependency, repo reconciliation, and Observatory / IMI shared-capability boundary clarification.
+- Current M14 finding: no implementation-ready Stage B packet exists yet. Stage B execution is not authorized.
+- Current next direction after 020H disposition: read-only Stage B candidate discovery, preferably in Neon Ronin, then a concrete owner-approved Stage B task packet before any coding-agent execution.
+- Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md` and corrected through SP-1 / M13 / M14 planning updates.
 - Platform repository: local-only at commit `b7593c5ee90fd32c1e2a86572cc570d307de2be6`; no remote exists.
-- Docs repository: active M13 planning is ahead of `origin/main`; verify current HEAD before work.
+- Docs repository: active M14 work is ahead of `origin/main`; verify current HEAD before work.
 - Canonical vault: local-only at commit `c898f261c0b341eb8419125247c8bd53ef567d6c`; no remote exists.
 - Live operational database: `kaizen_ops` is migrated through `0005_recovery_retention_integrity`.
 - Go8 repository: operational local tool server.
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure.
-- Observatory research remains a parallel evidence track only; no provider purchase, raw capture, crawler deployment, client-data reuse, physical schema, Qdrant, LangGraph, MCP-tool implementation, or hammer execution is authorized.
 - Qdrant index: not implemented.
 - Hermes Desktop / Hermes Agent: deferred; no canonical write authority or live integration is authorized.
+- Observatory / IMI remains a shared capability / ownership-boundary candidate. No Observatory / IMI implementation is authorized.
 - Accepted decisions remain governing inputs. Decision 0015 is a known reserved / unauthored / owner-deferred governance-compression gap; do not present it as accepted doctrine and do not fabricate it.
 - Active workflow posture: move efficiently on low-risk planning and review fixes; preserve full gates for consequential mutation and implementation.
 - Stewardship principle: structure and automation must earn their existence.
@@ -56,37 +52,39 @@ This numbered list is a task-dependent reference map, not a requirement to load 
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file; authoritative current-state pointer
 2. `ROADMAP_V0.4.md` - current accepted roadmap for Kaizen v1 and full-project completion
-3. `ROADMAP_V0.3.md` - previous Packet 018A roadmap surface
-4. `01-project-standard/kaizen-project-standard-v0.2.md` - authoritative Kaizen Project Standard v0.2
-5. `03-research-results/307-milestone-12-owner-acceptance.md` - latest milestone closure authority
-6. `03-research-results/326-sp-1-owner-acceptance.md` - SP-1 closure / M13 entry precondition satisfied
-7. `05-specs/milestone-13-operational-service-and-safe-local-tool-surface-hardening.md` - accepted M13 definition
-8. `03-research-results/328-milestone-13-definition-owner-acceptance.md` - M13 definition owner acceptance
-9. `03-research-results/329-packet-019a-m13-inventory-and-readiness-audit.md` - Packet 019A inventory
-10. `03-research-results/333-milestone-13-claude-review-steward-disposition.md` - Claude review disposition
-11. `03-research-results/334-packet-019a-inventory-completion-addendum.md` - 019A inventory-completion addendum
-12. `03-research-results/330-packet-019b-service-boundary-proof-task-packet.md` - Packet 019B service-boundary proof draft
-13. `03-research-results/331-packet-019c-local-tool-surface-approval-task-packet.md` - Packet 019C local tool-surface approval draft
-14. `03-research-results/332-packet-019d-synthetic-proof-and-m14-readiness-contract-task-packet.md` - Packet 019D readiness-contract draft
-15. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
-16. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
-17. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
-18. `03-research-results/313-post-m12-audit-pass-1-steward-disposition.md` - Pass 1 disposition
-19. `03-research-results/314-post-m12-audit-pass-2-steward-disposition.md` - Pass 2 disposition
-20. `03-research-results/315-post-m12-historical-disposition-audit.md` - post-M12 audit Pass 3
-21. `03-research-results/316-post-m12-audit-pass-3-steward-disposition.md` - Pass 3 disposition and tracked P3 repair register
-22. `04-design-decisions/README.md` - decisions index and Decision 0015 gap note
-23. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
-24. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
-25. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md`
-26. `05-specs/milestone-11-operational-data-foundation-planning.md`
-27. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md`
-28. `05-specs/controlled-implementation-return-pilot.md` - Milestone 9 definition/spec despite non-numbered filename
-29. `05-specs/milestone-8-reliability-and-known-defect-closure.md`
-30. `05-specs/milestone-7-durable-recoverability.md`
-31. `IMPLEMENTATION_ROADMAP.md` - historical completed first-slice roadmap for Milestones 1 through 5
-32. `IMPLEMENTATION_ROADMAP_V0.2.md` - historical accepted Milestone 6 implementation-roadmap snapshot; preserve bytes unless separately approved
-33. `ROADMAP.md` - historical planning provenance only; not a current-gate source
+3. `05-specs/milestone-14-first-real-internal-project-governed-run.md` - active M14 definition and packet sequence
+4. `03-research-results/342-milestone-13-owner-closure-acceptance.md` - Milestone 13 closure authority
+5. `03-research-results/345-packet-020a-m14-workload-selection-and-boundary-registration.md` - M14 selected workload
+6. `03-research-results/346-packet-020b-phase-0-boundary-and-collision-pre-registration.md` - M14 boundary/scoring pre-registration
+7. `03-research-results/348-packet-020b-claude-review-disposition.md` - Packet 020B Claude review disposition
+8. `03-research-results/349-packet-020c-repo-state-pinning-and-idea-only-firewall.md` - downstream repo pins and idea-only firewall
+9. `03-research-results/350-packet-020d-stage-a-idea-only-generation-protocol.md` - Stage A idea-only protocol
+10. `03-research-results/351-packet-020d-stage-a-idea-only-generation-output.md` - Stage A unreconciled candidate output
+11. `03-research-results/352-packet-020d-stage-a-idea-only-output-review.md` - Stage A output review
+12. `03-research-results/353-packet-020e-stage-a-repo-reconciliation-protocol.md` - Stage A reconciliation protocol
+13. `03-research-results/354-packet-020e-stage-a-repo-reconciliation-report.md` - Stage A reconciliation report
+14. `03-research-results/355-packet-020f-parent-child-and-observatory-boundary-candidate.md` - parent/child and Observatory boundary candidate
+15. `03-research-results/356-packet-020g-implementation-ready-doc-quality-audit.md` - no-ready-packet finding and Stage B candidate-discovery recommendation
+16. `03-research-results/357-packet-020h-fresh-context-resumption-pack.md` - fresh-context resumption pack
+17. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
+18. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
+19. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
+20. `03-research-results/313-post-m12-audit-pass-1-steward-disposition.md` - Pass 1 disposition
+21. `03-research-results/314-post-m12-audit-pass-2-steward-disposition.md` - Pass 2 disposition
+22. `03-research-results/315-post-m12-historical-disposition-audit.md` - post-M12 audit Pass 3
+23. `03-research-results/316-post-m12-audit-pass-3-steward-disposition.md` - Pass 3 disposition and tracked P3 repair register
+24. `04-design-decisions/README.md` - decisions index and Decision 0015 gap note
+25. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
+26. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
+27. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md`
+28. `05-specs/milestone-11-operational-data-foundation-planning.md`
+29. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md`
+30. `05-specs/controlled-implementation-return-pilot.md` - Milestone 9 definition/spec despite non-numbered filename
+31. `05-specs/milestone-8-reliability-and-known-defect-closure.md`
+32. `05-specs/milestone-7-durable-recoverability.md`
+33. `IMPLEMENTATION_ROADMAP.md` - historical completed first-slice roadmap for Milestones 1 through 5
+34. `IMPLEMENTATION_ROADMAP_V0.2.md` - historical accepted Milestone 6 implementation-roadmap snapshot; preserve bytes unless separately approved
+35. `ROADMAP.md` - historical planning provenance only; not a current-gate source
 ## Folder map
 
 | Folder | Purpose | Doctrine status |
@@ -228,31 +226,30 @@ Type-specific fields are defined in `05-specs/kaizen-note-type-registry.md`.
 
 ## Current next gate
 
-The active sequence is now at a post-Milestone-12 cleanup and roadmap decision point:
+The active sequence is Milestone 14 fresh-context resumption proof disposition:
 
 ```text
-Milestones 1-8: closed
--> Milestone 9 controlled implementation-return pilot: closed under Result 244
--> Milestone 10 workload/system-of-record reconciliation: closed under Result 250
--> Milestone 11 operational data foundation: closed under Result 288
--> Packet 016G post-closure attestation-integrity correction: complete under Result 293
--> Milestone 12 recovery realism and operational restore proof: closed under Result 307
--> Post-Milestone-12 audit program Passes 1-3: complete and dispositioned under Results 313, 314, and 316
--> current gate: Packet 018A reading-path cleanup and later owner-approved post-M12 roadmap decision
+Milestones 1-13: closed
+-> Milestone 14: active
+-> 020A workload selection / boundary registration: complete
+-> 020B Phase 0 pre-registration: complete
+-> 020C repo-state pinning and idea-only firewall: complete
+-> 020D idea-only generation and review: complete
+-> 020E repo reconciliation protocol and report: complete
+-> 020F parent/child and Observatory / IMI boundary candidate: complete
+-> 020G implementation-ready doc quality audit: complete; no Stage B packet ready yet
+-> current gate: 020H fresh-context resumption proof disposition
 ```
 
 Current authority:
 
-- Result 244 closes Milestone 9;
-- Result 250 closes Milestone 10;
-- Decision 0019 records Milestone 10 system-of-record reconciliation;
-- Decision 0020 records Milestone 11 operational foundation boundaries;
-- Result 288 closes Milestone 11;
-- Results 291 through 293 record Packet 016G planning approval, implementation return, and completion audit;
-- Result 307 closes Milestone 12 and accepts its residual limitations;
-- Results 310 through 316 record and disposition the post-M12 audit program Passes 0 through 3;
-- Observatory work remains research-only under the OBR-01 through OBR-15 track;
-- Qdrant, LangGraph, Hermes, UI, provider purchase, raw capture, and production MCP work remain deferred and separately gated.
+- Result 342 closes Milestone 13;
+- ROADMAP_V0.4 is the active accepted roadmap;
+- the M14 spec records the active packet sequence;
+- Packets 020A through 020G record the selected workload, boundaries, idea-only proof, reconciliation, dependency map, and no-ready-packet finding;
+- Packet 020H resumption pack is recorded in `03-research-results/357-packet-020h-fresh-context-resumption-pack.md`;
+- Stage B execution remains unauthorized until a separate concrete owner-approved packet exists;
+- Observatory / IMI remains a shared capability / ownership-boundary candidate and is not implemented.
 
 ## Active deferred boundaries and tracked repair backlog
 

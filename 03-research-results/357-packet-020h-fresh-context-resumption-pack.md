@@ -41,6 +41,7 @@ The fresh-context resumption agent must read only these M14 artifacts unless a l
 ```text
 00-entrypoint/LLM_START_HERE.md
 05-specs/milestone-14-first-real-internal-project-governed-run.md
+03-research-results/342-milestone-13-owner-closure-acceptance.md
 03-research-results/345-packet-020a-m14-workload-selection-and-boundary-registration.md
 03-research-results/346-packet-020b-phase-0-boundary-and-collision-pre-registration.md
 03-research-results/348-packet-020b-claude-review-disposition.md
@@ -131,6 +132,7 @@ Your job is to read the specified Kaizen artifacts and produce a resumption repo
 ```text
 C:\dev\kaizen-docs\00-entrypoint\LLM_START_HERE.md
 C:\dev\kaizen-docs\05-specs\milestone-14-first-real-internal-project-governed-run.md
+C:\dev\kaizen-docs\03-research-results\342-milestone-13-owner-closure-acceptance.md
 C:\dev\kaizen-docs\03-research-results\345-packet-020a-m14-workload-selection-and-boundary-registration.md
 C:\dev\kaizen-docs\03-research-results\346-packet-020b-phase-0-boundary-and-collision-pre-registration.md
 C:\dev\kaizen-docs\03-research-results\348-packet-020b-claude-review-disposition.md
