@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD at Packet 018A approval: b7593c5ee90fd32c1e2a86572cc570d307de2be6
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: post-v1 hardening and lean read-path cleanup after 021B / 021C / 021D / 021E / 021F vault alignment
+Current active lane: post-v1 hardening priority selection after completed 021B / 021C / 021D / 021E / 021F vault alignment, lean docs read-path refresh, and Result 382 backup verification record
 ```
 
 ## Project boundary definitions
@@ -832,11 +832,13 @@ Current active planning lane:
 
 ```text
 021B current-state vault amendment: executed, verified, committed locally, and returned in Result 378
-021C command-center vault amendment: completed before this read-path refresh
-021D overview vault amendment: completed before this read-path refresh
+021C command-center vault amendment: complete
+021D overview vault amendment: complete
 021E command-center stale-sequence cleanup: executed, verified, and committed locally
 021F current-state stale-sequence cleanup: executed, verified, and committed locally
--> current gate: finish lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md
+lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
+022A / 022B / 022C post-v1 backup generation, transfer verification, and plaintext cleanup: recorded in Result 382
+-> current gate: select the next bounded post-v1 hardening priority
 -> later: docs repo / Neon Ronin sync posture, lean-record cleanup, Claude UX / operator-workflow planning, and broader post-v1 hardening backlog
 ```
 
