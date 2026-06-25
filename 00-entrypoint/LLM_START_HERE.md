@@ -30,13 +30,13 @@ Humans = authority-bearing review, approval, and promotion
 - Latest closed milestone: Milestone 14, accepted by owner in `03-research-results/368-milestone-14-kaizen-v1-owner-acceptance.md`.
 - Accepted v1 checkpoint: docs commit `2a76363d3257cd3230746dc4c5901965291591d8`, with recorded caveats and post-v1 hardening deferred.
 - Current post-acceptance docs checkpoint: verify current HEAD before work; post-v1 audit preparation and reading-path refresh records may exist after the accepted checkpoint.
-- Current gate: 021C generated an immutable amendment plan for `projects/kaizen-platform/command-center.md`; next decision is exact owner approval/execution of plan SHA `220685d8d489c69042d82c56510dc7ee313e0e448fb634d0139a0097ce82e9b7`, or revision. Kaizen v1 remains accepted unless a later accepted audit records an acceptance-invalidating defect.
+- Current gate: post-v1 hardening and lean read-path cleanup after completed 021B / 021C / 021D / 021E / 021F vault alignment. Kaizen v1 remains accepted unless a later accepted audit records an acceptance-invalidating defect.
 - Completed M14 workload: Neon Ronin parent project idea-to-implementation-docs proof with SearchClarity child workspace/business-lane dependency, repo reconciliation, Stage B docs-only implementation return, fresh-context proof, and backup/restore proof.
 - Core M14 boundary: SearchClarity captures the signal. Neon Ronin scores the signal. Kaizen governs the project-intelligence and implementation-doc chain.
 - Kaizen docs repository role: this repo is Kaizen's construction, governance, proof, and audit workbench. It is not the long-term home of downstream project truth.
 - Kaizen Obsidian Vault role: the intended canonical living project-intelligence layer for governed projects. Post-v1 work must define the project-to-vault promotion flow.
 - Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md` and corrected through SP-1 / M13 / M14 / post-v1 updates.
-- Platform repository: local-only at commit `b7593c5ee90fd32c1e2a86572cc570d307de2be6`; no remote exists.
+- Platform repository: local-only at commit `7daabf3eff0b3b0768e88512ca7d596c94e41140`; no remote exists.
 - Docs repository: local work is ahead of `origin/main`; verify current HEAD and sync posture before push or handoff work.
 - Canonical vault: local-only at commit `c898f261c0b341eb8419125247c8bd53ef567d6c`; no remote exists.
 - Neon Ronin repository: Stage B M14 proof commits are local and ahead of origin; no push is authorized by this file.
@@ -47,7 +47,7 @@ Humans = authority-bearing review, approval, and promotion
 - Hermes Desktop / Hermes Agent: deferred; no canonical write authority or live integration is authorized.
 - Observatory / IMI remains a shared capability / ownership-boundary candidate. No Observatory / IMI implementation is authorized.
 - Accepted decisions remain governing inputs. Decision 0015 is a known reserved / unauthored / owner-deferred governance-compression gap; do not present it as accepted doctrine and do not fabricate it.
-- Active workflow posture: 021C command-center vault amendment plan is generated; decide whether to approve/execute that exact plan, then continue overview inspection, sync posture decisions, and post-v1 hardening; preserve full gates for consequential mutation and implementation.
+- Active workflow posture: complete lean docs read-path cleanup, then decide sync posture and post-v1 hardening priorities; preserve full gates for consequential mutation and implementation.
 - Stewardship principle: structure and automation must earn their existence.
 
 ## Read-first sequence
