@@ -8,7 +8,52 @@ Research results are evidence, not doctrine.
 
 Do not copy a research result directly into the Kaizen Project Standard. First preserve the source or a faithful evidence summary, extract claims and constraints, reconcile recommendations through `adopt`, `modify`, `reject`, and `defer`, then promote changes through an accepted decision or reviewed specification.
 
-## Current evidence set
+## Current / preserve-first records
+
+Use these records before replaying older chains:
+
+```text
+322 roadmap v0.4 owner acceptance
+326 SP-1 owner closure acceptance
+342 Milestone 13 owner closure acceptance
+367 Kaizen v1 completion audit and owner-acceptance readiness
+368 Milestone 14 / Kaizen v1 owner acceptance
+373 post-v1 Claude audit disposition and reading-path refresh closure
+375 post-v1 vault planning-doc reconciliation audit
+378 / 381 vault living-note amendment returns
+382 post-v1 backup generation, transfer verification, and plaintext cleanup
+383 backup v2 key-custody recovery, transfer verification, restore proof, and plaintext cleanup
+```
+
+## Evidence cluster index
+
+```text
+001-017  foundational research, agent boundaries, architecture, tool audits, early decisions
+018-067  Milestones 1-5 first-slice implementation, audits, retrospectives, and v0.2 acceptance
+068-095  Milestone 6 operator / amendment support and closure
+096-132  Milestone 7 durable recoverability and backup posture
+133-162  Milestone 8 reliability and known-defect closure
+163-167  early Observatory / reconciliation bridge records
+168-244  Milestone 9 Northstar controlled implementation-return pilot
+245-251  Milestone 10 workload and system-of-record reconciliation
+252-294  Milestone 11 operational data foundation
+295-307  Milestone 12 recovery realism and operational restore proof
+308-326  post-M12 audit, roadmap v0.4, SP-1, and closure records
+327-342  Milestone 13 definition, execution, audit, and closure
+343-368  Milestone 14 / Kaizen v1 real internal project proof and owner acceptance
+369-383  post-v1 audit, vault alignment, backup, restore, and vault-admission hardening context
+```
+
+## Historical-read rules
+
+```text
+Do not treat every result as active read-path material.
+Load by cluster when the user's task needs that proof chain.
+Prompt records, raw audit setup, packet chatter, and implementation-return chains are historical unless a current packet explicitly reopens them.
+Acceptance, decision, audit-closure, recovery, restore-proof, vault-admission, and current-state records remain preserve-first anchors.
+```
+
+## Historical early-record detail (preserved, not active read path)
 
 - `001-hermes-agent-boundaries-claude-summary.md`
 - `002-hermes-desktop-verification-gpt-summary.md`

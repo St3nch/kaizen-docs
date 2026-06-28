@@ -56,49 +56,25 @@ Humans = authority-bearing review, approval, and promotion
 This numbered list is a task-dependent reference map, not a requirement to load every file. Always read this entrypoint and active accepted `ROADMAP_V0.4.md` for roadmap work. Then load only the decisions, specs, audits, task packets, and implementation returns relevant to the requested work unless the user explicitly requests a full-repository audit.
 
 1. `00-entrypoint/LLM_START_HERE.md` - this file; authoritative current-state pointer
-2. `ROADMAP_V0.4.md` - accepted roadmap; current post-v1 lane should be read with later acceptance and reading-path refresh records
+2. `ROADMAP_V0.4.md` - accepted roadmap and current post-v1 lane
 3. `03-research-results/368-milestone-14-kaizen-v1-owner-acceptance.md` - Kaizen v1 / Milestone 14 owner acceptance
 4. `03-research-results/367-packet-020l-kaizen-v1-completion-audit-and-owner-acceptance-readiness.md` - v1 completion audit and caveats
-5. `03-research-results/366-packet-020k-backup-restore-proof-result.md` - M14 backup/restore proof result
-6. `03-research-results/382-packet-022abc-post-v1-backup-generation-transfer-and-cleanup-record.md` - post-v1 encrypted backup generation, transfer verification, and plaintext cleanup record
-7. `03-research-results/383-packet-022f-through-022j-backup-v2-key-custody-and-restore-proof-record.md` - post-v1 backup v2 key-custody recovery, fresh backup, transfer verification, restore proof, and plaintext cleanup record
-8. `03-research-results/364-packet-020j-stage-b-closure-audit-and-sequence-reconciliation.md` - Stage B closure and sequence reconciliation
-9. `03-research-results/363-packet-020j-stage-b-implementation-return.md` - Stage B implementation return
-10. `05-specs/milestone-14-first-real-internal-project-governed-run.md` - M14 definition, now completed/accepted by Result 368
-11. `03-research-results/378-packet-021b-vault-amendment-implementation-return.md` - 021B executed current-state vault amendment return
-12. `03-research-results/380-packet-021c-vault-amendment-plan-generation-result.md` - generated immutable 021C amendment plan result
-13. `03-research-results/379-packet-021c-kaizen-platform-command-center-vault-amendment-candidate.md` - 021C command-center vault amendment candidate
-14. `03-research-results/376-packet-021b-kaizen-platform-post-v1-current-state-vault-amendment-candidate.md` - 021B current-state vault amendment candidate
-15. `03-research-results/377-packet-021b-vault-amendment-plan-generation-result.md` - generated immutable 021B amendment plan result
-16. `03-research-results/375-post-v1-vault-planning-doc-reconciliation-audit.md` - vault planning-doc reconciliation
-17. `03-research-results/374-post-v1-vault-promotion-flow-planning-packet.md` - post-v1 vault alignment planning context
-18. `03-research-results/369-kaizen-v1-post-acceptance-claude-adversarial-audit-prompt.md` - post-v1 adversarial audit prompt
-19. `03-research-results/370-kaizen-v1-post-acceptance-claude-mcp-tool-requirements.md` - Claude audit MCP tool requirements
-20. `03-research-results/371-claude-mcp-build-and-audit-quickstart.md` - Claude MCP build/audit quickstart
-21. `03-research-results/372-claude-post-v1-audit-start-prompt.md` - one-paste Claude audit start prompt
-22. `03-research-results/342-milestone-13-owner-closure-acceptance.md` - Milestone 13 closure authority
-23. `03-research-results/345-packet-020a-m14-workload-selection-and-boundary-registration.md` - M14 selected workload
-24. `03-research-results/346-packet-020b-phase-0-boundary-and-collision-pre-registration.md` - M14 boundary/scoring pre-registration
-25. `03-research-results/355-packet-020f-parent-child-and-observatory-boundary-candidate.md` - parent/child and Observatory boundary candidate
-26. `03-research-results/310-post-m12-audit-source-inventory.md` - post-M12 audit Pass 0 inventory
-27. `03-research-results/311-post-m12-roadmap-and-entrypoint-audit.md` - post-M12 audit Pass 1
-28. `03-research-results/312-post-m12-milestone-traceability-audit.md` - post-M12 audit Pass 2
-29. `03-research-results/313-post-m12-audit-pass-1-steward-disposition.md` - Pass 1 disposition
-30. `03-research-results/314-post-m12-audit-pass-2-steward-disposition.md` - Pass 2 disposition
-31. `03-research-results/315-post-m12-historical-disposition-audit.md` - post-M12 audit Pass 3
-32. `03-research-results/316-post-m12-audit-pass-3-steward-disposition.md` - Pass 3 disposition and tracked P3 repair register
-33. `04-design-decisions/README.md` - decisions index and Decision 0015 gap note
-34. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md`
-35. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md`
-36. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md`
-37. `05-specs/milestone-11-operational-data-foundation-planning.md`
-38. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md`
-39. `05-specs/controlled-implementation-return-pilot.md` - Milestone 9 definition/spec despite non-numbered filename
-40. `05-specs/milestone-8-reliability-and-known-defect-closure.md`
-41. `05-specs/milestone-7-durable-recoverability.md`
-42. `IMPLEMENTATION_ROADMAP.md` - historical completed first-slice roadmap for Milestones 1 through 5
-43. `IMPLEMENTATION_ROADMAP_V0.2.md` - historical accepted Milestone 6 implementation-roadmap snapshot; preserve bytes unless separately approved
-44. `ROADMAP.md` - historical planning provenance only; not a current-gate source
+5. `03-research-results/382-packet-022abc-post-v1-backup-generation-transfer-and-cleanup-record.md` - post-v1 backup record
+6. `03-research-results/383-packet-022f-through-022j-backup-v2-key-custody-and-restore-proof-record.md` - backup v2 key custody and restore proof
+7. `03-research-results/373-post-v1-claude-audit-disposition-and-reading-path-refresh-closure.md` - post-v1 audit disposition
+8. `03-research-results/375-post-v1-vault-planning-doc-reconciliation-audit.md` - vault planning reconciliation
+9. `03-research-results/README.md` - cluster index for historical research/result lookup; use instead of loading old result chains by default
+10. `06-handoff-patterns/README.md` - historical handoff packet library index; not a current work queue
+11. `04-design-decisions/README.md` - decisions index and current decision lookup
+12. `04-design-decisions/0019-milestone-10-system-of-record-reconciliation.md` - system-of-record reconciliation authority
+13. `04-design-decisions/0020-milestone-11-operational-foundation-boundaries.md` - operational foundation boundary authority
+14. `05-specs/milestone-14-first-real-internal-project-governed-run.md` - M14 definition, now completed/accepted by Result 368
+15. `05-specs/milestone-12-recovery-realism-and-operational-restore-proof.md` - recovery realism spec when recovery work is relevant
+16. `05-specs/milestone-11-operational-data-foundation-planning.md` - operational data foundation spec when database work is relevant
+17. `05-specs/milestone-10-workload-and-system-of-record-reconciliation.md` - workload/system-of-record spec when boundary work is relevant
+18. Historical roadmaps only when investigating lineage: `IMPLEMENTATION_ROADMAP.md`, `IMPLEMENTATION_ROADMAP_V0.2.md`, `ROADMAP.md`
+
+Historical prompt clusters, implementation-return chains, audit setup records, and old handoff packets are preserved evidence. Do not load them by default; follow `03-research-results/README.md` and `06-handoff-patterns/README.md` by task-specific cluster.
 ## Folder map
 
 | Folder | Purpose | Doctrine status |

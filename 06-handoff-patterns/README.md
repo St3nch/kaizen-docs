@@ -4,7 +4,26 @@ This folder defines patterns for implementation-ready task packets and coding-ag
 
 The goal is to make handoffs specific enough that a coding agent can execute them without guessing.
 
-## Current packets
+## Historical packet library
+
+This folder is preserved as an implementation handoff packet library. It is not the current work queue.
+
+Use active roadmap gates, current task approvals, exact operation IDs, and current repository state before executing any new work. Old packets are preserved for lineage, auditability, and reusable patterns; they do not authorize new mutation by themselves.
+
+## Packet clusters
+
+```text
+001-009b  Milestones 1-5 first-slice foundations, vault bootstrap, staging, promotion, and governed amendment proof
+010a-010f Milestone 6 operator surface and implementation-return preparation
+011a-011e Milestone 7 durable recoverability and backup/restore posture
+012a-012e1 Milestone 8 reliability and known-defect closure
+013a-013e Milestone 9 Northstar readiness, bootstrap, and backup setup
+014a-014f Milestone 9 Northstar controlled implementation-return pilot
+015a      Milestone 10 workload and system-of-record reconciliation
+016a-016f Milestone 11 operational data foundation
+```
+
+## Historical first-slice packet detail (preserved, not active work queue)
 
 - `001-bootstrap-kaizen-platform-id-parser-foundations.md` - owner-approved; completed and audited pass-with-notes
 - `002-implement-deterministic-note-validation.md` - completed and audited pass-with-notes

@@ -843,8 +843,9 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 022A / 022B / 022C post-v1 backup generation, transfer verification, and plaintext cleanup: recorded in Result 382
 022F / 022G / 022H / 022I / 022J backup v2 key-custody recovery, fresh backup generation, transfer verification, restore proof, and plaintext cleanup: recorded in Result 383
 022Q vault admission doctrine hardening: vault commit 6fbc8cefe4ed4cd57403648ee3977ee2aeaaba5b; docs commit 51eea6fe3f6a87974ec7af85b066e8ebf7b8e929
--> current gate: select the next bounded post-v1 hardening priority after backup v2 restore proof and vault admission doctrine hardening
--> later: docs repo / Neon Ronin sync posture, lean-record cleanup, Claude UX / operator-workflow planning, vault promotion flow planning, and broader post-v1 hardening backlog
+022S lean-record index cleanup: selected as the next bounded post-v1 hardening priority; edits are limited to docs indexes and read-path references
+-> current gate: finish 022S verification, commit, and docs push if approved
+-> later: docs repo / Neon Ronin sync posture, Claude UX / operator-workflow planning, vault promotion flow planning, and broader post-v1 hardening backlog
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
