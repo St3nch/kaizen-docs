@@ -35,10 +35,10 @@ Humans = authority-bearing review, approval, and promotion
 - Post-v1 backup records: `03-research-results/382-packet-022abc-post-v1-backup-generation-transfer-and-cleanup-record.md` records the earlier encrypted backup generation, USB and Google Drive verification, and plaintext cleanup; `03-research-results/383-packet-022f-through-022j-backup-v2-key-custody-and-restore-proof-record.md` records the completed age identity v2 recovery, fresh backup, USB / Google verification, restore proof, and source plaintext cleanup.
 - Core M14 boundary: SearchClarity captures the signal. Neon Ronin scores the signal. Kaizen governs the project-intelligence and implementation-doc chain.
 - Kaizen docs repository role: this repo is Kaizen's construction, governance, proof, and audit workbench. It is not the long-term home of downstream project truth.
-- Kaizen Obsidian Vault role: the intended canonical living project-intelligence layer for governed projects. Post-v1 vault alignment is complete through 021F; future project-to-vault promotion flow work remains separately gated.
+- Kaizen Obsidian Vault role: the intended canonical living project-intelligence layer for governed projects, not an evidence dump. Post-v1 vault alignment is complete through 021F; vault admission hardening now applies during development and must carry into launched Kaizen projects. Future project-to-vault promotion flow work remains separately gated.
 - Active accepted planning roadmap: `ROADMAP_V0.4.md`, owner-accepted in `03-research-results/322-roadmap-v0.4-owner-acceptance.md` and corrected through SP-1 / M13 / M14 / post-v1 updates.
 - Platform repository: local-only at commit `7daabf3eff0b3b0768e88512ca7d596c94e41140`; no remote exists.
-- Docs repository: synced to `origin/main` at commit `b066b4b994ac8b5c1d1a8a5e06d843c78f81653b`; verify current HEAD and sync posture before push or handoff work.
+- Docs repository: synced to `origin/main` at commit `476c004843878977bdc0950f180e9d80ce9e3ec4`; verify current HEAD and sync posture before push or handoff work.
 - Canonical vault: local-only at commit `ba896a5de5ede45ab1408a8f207c85974e4a6992`; no remote exists.
 - Neon Ronin repository: Stage B M14 proof commits are local and ahead of origin; no push is authorized by this file.
 - Live operational database: `kaizen_ops` is migrated through `0005_recovery_retention_integrity`.

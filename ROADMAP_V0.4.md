@@ -101,6 +101,9 @@ Additional long-term architecture direction:
 
 ```text
 Obsidian remains the primary human workspace for canonical Markdown intelligence.
+The Kaizen vault is the living project-intelligence layer, not an evidence dump; vault admission is limited to durable project intelligence that helps projects continue, govern, execute, and improve.
+Full-fidelity governance proof, raw prompts, raw tool output, immutable evidence, backup hash chatter, and detailed implementation-return records remain in their appropriate docs, staging/evidence, operational, recovery, source-repository, or archive layers unless distilled through governed review.
+This admission rule applies immediately during development and must carry into launched Kaizen projects.
 A progressive hybrid human interface is planned through reviewed decisions and later gates.
 Tauri is the leading desktop-shell candidate, not irreversible doctrine.
 Operational records belong in typed service boundaries, not arbitrary SQL access.
