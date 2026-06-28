@@ -846,9 +846,10 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 022S lean-record index cleanup: committed and pushed at docs commit 3418673ad12487d0d76a9591521f82ae3cab45b8
 022W downstream project posture correction: committed and pushed at docs commit 5089775badf87059195ecfb34e9914f3afb41eb0
 022X operator-workflow friction hardening: committed and pushed at docs commit 189c6deca695aa06f62bd2dd5e86619a7d5c292c
-022Y vault promotion flow planning: selected to define docs/evidence -> distilled project intelligence -> vault admission test -> bounded vault amendment
--> current gate: finish 022Y verification, commit, and docs upstream sync if preflight passes
--> later: post-v1 hardening closeout / next milestone selection, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
+022Y vault promotion flow planning: committed and pushed at docs commit d08d9b6d187648d6fe8e79e368af78b0c58a1dec
+022Z post-v1 hardening closeout: selected to mark this hardening stretch complete enough to move to next milestone / next major lane selection
+-> current gate: select the next milestone / next major lane
+-> later: broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
