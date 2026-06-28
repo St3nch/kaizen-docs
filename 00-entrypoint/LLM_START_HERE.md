@@ -40,7 +40,7 @@ Humans = authority-bearing review, approval, and promotion
 - Platform repository: local-only at commit `7daabf3eff0b3b0768e88512ca7d596c94e41140`; no remote exists.
 - Docs repository: synced to `origin/main` at commit `3418673ad12487d0d76a9591521f82ae3cab45b8`; verify current HEAD and sync posture before push or handoff work.
 - Canonical vault: local-only at commit `6fbc8cefe4ed4cd57403648ee3977ee2aeaaba5b`; no remote exists.
-- Neon Ronin repository: Stage B M14 proof commits are local and ahead of origin; no push is authorized by this file.
+- Neon Ronin / SearchClarity posture: current material is legacy planning and verification material, not an official governed Go8 root or active repo-sync target. Future work should smartly distill useful material into the vault under vault admission rules; real Neon Ronin and SearchClarity repos may be created later under separately approved project-bootstrap packets.
 - Live operational database: `kaizen_ops` is migrated through `0005_recovery_retention_integrity`.
 - Go8 repository: operational local tool server.
 - Kaizen MCP remains a temporary non-Git proving ground; it is not production infrastructure.
