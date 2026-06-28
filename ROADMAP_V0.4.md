@@ -849,8 +849,9 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 022Y vault promotion flow planning: committed and pushed at docs commit d08d9b6d187648d6fe8e79e368af78b0c58a1dec
 022Z post-v1 hardening closeout: committed and pushed at docs commit e1b0e7c66ccf527dc8e180d29aa844bc2c5d208a
 023A M15 research synthesis and Tauri-aligned direction: committed and pushed at docs commit a2e831bd254c3c7b7e174e1f2c059da114c1c343
-023B M15 definition/spec draft: selected and drafted at `05-specs/milestone-15-dynamic-obsidian-experience-and-typed-read-model.md`
--> current gate: M15 spec audit / owner acceptance
+023B M15 definition/spec draft: committed and pushed at docs commit a8d9f1230b2ceb7997157188e78fcdeda3236b88
+023C M15 definition/spec audit: completed in `03-research-results/385-m15-definition-spec-audit.md`; pass with no blocking defects
+-> current gate: owner acceptance for M15 definition/spec
 -> later: first M15 implementation packet, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
