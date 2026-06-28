@@ -848,9 +848,10 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 022X operator-workflow friction hardening: committed and pushed at docs commit 189c6deca695aa06f62bd2dd5e86619a7d5c292c
 022Y vault promotion flow planning: committed and pushed at docs commit d08d9b6d187648d6fe8e79e368af78b0c58a1dec
 022Z post-v1 hardening closeout: committed and pushed at docs commit e1b0e7c66ccf527dc8e180d29aa844bc2c5d208a
-023A M15 research synthesis and Tauri-aligned direction: selected to preserve the deep-research direction before M15 spec drafting
--> current gate: draft Milestone 15 definition/spec using Result 384 as source direction
--> later: M15 spec audit / owner acceptance, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
+023A M15 research synthesis and Tauri-aligned direction: committed and pushed at docs commit a2e831bd254c3c7b7e174e1f2c059da114c1c343
+023B M15 definition/spec draft: selected and drafted at `05-specs/milestone-15-dynamic-obsidian-experience-and-typed-read-model.md`
+-> current gate: M15 spec audit / owner acceptance
+-> later: first M15 implementation packet, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
