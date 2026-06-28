@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD at Packet 018A approval: b7593c5ee90fd32c1e2a86572cc570d307de2be6
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: post-v1 hardening priority selection after completed 021B / 021C / 021D / 021E / 021F vault alignment, lean docs read-path refresh, and Result 382 backup verification record
+Current active lane: post-v1 hardening priority selection after completed 021B / 021C / 021D / 021E / 021F vault alignment, lean docs read-path refresh, Result 382 backup verification record, and Result 383 backup v2 key-custody recovery / restore proof record
 ```
 
 ## Project boundary definitions
@@ -838,8 +838,9 @@ Current active planning lane:
 021F current-state stale-sequence cleanup: executed, verified, and committed locally
 lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 022A / 022B / 022C post-v1 backup generation, transfer verification, and plaintext cleanup: recorded in Result 382
--> current gate: select the next bounded post-v1 hardening priority
--> later: docs repo / Neon Ronin sync posture, lean-record cleanup, Claude UX / operator-workflow planning, and broader post-v1 hardening backlog
+022F / 022G / 022H / 022I / 022J backup v2 key-custody recovery, fresh backup generation, transfer verification, restore proof, and plaintext cleanup: recorded in Result 383
+-> current gate: select the next bounded post-v1 hardening priority after backup v2 restore proof
+-> later: docs repo / Neon Ronin sync posture, lean-record cleanup, Claude UX / operator-workflow planning, vault promotion flow planning, and broader post-v1 hardening backlog
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
