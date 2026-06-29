@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Packet 024F hammer tests and prototype audit draft awaiting owner review / acceptance
+Current active lane: Packet 024F hammer tests and prototype audit complete; next recommended step is Packet 024G Qdrant-backed disposable synthetic prototype definition
 ```
 
 ## Project boundary definitions
@@ -877,8 +877,9 @@ Packet 024D retrieval gateway and typed tool contract result: recorded in `03-re
 Packet 024E disposable synthetic local prototype draft: recorded in `03-research-results/409-packet-024e-disposable-synthetic-local-prototype.md`
 Packet 024E disposable synthetic local prototype implementation return: recorded in `03-research-results/410-packet-024e-implementation-return.md`
 Packet 024F hammer tests and prototype audit draft: recorded in `03-research-results/411-packet-024f-hammer-tests-and-prototype-audit.md`
--> current gate: owner review / acceptance for Packet 024F
--> later: accepted 024F execution, then decide whether to proceed to Qdrant-backed disposable prototype or amend M16 sequence; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
+Packet 024F hammer tests and prototype audit result: recorded in `03-research-results/412-packet-024f-hammer-tests-and-prototype-audit-result.md`
+-> current gate: draft Packet 024G Qdrant-backed disposable synthetic prototype definition
+-> later: accepted 024G definition, then decide whether to authorize Qdrant-backed disposable synthetic implementation; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
