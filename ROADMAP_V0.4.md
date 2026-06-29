@@ -31,10 +31,10 @@ Packet 018A reading-path cleanup: implemented, audited, corrected, and owner-acc
 SP-1: closed under Result 326
 Milestone 13: closed and owner-accepted in Result 342
 Milestone 14 / Kaizen v1: owner-accepted in Result 368
-Platform HEAD after Packet 023F implementation: 9ba18e075deaca368c0869b636c318855491bb8a
+Platform HEAD after Packet 023G implementation: 1fb78418cbefb526e05eaf851bec5bff536371dc
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Milestone 15 after Packet 023F current-state and command-center contract implementation, with Packet 023G review-item notes and review queue views draft now awaiting owner review / acceptance
+Current active lane: Milestone 15 after Packet 023G review-item notes and review queue projection implementation, with Packet 023H resume view and context-pack assembly as the next roadmap-consistent gate
 ```
 
 ## Project boundary definitions
@@ -859,8 +859,9 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 023F current-state and command-center contract draft: recorded in `03-research-results/391-packet-023f-current-state-and-command-center-contracts.md`
 023F implementation return: platform command-center contract fixture proof committed at `9ba18e075deaca368c0869b636c318855491bb8a` and recorded in `03-research-results/392-packet-023f-implementation-return.md`
 023G review-item notes and review queue views draft: recorded in `03-research-results/393-packet-023g-review-item-notes-and-review-queue-views.md`
--> current gate: owner review / acceptance for Packet 023G
--> later: accepted 023G implementation packet, resume view and context-pack assembly, integrated M15 closure audit, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
+023G implementation return: platform review queue projection committed at `1fb78418cbefb526e05eaf851bec5bff536371dc` and recorded in `03-research-results/394-packet-023g-implementation-return.md`
+-> current gate: Packet 023H planning for resume view and context-pack assembly
+-> later: accepted 023H implementation packet, integrated M15 closure audit, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
