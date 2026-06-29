@@ -852,8 +852,9 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 023B M15 definition/spec draft: committed and pushed at docs commit a8d9f1230b2ceb7997157188e78fcdeda3236b88
 023C M15 definition/spec audit: committed and pushed at docs commit 9413b0c860ba76ecdb60c7693ba637fcfc6e3a61
 023D M15 definition/spec owner acceptance: committed and pushed at docs commit 9cbfd05f3d711f1fd8a73a08c1156573a7bca475
-023D M15 note schema and parser direction planning draft: recorded in `03-research-results/387-packet-023d-m15-note-schema-and-parser-direction.md`
--> current gate: owner review / acceptance for Packet 023D planning direction
+023D M15 note schema and parser direction planning draft: committed and pushed at docs commit 128bfbb0371e9c7864cd73e324767550134e224c
+023D owner acceptance: recorded in `03-research-results/388-packet-023d-owner-acceptance.md`
+-> current gate: draft 023E narrow M15 schema contract and parser prototype implementation packet
 -> later: accepted first M15 implementation packet, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
