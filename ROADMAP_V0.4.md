@@ -31,10 +31,10 @@ Packet 018A reading-path cleanup: implemented, audited, corrected, and owner-acc
 SP-1: closed under Result 326
 Milestone 13: closed and owner-accepted in Result 342
 Milestone 14 / Kaizen v1: owner-accepted in Result 368
-Platform HEAD at Packet 018A approval: b7593c5ee90fd32c1e2a86572cc570d307de2be6
+Platform HEAD after Packet 023E implementation: 2820bdb94a8eb580ae79ad797c61bd6422649659
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: post-v1 hardening priority selection after completed 021B / 021C / 021D / 021E / 021F vault alignment, lean docs read-path refresh, Result 382 backup verification record, and Result 383 backup v2 key-custody recovery / restore proof record
+Current active lane: Milestone 15 after Packet 023E parser/validator prototype implementation, with Packet 023F current-state and command-center contract planning as the next roadmap-consistent gate
 ```
 
 ## Project boundary definitions
@@ -855,8 +855,9 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 023D M15 note schema and parser direction planning draft: committed and pushed at docs commit 128bfbb0371e9c7864cd73e324767550134e224c
 023D owner acceptance: committed and pushed at docs commit 68c5bbff073e15b03e453bb1bd69c6a91c866b4e
 023E narrow M15 schema contract and parser prototype packet draft: recorded in `03-research-results/389-packet-023e-m15-schema-contract-and-parser-prototype.md`
--> current gate: owner review / acceptance for Packet 023E implementation packet
--> later: accepted first M15 implementation packet, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
+023E implementation return: platform parser/validator prototype committed at `2820bdb94a8eb580ae79ad797c61bd6422649659` and recorded in `03-research-results/390-packet-023e-implementation-return.md`
+-> current gate: Packet 023F planning for current-state and command-center contracts
+-> later: accepted 023F implementation packet, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
