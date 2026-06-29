@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Milestone 16 Qdrant research context and hammer-test direction recorded; next recommended step is docs-only Packet 024A for M16 definition and Qdrant evidence reconciliation
+Current active lane: Packet 024A M16 definition and Qdrant evidence reconciliation draft awaiting owner review / acceptance
 ```
 
 ## Project boundary definitions
@@ -866,8 +866,9 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 023I M15 integrated proof and closure audit result: recorded in `03-research-results/398-packet-023i-m15-integrated-proof-and-closure-audit-result.md`
 Milestone 15 owner closure acceptance: recorded in `03-research-results/399-milestone-15-owner-closure-acceptance.md`
 Milestone 16 Qdrant research context and hammer-test direction: recorded in `03-research-results/400-milestone-16-qdrant-research-context-and-hammer-test-direction.md`
--> current gate: draft docs-only Packet 024A for M16 definition and Qdrant evidence reconciliation
--> later: continue to the next accepted roadmap lane; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
+Packet 024A M16 definition and Qdrant evidence reconciliation draft: recorded in `03-research-results/401-packet-024a-m16-definition-and-qdrant-evidence-reconciliation.md`
+-> current gate: owner review / acceptance for Packet 024A
+-> later: accepted 024A execution, then Packet 024B corpus boundary and governance contract; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
