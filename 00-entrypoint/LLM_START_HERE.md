@@ -30,7 +30,7 @@ Humans = authority-bearing review, approval, and promotion
 - Latest closed milestone: Milestone 14, accepted by owner in `03-research-results/368-milestone-14-kaizen-v1-owner-acceptance.md`.
 - Accepted v1 checkpoint: docs commit `2a76363d3257cd3230746dc4c5901965291591d8`, with recorded caveats and post-v1 hardening deferred.
 - Current post-acceptance docs checkpoint: verify current HEAD before work; post-v1 audit preparation and reading-path refresh records may exist after the accepted checkpoint.
-- Current gate: Packet 023G implementation is complete and recorded in `03-research-results/394-packet-023g-implementation-return.md`. Packet 023F implementation is recorded in `03-research-results/392-packet-023f-implementation-return.md`. Accepted M15 spec is `05-specs/milestone-15-dynamic-obsidian-experience-and-typed-read-model.md` at spec commit `a8d9f1230b2ceb7997157188e78fcdeda3236b88`. Packet 023G added the review-item fixture proof and derived review queue projection at platform commit `1fb78418cbefb526e05eaf851bec5bff536371dc`; no Tauri, Qdrant, Hermes write authority, Observatory / IMI implementation, vault mutation, staging mutation, or database mutation is authorized. The next roadmap-consistent gate is Packet 023H planning for resume view and context-pack assembly. Kaizen v1 remains accepted unless a later accepted audit records an acceptance-invalidating defect.
+- Current gate: owner review / acceptance for Packet 023H draft in `03-research-results/395-packet-023h-resume-view-and-context-pack-assembly.md`. Packet 023G implementation is complete and recorded in `03-research-results/394-packet-023g-implementation-return.md`. Accepted M15 spec is `05-specs/milestone-15-dynamic-obsidian-experience-and-typed-read-model.md` at spec commit `a8d9f1230b2ceb7997157188e78fcdeda3236b88`. Packet 023H proposes a narrow platform demonstration of resume view and derived context-pack manifest assembly at platform starting commit `1fb78418cbefb526e05eaf851bec5bff536371dc`; no implementation, Tauri, Qdrant, Hermes write authority, Observatory / IMI implementation, vault mutation, staging mutation, or database mutation is authorized until explicit owner acceptance. Kaizen v1 remains accepted unless a later accepted audit records an acceptance-invalidating defect.
 - Completed M14 workload: Neon Ronin parent project idea-to-implementation-docs proof with SearchClarity child workspace/business-lane dependency, repo reconciliation, Stage B docs-only implementation return, fresh-context proof, and backup/restore proof.
 - Post-v1 backup records: `03-research-results/382-packet-022abc-post-v1-backup-generation-transfer-and-cleanup-record.md` records the earlier encrypted backup generation, USB and Google Drive verification, and plaintext cleanup; `03-research-results/383-packet-022f-through-022j-backup-v2-key-custody-and-restore-proof-record.md` records the completed age identity v2 recovery, fresh backup, USB / Google verification, restore proof, and source plaintext cleanup.
 - Core M14 boundary: SearchClarity captures the signal. Neon Ronin scores the signal. Kaizen governs the project-intelligence and implementation-doc chain.
@@ -232,7 +232,8 @@ Milestones 1-14: closed
 -> Packet 023F implementation return: recorded in Result 392
 -> Packet 023G review-item notes and review queue views draft: recorded in Result 393
 -> Packet 023G implementation return: recorded in Result 394
--> current gate: Packet 023H planning for resume view and context-pack assembly
+-> Packet 023H resume view and context-pack assembly draft: recorded in Result 395
+-> current gate: owner review / acceptance for Packet 023H
 ```
 
 Current authority:
