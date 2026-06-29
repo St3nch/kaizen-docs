@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Packet 024F hammer tests and prototype audit complete; next recommended step is Packet 024G Qdrant-backed disposable synthetic prototype definition
+Current active lane: Packet 024G Qdrant-backed disposable synthetic prototype definition draft awaiting owner review / acceptance
 ```
 
 ## Project boundary definitions
@@ -878,7 +878,8 @@ Packet 024E disposable synthetic local prototype draft: recorded in `03-research
 Packet 024E disposable synthetic local prototype implementation return: recorded in `03-research-results/410-packet-024e-implementation-return.md`
 Packet 024F hammer tests and prototype audit draft: recorded in `03-research-results/411-packet-024f-hammer-tests-and-prototype-audit.md`
 Packet 024F hammer tests and prototype audit result: recorded in `03-research-results/412-packet-024f-hammer-tests-and-prototype-audit-result.md`
--> current gate: draft Packet 024G Qdrant-backed disposable synthetic prototype definition
+Packet 024G Qdrant-backed disposable synthetic prototype definition draft: recorded in `03-research-results/413-packet-024g-qdrant-backed-disposable-synthetic-prototype-definition.md`
+-> current gate: owner review / acceptance for Packet 024G
 -> later: accepted 024G definition, then decide whether to authorize Qdrant-backed disposable synthetic implementation; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
 ```
 
