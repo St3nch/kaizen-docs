@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Milestone 15 after Packet 023H resume view and context-pack assembly implementation, with Packet 023I M15 integrated proof and closure audit draft now awaiting owner review / acceptance
+Current active lane: Milestone 15 after Packet 023I integrated proof and closure audit execution, with M15 closure now awaiting owner review / acceptance
 ```
 
 ## Project boundary definitions
@@ -863,8 +863,9 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 023H resume view and context-pack assembly draft: recorded in `03-research-results/395-packet-023h-resume-view-and-context-pack-assembly.md`
 023H implementation return: platform resume/context-pack projections committed at `84071eef1e5859f651d3213c65f3bfc99a3c94f8` and recorded in `03-research-results/396-packet-023h-implementation-return.md`
 023I M15 integrated proof and closure audit draft: recorded in `03-research-results/397-packet-023i-m15-integrated-proof-and-closure-audit.md`
--> current gate: owner review / acceptance for Packet 023I
--> later: accepted 023I closure audit execution and owner M15 closure decision, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
+023I M15 integrated proof and closure audit result: recorded in `03-research-results/398-packet-023i-m15-integrated-proof-and-closure-audit-result.md`
+-> current gate: owner review / acceptance for M15 closure
+-> later: if owner accepts M15 closure, continue to the next accepted roadmap lane; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
