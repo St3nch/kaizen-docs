@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Packet 024A M16 definition and Qdrant evidence reconciliation complete; next recommended step is docs-only Packet 024B corpus boundary and governance contract
+Current active lane: Packet 024B corpus boundary and governance contract draft awaiting owner review / acceptance
 ```
 
 ## Project boundary definitions
@@ -868,7 +868,8 @@ Milestone 15 owner closure acceptance: recorded in `03-research-results/399-mile
 Milestone 16 Qdrant research context and hammer-test direction: recorded in `03-research-results/400-milestone-16-qdrant-research-context-and-hammer-test-direction.md`
 Packet 024A M16 definition and Qdrant evidence reconciliation draft: recorded in `03-research-results/401-packet-024a-m16-definition-and-qdrant-evidence-reconciliation.md`
 Packet 024A M16 definition and Qdrant evidence reconciliation result: recorded in `03-research-results/402-packet-024a-m16-definition-and-qdrant-evidence-reconciliation-result.md`
--> current gate: draft docs-only Packet 024B corpus boundary and governance contract
+Packet 024B corpus boundary and governance contract draft: recorded in `03-research-results/403-packet-024b-corpus-boundary-and-governance-contract.md`
+-> current gate: owner review / acceptance for Packet 024B
 -> later: accepted 024B execution, then Packet 024C chunk/payload/ID/rebuild contract; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
 ```
 
