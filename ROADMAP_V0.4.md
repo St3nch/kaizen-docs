@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023F implementation: 9ba18e075deaca368c0869b636c318855491bb8a
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Milestone 15 after Packet 023F current-state and command-center contract implementation, with Packet 023G review-item notes and review queue views as the next roadmap-consistent gate
+Current active lane: Milestone 15 after Packet 023F current-state and command-center contract implementation, with Packet 023G review-item notes and review queue views draft now awaiting owner review / acceptance
 ```
 
 ## Project boundary definitions
@@ -858,7 +858,8 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 023E implementation return: platform parser/validator prototype committed at `2820bdb94a8eb580ae79ad797c61bd6422649659` and recorded in `03-research-results/390-packet-023e-implementation-return.md`
 023F current-state and command-center contract draft: recorded in `03-research-results/391-packet-023f-current-state-and-command-center-contracts.md`
 023F implementation return: platform command-center contract fixture proof committed at `9ba18e075deaca368c0869b636c318855491bb8a` and recorded in `03-research-results/392-packet-023f-implementation-return.md`
--> current gate: Packet 023G planning for review-item notes and review queue views
+023G review-item notes and review queue views draft: recorded in `03-research-results/393-packet-023g-review-item-notes-and-review-queue-views.md`
+-> current gate: owner review / acceptance for Packet 023G
 -> later: accepted 023G implementation packet, resume view and context-pack assembly, integrated M15 closure audit, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
