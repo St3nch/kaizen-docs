@@ -850,9 +850,10 @@ lean docs read-path refresh for LLM_START_HERE.md and ROADMAP_V0.4.md: complete
 022Z post-v1 hardening closeout: committed and pushed at docs commit e1b0e7c66ccf527dc8e180d29aa844bc2c5d208a
 023A M15 research synthesis and Tauri-aligned direction: committed and pushed at docs commit a2e831bd254c3c7b7e174e1f2c059da114c1c343
 023B M15 definition/spec draft: committed and pushed at docs commit a8d9f1230b2ceb7997157188e78fcdeda3236b88
-023C M15 definition/spec audit: completed in `03-research-results/385-m15-definition-spec-audit.md`; pass with no blocking defects
--> current gate: owner acceptance for M15 definition/spec
--> later: first M15 implementation packet, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
+023C M15 definition/spec audit: committed and pushed at docs commit 9413b0c860ba76ecdb60c7693ba637fcfc6e3a61
+023D M15 definition/spec owner acceptance: recorded in `03-research-results/386-m15-definition-spec-owner-acceptance.md`
+-> current gate: first M15 implementation-packet planning — M15 Note Schema and Parser Direction
+-> later: accepted first M15 implementation packet, broader post-v1 hardening backlog, and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
