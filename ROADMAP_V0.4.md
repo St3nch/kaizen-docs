@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Packet 024D retrieval gateway and typed tool contract draft awaiting owner review / acceptance
+Current active lane: Packet 024D retrieval gateway and typed tool contract complete; next recommended step is Packet 024E disposable synthetic local prototype
 ```
 
 ## Project boundary definitions
@@ -873,8 +873,9 @@ Packet 024B corpus boundary and governance contract result: recorded in `03-rese
 Packet 024C chunk, payload, ID, and rebuild contract draft: recorded in `03-research-results/405-packet-024c-chunk-payload-id-and-rebuild-contract.md`
 Packet 024C chunk, payload, ID, and rebuild contract result: recorded in `03-research-results/406-packet-024c-chunk-payload-id-and-rebuild-contract-result.md`
 Packet 024D retrieval gateway and typed tool contract draft: recorded in `03-research-results/407-packet-024d-retrieval-gateway-and-typed-tool-contract.md`
--> current gate: owner review / acceptance for Packet 024D
--> later: accepted 024D execution, then Packet 024E disposable synthetic local prototype; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
+Packet 024D retrieval gateway and typed tool contract result: recorded in `03-research-results/408-packet-024d-retrieval-gateway-and-typed-tool-contract-result.md`
+-> current gate: draft Packet 024E disposable synthetic local prototype
+-> later: accepted 024E implementation, then Packet 024F hammer tests and prototype implementation return; broader post-v1 hardening backlog and later Neon Ronin / SearchClarity vault distillation plus real repo bootstrap remain separately governed
 ```
 
 Kaizen v1 is accepted. Post-v1 work remains governed: vault amendment preparation, plan generation, execution, future implementation, repository push, vault promotion, platform mutation, database mutation, downstream project mutation, and Observatory / IMI work require exact owner approval for the relevant packet, operation, plan hash, starting commits, path scope, tests, and non-authorization boundaries.
