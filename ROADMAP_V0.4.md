@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Packet 024H Qdrant synthetic proof complete; next recommended step is 024I hammer audit
+Current active lane: Packet 024I hammer audit passed; real corpus indexing remains unauthorized
 ```
 
 ## Project boundary definitions
