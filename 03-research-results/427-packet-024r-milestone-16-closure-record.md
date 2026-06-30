@@ -121,15 +121,19 @@ Qdrant real-pilot container: gone
 Qdrant real-pilot volume: removed
 ```
 
-## Next milestone handoff
+## Next gate handoff
 
-Recommended next milestone:
+The next retrieval follow-up is not assigned a milestone number by this closure record.
+
+`ROADMAP_V0.4.md` already defines Milestone 17 as Hermes constrained-clerk integration. That milestone identity remains unchanged unless separately amended through a governed roadmap update.
+
+Recommended next retrieval gate:
 
 ```text
-Milestone 17 — Governed Retrieval Expansion Gate
+Retrieval Expansion Options and Gate Contract
 ```
 
-Milestone 17 should not begin by assuming corpus expansion. It should first choose one expansion lane explicitly:
+The retrieval expansion gate should first choose one expansion lane explicitly:
 
 ```text
 larger docs corpus;
@@ -140,10 +144,10 @@ agent-facing retrieval contract;
 production gateway packaging.
 ```
 
-Recommended first packet:
+The retrieval expansion gate should be docs-only unless separately authorized.
+
+Correction recorded in:
 
 ```text
-025A — Milestone 17 Retrieval Expansion Options and Gate Contract
+03-research-results/428-packet-024s-milestone-16-closure-handoff-correction.md
 ```
-
-025A should be docs-only unless separately authorized.
