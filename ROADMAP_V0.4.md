@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Post-M16 roadmap reconciliation complete in Packet 025A. Milestone 16 is closed. Existing roadmap Milestone 17 remains Hermes constrained-clerk integration unless separately amended. Next recommended gate is 025B Retrieval Expansion Options and Gate Contract.
+Current active lane: Retrieval expansion lane selection complete in Packet 025B. Milestone 16 is closed. Existing roadmap Milestone 17 remains Hermes constrained-clerk integration unless separately amended. Next recommended gate is 025C Expanded Docs Corpus Boundary and Evaluation Contract.
 ```
 
 ## Project boundary definitions
