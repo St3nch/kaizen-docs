@@ -34,7 +34,7 @@ Milestone 14 / Kaizen v1: owner-accepted in Result 368
 Platform HEAD after Packet 023H implementation: 84071eef1e5859f651d3213c65f3bfc99a3c94f8
 Vault HEAD at Packet 018A approval: c898f261c0b341eb8419125247c8bd53ef567d6c
 Live operational database: kaizen_ops migrated through 0005_recovery_retention_integrity
-Current active lane: Expanded docs corpus implementation returned in Packet 025D. Milestone 16 is closed. Existing roadmap Milestone 17 remains Hermes constrained-clerk integration unless separately amended. Platform is at d1f258175ff1128e8d145be5611a6900c3952ee4. Next recommended gate is 025E Expanded Docs Corpus Hammer Audit.
+Current active lane: Expanded docs corpus hammer audit passed in Packet 025E. Milestone 16 is closed. Existing roadmap Milestone 17 remains Hermes constrained-clerk integration unless separately amended. Platform is at d1f258175ff1128e8d145be5611a6900c3952ee4. Next recommended gate is 025F Retrieval Expansion Closure and Next Lane Decision.
 ```
 
 ## Project boundary definitions
